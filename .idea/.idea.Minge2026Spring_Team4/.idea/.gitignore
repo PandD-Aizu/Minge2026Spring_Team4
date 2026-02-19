@@ -1,0 +1,8 @@
+﻿# デフォルトの無視対象ファイル
+/shelf/
+/workspace.xml
+# Rider の無視対象ファイル
+/.idea.Minge2026Spring_Team4.iml
+/projectSettingsUpdater.xml
+/modules.xml
+/contentModel.xml
