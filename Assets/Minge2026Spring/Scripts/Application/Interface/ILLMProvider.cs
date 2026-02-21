@@ -1,7 +1,9 @@
-using Codice.Client.Common.WebApi.Requests;
-using UnityEngine;
+using Cysharp.Threading.Tasks;
 
-public interface ILLMProvider
+namespace Minge2026Spring.Scripts.Application.Interface
 {
-    public string SendRequest(string userInput);
+    public interface ILLMProvider
+    {
+        public UniTask<string> SendRequestAsync(string userInput);
+    }
 }

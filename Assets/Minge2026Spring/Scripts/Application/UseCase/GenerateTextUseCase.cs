@@ -1,5 +1,6 @@
-﻿using System.Threading;
+using System.Threading;
 using Cysharp.Threading.Tasks;
+using Minge2026Spring.Scripts.Application.Interface;
 using UnityEngine;
 
 namespace Minge2026Spring.Scripts.Application.UseCase
@@ -13,9 +14,9 @@ namespace Minge2026Spring.Scripts.Application.UseCase
             _llmProvider = llmProvider;
         }
 
-        public string GenerateText(string userInput)
+        public async UniTask<string> GenerateTextAsync(string userInput)
         {
-            return _llmProvider.SendRequest(userInput);
+            return await _llmProvider.SendRequestAsync(userInput);
         }
     }
 }

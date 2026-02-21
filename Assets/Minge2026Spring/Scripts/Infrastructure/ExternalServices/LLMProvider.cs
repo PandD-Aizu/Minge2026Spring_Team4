@@ -1,7 +1,8 @@
-﻿using System.Text;
+using System.Text;
 using Codice.CM.Common.Merge;
 using Cysharp.Threading.Tasks;
 using Minge2026Spring.Scripts.Infrastructure.DTOs;
+using Minge2026Spring.Scripts.Application.Interface;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -11,18 +12,16 @@ namespace Minge2026Spring.Scripts.Infrastructure.ExternalServices
     {
         private const string URL = "http://localhost:11434/api/generate";
         private const string MODEL_NAME = "gemma3:4b";
-        private const string SYSTEM_PROMPT = "あなたは、すべての母です。全力でよしよししてください。";
+        private const string SYSTEM_PROMPT = "全力でよしよししてください。";
         
         /// <summary>
         /// LLMにユーザーの入力を送信し、応答を受け取るメソッド
         /// </summary>
         /// <param name="userInput">ユーザー入力</param>
         /// <returns>LLMの応答</returns>
-        public string SendRequest(string userInput)
+        public async UniTask<string> SendRequestAsync(string userInput)
         {
-            return GenerateRequestAsync(userInput)
-                .GetAwaiter()
-                .GetResult();
+            return await GenerateRequestAsync(userInput);
         }
 
         /// <summary>
@@ -36,8 +35,8 @@ namespace Minge2026Spring.Scripts.Infrastructure.ExternalServices
             var requestData = new LLMRequest()
             {
                 model = MODEL_NAME,
-                systemPrompt = SYSTEM_PROMPT,
-                userPrompt =  userInput,
+                system = SYSTEM_PROMPT,
+                prompt =  userInput,
                 stream = false
             };
             var json = JsonUtility.ToJson(requestData);
