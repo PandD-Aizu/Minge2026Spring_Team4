@@ -12,11 +12,9 @@ namespace Minge2026Spring.Scripts.DI
     {
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.Register<LLMProvider>(Lifetime.Scoped)
-                .AsImplementedInterfaces();
-            builder.Register<GenerateTextUseCase>(Lifetime.Scoped);
-            builder.RegisterEntryPoint<NovelLLMPresenter>();
-            builder.RegisterComponentInHierarchy<DialogueWindowView>();
+            builder.Register<ChatUseCase>(Lifetime.Scoped);
+            builder.RegisterEntryPoint<NovelChatPresenter>();
+            builder.RegisterComponentInHierarchy<ChatWindowView>();
         }
     }
 }

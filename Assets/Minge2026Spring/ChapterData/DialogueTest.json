@@ -1,0 +1,38 @@
+{
+    "blocks": [
+        {
+            "blockId": "0",
+            "dialogues": [
+                {
+                    "iconId": "PlayerIcon",
+                    "speaker": "Player",
+                    "message": "おなかすいたー",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "PlayerIcon",
+                    "speaker": "Player",
+                    "message": "(おなかが鳴る)",
+                    "waitingTime": 0.0
+                }
+            ],
+            "choices": [],
+            "nextBlockId": "1",
+            "waitingTime": 2.0
+        },
+        {
+            "blockId": "1",
+            "dialogues": [
+                {
+                    "iconId": "PlayerIcon",
+                    "speaker": "Player",
+                    "message": "おすしたべたい",
+                    "waitingTime": 5.0
+                }
+            ],
+            "choices": [],
+            "nextBlockId": "",
+            "waitingTime": 0.0
+        }
+    ]
+}

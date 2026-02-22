@@ -1,6 +1,7 @@
 using System;
 using Minge2026Spring.Scripts.Application.UseCase;
 using Minge2026Spring.Scripts.View;
+using UnityEngine;
 using VContainer.Unity;
 
 namespace Minge2026Spring.Scripts.Presenter
@@ -8,12 +9,12 @@ namespace Minge2026Spring.Scripts.Presenter
     public class NovelLLMPresenter : IInitializable, IDisposable
     {
         private readonly GenerateTextUseCase _generateTextUseCase;
-        private readonly DialogueWindowView _dialogueWindowView;
+        private readonly ChatWindowView chatWindowView;
         
-        public NovelLLMPresenter(GenerateTextUseCase generateTextUseCase, DialogueWindowView dialogueWindowView)
+        public NovelLLMPresenter(GenerateTextUseCase generateTextUseCase, ChatWindowView chatWindowView)
         {
             _generateTextUseCase = generateTextUseCase;
-            _dialogueWindowView = dialogueWindowView;
+            this.chatWindowView = chatWindowView;
         }
         
         public async void Initialize()
@@ -21,7 +22,7 @@ namespace Minge2026Spring.Scripts.Presenter
             string userInput = "全力でほめてください";
             string output = await _generateTextUseCase.GenerateTextAsync(userInput);
 
-            _dialogueWindowView.SetText(output);
+            Debug.Log($"Generated Text: {output}");
         }
 
         public void Dispose()
