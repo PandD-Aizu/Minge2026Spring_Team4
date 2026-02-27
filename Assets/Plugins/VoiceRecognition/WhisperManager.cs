@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 
 namespace VoiceRecognition
 {
-    public class WhisperManager
+    public class WhisperManager : IDisposable
     {
         [DllImport("voice_recognition_for_unity")]
         private static extern int init_whisper(string modelPath, string tokenizerPath, string configPath);
@@ -49,6 +49,11 @@ namespace VoiceRecognition
             free_string(resultPtr);
 
             return resultText;
+        }
+
+        public void Dispose()
+        {
+            
         }
     }
 }

@@ -5,6 +5,6 @@ namespace Minge2026Spring.Scripts.Application.Interface
 {
     public interface ISpeechRecognitionProvider
     {
-        public string ProcessSpeechRecognition(IntPtr audio, int sampleLength);
+        public string Transcribe(FMOD.Sound sound);
     }
 }
