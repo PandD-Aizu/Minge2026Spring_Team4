@@ -2,8 +2,9 @@
     "name": "Application",
     "rootNamespace": "",
     "references": [
-        "GUID:f44f340a63193694bbc1057e57e12911",
-        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:0c752da273b17c547ae705acf0f2adf2",
+        "GUID:f44f340a63193694bbc1057e57e12911"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
