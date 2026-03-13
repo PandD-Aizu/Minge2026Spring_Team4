@@ -1,4 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using System;
+using Cysharp.Threading.Tasks;
 using Minge2026Spring.Scripts.Application.Interface;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -7,70 +8,57 @@ namespace Minge2026Spring.Scripts.Infrastructure.ExternalServices
 {
     public class JsonUtilityProvider : IJsonUtilityProvider
     {
-        /// <summary>
-        /// JsonファイルをAddressablesから読み込んで、任意のオブジェクトに変換する
-        /// </summary>
-        /// <param name="addressableJsonKey">読み込むJsonファイル</param>
-        /// <typeparam name="T">Jsonファイルを変換した後の入れ子のオブジェクトの型</typeparam>
-        /// <returns>Jsonファイルのデータを内包したオブジェクト</returns>
-        public T ConvertJsonToAnyObject<T>(string addressableJsonKey)
+        /// <inheritdoc />
+        public async UniTask<T> ConvertJsonToAnyObjectAsync<T>(string addressableJsonKey)
         {
-            // nullチェック
-            if (addressableJsonKey is null)
+            if (string.IsNullOrEmpty(addressableJsonKey))
             {
-                Debug.LogError("Addressable Key is null.");
+                UnityEngine.Debug.LogError($"[JsonUtilityProvider] Invalid addressable JSON key: {addressableJsonKey}");
                 return default;
             }
 
-            // AddressablesからJsonファイルを読み込む
-            var jsonAsset = Addressables.LoadAssetAsync<TextAsset>(addressableJsonKey).WaitForCompletion();
-            if (jsonAsset is null)
-            {
-                Debug.LogError($"Invalid Json Key: {addressableJsonKey}");
-                return default;
-            }
-            
-            // 任意の型に入れて返す
-            var result = JsonUtility.FromJson<T>(jsonAsset.text);
-            if (result is null)
-            {
-                Debug.LogError("Failed to convert Json: convert result is null.");
-                return default;
-            }
-            
-            // 代入可能かチェック
-            if (!typeof(T).IsAssignableFrom(result.GetType()))
-            {
-                Debug.LogError($"Failed to convert Json: convert result type is {result.GetType()}, expected type is assignable from {typeof(T)}.");
-                return default;
-            }
+            var handle = Addressables.LoadAssetAsync<TextAsset>(addressableJsonKey);
+            var jsonAsset = await handle.Task;
 
-            // 厳密な型チェック
-            if (result.GetType() != typeof(T))
+            try
             {
-                Debug.LogWarning($"Warning: Json converted to {result.GetType()}, expected type is {typeof(T)}.");
+                if (jsonAsset is null)
+                {
+                    UnityEngine.Debug.LogError($"[JsonUtilityProvider] Failed to load JSON asset with key: {addressableJsonKey}");
+                    return default;
+                }
+
+                var result = JsonUtility.FromJson<T>(jsonAsset.text);
+                if (result is null)
+                {
+                    UnityEngine.Debug.LogError($"[JsonUtilityProvider] Failed to parse JSON from asset with key: {addressableJsonKey}");
+                    return default;
+                }
+
+                return result;
             }
-            
-            return result;
+            catch (Exception e)
+            {
+                UnityEngine.Debug.LogError($"[JsonUtilityProvider] Exception occurred while converting JSON to object with key: {addressableJsonKey}");
+                UnityEngine.Debug.LogError(e);
+                return default;
+            }
+            finally
+            {
+                Addressables.Release(handle);
+            }
         }
-        
-        /// <summary>
-        /// オブジェクトをJson形式の文字列に変換する
-        /// </summary>
-        /// <param name="data">変換するオブジェクト</param>
-        /// <param name="prettyPrint">行のインデントを有効にするかどうか</param>
-        /// <typeparam name="T">変換したいオブジェクトの型</typeparam>
-        /// <returns>Json形式の文字列</returns>
-        public string ConvertStringToJson<T>(T data, bool prettyPrint = false)
+
+        /// <inheritdoc />
+        public string ConvertAnyObjectToJsonAsync<T>(T obj, bool prettyPrint = false)
         {
-            // nullチェック
-            if (data is null)
+            if (obj is null)
             {
-                Debug.LogError("Data is null.");
+                UnityEngine.Debug.LogError($"[JsonUtilityProvider] Cannot convert null object to JSON.");
+                return string.Empty;
             }
             
-            // Json形式の文字列に変換
-            string result = JsonUtility.ToJson(data, prettyPrint);
+            string result = JsonUtility.ToJson(obj, prettyPrint);
             return result;
         }
     }
