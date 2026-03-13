@@ -118,3 +118,6 @@ fmod_editor.log
 
 # Ignore Whisper Model folders
 /[Aa]ssets/StreamingAssets/Whisper_tiny/
+
+# Ignore Qwen3.5 model folders
+/[Aa]ssets/StreamingAssets/Qwen3.5_2B/

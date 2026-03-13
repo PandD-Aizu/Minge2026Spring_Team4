@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Cysharp.Threading.Tasks;
 using Minge2026Spring.Scripts.Application.DTOs;
 using Minge2026Spring.Scripts.Application.Interface;
 using R3;
@@ -25,10 +26,10 @@ namespace Minge2026Spring.Scripts.Application.UseCase
         /// 章の会話データをロードする
         /// </summary>
         /// <param name="chapterId">章の会話jsonデータへのパス</param>
-        public void LoadChapter(string chapterId)
+        public async UniTaskVoid LoadChapter(string chapterId)
         {
             // 章の会話データをjsonからロードする
-            _chapter = _jsonUtilityProvider.ConvertJsonToAnyObject<Chapter>(chapterId);
+            _chapter = await _jsonUtilityProvider.ConvertJsonToAnyObjectAsync<Chapter>(chapterId);
             if (_chapter?.blocks is null || _chapter.blocks.Length == 0)
                 return;
             
