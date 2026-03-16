@@ -12,9 +12,33 @@ namespace Minge2026Spring.Scripts.DI
     {
         protected override void Configure(IContainerBuilder builder)
         {
+            // ゲーム進行関係
             builder.Register<ChatUseCase>(Lifetime.Scoped);
+            builder.Register<FreeChatUseCase>(Lifetime.Scoped);
             builder.RegisterEntryPoint<NovelChatPresenter>();
             builder.RegisterComponentInHierarchy<ChatWindowView>();
+            
+            // Json関係
+            builder.Register<JsonUtilityProvider>(Lifetime.Scoped)
+                .AsImplementedInterfaces();
+            builder.Register<JsonCreator>(Lifetime.Scoped)
+                .AsImplementedInterfaces();
+            
+            // LLM関係
+            builder.Register<LLMProvider>(Lifetime.Scoped)
+                .AsImplementedInterfaces();
+            
+            // 音声認識関係
+            builder.Register<SpeechRecognitionProvider>(Lifetime.Scoped)
+                .AsImplementedInterfaces();
+            
+            // FMOD関係
+            builder.Register<FMODAudioInputProvider>(Lifetime.Scoped)
+                .AsImplementedInterfaces();
+            builder.Register<FMODBGMService>(Lifetime.Scoped)
+                .AsImplementedInterfaces();
+            builder.Register<FMODSEService>(Lifetime.Scoped)
+                .AsImplementedInterfaces();
         }
     }
 }

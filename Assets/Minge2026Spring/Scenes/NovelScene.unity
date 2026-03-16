@@ -1912,7 +1912,7 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   choicePrefab:
-    m_AssetGUID: 
+    m_AssetGUID: 7d33f1ac26ab7b24994bd0a6d8baa580
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 
@@ -2016,5 +2016,5 @@ SceneRoots:
   - {fileID: 413158103}
   - {fileID: 164508689}
   - {fileID: 1879685076}
-  - {fileID: 1009125335}
   - {fileID: 1933025974}
+  - {fileID: 1009125335}

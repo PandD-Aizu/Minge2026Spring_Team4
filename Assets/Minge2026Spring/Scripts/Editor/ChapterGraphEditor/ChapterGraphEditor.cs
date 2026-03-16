@@ -27,6 +27,14 @@ namespace Minge2026Spring.Scripts.Editor
             ConstructGraphView();
             ConstructSplitView();
             GenerateToolbar();
+
+            // スタイルシートを適用
+            string[] guids = UnityEditor.AssetDatabase.FindAssets("t:StyleSheet ChapterGraphStyle");
+            if (guids.Length > 0)
+            {
+                string path = UnityEditor.AssetDatabase.GUIDToAssetPath(guids[0]);
+                rootVisualElement.styleSheets.Add(UnityEditor.AssetDatabase.LoadAssetAtPath<StyleSheet>(path));
+            }
         }
 
         private void ConstructGraphView()
@@ -51,7 +59,17 @@ namespace Minge2026Spring.Scripts.Editor
             splitView.Add(leftPane);
             
             // 右側のインスペクタ
-            var rightPane = new ScrollView(ScrollViewMode.VerticalAndHorizontal);
+            var rightPane = new ScrollView(ScrollViewMode.VerticalAndHorizontal)
+            {
+                name = "inspector-pane"
+            };
+            
+            var inspectorTitle = new Label("Node Inspector")
+            {
+                name = "inspector-title"
+            };
+            rightPane.Add(inspectorTitle);
+            
             inspectorContainer = new IMGUIContainer(DrawInspector);
             rightPane.Add(inspectorContainer);
             splitView.Add(rightPane);
@@ -61,9 +79,25 @@ namespace Minge2026Spring.Scripts.Editor
         {
             var toolbar = new Toolbar();
 
-            var btnAddNode = new Button(() => graphView.CreateNewNode("NewBlock"))
+            var titleLabel = new Label("Chapter Graph Editor")
             {
-                text = "Add Node"
+                name = "toolbar-title"
+            };
+            toolbar.Add(titleLabel);
+
+            var btnAddDialogue = new Button(() => graphView.CreateNewNode("NewDialogue", ChapterNodeType.Dialogue))
+            {
+                text = "Add Dialogue"
+            };
+
+            var btnAddChoice = new Button(() => graphView.CreateNewNode("NewChoice", ChapterNodeType.Choice))
+            {
+                text = "Add Choice"
+            };
+
+            var btnAddLLM = new Button(() => graphView.CreateNewNode("NewLLM", ChapterNodeType.LLM))
+            {
+                text = "Add LLM"
             };
 
             var btnSave = new Button(SaveData)
@@ -76,7 +110,9 @@ namespace Minge2026Spring.Scripts.Editor
                 text = "Load JSON"
             };
             
-            toolbar.Add(btnAddNode);
+            toolbar.Add(btnAddDialogue);
+            toolbar.Add(btnAddChoice);
+            toolbar.Add(btnAddLLM);
             toolbar.Add(new ToolbarSpacer()
             {
                 flex = true
@@ -98,97 +134,160 @@ namespace Minge2026Spring.Scripts.Editor
         {
             if (selectedNode is null)
             {
+                GUILayout.FlexibleSpace();
+                GUILayout.BeginHorizontal();
+                GUILayout.FlexibleSpace();
                 GUILayout.Label("ノードを選択してください", EditorStyles.centeredGreyMiniLabel);
+                GUILayout.FlexibleSpace();
+                GUILayout.EndHorizontal();
+                GUILayout.FlexibleSpace();
                 return;
             }
 
             var block = selectedNode.BlockData;
             
-            GUILayout.Label("Block Settings", EditorStyles.boldLabel);
+            // Header Section
+            GUILayout.BeginVertical("helpBox");
+            GUILayout.Label("Basic Settings", EditorStyles.boldLabel);
             EditorGUI.BeginChangeCheck();
             block.blockId = EditorGUILayout.TextField("Block ID", block.blockId);
-            selectedNode.title = block.blockId;
+            selectedNode.UpdateTitle();
+            block.nodeType = (ChapterNodeType)EditorGUILayout.EnumPopup("Node Type", block.nodeType);
             block.waitingTime = EditorGUILayout.FloatField("Waiting Time(s)", block.waitingTime);
+            GUILayout.EndVertical();
             
-            GUILayout.Space(10);
+            GUILayout.Space(15);
             
-            // Dialoguesの編集
-            GUILayout.Label("Dialogues", EditorStyles.boldLabel);
-            if (block.dialogues is null)
-                block.dialogues = new Dialogue[0];
-
-            var dialogueList = block.dialogues.ToList();
-            for (int i = 0; i < dialogueList.Count; i++)
+            if (block.nodeType == ChapterNodeType.Dialogue || block.nodeType == ChapterNodeType.LLM)
             {
-                GUILayout.BeginVertical("box");
-                var dialogue = dialogueList[i];
-                dialogue.speaker = EditorGUILayout.TextField("Speaker", dialogue.speaker);
-                dialogue.iconId = EditorGUILayout.TextField("Icon ID", dialogue.iconId);
-                
-                GUILayout.Label("Message:");
-                dialogue.message = EditorGUILayout.TextArea(dialogue.message, GUILayout.Height(40));
-                dialogue.waitingTime = EditorGUILayout.FloatField("Waiting Time(s)", dialogue.waitingTime);
-                
-                dialogueList[i] = dialogue;
+                // Dialoguesの編集
+                GUILayout.Label("Dialogue Sequence", EditorStyles.boldLabel);
+                if (block.dialogues is null)
+                    block.dialogues = new Dialogue[0];
 
-                if (GUILayout.Button("Remove Dialogue", GUILayout.Width(120)))
+                var dialogueList = block.dialogues.ToList();
+                for (int i = 0; i < dialogueList.Count; i++)
                 {
-                    dialogueList.RemoveAt(i);
-                    i--;
+                    GUILayout.BeginVertical("helpBox");
+                    var dialogue = dialogueList[i];
+                    
+                    GUILayout.BeginHorizontal();
+                    GUILayout.Label($"Entry #{i + 1}", EditorStyles.miniBoldLabel);
+                    GUILayout.FlexibleSpace();
+                    if (GUILayout.Button("✕", GUILayout.Width(20)))
+                    {
+                        dialogueList.RemoveAt(i);
+                        i--;
+                        GUILayout.EndHorizontal();
+                        GUILayout.EndVertical();
+                        continue;
+                    }
+                    GUILayout.EndHorizontal();
+
+                    dialogue.speaker = EditorGUILayout.TextField("Speaker", dialogue.speaker);
+                    dialogue.iconId = EditorGUILayout.TextField("Icon ID", dialogue.iconId);
+                    
+                    GUILayout.Label("Message:");
+                    dialogue.message = EditorGUILayout.TextArea(dialogue.message, GUILayout.MinHeight(50), GUILayout.ExpandHeight(true));
+                    dialogue.waitingTime = EditorGUILayout.FloatField("Wait After(s)", dialogue.waitingTime);
+                    
+                    dialogueList[i] = dialogue;
+                    GUILayout.EndVertical();
+                    GUILayout.Space(5);
                 }
                 
-                GUILayout.EndVertical();
-            }
-            
-            if (GUILayout.Button("Add Dialogue"))
-                dialogueList.Add(new Dialogue());
-            
-            block.dialogues = dialogueList.ToArray();
-            
-            GUILayout.Space(10);
-            
-            // Choicesの編集
-            GUILayout.Label("Choices", EditorStyles.boldLabel);
-            if (block.choices is null)
-                block.choices = new Choice[0];
-
-            var choiceList = block.choices.ToList();
-            bool choicesChanged = false;
-            for (int i = 0; i < choiceList.Count; i++)
-            {
                 GUILayout.BeginHorizontal();
-                var choice = choiceList[i];
-                choice.choiceText = EditorGUILayout.TextField(choice.choiceText);
-                choiceList[i] = choice;
-
-                if (GUILayout.Button("X", GUILayout.Width(30)))
-                {
-                    choiceList.RemoveAt(i);
-                    choicesChanged = true;
-                    i--;
-                }
+                if (GUILayout.Button("+ Add Dialogue Entry", GUILayout.Height(25)))
+                    dialogueList.Add(new Dialogue { speaker = "Speaker" });
                 
+                if (dialogueList.Count > 0 && GUILayout.Button("Clear All", GUILayout.Width(70), GUILayout.Height(25)))
+                    dialogueList.Clear();
                 GUILayout.EndHorizontal();
+                
+                block.dialogues = dialogueList.ToArray();
             }
 
-            if (GUILayout.Button("Add Choice"))
+            if (block.nodeType == ChapterNodeType.Choice)
             {
-                choiceList.Add(new Choice
+                // Choicesの編集
+                GUILayout.Label("Branching Choices", EditorStyles.boldLabel);
+                if (block.choices is null)
+                    block.choices = new Choice[0];
+
+                var choiceList = block.choices.ToList();
+                bool choicesChanged = false;
+                for (int i = 0; i < choiceList.Count; i++)
                 {
-                    choiceText = "New Choice"
-                });
-                choicesChanged = true;
+                    GUILayout.BeginHorizontal("helpBox");
+                    var choice = choiceList[i];
+                    choice.choiceText = EditorGUILayout.TextField($"Choice {i+1}", choice.choiceText);
+                    choiceList[i] = choice;
+
+                    if (GUILayout.Button("✕", GUILayout.Width(25)))
+                    {
+                        choiceList.RemoveAt(i);
+                        choicesChanged = true;
+                        i--;
+                    }
+                    GUILayout.EndHorizontal();
+                }
+
+                if (GUILayout.Button("+ Add Choice Option", GUILayout.Height(25)))
+                {
+                    choiceList.Add(new Choice { choiceText = "New Option" });
+                    choicesChanged = true;
+                }
+
+                block.choices = choiceList.ToArray();
+
+                if (choicesChanged)
+                {
+                    selectedNode.RefreshPorts();
+                }
             }
 
-            block.choices = choiceList.ToArray();
-
-            if (choicesChanged)
+            if (block.nodeType == ChapterNodeType.LLM)
             {
-                selectedNode.RefreshPorts();
+                GUILayout.Space(10);
+                // FreeChatの編集
+                GUILayout.Label("AI Conversation (FreeChat)", EditorStyles.boldLabel);
+                if (block.freeChats is null)
+                    block.freeChats = new FreeChat[0];
+
+                var freeChatList = block.freeChats.ToList();
+                for (int i = 0; i < freeChatList.Count; i++)
+                {
+                    GUILayout.BeginVertical("helpBox");
+                    var freeChat = freeChatList[i];
+                    
+                    GUILayout.BeginHorizontal();
+                    GUILayout.Label($"Config #{i + 1}", EditorStyles.miniBoldLabel);
+                    GUILayout.FlexibleSpace();
+                    if (GUILayout.Button("✕", GUILayout.Width(20)))
+                    {
+                        freeChatList.RemoveAt(i);
+                        i--;
+                        GUILayout.EndHorizontal();
+                        GUILayout.EndVertical();
+                        continue;
+                    }
+                    GUILayout.EndHorizontal();
+
+                    freeChat.waitingTime = EditorGUILayout.FloatField("Prep Time(s)", freeChat.waitingTime);
+                    freeChat.recordDuration = EditorGUILayout.FloatField("Record Limit(s)", freeChat.recordDuration);
+                    freeChatList[i] = freeChat;
+                    GUILayout.EndVertical();
+                }
+
+                if (GUILayout.Button("+ Add FreeChat Config", GUILayout.Height(25)))
+                    freeChatList.Add(new FreeChat { waitingTime = 1.0f, recordDuration = 5.0f });
+
+                block.freeChats = freeChatList.ToArray();
             }
 
             if (EditorGUI.EndChangeCheck())
             {
+                selectedNode.RefreshPorts();
                 EditorUtility.SetDirty(this);
             }
         }
@@ -209,7 +308,6 @@ namespace Minge2026Spring.Scripts.Editor
                     .ToList()
                     .Cast<ChapterNode>()
                     .ToList();
-            nodes = nodes.OrderBy(node => node.InputPort.connections.Any() ? 1 : 0).ToList();
             
             var blocks = new List<ChapterBlock>();
 
@@ -217,23 +315,33 @@ namespace Minge2026Spring.Scripts.Editor
             {
                 var block = node.BlockData;
                 
+                // ポジションの保存
+                block.nodePosX = node.GetPosition().x;
+                block.nodePosY = node.GetPosition().y;
+                
                 // 接続されているエッジから遷移先のIDを自動設定する
-                if (block.choices is null || block.choices.Length == 0)
+                if (block.nodeType != ChapterNodeType.Choice)
                 {
-                    var edge = node.DefaultOutputPort.connections.FirstOrDefault();
-                    block.nextBlockId = 
-                        edge is not null ? ((ChapterNode)edge.input.node).BlockData.blockId : "";
+                    if (node.DefaultOutputPort is not null)
+                    {
+                        var edge = node.DefaultOutputPort.connections.FirstOrDefault();
+                        block.nextBlockId = 
+                            edge is not null ? ((ChapterNode)edge.input.node).BlockData.blockId : "";
+                    }
                 }
                 else
                 {
                     block.nextBlockId = "";
-                    for (int i = 0; i < block.choices.Length; i++)
+                    if (block.choices is not null)
                     {
-                        if (i < node.ChoicePorts.Count)
+                        for (int i = 0; i < block.choices.Length; i++)
                         {
-                            var edge = node.ChoicePorts[i].connections.FirstOrDefault();
-                            block.choices[i].nextBlockId =
-                                edge is not null ? ((ChapterNode)edge.input.node).BlockData.blockId : "";
+                            if (i < node.ChoicePorts.Count)
+                            {
+                                var edge = node.ChoicePorts[i].connections.FirstOrDefault();
+                                block.choices[i].nextBlockId =
+                                    edge is not null ? ((ChapterNode)edge.input.node).BlockData.blockId : "";
+                            }
                         }
                     }
                 }
@@ -266,6 +374,7 @@ namespace Minge2026Spring.Scripts.Editor
             foreach (var block in chapter.blocks)
             {
                 var node = graphView.CreateNode(block);
+                node.SetPosition(new Rect(block.nodePosX, block.nodePosY, 200, 150));
                 nodeDict[block.blockId] = node;
             }
 
@@ -274,34 +383,33 @@ namespace Minge2026Spring.Scripts.Editor
                 if (!nodeDict.TryGetValue(block.blockId, out var parentNode))
                     continue;
 
-                if (block.choices is null || block.choices.Length == 0)
+                if (block.nodeType != ChapterNodeType.Choice)
                 {
                     if (!string.IsNullOrEmpty(block.nextBlockId) &&
                         nodeDict.TryGetValue(block.nextBlockId, out var childNode))
                     {
-                        var edge = parentNode.DefaultOutputPort.ConnectTo(childNode.InputPort);
-                        graphView.AddElement(edge);
-                    }
-                }
-                else
-                {
-                    for (int i = 0; i < block.choices.Length; i++)
-                    {
-                        var targetId = block.choices[i].nextBlockId;
-                        if (!string.IsNullOrEmpty(targetId) && nodeDict.TryGetValue(targetId, out var childNode))
+                        if (parentNode.DefaultOutputPort is not null)
                         {
-                            var edge = parentNode.ChoicePorts[i].ConnectTo(childNode.InputPort);
+                            var edge = parentNode.DefaultOutputPort.ConnectTo(childNode.InputPort);
                             graphView.AddElement(edge);
                         }
                     }
                 }
-            }
-
-            int index = 0;
-            foreach (var node in nodeDict.Values)
-            {
-                node.SetPosition(new Rect(index * 250, index * 100, 200, 150));
-                index++;
+                else
+                {
+                    if (block.choices is not null)
+                    {
+                        for (int i = 0; i < block.choices.Length; i++)
+                        {
+                            var targetId = block.choices[i].nextBlockId;
+                            if (!string.IsNullOrEmpty(targetId) && nodeDict.TryGetValue(targetId, out var childNode))
+                            {
+                                var edge = parentNode.ChoicePorts[i].ConnectTo(childNode.InputPort);
+                                graphView.AddElement(edge);
+                            }
+                        }
+                    }
+                }
             }
         }
     }

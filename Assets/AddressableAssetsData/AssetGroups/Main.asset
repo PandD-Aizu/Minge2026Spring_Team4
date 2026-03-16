@@ -15,11 +15,43 @@ MonoBehaviour:
   m_GroupName: Main
   m_GUID: 42cc0676aca0a7344a3c7c2d0f8f8c7c
   m_SerializeEntries:
+  - m_GUID: 158fca97abfe8054cb934f1b0521c17a
+    m_Address: goddo_icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 264eedf5b47d1df41b850f900687cda4
+    m_Address: test
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36964b079ed46354c881315a4577714d
+    m_Address: kashiwamochi_icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43161b92db59e104abe34b5b27848aaa
     m_Address: Chapter1
     m_ReadOnly: 0
     m_SerializedLabels:
     - Json
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7d33f1ac26ab7b24994bd0a6d8baa580
+    m_Address: ChoiceUIObject
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Prefab
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8094d9d6c7cc24f42b2bad3d47e250f8
+    m_Address: ryuta_icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8077101bbbcc774096d56bef6bd4305
+    m_Address: NotoSans_Regular
+    m_ReadOnly: 0
+    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f16210b609ad0fd40b5f0e2a9cc64b93
     m_Address: ChatUIObject
