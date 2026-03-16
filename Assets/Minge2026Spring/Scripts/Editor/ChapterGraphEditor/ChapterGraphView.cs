@@ -10,6 +10,7 @@ namespace Minge2026Spring.Scripts.Editor
     public class ChapterGraphView : GraphView
     {
         private ChapterGraphEditor editor;
+        private NodeSearchWindow searchWindow;
 
         public ChapterGraphView(ChapterGraphEditor editor)
         {
@@ -32,6 +33,23 @@ namespace Minge2026Spring.Scripts.Editor
                 string path = UnityEditor.AssetDatabase.GUIDToAssetPath(guids[0]);
                 styleSheets.Add(UnityEditor.AssetDatabase.LoadAssetAtPath<StyleSheet>(path));
             }
+
+            AddMiniMap();
+            AddSearchWindow();
+        }
+
+        private void AddMiniMap()
+        {
+            var miniMap = new MiniMap { anchored = true };
+            miniMap.SetPosition(new Rect(10, 30, 200, 140));
+            Add(miniMap);
+        }
+
+        private void AddSearchWindow()
+        {
+            searchWindow = ScriptableObject.CreateInstance<NodeSearchWindow>();
+            searchWindow.Init(this);
+            nodeCreationRequest = context => SearchWindow.Open(new SearchWindowContext(context.screenMousePosition), searchWindow);
         }
 
         public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
@@ -43,11 +61,12 @@ namespace Minge2026Spring.Scripts.Editor
                 .ToList();
         }
 
-        public void CreateNewNode(string blockId)
+        public void CreateNewNode(string blockId, ChapterNodeType nodeType)
         {
             var block = new ChapterBlock
             {
                 blockId = blockId,
+                nodeType = nodeType,
                 dialogues = new Dialogue[0],
                 choices = new Choice[0]
             };

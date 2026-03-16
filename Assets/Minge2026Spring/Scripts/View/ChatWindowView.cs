@@ -1,4 +1,5 @@
-﻿using System.Threading;
+﻿using System;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using Minge2026Spring.Scripts.Application.DTOs;
 using UnityEngine;
@@ -20,7 +21,8 @@ namespace Minge2026Spring.Scripts.View
         /// </summary>
         /// <param name="chapterBlock">章のブロック会話データ</param>
         /// <param name="token">キャンセルトークン</param>>
-        public async UniTask AddNewChatObject(ChapterBlock chapterBlock, CancellationToken token)
+        /// <param name="onChoiceSelected">選択肢押下時コールバック</param>
+        public async UniTask AddNewChatObject(ChapterBlock chapterBlock, CancellationToken token, Action<int> onChoiceSelected = null)
         {
             // 待機時間を考慮しながら、UIを順に表示していく
             foreach (var dialogue in chapterBlock.dialogues)
@@ -29,7 +31,7 @@ namespace Minge2026Spring.Scripts.View
                 await chatHandle.ToUniTask(cancellationToken: token);
                 var chatObject = chatHandle.Result;
                 var chatUIView = chatObject.GetComponent<ChatUIView>();
-                chatUIView.SetData(dialogue);
+                chatUIView.SetData(dialogue).Forget();
 
                 if (dialogue.waitingTime > 0)
                     await UniTask.WaitForSeconds(dialogue.waitingTime, cancellationToken: token);
@@ -42,7 +44,7 @@ namespace Minge2026Spring.Scripts.View
                 await choiceHandle.ToUniTask(cancellationToken: token);
                 var choiceObject = choiceHandle.Result;
                 var choiceUIView = choiceObject.GetComponent<ChoiceUIView>();
-                choiceUIView.SetData(chapterBlock.choices);
+                choiceUIView.SetData(chapterBlock.choices, onChoiceSelected);
             }
         }
     }
