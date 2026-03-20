@@ -9,5 +9,13 @@ public class RootLifetimeScope : LifetimeScope
     {
         // Repository
         builder.Register<MoraleRepository>(Lifetime.Singleton);
+        
+        // SceneTransition
+        builder.Register<SceneTransitionProvider>(Lifetime.Singleton)
+            .AsImplementedInterfaces();
+        
+        // Application Management
+        builder.Register<ApplicationStopProvider>(Lifetime.Singleton)
+            .AsImplementedInterfaces();
     }
 }
