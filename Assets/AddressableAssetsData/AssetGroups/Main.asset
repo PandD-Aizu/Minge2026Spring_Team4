@@ -37,6 +37,11 @@ MonoBehaviour:
     m_SerializedLabels:
     - Json
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7517fd8332218e14b82c15b07c1fad58
+    m_Address: OptionScene
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7d33f1ac26ab7b24994bd0a6d8baa580
     m_Address: ChoiceUIObject
     m_ReadOnly: 0
@@ -45,6 +50,21 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8094d9d6c7cc24f42b2bad3d47e250f8
     m_Address: ryuta_icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 832553c7cc5ee1c459a383dfc8ca1235
+    m_Address: ChapterSelectScene
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9520edf0a9f745348a81e83c1fe5ebf7
+    m_Address: TitleScene
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b7ab0efb7c3807347b6f21dc2400dd23
+    m_Address: NovelScene
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
