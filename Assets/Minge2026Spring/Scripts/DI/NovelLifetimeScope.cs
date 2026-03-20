@@ -1,5 +1,7 @@
 using Minge2026Spring.Scripts.Application.UseCase;
+using Minge2026Spring.Scripts.Domain.DomainService;
 using Minge2026Spring.Scripts.Infrastructure.ExternalServices;
+using Minge2026Spring.Scripts.Infrastructure.Repositories;
 using Minge2026Spring.Scripts.Presenter;
 using Minge2026Spring.Scripts.View;
 using UnityEngine;
@@ -15,8 +17,16 @@ namespace Minge2026Spring.Scripts.DI
             // ゲーム進行関係
             builder.Register<ChatUseCase>(Lifetime.Scoped);
             builder.Register<FreeChatUseCase>(Lifetime.Scoped);
+            builder.Register<MoraleUseCase>(Lifetime.Scoped);
+            builder.Register<MoraleCheckService>(Lifetime.Scoped);
             builder.RegisterEntryPoint<NovelChatPresenter>();
             builder.RegisterComponentInHierarchy<ChatWindowView>();
+
+            // Morale関係
+            builder.Register<MoraleRepository>(Lifetime.Scoped)
+                .AsImplementedInterfaces();
+            builder.Register<SharedMemoryService>(Lifetime.Scoped)
+                .AsImplementedInterfaces();
             
             // Json関係
             builder.Register<JsonUtilityProvider>(Lifetime.Scoped)
