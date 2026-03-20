@@ -18,10 +18,10 @@ namespace Minge2026Spring.Scripts.Application.DTOs
     [Serializable]
     public class ChapterBlock
     {
-        public string blockId;       // このブロック固有のID
+        public string blockId;           // このブロック固有のID
         public ChapterNodeType nodeType; // ノードの種類
-        public float nodePosX;       // ノードのX座標
-        public float nodePosY;       // ノードのY座標
+        public float nodePosX;           // ノードのX座標
+        public float nodePosY;           // ノードのY座標
         
         public Dialogue[] dialogues; // このブロックで表示される会話群
         
@@ -49,6 +49,11 @@ namespace Minge2026Spring.Scripts.Application.DTOs
     {
         public string choiceText;  // 選択肢のテキスト
         public string nextBlockId; // 選択肢を選んだ場合の次のブロックのID
+
+        public int characterAMoraleDelta; // CharacterAの士気変化量
+        public int characterBMoraleDelta; // CharacterBの士気変化量
+        public int characterCMoraleDelta; // CharacterCの士気変化量
+        public int characterDMoraleDelta; // CharacterDの士気変化量
     }
 
     [Serializable]
