@@ -1,0 +1,61 @@
+﻿[
+  {
+    "Gimmiks": [
+      {
+        "gimmikName": "罠ブロック",
+        "gimmikPos": [
+          -32.0,
+          512.0
+        ],
+        "value1": 0,
+        "value2": 0.0,
+        "value3": 0.0
+      },
+      {
+        "gimmikName": "罠ブロック",
+        "gimmikPos": [
+          -32.0,
+          544.0
+        ],
+        "value1": 0,
+        "value2": 0.0,
+        "value3": 0.0
+      },
+      {
+        "gimmikName": "ワープ",
+        "gimmikPos": [
+          672.0,
+          608.0
+        ],
+        "value1": "normal4",
+        "value2": 0.0,
+        "value3": 0.0
+      },
+      {
+        "gimmikName": "ワープ",
+        "gimmikPos": [
+          704.0,
+          608.0
+        ],
+        "value1": "normal4",
+        "value2": 0.0,
+        "value3": 0.0
+      },
+      {
+        "gimmikName": "ワープ",
+        "gimmikPos": [
+          736.0,
+          608.0
+        ],
+        "value1": "normal4",
+        "value2": 0.0,
+        "value3": 0.0
+      }
+    ],
+    "background": "sample",
+    "startPlayerPos": [
+      16.0,
+      544.0
+    ]
+  }
+]

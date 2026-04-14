@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using Cysharp.Threading.Tasks;
 using Minge2026Spring.Scripts.Application.DTOs;
 using Minge2026Spring.Scripts.Application.UseCase;
@@ -14,6 +15,7 @@ namespace Minge2026Spring.Scripts.Presenter
         private readonly ChatUseCase _chatUseCase;
         private readonly FreeChatUseCase _freeChatUseCase;
         private readonly MoraleUseCase _moraleUseCase;
+        private readonly GameStarterUseCase _gameStarterUseCase;
         private readonly ChatWindowView _chatWindowView;
         
         private CompositeDisposable _disposables = new();
@@ -22,11 +24,13 @@ namespace Minge2026Spring.Scripts.Presenter
             ChatUseCase chatUseCase,
             FreeChatUseCase freeChatUseCase,
             MoraleUseCase moraleUseCase,
+            GameStarterUseCase gameStarterUseCase,
             ChatWindowView chatWindowView)
         {
             _chatUseCase = chatUseCase;
             _freeChatUseCase = freeChatUseCase;
             _moraleUseCase = moraleUseCase;
+            _gameStarterUseCase = gameStarterUseCase;
             _chatWindowView = chatWindowView;
         }
         
@@ -45,12 +49,6 @@ namespace Minge2026Spring.Scripts.Presenter
                         ApplyChoiceMorale(block, choiceIndex);
                         _chatUseCase.MoveToNextBlock(choiceIndex);
                     });
-
-                    // // FreeChatブロックがあれば、FreeChatUseCaseを使う
-                    // if (block.freeChats != null && block.freeChats.Length > 0)
-                    // {
-                    //     await ProcessFreeChatBlockAsync(block.freeChats[0], token);
-                    // }
                     
                     // 遷移待ちと次ブロックへの移動
                     if (block.choices is null || block.choices.Length == 0)
@@ -64,14 +62,22 @@ namespace Minge2026Spring.Scripts.Presenter
                 })
                 .AddTo(_disposables);
             
+            _chatUseCase.IsChapterEnded
+                .Skip(1)
+                .Where(isEnded => isEnded)
+                .Subscribe(isEnded =>
+                {
+                    if (isEnded)
+                    {
+                        var path = Path.Combine(UnityEngine.Application.streamingAssetsPath, "I_gonna_be_the_tresure_hunter/I_wanna_test.exe");
+                        _gameStarterUseCase.StartGame(path);
+                    }
+                })
+                .AddTo(_disposables);
+            
             // 章の会話データをロードする
             _chatUseCase.LoadChapter("Chapter1").Forget();
         }
-
-        // private async UniTask ProcessFreeChatBlockAsync(FreeChat freeChatData, CancellationToken token)
-        // {
-        //     
-        // }
 
         public void Dispose()
         {

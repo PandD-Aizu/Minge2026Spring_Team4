@@ -1,0 +1,121 @@
+﻿[
+  {
+    "Gimmiks": [
+      {
+        "gimmikName": "罠トリガー",
+        "gimmikPos": [
+          96.0,
+          160.0
+        ],
+        "value1": 0,
+        "value2": 1.0,
+        "value3": 1.0
+      },
+      {
+        "gimmikName": "罠針_上",
+        "gimmikPos": [
+          192.0,
+          96.0
+        ],
+        "value1": 0,
+        "value2": 0.0,
+        "value3": 0.0
+      },
+      {
+        "gimmikName": "罠針_下",
+        "gimmikPos": [
+          32.0,
+          0.0
+        ],
+        "value1": 0,
+        "value2": 270.0,
+        "value3": 1.0
+      },
+      {
+        "gimmikName": "罠針_下",
+        "gimmikPos": [
+          64.0,
+          0.0
+        ],
+        "value1": 0,
+        "value2": 270.0,
+        "value3": 1.0
+      },
+      {
+        "gimmikName": "罠針_下",
+        "gimmikPos": [
+          96.0,
+          0.0
+        ],
+        "value1": 0,
+        "value2": 270.0,
+        "value3": 1.0
+      },
+      {
+        "gimmikName": "罠針_下",
+        "gimmikPos": [
+          128.0,
+          0.0
+        ],
+        "value1": 0,
+        "value2": 270.0,
+        "value3": 1.0
+      },
+      {
+        "gimmikName": "罠針_下",
+        "gimmikPos": [
+          160.0,
+          0.0
+        ],
+        "value1": 0,
+        "value2": 270.0,
+        "value3": 1.0
+      },
+      {
+        "gimmikName": "罠ブロック",
+        "gimmikPos": [
+          672.0,
+          -32.0
+        ],
+        "value1": 1,
+        "value2": 0.0,
+        "value3": 0.0
+      },
+      {
+        "gimmikName": "罠ブロック",
+        "gimmikPos": [
+          704.0,
+          -32.0
+        ],
+        "value1": 1,
+        "value2": 0.0,
+        "value3": 0.0
+      },
+      {
+        "gimmikName": "罠ブロック",
+        "gimmikPos": [
+          736.0,
+          -32.0
+        ],
+        "value1": 1,
+        "value2": 0.0,
+        "value3": 0.0
+      },
+      {
+        "gimmikName": "ワープ",
+        "gimmikPos": [
+          32.0,
+          608.0
+        ],
+        "value1": "normal6",
+        "value2": 0.0,
+        "value3": 0.0
+      }
+    ],
+    "background": "sample",
+    "startPlayerPos": [
+      720.0,
+      16.0
+    ]
+  }
+]

@@ -24,7 +24,7 @@ namespace Minge2026Spring.Scripts.Infrastructure.ExternalServices
             bool isInitialized = LLMForUnityManager.Init(modelPath);
             if (!isInitialized)
             {
-                Debug.LogError("[LLMProvider] Failed to initialize LLMForUnityManager.");
+                Debug.LogError($"[LLMProvider] Failed to initialize LLMForUnityManager.\nmodelPath = {modelPath}");
             }
         }
 

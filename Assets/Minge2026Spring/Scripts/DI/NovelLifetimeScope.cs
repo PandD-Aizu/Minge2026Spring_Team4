@@ -18,6 +18,7 @@ namespace Minge2026Spring.Scripts.DI
             builder.Register<ChatUseCase>(Lifetime.Scoped);
             builder.Register<FreeChatUseCase>(Lifetime.Scoped);
             builder.Register<MoraleUseCase>(Lifetime.Scoped);
+            builder.Register<GameStarterUseCase>(Lifetime.Scoped);
             builder.Register<MoraleCheckService>(Lifetime.Scoped);
             builder.RegisterEntryPoint<NovelChatPresenter>();
             builder.RegisterComponentInHierarchy<ChatWindowView>();
@@ -40,6 +41,10 @@ namespace Minge2026Spring.Scripts.DI
             
             // 音声認識関係
             builder.Register<SpeechRecognitionProvider>(Lifetime.Scoped)
+                .AsImplementedInterfaces();
+            
+            // 外部プロセス関係
+            builder.Register<ExternalProcessProvider>(Lifetime.Scoped)
                 .AsImplementedInterfaces();
             
             // FMOD関係

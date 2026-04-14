@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using Minge2026Spring.Scripts.Application.DTOs;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.UI;
 
 namespace Minge2026Spring.Scripts.View
 {
@@ -11,6 +13,7 @@ namespace Minge2026Spring.Scripts.View
     {
         [Header("UI Components")]
         [SerializeField] public Transform scrollViewContentTransform;
+        [SerializeField] public ScrollRect scrollRect;
 
         [Header("Prefabs")] 
         [SerializeField] public AssetReference chatPrefab;
@@ -32,6 +35,8 @@ namespace Minge2026Spring.Scripts.View
                 var chatObject = chatHandle.Result;
                 var chatUIView = chatObject.GetComponent<ChatUIView>();
                 chatUIView.SetData(dialogue).Forget();
+                
+                ScrollToBottom();
 
                 if (dialogue.waitingTime > 0)
                     await UniTask.WaitForSeconds(dialogue.waitingTime, cancellationToken: token);
@@ -45,7 +50,26 @@ namespace Minge2026Spring.Scripts.View
                 var choiceObject = choiceHandle.Result;
                 var choiceUIView = choiceObject.GetComponent<ChoiceUIView>();
                 choiceUIView.SetData(chapterBlock.choices, onChoiceSelected);
+                
+                ScrollToBottom();
             }
+        }
+
+        /// <summary>
+        /// 一番下までスクロールする
+        /// </summary>
+        private void ScrollToBottom()
+        {
+            if (scrollRect is null)
+                return;
+
+            // キャンバスの描画を更新
+            Canvas.ForceUpdateCanvases();
+
+            // 一番下まで移動
+            scrollRect
+                .DOVerticalNormalizedPos(0f, 0.3f)
+                .SetEase(Ease.OutQuart);
         }
     }
 }
