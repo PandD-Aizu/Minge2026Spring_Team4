@@ -175,81 +175,8 @@
                     "waitingTime": 5.0
                 }
             ],
-            "choices": [
-                {
-                    "choiceText": "アクションかシューティングを作ろう",
-                    "nextBlockId": "Part1_1_Branch_Ans0",
-                    "characterAMoraleDelta": 1,
-                    "characterBMoraleDelta": 2,
-                    "characterCMoraleDelta": 0,
-                    "characterDMoraleDelta": 1
-                },
-                {
-                    "choiceText": "すごいの作ろう",
-                    "nextBlockId": "Part1_1_Branch_Ans1",
-                    "characterAMoraleDelta": 0,
-                    "characterBMoraleDelta": -1,
-                    "characterCMoraleDelta": -2,
-                    "characterDMoraleDelta": -1
-                },
-                {
-                    "choiceText": "みんなはどうしたい？",
-                    "nextBlockId": "Part1_1_Branch_Ans2",
-                    "characterAMoraleDelta": 1,
-                    "characterBMoraleDelta": 1,
-                    "characterCMoraleDelta": 2,
-                    "characterDMoraleDelta": 1
-                }
-            ],
-            "nextBlockId": "Choices",
-            "freeChats": [],
-            "waitingTime": 5.0
-        },
-        {
-            "blockId": "Part1_1_Branch_Ans0",
-            "nodeType": 0,
-            "nodePosX": 739.0,
-            "nodePosY": 1.0,
-            "dialogues": [
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "アクションかシューティングを　作りたいなって思うんだけど\nみんなはどう思う？",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "ryuta_icon",
-                    "speaker": "Ryuta",
-                    "message": "え　めっちゃいいじゃないですか\n僕アクション作るの　得意ですよ！",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "他のみんなはどう思う？",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっと",
-                    "message": "無難なシステムなら　実装も難しくないだろうし\nいいんじゃない？",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "milu_icon",
-                    "speaker": "Milu",
-                    "message": "えと……メカっぽいの描くの苦手なんですけど……\nそれで大丈夫なら　いいと思います",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "kashiwamochi_icon",
-                    "speaker": "かしわもち",
-                    "message": "まぁ　いいと思います\n曲の雰囲気とか　言ってもらえれば　全然作るので",
-                    "waitingTime": 5.0
-                }
-            ],
             "choices": [],
-            "nextBlockId": "Part1_2",
+            "nextBlockId": "Choices",
             "freeChats": [],
             "waitingTime": 5.0
         },
@@ -350,6 +277,54 @@
             "waitingTime": 5.0
         },
         {
+            "blockId": "Part1_1_Branch_Ans0",
+            "nodeType": 0,
+            "nodePosX": 739.0,
+            "nodePosY": 1.0,
+            "dialogues": [
+                {
+                    "iconId": "player_icon",
+                    "speaker": "主人公",
+                    "message": "アクションかシューティングを　作りたいなって思うんだけど\nみんなはどう思う？",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "ryuta_icon",
+                    "speaker": "Ryuta",
+                    "message": "え　めっちゃいいじゃないですか\n僕アクション作るの　得意ですよ！",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "player_icon",
+                    "speaker": "主人公",
+                    "message": "他のみんなはどう思う？",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "goddo_icon",
+                    "speaker": "ごっと",
+                    "message": "無難なシステムなら　実装も難しくないだろうし\nいいんじゃない？",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "milu_icon",
+                    "speaker": "Milu",
+                    "message": "えと……メカっぽいの描くの苦手なんですけど……\nそれで大丈夫なら　いいと思います",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "kashiwamochi_icon",
+                    "speaker": "かしわもち",
+                    "message": "まぁ　いいと思います\n曲の雰囲気とか　言ってもらえれば　全然作るので",
+                    "waitingTime": 5.0
+                }
+            ],
+            "choices": [],
+            "nextBlockId": "Part1_2",
+            "freeChats": [],
+            "waitingTime": 5.0
+        },
+        {
             "blockId": "Part1_2",
             "nodeType": 0,
             "nodePosX": 1050.0,
@@ -402,7 +377,7 @@
                     "choiceText": "アクションかシューティングを作ろう",
                     "nextBlockId": "Part1_1_Branch_Ans0",
                     "characterAMoraleDelta": 1,
-                    "characterBMoraleDelta": 2,
+                    "characterBMoraleDelta": 95,
                     "characterCMoraleDelta": 0,
                     "characterDMoraleDelta": 1
                 },
@@ -418,7 +393,7 @@
                     "choiceText": "みんなはどうしたい？",
                     "nextBlockId": "Part1_1_Branch_Ans2",
                     "characterAMoraleDelta": 1,
-                    "characterBMoraleDelta": 1,
+                    "characterBMoraleDelta": -10,
                     "characterCMoraleDelta": 2,
                     "characterDMoraleDelta": 1
                 }

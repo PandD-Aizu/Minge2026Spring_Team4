@@ -24,20 +24,20 @@ namespace Minge2026Spring.Scripts.View
         /// スクロールビューに新しい会話オブジェクトを追加する
         /// </summary>
         /// <param name="chapterBlock">章のブロック会話データ</param>
-        /// <param name="token">キャンセルトークン</param>>
+        /// <param name="token">キャンセルトークン</param>
         /// <param name="onChoiceSelected">選択肢押下時コールバック</param>
-        /// <param name="skipDelays">trueの場合は会話の待機時間をスキップする</param>
+        /// <param name="shouldSkipDelays">trueを返す間は会話の待機時間をスキップする</param>
         public async UniTask AddNewChatObject(
             ChapterBlock chapterBlock,
             CancellationToken token,
             Action<int> onChoiceSelected = null,
-            bool skipDelays = false)
+            Func<bool> shouldSkipDelays = null)
         {
-            await RenderDialoguesAsync(chapterBlock, token, skipDelays);
+            await RenderDialoguesAsync(chapterBlock, token, shouldSkipDelays);
             await RenderChoicesAsync(chapterBlock, token, onChoiceSelected);
         }
 
-        private async UniTask RenderDialoguesAsync(ChapterBlock chapterBlock, CancellationToken token, bool skipDelays)
+        private async UniTask RenderDialoguesAsync(ChapterBlock chapterBlock, CancellationToken token, Func<bool> shouldSkipDelays)
         {
             if (chapterBlock.dialogues is null || chapterBlock.dialogues.Length == 0)
                 return;
@@ -53,8 +53,27 @@ namespace Minge2026Spring.Scripts.View
 
                 ScrollToBottom();
 
-                if (!skipDelays && dialogue.waitingTime > 0)
-                    await UniTask.WaitForSeconds(dialogue.waitingTime, cancellationToken: token);
+                if (dialogue.waitingTime > 0)
+                    await WaitForDialogueDelayAsync(dialogue.waitingTime, token, shouldSkipDelays);
+            }
+        }
+
+        private static async UniTask WaitForDialogueDelayAsync(float waitingTime, CancellationToken token, Func<bool> shouldSkipDelays)
+        {
+            if (shouldSkipDelays?.Invoke() == true)
+                return;
+
+            const float stepSeconds = 0.1f;
+            var remaining = waitingTime;
+
+            while (remaining > 0f)
+            {
+                if (shouldSkipDelays?.Invoke() == true)
+                    return;
+
+                var waitSeconds = Mathf.Min(stepSeconds, remaining);
+                await UniTask.WaitForSeconds(waitSeconds, cancellationToken: token);
+                remaining -= waitSeconds;
             }
         }
 

@@ -60,6 +60,12 @@ namespace Minge2026Spring.Scripts.Application.UseCase
         /// <returns></returns>
         public MoraleDto GetMoraleDto()
         {
+            if (_cache == null)
+            {
+                _cache = new InternalParameterCollection();
+                EnsureDefaultCharacters();
+            }
+
             var dto = new MoraleDto();
             foreach(var character in _cache.Characters)
                 dto.MoraleMap[character.Key] = character.Value.Morale;

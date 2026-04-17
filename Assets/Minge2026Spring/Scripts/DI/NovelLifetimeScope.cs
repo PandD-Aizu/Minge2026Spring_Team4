@@ -1,7 +1,9 @@
 using Minge2026Spring.Scripts.Application.UseCase;
+using Minge2026Spring.Scripts.Application.Interface;
 using Minge2026Spring.Scripts.Domain.DomainService;
 using Minge2026Spring.Scripts.Infrastructure.ExternalServices;
 using Minge2026Spring.Scripts.Infrastructure.Repositories;
+using Minge2026Spring.Scripts.Infrastructure.Tmp;
 using Minge2026Spring.Scripts.Presenter;
 using Minge2026Spring.Scripts.View;
 using UnityEngine;
@@ -33,6 +35,8 @@ namespace Minge2026Spring.Scripts.DI
             builder.Register<JsonUtilityProvider>(Lifetime.Scoped)
                 .AsImplementedInterfaces();
             builder.Register<JsonCreator>(Lifetime.Scoped)
+                .AsImplementedInterfaces();
+            builder.Register<TmpMoraleValueJsonService>(Lifetime.Scoped)
                 .AsImplementedInterfaces();
             
             // LLM関係

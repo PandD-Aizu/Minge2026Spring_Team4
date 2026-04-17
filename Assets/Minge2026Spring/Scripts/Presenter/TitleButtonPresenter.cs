@@ -24,7 +24,7 @@ namespace Minge2026Spring.Scripts.Presenter
 
         public void Initialize()
         { 
-            BindTransition(_view.StartButton,  _useCase.LoadChapterSelectSceneAsync);
+            BindTransition(_view.StartButton,  _useCase.LoadNovelSceneAsync);
             BindTransition(_view.OptionButton, _useCase.LoadOptionSceneAsync);
             BindTransition(_view.ExitButton,   _appStopUseCase.StopApplication);
         }

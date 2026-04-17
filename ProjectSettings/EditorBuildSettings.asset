@@ -6,8 +6,14 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Minge2026Spring/Scenes/TitleScene.unity
+    guid: 9520edf0a9f745348a81e83c1fe5ebf7
+  - enabled: 1
+    path: Assets/Minge2026Spring/Scenes/OptionScene.unity
+    guid: 7517fd8332218e14b82c15b07c1fad58
+  - enabled: 1
+    path: Assets/Minge2026Spring/Scenes/NovelScene.unity
+    guid: b7ab0efb7c3807347b6f21dc2400dd23
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 4130620a44b1f6342ab6ac1374f9dd83, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
