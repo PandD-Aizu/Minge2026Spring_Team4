@@ -14,6 +14,7 @@ namespace Minge2026Spring.Scripts.View
         [Header("UI Components")]
         [SerializeField] public Transform scrollViewContentTransform;
         [SerializeField] public ScrollRect scrollRect;
+        [SerializeField] public Button skipButton;
 
         [Header("Prefabs")] 
         [SerializeField] public AssetReference chatPrefab;
@@ -25,8 +26,22 @@ namespace Minge2026Spring.Scripts.View
         /// <param name="chapterBlock">章のブロック会話データ</param>
         /// <param name="token">キャンセルトークン</param>>
         /// <param name="onChoiceSelected">選択肢押下時コールバック</param>
-        public async UniTask AddNewChatObject(ChapterBlock chapterBlock, CancellationToken token, Action<int> onChoiceSelected = null)
+        /// <param name="skipDelays">trueの場合は会話の待機時間をスキップする</param>
+        public async UniTask AddNewChatObject(
+            ChapterBlock chapterBlock,
+            CancellationToken token,
+            Action<int> onChoiceSelected = null,
+            bool skipDelays = false)
         {
+            await RenderDialoguesAsync(chapterBlock, token, skipDelays);
+            await RenderChoicesAsync(chapterBlock, token, onChoiceSelected);
+        }
+
+        private async UniTask RenderDialoguesAsync(ChapterBlock chapterBlock, CancellationToken token, bool skipDelays)
+        {
+            if (chapterBlock.dialogues is null || chapterBlock.dialogues.Length == 0)
+                return;
+
             // 待機時間を考慮しながら、UIを順に表示していく
             foreach (var dialogue in chapterBlock.dialogues)
             {
@@ -35,24 +50,27 @@ namespace Minge2026Spring.Scripts.View
                 var chatObject = chatHandle.Result;
                 var chatUIView = chatObject.GetComponent<ChatUIView>();
                 chatUIView.SetData(dialogue).Forget();
-                
+
                 ScrollToBottom();
 
-                if (dialogue.waitingTime > 0)
+                if (!skipDelays && dialogue.waitingTime > 0)
                     await UniTask.WaitForSeconds(dialogue.waitingTime, cancellationToken: token);
             }
+        }
 
+        private async UniTask RenderChoicesAsync(ChapterBlock chapterBlock, CancellationToken token, Action<int> onChoiceSelected)
+        {
             // 選択肢があれば、最後に表示する
-            if (chapterBlock.choices is not null && chapterBlock.choices.Length > 0)
-            {
-                var choiceHandle = Addressables.InstantiateAsync(choicePrefab, scrollViewContentTransform);
-                await choiceHandle.ToUniTask(cancellationToken: token);
-                var choiceObject = choiceHandle.Result;
-                var choiceUIView = choiceObject.GetComponent<ChoiceUIView>();
-                choiceUIView.SetData(chapterBlock.choices, onChoiceSelected);
-                
-                ScrollToBottom();
-            }
+            if (chapterBlock.choices is null || chapterBlock.choices.Length == 0)
+                return;
+
+            var choiceHandle = Addressables.InstantiateAsync(choicePrefab, scrollViewContentTransform);
+            await choiceHandle.ToUniTask(cancellationToken: token);
+            var choiceObject = choiceHandle.Result;
+            var choiceUIView = choiceObject.GetComponent<ChoiceUIView>();
+            choiceUIView.SetData(chapterBlock.choices, onChoiceSelected);
+
+            ScrollToBottom();
         }
 
         /// <summary>

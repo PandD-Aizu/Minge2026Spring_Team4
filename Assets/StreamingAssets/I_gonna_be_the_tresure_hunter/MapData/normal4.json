@@ -7,9 +7,7 @@
           672.0,
           608.0
         ],
-        "value1": "normal5",
-        "value2": 0.0,
-        "value3": 0.0
+        "value1": "normal7"
       },
       {
         "gimmikName": "罠ブロック",
@@ -17,9 +15,7 @@
           672.0,
           -32.0
         ],
-        "value1": 0,
-        "value2": 0.0,
-        "value3": 0.0
+        "value1": 0
       },
       {
         "gimmikName": "罠ブロック",
@@ -27,9 +23,7 @@
           704.0,
           -32.0
         ],
-        "value1": 0,
-        "value2": 0.0,
-        "value3": 0.0
+        "value1": 0
       },
       {
         "gimmikName": "罠ブロック",
@@ -37,9 +31,7 @@
           736.0,
           -32.0
         ],
-        "value1": 0,
-        "value2": 0.0,
-        "value3": 0.0
+        "value1": 0
       },
       {
         "gimmikName": "特殊ワープ",
@@ -47,9 +39,7 @@
           496.0,
           304.0
         ],
-        "value1": "secret1",
-        "value2": 0.0,
-        "value3": 0.0
+        "value1": "normal5"
       }
     ],
     "background": "sample",
