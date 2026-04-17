@@ -1,7 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Minge2026Spring.Scripts.Application.DTOs
 {
+    public static class CharacterMoraleKeys
+    {
+        public const string CharacterA = "Got";
+        public const string CharacterB = "Ryuta";
+        public const string CharacterC = "Milu";
+        public const string CharacterD = "kashiwa";
+    }
+
+    public readonly struct CharacterMoraleDelta
+    {
+        public string CharacterId { get; }
+        public int Delta { get; }
+
+        public CharacterMoraleDelta(string characterId, int delta)
+        {
+            CharacterId = characterId;
+            Delta = delta;
+        }
+    }
+
     [Serializable]
     public class Chapter
     {
@@ -54,6 +75,14 @@ namespace Minge2026Spring.Scripts.Application.DTOs
         public int characterBMoraleDelta; // CharacterBの士気変化量
         public int characterCMoraleDelta; // CharacterCの士気変化量
         public int characterDMoraleDelta; // CharacterDの士気変化量
+
+        public IEnumerable<CharacterMoraleDelta> GetMoraleDeltas()
+        {
+            yield return new CharacterMoraleDelta(CharacterMoraleKeys.CharacterA, characterAMoraleDelta);
+            yield return new CharacterMoraleDelta(CharacterMoraleKeys.CharacterB, characterBMoraleDelta);
+            yield return new CharacterMoraleDelta(CharacterMoraleKeys.CharacterC, characterCMoraleDelta);
+            yield return new CharacterMoraleDelta(CharacterMoraleKeys.CharacterD, characterDMoraleDelta);
+        }
     }
 
     [Serializable]

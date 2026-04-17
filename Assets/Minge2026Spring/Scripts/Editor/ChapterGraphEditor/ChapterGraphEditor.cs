@@ -218,18 +218,26 @@ namespace Minge2026Spring.Scripts.Editor
                 bool choicesChanged = false;
                 for (int i = 0; i < choiceList.Count; i++)
                 {
-                    GUILayout.BeginHorizontal("helpBox");
+                    GUILayout.BeginVertical("helpBox");
                     var choice = choiceList[i];
+
+                    GUILayout.BeginHorizontal();
                     choice.choiceText = EditorGUILayout.TextField($"Choice {i+1}", choice.choiceText);
-                    choiceList[i] = choice;
 
                     if (GUILayout.Button("✕", GUILayout.Width(25)))
                     {
                         choiceList.RemoveAt(i);
                         choicesChanged = true;
                         i--;
+                        GUILayout.EndHorizontal();
+                        GUILayout.EndVertical();
+                        continue;
                     }
                     GUILayout.EndHorizontal();
+
+                    choice = DrawChoiceMoraleFields(choice);
+                    choiceList[i] = choice;
+                    GUILayout.EndVertical();
                 }
 
                 if (GUILayout.Button("+ Add Choice Option", GUILayout.Height(25)))
@@ -292,6 +300,19 @@ namespace Minge2026Spring.Scripts.Editor
             }
         }
 
+        private static Choice DrawChoiceMoraleFields(Choice choice)
+        {
+            GUILayout.Space(4);
+            GUILayout.Label("Morale Delta", EditorStyles.miniBoldLabel);
+
+            choice.characterAMoraleDelta = EditorGUILayout.IntField("Got", choice.characterAMoraleDelta);
+            choice.characterBMoraleDelta = EditorGUILayout.IntField("Ryuta", choice.characterBMoraleDelta);
+            choice.characterCMoraleDelta = EditorGUILayout.IntField("Milu", choice.characterCMoraleDelta);
+            choice.characterDMoraleDelta = EditorGUILayout.IntField("Kashiwa", choice.characterDMoraleDelta);
+
+            return choice;
+        }
+
         /// <summary>
         /// Jsonの保存と読み込み
         /// </summary>
@@ -322,6 +343,7 @@ namespace Minge2026Spring.Scripts.Editor
                 // 接続されているエッジから遷移先のIDを自動設定する
                 if (block.nodeType != ChapterNodeType.Choice)
                 {
+                    block.choices = new Choice[0];
                     if (node.DefaultOutputPort is not null)
                     {
                         var edge = node.DefaultOutputPort.connections.FirstOrDefault();

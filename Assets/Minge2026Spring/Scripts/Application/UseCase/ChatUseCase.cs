@@ -16,6 +16,9 @@ namespace Minge2026Spring.Scripts.Application.UseCase
 
         public ReadOnlyReactiveProperty<ChapterBlock> CurrentChapterBlock => _currentChapterBlock.ToReadOnlyReactiveProperty();
         private readonly ReactiveProperty<ChapterBlock> _currentChapterBlock = new ();
+
+        public ReadOnlyReactiveProperty<bool> IsChapterEnded => _isChapterEnded.ToReadOnlyReactiveProperty();
+        private readonly ReactiveProperty<bool> _isChapterEnded = new (false);
         
         public ChatUseCase(IJsonUtilityProvider jsonUtilityProvider)
         {
@@ -29,9 +32,14 @@ namespace Minge2026Spring.Scripts.Application.UseCase
         public async UniTaskVoid LoadChapter(string chapterId)
         {
             // 章の会話データをjsonからロードする
+            _isChapterEnded.Value = false;
             _chapter = await _jsonUtilityProvider.ConvertJsonToAnyObjectAsync<Chapter>(chapterId);
             if (_chapter?.blocks is null || _chapter.blocks.Length == 0)
+            {
+                _currentChapterBlock.Value = null;
+                _isChapterEnded.Value = true;
                 return;
+            }
             
             // ブロックに分割
             _chapterBlocks = _chapter.blocks.ToList();
@@ -47,6 +55,11 @@ namespace Minge2026Spring.Scripts.Application.UseCase
         public void MoveToNextBlock(int userChooseIndex = -1)
         {
             var currentBlock = _currentChapterBlock.Value;
+            if (currentBlock is null)
+            {
+                _isChapterEnded.Value = true;
+                return;
+            }
             
             // 選択肢がある: 遷移先へ移動、選択肢がない: 通常の遷移先へ移動
             string nextBlockId = (userChooseIndex >= 0 && currentBlock.choices?.Length > userChooseIndex) 
@@ -55,6 +68,10 @@ namespace Minge2026Spring.Scripts.Application.UseCase
             
             // 取得したIDに該当するブロックに更新
             _currentChapterBlock.Value = _chapterBlocks.FirstOrDefault(block => block.blockId == nextBlockId);
+            if (_currentChapterBlock.Value is null)
+            {
+                _isChapterEnded.Value = true;
+            }
         }
     }
 }
