@@ -1,4 +1,5 @@
 ﻿using System;
+using Minge2026Spring.Scripts.Application.Interface;
 using Minge2026Spring.Scripts.Application.UseCase;
 using R3;
 using UnityEngine;
@@ -10,6 +11,7 @@ namespace Minge2026Spring.Scripts.Presenter
     {
         private readonly ProcessUseCase _processUseCase;
         private readonly SceneTransitionUseCase _sceneTransitionUseCase;
+        private bool _hasObservedRunning;
 
         private CompositeDisposable _disposables = new ();
 
@@ -23,14 +25,26 @@ namespace Minge2026Spring.Scripts.Presenter
         {
             _processUseCase.IsProcessRunning
                 .Skip(1)
-                .Where(isRunning => !isRunning)
-                .Subscribe(_ => _sceneTransitionUseCase.LoadResultSceneAsync())
+                .Subscribe(isRunning =>
+                {
+                    if (isRunning)
+                    {
+                        _hasObservedRunning = true;
+                        return;
+                    }
+
+                    // 起動済みプロセスが停止した時だけリザルトへ遷移する。
+                    if (_hasObservedRunning)
+                    {
+                        _hasObservedRunning = false;
+                        _sceneTransitionUseCase.LoadResultSceneAsync();
+                    }
+                })
                 .AddTo(_disposables);
         }
         
         public void Tick()
         {
-            Debug.Log($"Process is running: {_processUseCase.IsProcessRunning.CurrentValue}");
             _processUseCase.CheckProcessIsRunning();
         }
 

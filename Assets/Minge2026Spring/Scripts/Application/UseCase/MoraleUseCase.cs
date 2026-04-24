@@ -4,8 +4,7 @@ using Minge2026Spring.Scripts.Application.Interface;
 using Minge2026Spring.Scripts.Domain.DomainService;
 using Minge2026Spring.Scripts.Domain.Entities;
 using Minge2026Spring.Scripts.Domain.Interface;
-using Minge2026Spring.Scripts.Domain.ValueObject;
-using Minge2026Spring.Scripts.Infrastructure.DTOs;
+using Minge2026Spring.Scripts.Domain.ValueObjects;
 using UnityEngine;
 
 namespace Minge2026Spring.Scripts.Application.UseCase

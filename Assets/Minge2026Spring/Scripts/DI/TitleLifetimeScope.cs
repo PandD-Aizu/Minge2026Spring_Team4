@@ -13,9 +13,9 @@ namespace Minge2026Spring.Scripts.DI
             builder.Register<SceneTransitionUseCase>(Lifetime.Scoped);
             builder.Register<ApplicationStopUseCase>(Lifetime.Scoped);
             
-            builder.RegisterEntryPoint<TitleButtonPresenter>();
+            builder.RegisterEntryPoint<TitleDefaultUIPresenter>();
 
-            builder.RegisterComponentInHierarchy<TitleButtonView>();
+            builder.RegisterComponentInHierarchy<TitleDefaultUIView>();
         }
     }
 }

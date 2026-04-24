@@ -3,6 +3,7 @@ using System.IO.MemoryMappedFiles;
 using System.Runtime.InteropServices;
 using System.Threading;
 using Minge2026Spring.Scripts.Application.Interface;
+using Minge2026Spring.Scripts.Domain.Entities;
 using Minge2026Spring.Scripts.Infrastructure.DTOs;
 
 namespace Minge2026Spring.Scripts.Infrastructure.ExternalServices

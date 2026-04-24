@@ -24,8 +24,7 @@ namespace Minge2026Spring.Scripts.Application.UseCase
         {
             var combinedPass = Path.Combine(UnityEngine.Application.streamingAssetsPath, startProcess);
             
-            _externalProcessProvider.StartProcess(combinedPass);
-            _isProcessRunning.Value = true;
+            _isProcessRunning.Value = _externalProcessProvider.StartProcess(combinedPass);
         }
 
         /// <summary>
@@ -42,7 +41,8 @@ namespace Minge2026Spring.Scripts.Application.UseCase
         /// </summary>
         public void CheckProcessIsRunning()
         {
-            _isProcessRunning.Value = !_externalProcessProvider.IsProcessRunning();
+            _externalProcessProvider.UpdateProcessHandle();
+            _isProcessRunning.Value = _externalProcessProvider.IsProcessRunning();
         }
     }
 }

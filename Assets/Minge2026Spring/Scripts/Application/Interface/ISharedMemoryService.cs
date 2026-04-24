@@ -1,4 +1,4 @@
-﻿using Minge2026Spring.Scripts.Infrastructure.DTOs;
+﻿using Minge2026Spring.Scripts.Domain.Entities;
 
 namespace Minge2026Spring.Scripts.Application.Interface
 {

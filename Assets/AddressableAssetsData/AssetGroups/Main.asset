@@ -42,6 +42,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a8e2a291a34eb24dad55469cc801465
+    m_Address: ChoiceButtonTex
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7517fd8332218e14b82c15b07c1fad58
     m_Address: OptionScene
     m_ReadOnly: 0
@@ -59,7 +64,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 832553c7cc5ee1c459a383dfc8ca1235
-    m_Address: ChapterSelectScene
+    m_Address: AchievementScene
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -79,7 +84,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: abd18c319dc604b41afc5a31b10b86d5
-    m_Address: ResultScene
+    m_Address: EndingScene
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -87,6 +92,12 @@ MonoBehaviour:
     m_Address: NovelScene
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e1e244ace8b4e1d4097b842613495fac
+    m_Address: Chapter
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e8077101bbbcc774096d56bef6bd4305
     m_Address: NotoSans_Regular

@@ -1,36 +1,34 @@
 ﻿using System.IO;
 using Cysharp.Threading.Tasks;
+using Minge2026Spring.Scripts.Application.Interface;
 using Minge2026Spring.Scripts.Infrastructure.DTOs;
-using Minge2026Spring.Scripts.Infrastructure.ExternalServices;
 using UnityEngine;
 
 namespace Minge2026Spring.Scripts.Infrastructure.Repositories
 {
-    public class FMODSettingsRepository
+    public class FMODSettingsRepository : IFMODSettingsRepository
     {
-        private readonly JsonUtilityProvider _jsonUtilityProvider;
-        private readonly JsonCreator _jsonCreator;
+        private readonly IJsonUtilityProvider _jsonUtilityProvider;
+        private readonly IJsonFileCreator _jsonCreator;
         
         private const string SettingsFileName = "FMODSettings.json";
         private string filePath = Path.Combine(UnityEngine.Application.persistentDataPath, SettingsFileName);
         
-        public float MasterVolume;
-        public float BgmVolume;
-        public float SeVolume;
+        public float MasterVolume { get; set; } = 1.0f;
+        public float BgmVolume { get; set; } = 1.0f;
+        public float SeVolume { get; set; } = 1.0f;
 
         public FMODSettingsRepository(
-            JsonUtilityProvider jsonUtilityProvider,
-            JsonCreator jsonCreator)
+            IJsonUtilityProvider jsonUtilityProvider,
+            IJsonFileCreator jsonCreator)
         {
             _jsonUtilityProvider = jsonUtilityProvider;
             _jsonCreator = jsonCreator;
             
-            LoadSettings().Forget();
+            LoadSettingsAsync().Forget();
         }
 
-        /// <summary>
-        /// 現在の設定値をjsonファイルにセーブ
-        /// </summary>
+        /// <inheritdoc/>
         public void SaveSettings()
         {
             var settingsData = new FMODSettingsData
@@ -44,21 +42,24 @@ namespace Minge2026Spring.Scripts.Infrastructure.Repositories
             _jsonCreator.CreateTextToJsonFile(filePath, jsonText);
         }
 
-        /// <summary>
-        /// jsonファイルから設定値をロードしてプロパティに反映
-        /// </summary>
-        public async UniTaskVoid LoadSettings()
+        /// <inheritdoc/>
+        public UniTaskVoid LoadSettingsAsync()
         {
             if (!File.Exists(filePath))
             {
                 Debug.LogWarning($"[FMODSettingsRepository] Settings file not found: {filePath}");
-                return;
+                return default;
             }
 
             try
             {
                 string jsonText = File.ReadAllText(filePath);
-                var settingsData = await _jsonUtilityProvider.ConvertJsonToAnyObjectAsync<FMODSettingsData>(jsonText);
+                var settingsData = _jsonUtilityProvider.ConvertRawJsonToAnyObject<FMODSettingsData>(jsonText);
+                if (settingsData == null)
+                {
+                    Debug.LogError($"[FMODSettingsRepository] Failed to parse settings JSON: {filePath}");
+                    return default;
+                }
                 
                 MasterVolume = settingsData.MasterVolume;
                 BgmVolume = settingsData.BgmVolume;
@@ -69,6 +70,8 @@ namespace Minge2026Spring.Scripts.Infrastructure.Repositories
                 Debug.LogError($"[FMODSettingsRepository] Failed to load settings from file: {filePath}");
                 Debug.LogError(e);
             }
+
+            return default;
         }
     }
 }

@@ -255,11 +255,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 468489489
-      Data2: 1223164286
-      Data3: 504848545
-      Data4: 179134369
-    Path: event:/Halfway
+      Data1: -1137853715
+      Data2: 1103588721
+      Data3: 1854675083
+      Data4: 407535397
+    Path: event:/BGM/NovelSceneBGM
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 2
@@ -320,10 +320,10 @@ RectTransform:
   - {fileID: 890513224}
   m_Father: {fileID: 164508689}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60, y: -500}
-  m_SizeDelta: {x: 1200, y: 50}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 60, y: -490}
+  m_SizeDelta: {x: 1200, y: -1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &304953240
 MonoBehaviour:
@@ -446,8 +446,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 295b362133bfe68498d989afee6fb21b, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -464,6 +464,69 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304953238}
   m_CullTransparentMesh: 1
+--- !u!1 &392781347
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 392781349}
+  - component: {fileID: 392781348}
+  m_Layer: 0
+  m_Name: NotificationSE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &392781348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392781347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 49495671
+      Data2: 1267462555
+      Data3: -1458666587
+      Data4: -451710518
+    Path: event:/SE/NotificationSE
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!4 &392781349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392781347}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1933025974}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &413158099
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,7 +734,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.1
+  m_fontSize: 59.95
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -734,8 +797,8 @@ GameObject:
   m_Component:
   - component: {fileID: 544072693}
   - component: {fileID: 544072692}
-  - component: {fileID: 544072694}
   - component: {fileID: 544072695}
+  - component: {fileID: 544072694}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -752,8 +815,8 @@ Camera:
   m_GameObject: {fileID: 544072690}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -835,8 +898,8 @@ MonoBehaviour:
   m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
-  m_StopNaN: 0
-  m_Dithering: 0
+  m_StopNaN: 1
+  m_Dithering: 1
   m_ClearDepth: 1
   m_AllowXRRendering: 1
   m_AllowHDROutput: 1
@@ -899,10 +962,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1297502115}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -758.4164, y: 0}
-  m_SizeDelta: {x: 400, y: 1080}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -708.4164, y: 0}
+  m_SizeDelta: {x: 400, y: 980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &570845806
 MonoBehaviour:
@@ -1026,7 +1089,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.1
+  m_fontSize: 59.95
   m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1091,6 +1154,7 @@ GameObject:
   - component: {fileID: 753006331}
   - component: {fileID: 753006330}
   - component: {fileID: 753006329}
+  - component: {fileID: 753006333}
   m_Layer: 5
   m_Name: SkipButton
   m_TagString: Untagged
@@ -1162,8 +1226,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 5a8e2a291a34eb24dad55469cc801465, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1195,11 +1259,42 @@ RectTransform:
   - {fileID: 1162188410}
   m_Father: {fileID: 164508689}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 890, y: -510}
-  m_SizeDelta: {x: 100, y: 30}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -112.900024, y: -492.5}
+  m_SizeDelta: {x: 200, y: -1005}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &753006333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753006328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FMODUnity::FMODUnity.StudioEventEmitter
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 990813091
+      Data2: 1128204771
+      Data3: -913877372
+      Data4: -748630592
+    Path: event:/SE/ClickSE
+  Event: 
+  EventPlayTrigger: 20
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &824006311
 GameObject:
   m_ObjectHideFlags: 0
@@ -1320,10 +1415,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1297502115}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 1820, y: 980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &909926262
 MonoBehaviour:
@@ -1625,9 +1720,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Skip
-
-'
+  m_text: "\u30B9\u30AD\u30C3\u30D7"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e8077101bbbcc774096d56bef6bd4305, type: 2}
   m_sharedMaterial: {fileID: 5653038164525469411, guid: e8077101bbbcc774096d56bef6bd4305, type: 2}
@@ -1636,8 +1729,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1743,10 +1836,10 @@ RectTransform:
   - {fileID: 1024065528}
   m_Father: {fileID: 164508689}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 60, y: 0}
-  m_SizeDelta: {x: 1200, y: 900}
+  m_SizeDelta: {x: -720, y: -180}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1293762669
 MonoBehaviour:
@@ -1777,7 +1870,7 @@ MonoBehaviour:
   m_Content: {fileID: 1439468456}
   m_Horizontal: 1
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
@@ -1846,14 +1939,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1297502115
-Transform:
+--- !u!224 &1297502115
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1297502114}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1863,6 +1955,11 @@ Transform:
   - {fileID: 570845805}
   m_Father: {fileID: 413158103}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -1820, y: -980}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1439468455
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,7 +2157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Main::Minge2026Spring.Scripts.DI.NovelLifetimeScope
   parentReference:
-    TypeName: RootLifetimeScope
+    TypeName: Minge2026Spring.Scripts.DI.RootLifetimeScope
   autoRun: 1
   autoInjectGameObjects: []
 --- !u!4 &1879685076
@@ -2237,6 +2334,7 @@ MonoBehaviour:
   scrollViewContentTransform: {fileID: 1439468456}
   scrollRect: {fileID: 1293762670}
   skipButton: {fileID: 753006329}
+  notificationEmitter: {fileID: 392781348}
   chatPrefab:
     m_AssetGUID: f16210b609ad0fd40b5f0e2a9cc64b93
     m_SubObjectName: 
@@ -2261,7 +2359,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 392781349}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2136529068
@@ -2349,5 +2448,5 @@ SceneRoots:
   - {fileID: 164508689}
   - {fileID: 1879685076}
   - {fileID: 1933025974}
-  - {fileID: 1009125335}
   - {fileID: 234889586}
+  - {fileID: 1009125335}

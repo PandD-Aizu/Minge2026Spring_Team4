@@ -7,7 +7,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Minge2026Spring.Scripts.Editor
+namespace Minge2026Spring.Scripts.Editor.ChapterGraphEditor
 {
     public class ChapterGraphEditor : EditorWindow
     {

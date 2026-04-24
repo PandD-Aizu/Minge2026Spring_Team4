@@ -71,6 +71,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: View::Minge2026Spring.Scripts.View.ChoiceUIView
   buttonParentObj: {fileID: 1399251178529906920}
+  choiceButtonSprite:
+    m_AssetGUID: 5a8e2a291a34eb24dad55469cc801465
+    m_SubObjectName: ChoiceButtonTex
+    m_SubObjectType: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 1
 --- !u!1 &9017550349393088853
 GameObject:
   m_ObjectHideFlags: 0

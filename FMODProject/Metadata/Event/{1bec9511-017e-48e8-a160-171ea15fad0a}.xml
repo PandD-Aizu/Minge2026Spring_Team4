@@ -8,7 +8,7 @@
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{8fcc9fdb-525c-438c-bd89-8c93fcc8e551}</destination>
+			<destination>{9a4afc31-8e2b-4232-b5f6-41c7d92f3231}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{5209a9b9-3a14-4ca9-b8d4-d2c357e53e80}</destination>
@@ -46,6 +46,9 @@
 		</relationship>
 	</object>
 	<object class="MixerInput" id="{da6feb49-80a3-4135-ad18-fdd439dd73ea}">
+		<relationship name="masters">
+			<destination>{4c49e31d-7cca-44a7-8698-fd1e79123ee9}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{e39e1b0d-8856-4c8a-90ea-abdad043cd76}</destination>
 		</relationship>
@@ -53,7 +56,7 @@
 			<destination>{49b442d3-16a1-47d5-af22-2d299e9d6cd2}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{194d8d51-8f0b-453c-85da-fb5443ea76c3}</destination>
+			<destination>{e59c2ba4-3925-4f34-95e4-2871b3a0453f}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{f0d8725f-1412-4c95-a4f2-1c4b7b94bb73}" />
@@ -103,6 +106,9 @@
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
+		<relationship name="modulators">
+			<destination>{ed9aac0a-55f1-4585-bd63-24c7dc1a9cb0}</destination>
+		</relationship>
 		<relationship name="effectChain">
 			<destination>{66426320-91b2-4894-81c6-21820fc0ad9e}</destination>
 		</relationship>
@@ -134,6 +140,17 @@
 	</object>
 	<object class="MixerBusPanner" id="{bd3bb11f-b0d9-4998-84a1-13428df2076d}" />
 	<object class="MixerBusFader" id="{b471c88f-8dd9-4936-9be9-98b6bcfe4f0c}" />
+	<object class="ADSRModulator" id="{ed9aac0a-55f1-4585-bd63-24c7dc1a9cb0}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
+	</object>
 	<object class="MixerBusEffectChain" id="{66426320-91b2-4894-81c6-21820fc0ad9e}">
 		<relationship name="effects">
 			<destination>{3712ee37-169a-49e9-8437-8c413683e60d}</destination>

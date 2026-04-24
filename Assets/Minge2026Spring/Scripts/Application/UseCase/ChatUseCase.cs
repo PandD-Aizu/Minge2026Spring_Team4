@@ -3,13 +3,16 @@ using System.Linq;
 using Cysharp.Threading.Tasks;
 using Minge2026Spring.Scripts.Application.DTOs;
 using Minge2026Spring.Scripts.Application.Interface;
+using Minge2026Spring.Scripts.Domain.ValueObjects;
 using R3;
+using UnityEngine;
 
 namespace Minge2026Spring.Scripts.Application.UseCase
 {
     public class ChatUseCase
     {
         private readonly IJsonUtilityProvider _jsonUtilityProvider;
+        private readonly IFMODSEService _seService;
         
         private Chapter _chapter;
         private List<ChapterBlock> _chapterBlocks;
@@ -20,9 +23,10 @@ namespace Minge2026Spring.Scripts.Application.UseCase
         public ReadOnlyReactiveProperty<bool> IsChapterEnded => _isChapterEnded.ToReadOnlyReactiveProperty();
         private readonly ReactiveProperty<bool> _isChapterEnded = new (false);
         
-        public ChatUseCase(IJsonUtilityProvider jsonUtilityProvider)
+        public ChatUseCase(IJsonUtilityProvider jsonUtilityProvider, IFMODSEService seService)
         {
             _jsonUtilityProvider = jsonUtilityProvider;
+            _seService = seService;
         }
 
         /// <summary>

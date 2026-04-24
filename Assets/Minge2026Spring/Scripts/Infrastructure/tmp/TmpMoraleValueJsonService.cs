@@ -5,7 +5,7 @@ using Minge2026Spring.Scripts.Application.Interface;
 using Minge2026Spring.Scripts.Domain.Entities;
 using UnityEngine;
 
-namespace Minge2026Spring.Scripts.Infrastructure.Tmp
+namespace Minge2026Spring.Scripts.Infrastructure.tmp
 {
     [Serializable]
     public class CharacterMoraleValueJson

@@ -10,15 +10,23 @@ namespace Minge2026Spring.Scripts.View
 {
     public class ChoiceUIView : MonoBehaviour
     {
+        [Header("GameSettings")]
         [SerializeField] private Transform buttonParentObj;
+
+        [Header("SpriteSettings")] 
+        [SerializeField] private AssetReference choiceButtonSprite;
+
+        private Sprite _choiceButtonSprite;
         
         /// <summary>
         /// 選択肢のデータをセットする
         /// </summary>
         /// <param name="choices">選択肢データ</param>
         /// <param name="onChoiceSelected">選択時コールバック</param>
-        public void SetData(Choice[] choices, Action<int> onChoiceSelected = null)
+        public async UniTaskVoid SetData(Choice[] choices, Action<int> onChoiceSelected = null)
         {
+            await LoadAsset();
+            
             if (buttonParentObj is null)
             {
                 Debug.LogError("ChoiceUIView.buttonParentObj が設定されていません。", this);
@@ -29,11 +37,13 @@ namespace Minge2026Spring.Scripts.View
 
             if (choices is null || choices.Length == 0)
                 return;
-
+            
             for (int i = 0; i < choices.Length; i++)
             {
                 CreateChoiceButton(choices[i], i, onChoiceSelected).Forget();
             }
+
+            ReleaseAsset();
         }
 
         private void ClearButtons()
@@ -58,10 +68,11 @@ namespace Minge2026Spring.Scripts.View
 
             var layoutElement = buttonObj.GetComponent<LayoutElement>();
             layoutElement.preferredWidth = 200;
-            layoutElement.preferredHeight = 50;
+            layoutElement.preferredHeight = 100;
 
             var image = buttonObj.GetComponent<Image>();
             image.color = new Color(1f, 1f, 1f, 0.95f);
+            image.sprite = _choiceButtonSprite;
 
             var button = buttonObj.GetComponent<Button>();
             var colors = button.colors;
@@ -86,7 +97,8 @@ namespace Minge2026Spring.Scripts.View
             textComponent.font = fontAsset;
             textComponent.text = choice.choiceText;
             textComponent.fontSize = 24;
-            textComponent.color = Color.black;
+            textComponent.enableAutoSizing = true;
+            textComponent.color = Color.white;
             textComponent.alignment = TextAlignmentOptions.Center;
             textComponent.textWrappingMode = TextWrappingModes.Normal;
 
@@ -110,6 +122,21 @@ namespace Minge2026Spring.Scripts.View
                 if (child.TryGetComponent<Button>(out var button))
                     button.interactable = isInteractable;
             }
+        }
+
+        private async UniTask LoadAsset()
+        { 
+            if (choiceButtonSprite != null)
+            {
+                var handle = choiceButtonSprite.LoadAssetAsync<Sprite>();
+                _choiceButtonSprite = await handle.Task;
+            }
+        }
+
+        private async void ReleaseAsset()
+        {
+            if (choiceButtonSprite != null)
+                choiceButtonSprite.ReleaseAsset();
         }
     }
 }

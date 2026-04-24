@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using Minge2026Spring.Scripts.Domain.Entities;
-using Minge2026Spring.Scripts.Domain.ValueObject;
+using Minge2026Spring.Scripts.Domain.ValueObjects;
 
 namespace Minge2026Spring.Scripts.Domain.DomainService
 {

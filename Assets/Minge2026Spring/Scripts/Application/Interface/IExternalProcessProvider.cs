@@ -6,7 +6,7 @@
         /// 指定したプロセスを起動する
         /// </summary>
         /// <param name="processPath">実行ファイルまでのパス</param>
-        void StartProcess(string processPath);
+        bool StartProcess(string processPath);
         
         /// <summary>
         /// 指定したプロセスを終了する
@@ -18,5 +18,10 @@
         /// </summary>
         /// <returns>起動している: false</returns>
         bool IsProcessRunning();
+
+        /// <summary>
+        /// ビルド版で null になったプロセスハンドルを復旧する
+        /// </summary>
+        void UpdateProcessHandle();
     }
 }

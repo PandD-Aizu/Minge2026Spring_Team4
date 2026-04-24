@@ -17,10 +17,12 @@ namespace Minge2026Spring.Scripts.View
         {
             var iconHandle = Addressables.LoadAssetAsync<Sprite>(dialogue.iconId);
             var iconAsset = await iconHandle.Task;
-
+            
             iconImage.sprite = iconAsset;
             speakerText.text = dialogue.speaker;
             chatText.text = dialogue.message;
+
+            chatText.fontSizeMax = 18;
 
             Addressables.Release(iconHandle);
         }

@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using Minge2026Spring.Scripts.Application.Interface;
-using Minge2026Spring.Scripts.Domain.ValueObject;
+using Minge2026Spring.Scripts.Domain.ValueObjects;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 

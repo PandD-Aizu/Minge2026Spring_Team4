@@ -1,6 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Diagnostics;
 using System.IO;
 using System.Runtime.InteropServices;
 using Minge2026Spring.Scripts.Application.Interface;
@@ -9,211 +7,156 @@ namespace Minge2026Spring.Scripts.Infrastructure.ExternalServices
 {
     public class ExternalProcessProvider : IDisposable, IExternalProcessProvider
     {
-        private Process _process = null;
-        private const int SwShowNormal = 1;
-        
-        [DllImport("shell32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
-        private static extern IntPtr ShellExecute(
-            IntPtr hwnd,
-            string lpOperation,
-            string lpFile,
-            string lpParameters,
-            string lpDirectory,
-            int nShowCmd
-        );
-        
-        /// <inheritdoc/>
-        public void StartProcess(string processPath)
+        // === Windows OSネイティブAPI (kernel32.dll) の定義 ===
+        [StructLayout(LayoutKind.Sequential)]
+        private struct STARTUPINFO
         {
-            // プロセスパスが無効な場合は、エラーを出力してプロセスを終了する
-            if (string.IsNullOrEmpty(processPath))
-            {
-                UnityEngine.Debug.LogError($"Invalid process path: {processPath}");
-                return;
-            }
+            public int cb;
+            public IntPtr lpReserved;
+            public IntPtr lpDesktop;
+            public IntPtr lpTitle;
+            public int dwX;
+            public int dwY;
+            public int dwXSize;
+            public int dwYSize;
+            public int dwXCountChars;
+            public int dwYCountChars;
+            public int dwFillAttribute;
+            public int dwFlags;
+            public short wShowWindow;
+            public short cbReserved2;
+            public IntPtr lpReserved2;
+            public IntPtr hStdInput;
+            public IntPtr hStdOutput;
+            public IntPtr hStdError;
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
+        private struct PROCESS_INFORMATION
+        {
+            public IntPtr hProcess;
+            public IntPtr hThread;
+            public int dwProcessId;
+            public int dwThreadId;
+        }
+
+        [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
+        private static extern bool CreateProcess(
+            string lpApplicationName,
+            string lpCommandLine,
+            IntPtr lpProcessAttributes,
+            IntPtr lpThreadAttributes,
+            bool bInheritHandles,
+            uint dwCreationFlags,
+            IntPtr lpEnvironment,
+            string lpCurrentDirectory,
+            [In] ref STARTUPINFO lpStartupInfo,
+            out PROCESS_INFORMATION lpProcessInformation);
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern bool GetExitCodeProcess(IntPtr hProcess, out uint lpExitCode);
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern bool CloseHandle(IntPtr hObject);
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern bool TerminateProcess(IntPtr hProcess, uint uExitCode);
+
+        private const uint STILL_ACTIVE = 259;
+
+        // Windowsから直接もらうプロセスの管理番号
+        private IntPtr _processHandle = IntPtr.Zero;
+
+        public bool StartProcess(string processPath)
+        {
+            if (string.IsNullOrEmpty(processPath)) return false;
 
             var normalizedPath = Path.GetFullPath(processPath.Trim());
             if (!File.Exists(normalizedPath))
             {
-                UnityEngine.Debug.LogError($"[ExternalProcessProvider] Executable not found.\noriginalPath = {processPath}\nnormalizedPath = {normalizedPath}");
-                return;
-            }
-
-            // プロセスが既に起動している場合は、エラーを出力してプロセスを終了する
-            if (_process is { HasExited: false })
-            {
-                UnityEngine.Debug.LogError($"Process is already running: {_process.ProcessName}\nKilling the process...");
-                _process.Kill();
-            }
-            
-            var workingDirectory = Path.GetDirectoryName(normalizedPath) ?? Environment.CurrentDirectory;
-            if (TryStartNativeShellExecute(normalizedPath, workingDirectory))
-            {
-                _process = null;
-                return;
-            }
-
-            if (TryStartDirect(normalizedPath, workingDirectory, out var directProcess))
-            {
-                _process = directProcess;
-                return;
-            }
-
-            if (TryStartShell(normalizedPath, workingDirectory, out var shellProcess))
-            {
-                _process = shellProcess;
-                return;
-            }
-
-            if (TryStartViaCmdStart(normalizedPath, workingDirectory, out var cmdProcess))
-            {
-                _process = cmdProcess;
-                return;
-            }
-
-            UnityEngine.Debug.LogError(
-                $"[ExternalProcessProvider] All launch strategies failed.\n" +
-                $"originalPath = {processPath}\n" +
-                $"normalizedPath = {normalizedPath}\n" +
-                $"workingDirectory = {workingDirectory}");
-        }
-
-        private static bool TryStartNativeShellExecute(string path, string workingDirectory)
-        {
-            if (Environment.OSVersion.Platform != PlatformID.Win32NT)
-                return false;
-
-            try
-            {
-                var result = ShellExecute(IntPtr.Zero, "open", path, null, workingDirectory, SwShowNormal);
-                var code = result.ToInt64();
-                if (code > 32)
-                {
-                    UnityEngine.Debug.Log($"[ExternalProcessProvider] Process started. strategy = native-shell, fileName = {path}");
-                    return true;
-                }
-
-                UnityEngine.Debug.LogError(
-                    $"[ExternalProcessProvider] Native shell launch failed.\n" +
-                    $"strategy = native-shell\n" +
-                    $"shellExecuteResult = {code}\n" +
-                    $"lastWin32Error = {Marshal.GetLastWin32Error()}\n" +
-                    $"fileName = {path}\n" +
-                    $"workingDirectory = {workingDirectory}");
+                UnityEngine.Debug.LogError($"[ExternalProcessProvider] File not found: {normalizedPath}");
                 return false;
             }
-            catch (Exception e)
+
+            var workingDirectory = Path.GetDirectoryName(normalizedPath);
+
+            // 起動前に前のプロセスが残っていれば確実に閉じる
+            StopProcess();
+
+            var startupInfo = new STARTUPINFO();
+            startupInfo.cb = Marshal.SizeOf(startupInfo);
+
+            // C#のバグを回避し、Windowsの根幹APIで直接起動する
+            bool success = CreateProcess(
+                normalizedPath,
+                null,
+                IntPtr.Zero,
+                IntPtr.Zero,
+                false,
+                0,
+                IntPtr.Zero,
+                workingDirectory,
+                ref startupInfo,
+                out PROCESS_INFORMATION processInfo);
+
+            if (success)
             {
-                UnityEngine.Debug.LogError(
-                    $"[ExternalProcessProvider] Native shell launch threw exception.\n" +
-                    $"strategy = native-shell\n" +
-                    $"fileName = {path}\n" +
-                    $"workingDirectory = {workingDirectory}\n" +
-                    $"exception = {e}");
-                return false;
-            }
-        }
-
-        private static bool TryStartDirect(string path, string workingDirectory, out Process process)
-        {
-            var app = new ProcessStartInfo
-            {
-                FileName = path,
-                WorkingDirectory = workingDirectory,
-                UseShellExecute = false
-            };
-
-            return TryStartWithStrategy("direct", app, out process);
-        }
-
-        private static bool TryStartShell(string path, string workingDirectory, out Process process)
-        {
-            var app = new ProcessStartInfo
-            {
-                FileName = path,
-                WorkingDirectory = workingDirectory,
-                UseShellExecute = true,
-                Verb = "open"
-            };
-
-            return TryStartWithStrategy("shell", app, out process);
-        }
-
-        private static bool TryStartViaCmdStart(string path, string workingDirectory, out Process process)
-        {
-            var app = new ProcessStartInfo
-            {
-                FileName = "cmd.exe",
-                Arguments = $"/c start \"\" \"{path}\"",
-                WorkingDirectory = workingDirectory,
-                UseShellExecute = false,
-                CreateNoWindow = true
-            };
-
-            return TryStartWithStrategy("cmd-start", app, out process);
-        }
-
-        private static bool TryStartWithStrategy(string strategy, ProcessStartInfo startInfo, out Process process)
-        {
-            process = null;
-            try
-            {
-                process = Process.Start(startInfo);
-                if (process is null)
-                {
-                    UnityEngine.Debug.LogWarning(
-                        $"[ExternalProcessProvider] Process.Start returned null. strategy = {strategy}, fileName = {startInfo.FileName}");
-                    return false;
-                }
-
-                UnityEngine.Debug.Log(
-                    $"[ExternalProcessProvider] Process started. strategy = {strategy}, fileName = {startInfo.FileName}");
+                UnityEngine.Debug.Log("[ExternalProcessProvider] CreateProcess 成功！");
+                _processHandle = processInfo.hProcess; // 絶対に見失わないハンドルを保持
+                
+                // スレッドハンドルは今回不要なので閉じてメモリリークを防ぐ
+                CloseHandle(processInfo.hThread);
                 return true;
             }
-            catch (Exception e)
+            else
             {
-                var nativeErrorCode = (e is Win32Exception win32) ? win32.NativeErrorCode.ToString() : "n/a";
-                UnityEngine.Debug.LogError(
-                    $"[ExternalProcessProvider] Launch attempt failed.\n" +
-                    $"strategy = {strategy}\n" +
-                    $"message = {e.Message}\n" +
-                    $"type = {e.GetType().Name}\n" +
-                    $"nativeErrorCode = {nativeErrorCode}\n" +
-                    $"fileName = {startInfo.FileName}\n" +
-                    $"arguments = {startInfo.Arguments}\n" +
-                    $"workingDirectory = {startInfo.WorkingDirectory}\n" +
-                    $"useShellExecute = {startInfo.UseShellExecute}");
+                int errorCode = Marshal.GetLastWin32Error();
+                UnityEngine.Debug.LogError($"[ExternalProcessProvider] CreateProcess 失敗。ErrorCode: {errorCode}");
                 return false;
             }
         }
 
-        /// <inheritdoc/>
         public void StopProcess()
         {
-            if (_process is null)
+            if (_processHandle != IntPtr.Zero)
             {
-                UnityEngine.Debug.LogError("Process is null");
-                return;
+                TerminateProcess(_processHandle, 0);
+                CloseHandle(_processHandle);
+                _processHandle = IntPtr.Zero;
             }
-
-            if (_process.HasExited)
-            {
-                UnityEngine.Debug.Log("Process has already exited");
-                return;
-            }
-            
-            _process.Kill();
         }
 
-        /// <inheritdoc/>
         public bool IsProcessRunning()
         {
-            return _process is not null && _process.HasExited;
+            if (_processHandle == IntPtr.Zero) return false;
+
+            // WindowsOSにプロセスの状態を直接問い合わせる
+            if (GetExitCodeProcess(_processHandle, out uint exitCode))
+            {
+                if (exitCode == STILL_ACTIVE)
+                {
+                    return true; // まだ元気に実行中
+                }
+                else
+                {
+                    UnityEngine.Debug.Log($"[ExternalProcessProvider] プロセスが終了しました。ExitCode: {exitCode}");
+                    CloseHandle(_processHandle);
+                    _processHandle = IntPtr.Zero;
+                    return false; // 終了した
+                }
+            }
+            
+            return false;
+        }
+
+        public void UpdateProcessHandle()
+        {
+            
         }
 
         public void Dispose()
         {
-            _process?.Dispose();
+            StopProcess();
         }
     }
 }

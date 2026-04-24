@@ -3,19 +3,34 @@ using Minge2026Spring.Scripts.Infrastructure.Repositories;
 using VContainer;
 using VContainer.Unity;
 
-public class RootLifetimeScope : LifetimeScope
+namespace Minge2026Spring.Scripts.DI
 {
-    protected override void Configure(IContainerBuilder builder)
+    public class RootLifetimeScope : LifetimeScope
     {
-        // Repository
-        builder.Register<MoraleRepository>(Lifetime.Singleton);
+        protected override void Configure(IContainerBuilder builder)
+        {
+            // External services
+            builder.Register<JsonUtilityProvider>(Lifetime.Singleton)
+                .AsSelf()
+                .AsImplementedInterfaces();
+            builder.Register<JsonCreator>(Lifetime.Singleton)
+                .AsSelf()
+                .AsImplementedInterfaces();
+            builder.Register<FMODVCAService>(Lifetime.Singleton)
+                .AsImplementedInterfaces();
+
+            // Repository
+            builder.Register<MoraleRepository>(Lifetime.Singleton);
+            builder.Register<FMODSettingsRepository>(Lifetime.Singleton)
+                .AsImplementedInterfaces();
         
-        // SceneTransition
-        builder.Register<SceneTransitionProvider>(Lifetime.Singleton)
-            .AsImplementedInterfaces();
+            // SceneTransition
+            builder.Register<SceneTransitionProvider>(Lifetime.Singleton)
+                .AsImplementedInterfaces();
         
-        // Application Management
-        builder.Register<ApplicationStopProvider>(Lifetime.Singleton)
-            .AsImplementedInterfaces();
+            // Application Management
+            builder.Register<ApplicationStopProvider>(Lifetime.Singleton)
+                .AsImplementedInterfaces();
+        }
     }
 }

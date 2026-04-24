@@ -1,7 +1,6 @@
 ﻿using System.Runtime.InteropServices;
-using Minge2026Spring.Scripts.Domain.Entities;
 
-namespace Minge2026Spring.Scripts.Infrastructure.DTOs
+namespace Minge2026Spring.Scripts.Domain.Entities
 {
     [StructLayout(LayoutKind.Sequential)]    
     public struct SharedData

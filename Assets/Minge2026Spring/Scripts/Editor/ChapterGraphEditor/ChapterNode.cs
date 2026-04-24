@@ -4,7 +4,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace Minge2026Spring.Scripts.Editor
+namespace Minge2026Spring.Scripts.Editor.ChapterGraphEditor
 {
     public class ChapterNode : Node
     {

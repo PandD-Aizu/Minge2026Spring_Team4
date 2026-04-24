@@ -20,5 +20,13 @@ namespace Minge2026Spring.Scripts.Application.Interface
         /// <typeparam name="T">任意の型</typeparam>
         /// <returns>Json形式の文字列</returns>
         public string ConvertAnyObjectToJsonAsync<T>(T obj, bool prettyPrint = false);
+
+        /// <summary>
+        /// 生のJson文字列を任意のオブジェクトに変換する
+        /// </summary>
+        /// <param name="jsonText">Json形式の文字列</param>
+        /// <typeparam name="T">変換するオブジェクトの型</typeparam>
+        /// <returns>変換したオブジェクト</returns>
+        public T ConvertRawJsonToAnyObject<T>(string jsonText);
     }
 }

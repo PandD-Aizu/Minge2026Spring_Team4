@@ -2,6 +2,7 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
+using FMODUnity;
 using Minge2026Spring.Scripts.Application.DTOs;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -16,6 +17,8 @@ namespace Minge2026Spring.Scripts.View
         [SerializeField] public ScrollRect scrollRect;
         [SerializeField] public Button skipButton;
 
+        [SerializeField] public StudioEventEmitter notificationEmitter;
+        
         [Header("Prefabs")] 
         [SerializeField] public AssetReference chatPrefab;
         [SerializeField] public AssetReference choicePrefab;
@@ -45,6 +48,7 @@ namespace Minge2026Spring.Scripts.View
             // 待機時間を考慮しながら、UIを順に表示していく
             foreach (var dialogue in chapterBlock.dialogues)
             {
+                notificationEmitter.Play();
                 var chatHandle = Addressables.InstantiateAsync(chatPrefab, scrollViewContentTransform);
                 await chatHandle.ToUniTask(cancellationToken: token);
                 var chatObject = chatHandle.Result;

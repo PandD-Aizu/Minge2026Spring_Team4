@@ -80,7 +80,7 @@ namespace Minge2026Spring.Scripts.Presenter
                 .AddTo(_disposables);
             
             // 章の会話データをロードする
-            _chatUseCase.LoadChapter("Chapter1").Forget();
+            _chatUseCase.LoadChapter("Chapter").Forget();
         }
 
         public void Dispose()
@@ -156,7 +156,7 @@ namespace Minge2026Spring.Scripts.Presenter
 
             if (block.waitingTime > 0)
                 await WaitWithSkipAsync(block.waitingTime, token);
-
+            
             _chatUseCase.MoveToNextBlock();
         }
 

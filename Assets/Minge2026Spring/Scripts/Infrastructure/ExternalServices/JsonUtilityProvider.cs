@@ -61,5 +61,33 @@ namespace Minge2026Spring.Scripts.Infrastructure.ExternalServices
             string result = JsonUtility.ToJson(obj, prettyPrint);
             return result;
         }
+
+        /// <inheritdoc />
+        public T ConvertRawJsonToAnyObject<T>(string jsonText)
+        {
+            if (string.IsNullOrEmpty(jsonText))
+            {
+                UnityEngine.Debug.LogError("[JsonUtilityProvider] Cannot parse empty JSON text.");
+                return default;
+            }
+
+            try
+            {
+                var result = JsonUtility.FromJson<T>(jsonText);
+                if (result == null)
+                {
+                    UnityEngine.Debug.LogError("[JsonUtilityProvider] Failed to parse raw JSON text.");
+                    return default;
+                }
+
+                return result;
+            }
+            catch (Exception e)
+            {
+                UnityEngine.Debug.LogError("[JsonUtilityProvider] Exception occurred while converting raw JSON text to object.");
+                UnityEngine.Debug.LogError(e);
+                return default;
+            }
+        }
     }
 }
