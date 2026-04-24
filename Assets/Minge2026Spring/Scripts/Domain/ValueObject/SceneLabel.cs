@@ -9,10 +9,11 @@
             Value = value;
         }
 
-        public static readonly SceneLabel Title = new("TitleScene");
-        public static readonly SceneLabel Option = new("OptionScene");
-        public static readonly SceneLabel ChapterSelect = new("ChapterSelectScene");
-        public static readonly SceneLabel Novel = new("NovelScene");
+        public static readonly SceneLabel Title = new ("TitleScene");
+        public static readonly SceneLabel Option = new ("OptionScene");
+        public static readonly SceneLabel ChapterSelect = new ("ChapterSelectScene");
+        public static readonly SceneLabel Novel = new ("NovelScene");
+        public static readonly SceneLabel Result = new ("ResultScene");
 
         public override string ToString() => Value;
 

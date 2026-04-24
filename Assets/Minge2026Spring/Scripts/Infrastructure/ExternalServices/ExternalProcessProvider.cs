@@ -10,6 +10,7 @@ namespace Minge2026Spring.Scripts.Infrastructure.ExternalServices
     public class ExternalProcessProvider : IDisposable, IExternalProcessProvider
     {
         private Process _process = null;
+        private const int SwShowNormal = 1;
         
         [DllImport("shell32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
         private static extern IntPtr ShellExecute(
@@ -18,9 +19,8 @@ namespace Minge2026Spring.Scripts.Infrastructure.ExternalServices
             string lpFile,
             string lpParameters,
             string lpDirectory,
-            int nShowCmd);
-
-        private const int SwShowNormal = 1;
+            int nShowCmd
+        );
         
         /// <inheritdoc/>
         public void StartProcess(string processPath)
@@ -47,10 +47,9 @@ namespace Minge2026Spring.Scripts.Infrastructure.ExternalServices
             }
             
             var workingDirectory = Path.GetDirectoryName(normalizedPath) ?? Environment.CurrentDirectory;
-
             if (TryStartNativeShellExecute(normalizedPath, workingDirectory))
             {
-                _process = null; // Native launch cannot be tracked by Process instance.
+                _process = null;
                 return;
             }
 
@@ -204,6 +203,12 @@ namespace Minge2026Spring.Scripts.Infrastructure.ExternalServices
             }
             
             _process.Kill();
+        }
+
+        /// <inheritdoc/>
+        public bool IsProcessRunning()
+        {
+            return _process is not null && _process.HasExited;
         }
 
         public void Dispose()

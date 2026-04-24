@@ -12,5 +12,11 @@
         /// 指定したプロセスを終了する
         /// </summary>
         void StopProcess();
+
+        /// <summary>
+        /// プロセスが起動しているかどうかチェック
+        /// </summary>
+        /// <returns>起動している: false</returns>
+        bool IsProcessRunning();
     }
 }

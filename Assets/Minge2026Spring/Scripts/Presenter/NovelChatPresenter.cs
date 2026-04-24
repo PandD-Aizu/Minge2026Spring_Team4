@@ -25,7 +25,7 @@ namespace Minge2026Spring.Scripts.Presenter
         private readonly FreeChatUseCase _freeChatUseCase;
         private readonly MoraleUseCase _moraleUseCase;
         private readonly ITmpMoraleJsonExporter _tmpMoraleJsonExporter;
-        private readonly GameStarterUseCase _gameStarterUseCase;
+        private readonly ProcessUseCase _processUseCase;
         private readonly ChatWindowView _chatWindowView;
         private SkipButtonHoldNotifier _skipButtonHoldNotifier;
         
@@ -37,14 +37,14 @@ namespace Minge2026Spring.Scripts.Presenter
             FreeChatUseCase freeChatUseCase,
             MoraleUseCase moraleUseCase,
             ITmpMoraleJsonExporter tmpMoraleJsonExporter,
-            GameStarterUseCase gameStarterUseCase,
+            ProcessUseCase processUseCase,
             ChatWindowView chatWindowView)
         {
             _chatUseCase = chatUseCase;
             _freeChatUseCase = freeChatUseCase;
             _moraleUseCase = moraleUseCase;
             _tmpMoraleJsonExporter = tmpMoraleJsonExporter;
-            _gameStarterUseCase = gameStarterUseCase;
+            _processUseCase = processUseCase;
             _chatWindowView = chatWindowView;
         }
         
@@ -69,11 +69,12 @@ namespace Minge2026Spring.Scripts.Presenter
                     if (isEnded)
                     {
                         SaveMoraleToTmpJson();
+                        
                         var path = Path.Combine(
-                            UnityEngine.Application.streamingAssetsPath,
                             "I_gonna_be_the_tresure_hunter",
-                            "I_wanna_Siv3D.exe");
-                        _gameStarterUseCase.StartGame(path);
+                            "I_wanna_Siv3D.exe"
+                        );
+                        _processUseCase.StartProcess(path);
                     }
                 })
                 .AddTo(_disposables);

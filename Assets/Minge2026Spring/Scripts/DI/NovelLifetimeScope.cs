@@ -21,8 +21,11 @@ namespace Minge2026Spring.Scripts.DI
             builder.Register<FreeChatUseCase>(Lifetime.Scoped);
             builder.Register<MoraleUseCase>(Lifetime.Scoped);
             builder.Register<GameStarterUseCase>(Lifetime.Scoped);
+            builder.Register<ProcessUseCase>(Lifetime.Scoped);
+            builder.Register<SceneTransitionUseCase>(Lifetime.Scoped);
             builder.Register<MoraleCheckService>(Lifetime.Scoped);
             builder.RegisterEntryPoint<NovelChatPresenter>();
+            builder.RegisterEntryPoint<NovelProcessPresenter>();
             builder.RegisterComponentInHierarchy<ChatWindowView>();
 
             // Morale関係

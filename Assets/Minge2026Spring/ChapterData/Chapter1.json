@@ -1,192 +1,6 @@
 {
     "blocks": [
         {
-            "blockId": "Choices",
-            "nodeType": 1,
-            "nodePosX": 473.0,
-            "nodePosY": 1.0,
-            "dialogues": [],
-            "choices": [
-                {
-                    "choiceText": "アクションかシューティングを作ろう",
-                    "nextBlockId": "Part1_1_Branch_Ans0",
-                    "characterAMoraleDelta": 1,
-                    "characterBMoraleDelta": 95,
-                    "characterCMoraleDelta": 0,
-                    "characterDMoraleDelta": 1
-                },
-                {
-                    "choiceText": "すごいの作ろう",
-                    "nextBlockId": "Part1_1_Branch_Ans1",
-                    "characterAMoraleDelta": 0,
-                    "characterBMoraleDelta": -1,
-                    "characterCMoraleDelta": -2,
-                    "characterDMoraleDelta": -1
-                },
-                {
-                    "choiceText": "みんなはどうしたい？",
-                    "nextBlockId": "Part1_1_Branch_Ans2",
-                    "characterAMoraleDelta": 1,
-                    "characterBMoraleDelta": -10,
-                    "characterCMoraleDelta": 2,
-                    "characterDMoraleDelta": 1
-                }
-            ],
-            "nextBlockId": "",
-            "freeChats": [],
-            "waitingTime": 3.0
-        },
-        {
-            "blockId": "Part1_0",
-            "nodeType": 0,
-            "nodePosX": 306.0,
-            "nodePosY": 1.0,
-            "dialogues": [
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "それでは、春みんげ～第一回オンラインミーティングを始めます",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "ryuta_icon",
-                    "speaker": "Ryuta",
-                    "message": "おなしゃす",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっと",
-                    "message": "お願いします",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "milu_icon",
-                    "speaker": "Milu",
-                    "message": "お、おねがいします",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "kashiwamochi_icon",
-                    "speaker": "かしわもち",
-                    "message": "おねがいしまぁす",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "じゃあ、まず自己紹介しましょうか",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "今回リーダーを務めます。学部三年の[name]です\nリーダーは初めてで少し緊張していますが、宜しくお願いします",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "ryuta_icon",
-                    "speaker": "Ryuta",
-                    "message": "学部二年のRyutaです\nあ、プログラマです。好きなゲームはトラップマンです",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっと",
-                    "message": "学部三年のごっとです\nプログラマで、Ryutaくんのサポートやります",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "milu_icon",
-                    "speaker": "Milu",
-                    "message": "が、学部一年のMiluです\nえと、グラフィッカでが、がんばります！",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "kashiwamochi_icon",
-                    "speaker": "かしわもち",
-                    "message": "学部二年のかしわもちです\nえーと、サウンドやります。　はーい",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "今後の予定だけど",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "今回は、全体ミーティングをもとに\n",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "作業は各々進めてください",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっと",
-                    "message": "今回はオフラインで集まりはしないんだね",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "うん、大学の立ち入り禁止期間とかぶちゃっててね",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "milu_icon",
-                    "speaker": "Milu",
-                    "message": "あぁ、入試ですか……",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "ryuta_icon",
-                    "speaker": "Ryuta",
-                    "message": "あと卒業式もあるからね",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "kashiwamochi_icon",
-                    "speaker": "かしわもち",
-                    "message": "俺は実家変えるから、オンラインしか難しいね",
-                    "waitingTime": 5.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "そういうわけで、オンラインで進めていきます",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "テストプレイ会を目標に頑張りましょう",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "というわけで、とりあえず今回作るゲームの大まかな方向性を決めていきたいと思います",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "ええと...(なんて声をかけよう)",
-                    "waitingTime": 0.0
-                }
-            ],
-            "choices": [],
-            "nextBlockId": "Choices",
-            "freeChats": [],
-            "waitingTime": 5.0
-        },
-        {
             "blockId": "Part1_1_Branch_Ans1",
             "nodeType": 0,
             "nodePosX": 741.0,
@@ -563,6 +377,192 @@
             "nextBlockId": "",
             "freeChats": [],
             "waitingTime": 0.0
+        },
+        {
+            "blockId": "Choices",
+            "nodeType": 1,
+            "nodePosX": 473.0,
+            "nodePosY": 1.0,
+            "dialogues": [],
+            "choices": [
+                {
+                    "choiceText": "アクションかシューティングを作ろう",
+                    "nextBlockId": "Part1_1_Branch_Ans0",
+                    "characterAMoraleDelta": 1,
+                    "characterBMoraleDelta": 95,
+                    "characterCMoraleDelta": 0,
+                    "characterDMoraleDelta": 1
+                },
+                {
+                    "choiceText": "すごいの作ろう",
+                    "nextBlockId": "Part1_1_Branch_Ans1",
+                    "characterAMoraleDelta": 0,
+                    "characterBMoraleDelta": -1,
+                    "characterCMoraleDelta": -2,
+                    "characterDMoraleDelta": -1
+                },
+                {
+                    "choiceText": "みんなはどうしたい？",
+                    "nextBlockId": "Part1_1_Branch_Ans2",
+                    "characterAMoraleDelta": 1,
+                    "characterBMoraleDelta": -10,
+                    "characterCMoraleDelta": 2,
+                    "characterDMoraleDelta": 1
+                }
+            ],
+            "nextBlockId": "",
+            "freeChats": [],
+            "waitingTime": 3.0
+        },
+        {
+            "blockId": "Part1_0",
+            "nodeType": 0,
+            "nodePosX": 306.0,
+            "nodePosY": 1.0,
+            "dialogues": [
+                {
+                    "iconId": "player_icon",
+                    "speaker": "主人公",
+                    "message": "それでは、春みんげ～第一回オンラインミーティングを始めます",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "ryuta_icon",
+                    "speaker": "Ryuta",
+                    "message": "おなしゃす",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "goddo_icon",
+                    "speaker": "ごっと",
+                    "message": "お願いします",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "milu_icon",
+                    "speaker": "Milu",
+                    "message": "お、おねがいします",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "kashiwamochi_icon",
+                    "speaker": "かしわもち",
+                    "message": "おねがいしまぁす",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "player_icon",
+                    "speaker": "主人公",
+                    "message": "じゃあ、まず自己紹介しましょうか",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "player_icon",
+                    "speaker": "主人公",
+                    "message": "今回リーダーを務めます。学部三年の[name]です\nリーダーは初めてで少し緊張していますが、宜しくお願いします",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "ryuta_icon",
+                    "speaker": "Ryuta",
+                    "message": "学部二年のRyutaです\nあ、プログラマです。好きなゲームはトラップマンです",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "goddo_icon",
+                    "speaker": "ごっと",
+                    "message": "学部三年のごっとです\nプログラマで、Ryutaくんのサポートやります",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "milu_icon",
+                    "speaker": "Milu",
+                    "message": "が、学部一年のMiluです\nえと、グラフィッカでが、がんばります！",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "kashiwamochi_icon",
+                    "speaker": "かしわもち",
+                    "message": "学部二年のかしわもちです\nえーと、サウンドやります。　はーい",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "player_icon",
+                    "speaker": "主人公",
+                    "message": "今後の予定だけど",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "player_icon",
+                    "speaker": "主人公",
+                    "message": "今回は、全体ミーティングをもとに\n",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "player_icon",
+                    "speaker": "主人公",
+                    "message": "作業は各々進めてください",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "goddo_icon",
+                    "speaker": "ごっと",
+                    "message": "今回はオフラインで集まりはしないんだね",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "player_icon",
+                    "speaker": "主人公",
+                    "message": "うん、大学の立ち入り禁止期間とかぶちゃっててね",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "milu_icon",
+                    "speaker": "Milu",
+                    "message": "あぁ、入試ですか……",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "ryuta_icon",
+                    "speaker": "Ryuta",
+                    "message": "あと卒業式もあるからね",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "kashiwamochi_icon",
+                    "speaker": "かしわもち",
+                    "message": "俺は実家変えるから、オンラインしか難しいね",
+                    "waitingTime": 5.0
+                },
+                {
+                    "iconId": "player_icon",
+                    "speaker": "主人公",
+                    "message": "そういうわけで、オンラインで進めていきます",
+                    "waitingTime": 0.0
+                },
+                {
+                    "iconId": "player_icon",
+                    "speaker": "主人公",
+                    "message": "テストプレイ会を目標に頑張りましょう",
+                    "waitingTime": 0.0
+                },
+                {
+                    "iconId": "player_icon",
+                    "speaker": "主人公",
+                    "message": "というわけで、とりあえず今回作るゲームの大まかな方向性を決めていきたいと思います",
+                    "waitingTime": 0.0
+                },
+                {
+                    "iconId": "player_icon",
+                    "speaker": "主人公",
+                    "message": "ええと...(なんて声をかけよう)",
+                    "waitingTime": 0.0
+                }
+            ],
+            "choices": [],
+            "nextBlockId": "Choices",
+            "freeChats": [],
+            "waitingTime": 5.0
         }
     ]
 }
