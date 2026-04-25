@@ -27,9 +27,7 @@
           768.0,
           192.0
         ],
-        "value1": 30,
-        "value2": 1.0,
-        "value3": 1.0
+        "value1": 30
       },
       {
         "gimmikName": "罠ブロック",
@@ -37,9 +35,7 @@
           768.0,
           224.0
         ],
-        "value1": 30,
-        "value2": 1.0,
-        "value3": 1.0
+        "value1": 30
       },
       {
         "gimmikName": "罠ブロック",
@@ -47,9 +43,7 @@
           768.0,
           256.0
         ],
-        "value1": 30,
-        "value2": 1.0,
-        "value3": 1.0
+        "value1": 30
       },
       {
         "gimmikName": "罠ブロック",
@@ -57,9 +51,7 @@
           768.0,
           288.0
         ],
-        "value1": 30,
-        "value2": 1.0,
-        "value3": 1.0
+        "value1": 30
       },
       {
         "gimmikName": "罠トリガー",
@@ -512,6 +504,7 @@
         "value3": 20.0
       }
     ],
+    "background": "cave",
     "startPlayerPos": [
       544.0,
       16.0

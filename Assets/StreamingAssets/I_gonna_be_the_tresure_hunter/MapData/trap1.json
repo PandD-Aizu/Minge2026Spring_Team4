@@ -372,6 +372,7 @@
         "value3": 1.0
       }
     ],
+    "background": "cave",
     "startPlayerPos": [
       80.0,
       80.0

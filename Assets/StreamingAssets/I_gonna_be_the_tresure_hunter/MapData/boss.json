@@ -1,6 +1,40 @@
 ﻿[
   {
-    "background": "sample",
+    "Gimmiks": [
+      {
+        "gimmikName": "罠ブロック",
+        "gimmikPos": [
+          768.0,
+          256.0
+        ],
+        "value1": 0
+      },
+      {
+        "gimmikName": "罠ブロック",
+        "gimmikPos": [
+          768.0,
+          288.0
+        ],
+        "value1": 0
+      },
+      {
+        "gimmikName": "ワープ",
+        "gimmikPos": [
+          800.0,
+          256.0
+        ],
+        "value1": "ExBoss"
+      },
+      {
+        "gimmikName": "ワープ",
+        "gimmikPos": [
+          800.0,
+          288.0
+        ],
+        "value1": "ExBoss"
+      }
+    ],
+    "background": "cave",
     "startPlayerPos": [
       400.0,
       30.0

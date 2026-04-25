@@ -77,9 +77,7 @@
           672.0,
           -32.0
         ],
-        "value1": 1,
-        "value2": 0.0,
-        "value3": 0.0
+        "value1": 1
       },
       {
         "gimmikName": "罠ブロック",
@@ -87,9 +85,7 @@
           704.0,
           -32.0
         ],
-        "value1": 1,
-        "value2": 0.0,
-        "value3": 0.0
+        "value1": 1
       },
       {
         "gimmikName": "罠ブロック",
@@ -97,9 +93,7 @@
           736.0,
           -32.0
         ],
-        "value1": 1,
-        "value2": 0.0,
-        "value3": 0.0
+        "value1": 1
       },
       {
         "gimmikName": "ワープ",
@@ -107,12 +101,10 @@
           32.0,
           608.0
         ],
-        "value1": "normal6",
-        "value2": 0.0,
-        "value3": 0.0
+        "value1": "normal6"
       }
     ],
-    "background": "sample",
+    "background": "cave",
     "startPlayerPos": [
       720.0,
       16.0

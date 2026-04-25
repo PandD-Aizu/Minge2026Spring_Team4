@@ -1,0 +1,27 @@
+﻿[
+  {
+    "Gimmiks": [
+      {
+        "gimmikName": "罠ブロック",
+        "gimmikPos": [
+          -32.0,
+          256.0
+        ],
+        "value1": 0
+      },
+      {
+        "gimmikName": "罠ブロック",
+        "gimmikPos": [
+          -32.0,
+          288.0
+        ],
+        "value1": 0
+      }
+    ],
+    "background": "caveLong",
+    "startPlayerPos": [
+      32.0,
+      304.0
+    ]
+  }
+]
