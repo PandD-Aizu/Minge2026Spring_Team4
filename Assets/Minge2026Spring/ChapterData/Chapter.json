@@ -1057,78 +1057,6 @@
             "waitingTime": 0.0
         },
         {
-            "blockId": "Choices4",
-            "nodeType": 1,
-            "nodePosX": 3300.0,
-            "nodePosY": 0.0,
-            "dialogues": [],
-            "choices": [
-                {
-                    "choiceText": "一旦ステージ用BGMを作って",
-                    "nextBlockId": "Part1_7_Branch_Ans0",
-                    "characterAMoraleDelta": 0,
-                    "characterBMoraleDelta": 0,
-                    "characterCMoraleDelta": 0,
-                    "characterDMoraleDelta": 5
-                },
-                {
-                    "choiceText": "世界観まで決めてほしい",
-                    "nextBlockId": "Part1_7_Branch_Ans1",
-                    "characterAMoraleDelta": 0,
-                    "characterBMoraleDelta": 0,
-                    "characterCMoraleDelta": 0,
-                    "characterDMoraleDelta": 10
-                },
-                {
-                    "choiceText": "最後にまとめて作って",
-                    "nextBlockId": "Part1_7_Branch_Ans2",
-                    "characterAMoraleDelta": 0,
-                    "characterBMoraleDelta": 0,
-                    "characterCMoraleDelta": 0,
-                    "characterDMoraleDelta": -25
-                }
-            ],
-            "nextBlockId": "",
-            "freeChats": [],
-            "waitingTime": 3.0
-        },
-        {
-            "blockId": "Choices5",
-            "nodeType": 1,
-            "nodePosX": 4200.0,
-            "nodePosY": 0.0,
-            "dialogues": [],
-            "choices": [
-                {
-                    "choiceText": "まずはラフでキャラデザインを出してほしい",
-                    "nextBlockId": "Part1_9_Branch_Ans0",
-                    "characterAMoraleDelta": 0,
-                    "characterBMoraleDelta": 0,
-                    "characterCMoraleDelta": 10,
-                    "characterDMoraleDelta": 0
-                },
-                {
-                    "choiceText": "全部勝手に進めて",
-                    "nextBlockId": "Part1_9_Branch_Ans1",
-                    "characterAMoraleDelta": 0,
-                    "characterBMoraleDelta": 0,
-                    "characterCMoraleDelta": 25,
-                    "characterDMoraleDelta": 0
-                },
-                {
-                    "choiceText": "一旦フリー素材でいいよ",
-                    "nextBlockId": "Part1_9_Branch_Ans2",
-                    "characterAMoraleDelta": 0,
-                    "characterBMoraleDelta": 0,
-                    "characterCMoraleDelta": -25,
-                    "characterDMoraleDelta": 0
-                }
-            ],
-            "nextBlockId": "",
-            "freeChats": [],
-            "waitingTime": 3.0
-        },
-        {
             "blockId": "Choices2",
             "nodeType": 1,
             "nodePosX": 1500.0,
@@ -1138,7 +1066,7 @@
                 {
                     "choiceText": "全体的な設計を作ったら見せてほしい",
                     "nextBlockId": "Part1_3_Branch_Ans0",
-                    "characterAMoraleDelta": 10,
+                    "characterAMoraleDelta": 45,
                     "characterBMoraleDelta": 0,
                     "characterCMoraleDelta": 0,
                     "characterDMoraleDelta": 0
@@ -1146,7 +1074,7 @@
                 {
                     "choiceText": "明日までに簡単にまとめてきて",
                     "nextBlockId": "Part1_3_Branch_Ans1",
-                    "characterAMoraleDelta": -10,
+                    "characterAMoraleDelta": 20,
                     "characterBMoraleDelta": 0,
                     "characterCMoraleDelta": 0,
                     "characterDMoraleDelta": 0
@@ -1154,7 +1082,7 @@
                 {
                     "choiceText": "よくわかんないから全部宜しく",
                     "nextBlockId": "Part1_3_Branch_Ans2",
-                    "characterAMoraleDelta": -25,
+                    "characterAMoraleDelta": 5,
                     "characterBMoraleDelta": 0,
                     "characterCMoraleDelta": 0,
                     "characterDMoraleDelta": 0
@@ -1175,7 +1103,7 @@
                     "choiceText": "とりあえず罠を1つ作ってほしい",
                     "nextBlockId": "Part1_5_Branch_Ans0",
                     "characterAMoraleDelta": 0,
-                    "characterBMoraleDelta": 10,
+                    "characterBMoraleDelta": 40,
                     "characterCMoraleDelta": 0,
                     "characterDMoraleDelta": 0
                 },
@@ -1183,7 +1111,7 @@
                     "choiceText": "無難なやつ作って",
                     "nextBlockId": "Part1_5_Branch_Ans1",
                     "characterAMoraleDelta": 0,
-                    "characterBMoraleDelta": -5,
+                    "characterBMoraleDelta": 30,
                     "characterCMoraleDelta": 0,
                     "characterDMoraleDelta": 0
                 },
@@ -1191,7 +1119,7 @@
                     "choiceText": "自由にやっちゃって",
                     "nextBlockId": "Part1_5_Branch_Ans2",
                     "characterAMoraleDelta": -10,
-                    "characterBMoraleDelta": 50,
+                    "characterBMoraleDelta": 20,
                     "characterCMoraleDelta": 0,
                     "characterDMoraleDelta": 0
                 }
@@ -1210,26 +1138,98 @@
                 {
                     "choiceText": "アクションかシューティングを作ろう",
                     "nextBlockId": "Part1_1_Branch_Ans0",
-                    "characterAMoraleDelta": 10,
+                    "characterAMoraleDelta": 35,
                     "characterBMoraleDelta": 50,
                     "characterCMoraleDelta": -10,
-                    "characterDMoraleDelta": -5
+                    "characterDMoraleDelta": 15
                 },
                 {
                     "choiceText": "すごいの作ろう",
                     "nextBlockId": "Part1_1_Branch_Ans1",
-                    "characterAMoraleDelta": -10,
-                    "characterBMoraleDelta": 5,
-                    "characterCMoraleDelta": 5,
-                    "characterDMoraleDelta": 5
+                    "characterAMoraleDelta": 5,
+                    "characterBMoraleDelta": 20,
+                    "characterCMoraleDelta": 40,
+                    "characterDMoraleDelta": 30
                 },
                 {
                     "choiceText": "みんなはどうしたい？",
                     "nextBlockId": "Part1_1_Branch_Ans2",
-                    "characterAMoraleDelta": -5,
+                    "characterAMoraleDelta": 10,
                     "characterBMoraleDelta": 25,
                     "characterCMoraleDelta": -5,
-                    "characterDMoraleDelta": -5
+                    "characterDMoraleDelta": 15
+                }
+            ],
+            "nextBlockId": "",
+            "freeChats": [],
+            "waitingTime": 3.0
+        },
+        {
+            "blockId": "Choices5",
+            "nodeType": 1,
+            "nodePosX": 4200.0,
+            "nodePosY": 0.0,
+            "dialogues": [],
+            "choices": [
+                {
+                    "choiceText": "まずはラフでキャラデザインを出してほしい",
+                    "nextBlockId": "Part1_9_Branch_Ans0",
+                    "characterAMoraleDelta": 0,
+                    "characterBMoraleDelta": 0,
+                    "characterCMoraleDelta": 35,
+                    "characterDMoraleDelta": 0
+                },
+                {
+                    "choiceText": "全部勝手に進めて",
+                    "nextBlockId": "Part1_9_Branch_Ans1",
+                    "characterAMoraleDelta": 0,
+                    "characterBMoraleDelta": 0,
+                    "characterCMoraleDelta": 50,
+                    "characterDMoraleDelta": 0
+                },
+                {
+                    "choiceText": "一旦フリー素材でいいよ",
+                    "nextBlockId": "Part1_9_Branch_Ans2",
+                    "characterAMoraleDelta": 0,
+                    "characterBMoraleDelta": 0,
+                    "characterCMoraleDelta": -25,
+                    "characterDMoraleDelta": 0
+                }
+            ],
+            "nextBlockId": "",
+            "freeChats": [],
+            "waitingTime": 3.0
+        },
+        {
+            "blockId": "Choices4",
+            "nodeType": 1,
+            "nodePosX": 3300.0,
+            "nodePosY": 0.0,
+            "dialogues": [],
+            "choices": [
+                {
+                    "choiceText": "一旦ステージ用BGMを作って",
+                    "nextBlockId": "Part1_7_Branch_Ans0",
+                    "characterAMoraleDelta": 0,
+                    "characterBMoraleDelta": 0,
+                    "characterCMoraleDelta": 0,
+                    "characterDMoraleDelta": 20
+                },
+                {
+                    "choiceText": "世界観まで決めてほしい",
+                    "nextBlockId": "Part1_7_Branch_Ans1",
+                    "characterAMoraleDelta": 0,
+                    "characterBMoraleDelta": 0,
+                    "characterCMoraleDelta": 0,
+                    "characterDMoraleDelta": 50
+                },
+                {
+                    "choiceText": "最後にまとめて作って",
+                    "nextBlockId": "Part1_7_Branch_Ans2",
+                    "characterAMoraleDelta": 0,
+                    "characterBMoraleDelta": 0,
+                    "characterCMoraleDelta": 0,
+                    "characterDMoraleDelta": -25
                 }
             ],
             "nextBlockId": "",
