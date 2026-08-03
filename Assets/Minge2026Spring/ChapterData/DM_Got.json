@@ -1,0 +1,33 @@
+{
+  "blocks": [
+    {
+      "blockId": "DM_Got_0",
+      "nodeType": 0,
+      "nodePosX": 0.0,
+      "nodePosY": 0.0,
+      "dialogues": [
+        { "iconId": "player_icon", "speaker": "主人公", "message": "javaの過去問ある？", "waitingTime": 3.0 },
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "ない", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "まじか", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "Ex8解けた？", "waitingTime": 3.0 },
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "答えほしいの？", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "ください", "waitingTime": 3.0 },
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "はい", "waitingTime": 3.0 },
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "間違ってることはないと思うけど", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "なんか違うファイル混じってない？", "waitingTime": 3.0 },
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "あ", "waitingTime": 3.0 },
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "まぁ、きにしないで", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "気になるんだが", "waitingTime": 3.0 },
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "見られて困らないからいいよ", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "いいんかい", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "ちなみにこのファイル何", "waitingTime": 3.0 },
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "ゲーム開発の時の設計のテンプレ。開発ルールのReadmeとか入ってる。なんでここにあるんだろ", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "知らん", "waitingTime": 3.0 }
+      ],
+      "choices": [],
+      "nextBlockId": "",
+      "freeChats": [],
+      "waitingTime": 0.0
+    }
+  ]
+}

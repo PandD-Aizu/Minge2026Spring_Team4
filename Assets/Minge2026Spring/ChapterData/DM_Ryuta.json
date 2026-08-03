@@ -1,0 +1,27 @@
+{
+  "blocks": [
+    {
+      "blockId": "DM_Ryuta_0",
+      "nodeType": 0,
+      "nodePosX": 0.0,
+      "nodePosY": 0.0,
+      "dialogues": [
+        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "ヌプラチューンやるんですけどどうですか？！", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "ヌプラ！いいですねぇ", "waitingTime": 3.0 },
+        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "明日の夜９時からです！", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "りょ", "waitingTime": 3.0 },
+        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "あと、今度協力型アクションゲームのH.E.P.O.の大型アプデあるんですけど、やりませんか？", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "へぽ？初めて聞く", "waitingTime": 3.0 },
+        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "めっちゃおもろいです", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "アクション好きのRyutaくんが言うなら間違いないな", "waitingTime": 3.0 },
+        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "おすすめです！", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "買った", "waitingTime": 3.0 },
+        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "かっけぇっす！", "waitingTime": 3.0 }
+      ],
+      "choices": [],
+      "nextBlockId": "",
+      "freeChats": [],
+      "waitingTime": 0.0
+    }
+  ]
+}

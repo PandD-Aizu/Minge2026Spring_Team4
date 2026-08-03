@@ -26,6 +26,30 @@ MonoBehaviour:
     m_SerializedLabels:
     - Json
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2d7f4a6c5b8e4019a3d6f7c8b9e0a1d2
+    m_Address: DM_Got
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3e8a5b7d6c9f4120a4e7f8d9c0b1a2e3
+    m_Address: DM_Kashiwamochi
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f9b6c8e7d0a4231b5f809ead1c2b3f4
+    m_Address: DM_Milu
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a0c7d9f8e1b4342c6a910fbe2d3c4a5
+    m_Address: DM_Ryuta
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 36964b079ed46354c881315a4577714d
     m_Address: kashiwamochi_icon
     m_ReadOnly: 0

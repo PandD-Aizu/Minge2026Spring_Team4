@@ -1,13 +1,16 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Runtime.InteropServices;
 using Minge2026Spring.Scripts.Application.Interface;
 
 namespace Minge2026Spring.Scripts.Infrastructure.ExternalServices
 {
-    public class ExternalProcessProvider : IDisposable, IExternalProcessProvider
+    /// <summary>
+    /// Windows上で外部ゲームを起動し、そのプロセスと子孫プロセスを管理する。
+    /// Job Objectを使うことで、親ゲームの異常終了時にもOSが関連プロセスを回収できる。
+    /// </summary>
+    public sealed class ExternalProcessProvider : IDisposable, IExternalProcessProvider
     {
-        // === Windows OSネイティブAPI (kernel32.dll) の定義 ===
         [StructLayout(LayoutKind.Sequential)]
         private struct STARTUPINFO
         {
@@ -40,6 +43,42 @@ namespace Minge2026Spring.Scripts.Infrastructure.ExternalServices
             public int dwThreadId;
         }
 
+        [StructLayout(LayoutKind.Sequential)]
+        private struct JOBOBJECT_BASIC_LIMIT_INFORMATION
+        {
+            public long PerProcessUserTimeLimit;
+            public long PerJobUserTimeLimit;
+            public uint LimitFlags;
+            public UIntPtr MinimumWorkingSetSize;
+            public UIntPtr MaximumWorkingSetSize;
+            public uint ActiveProcessLimit;
+            public UIntPtr Affinity;
+            public uint PriorityClass;
+            public uint SchedulingClass;
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
+        private struct IO_COUNTERS
+        {
+            public ulong ReadOperationCount;
+            public ulong WriteOperationCount;
+            public ulong OtherOperationCount;
+            public ulong ReadTransferCount;
+            public ulong WriteTransferCount;
+            public ulong OtherTransferCount;
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
+        private struct JOBOBJECT_EXTENDED_LIMIT_INFORMATION
+        {
+            public JOBOBJECT_BASIC_LIMIT_INFORMATION BasicLimitInformation;
+            public IO_COUNTERS IoInfo;
+            public UIntPtr ProcessMemoryLimit;
+            public UIntPtr JobMemoryLimit;
+            public UIntPtr PeakProcessMemoryUsed;
+            public UIntPtr PeakJobMemoryUsed;
+        }
+
         [DllImport("kernel32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
         private static extern bool CreateProcess(
             string lpApplicationName,
@@ -50,28 +89,74 @@ namespace Minge2026Spring.Scripts.Infrastructure.ExternalServices
             uint dwCreationFlags,
             IntPtr lpEnvironment,
             string lpCurrentDirectory,
-            [In] ref STARTUPINFO lpStartupInfo,
+            ref STARTUPINFO lpStartupInfo,
             out PROCESS_INFORMATION lpProcessInformation);
 
         [DllImport("kernel32.dll", SetLastError = true)]
-        private static extern bool GetExitCodeProcess(IntPtr hProcess, out uint lpExitCode);
+        private static extern IntPtr CreateJobObject(IntPtr lpJobAttributes, string lpName);
 
         [DllImport("kernel32.dll", SetLastError = true)]
-        private static extern bool CloseHandle(IntPtr hObject);
+        private static extern bool SetInformationJobObject(
+            IntPtr hJob,
+            int jobObjectInfoClass,
+            ref JOBOBJECT_EXTENDED_LIMIT_INFORMATION lpJobObjectInfo,
+            uint cbJobObjectInfoLength);
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern bool AssignProcessToJobObject(IntPtr hJob, IntPtr hProcess);
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern bool TerminateJobObject(IntPtr hJob, uint uExitCode);
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern uint WaitForSingleObject(IntPtr hHandle, uint dwMilliseconds);
 
         [DllImport("kernel32.dll", SetLastError = true)]
         private static extern bool TerminateProcess(IntPtr hProcess, uint uExitCode);
 
-        private const uint STILL_ACTIVE = 259;
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern uint ResumeThread(IntPtr hThread);
 
-        // Windowsから直接もらうプロセスの管理番号
-        private IntPtr _processHandle = IntPtr.Zero;
+        [DllImport("kernel32.dll", SetLastError = true)]
+        private static extern bool CloseHandle(IntPtr hObject);
+
+        private const uint CREATE_SUSPENDED = 0x00000004;
+        private const uint JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE = 0x00002000;
+        private const int JobObjectExtendedLimitInformation = 9;
+        private const uint WAIT_OBJECT_0 = 0x00000000;
+        private const uint WAIT_TIMEOUT = 0x00000102;
+        private const uint WAIT_FAILED = 0xFFFFFFFF;
+        private const uint StopWaitMilliseconds = 5000;
+
+        private IntPtr _processHandle;
+        private IntPtr _jobHandle;
+        private bool _disposed;
+
+        public ExternalProcessProvider()
+        {
+            UnityEngine.Application.quitting += StopProcess;
+        }
 
         public bool StartProcess(string processPath)
         {
-            if (string.IsNullOrEmpty(processPath)) return false;
+            if (_disposed || string.IsNullOrWhiteSpace(processPath))
+                return false;
 
-            var normalizedPath = Path.GetFullPath(processPath.Trim());
+#if !UNITY_STANDALONE_WIN && !UNITY_EDITOR_WIN
+            UnityEngine.Debug.LogError("[ExternalProcessProvider] Windows only.");
+            return false;
+#else
+            string normalizedPath;
+            try
+            {
+                normalizedPath = Path.GetFullPath(processPath.Trim());
+            }
+            catch (Exception exception) when (exception is ArgumentException || exception is NotSupportedException)
+            {
+                UnityEngine.Debug.LogError($"[ExternalProcessProvider] Invalid process path: {exception.Message}");
+                return false;
+            }
+
             if (!File.Exists(normalizedPath))
             {
                 UnityEngine.Debug.LogError($"[ExternalProcessProvider] File not found: {normalizedPath}");
@@ -79,83 +164,171 @@ namespace Minge2026Spring.Scripts.Infrastructure.ExternalServices
             }
 
             var workingDirectory = Path.GetDirectoryName(normalizedPath);
+            if (string.IsNullOrEmpty(workingDirectory))
+            {
+                UnityEngine.Debug.LogError($"[ExternalProcessProvider] Working directory could not be determined: {normalizedPath}");
+                return false;
+            }
 
-            // 起動前に前のプロセスが残っていれば確実に閉じる
             StopProcess();
 
-            var startupInfo = new STARTUPINFO();
-            startupInfo.cb = Marshal.SizeOf(startupInfo);
+            var jobHandle = CreateJobObject(IntPtr.Zero, null);
+            if (jobHandle == IntPtr.Zero)
+            {
+                LogLastWin32Error("CreateJobObject");
+                return false;
+            }
 
-            // C#のバグを回避し、Windowsの根幹APIで直接起動する
-            bool success = CreateProcess(
+            var jobLimits = new JOBOBJECT_EXTENDED_LIMIT_INFORMATION();
+            jobLimits.BasicLimitInformation.LimitFlags = JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE;
+            if (!SetInformationJobObject(
+                    jobHandle,
+                    JobObjectExtendedLimitInformation,
+                    ref jobLimits,
+                    (uint)Marshal.SizeOf(typeof(JOBOBJECT_EXTENDED_LIMIT_INFORMATION))))
+            {
+                LogLastWin32Error("SetInformationJobObject");
+                CloseHandle(jobHandle);
+                return false;
+            }
+
+            var startupInfo = new STARTUPINFO { cb = Marshal.SizeOf(typeof(STARTUPINFO)) };
+            PROCESS_INFORMATION processInfo;
+            var success = CreateProcess(
                 normalizedPath,
                 null,
                 IntPtr.Zero,
                 IntPtr.Zero,
                 false,
-                0,
+                CREATE_SUSPENDED,
                 IntPtr.Zero,
                 workingDirectory,
                 ref startupInfo,
-                out PROCESS_INFORMATION processInfo);
+                out processInfo);
 
-            if (success)
+            if (!success)
             {
-                UnityEngine.Debug.Log("[ExternalProcessProvider] CreateProcess 成功！");
-                _processHandle = processInfo.hProcess; // 絶対に見失わないハンドルを保持
-                
-                // スレッドハンドルは今回不要なので閉じてメモリリークを防ぐ
-                CloseHandle(processInfo.hThread);
-                return true;
-            }
-            else
-            {
-                int errorCode = Marshal.GetLastWin32Error();
-                UnityEngine.Debug.LogError($"[ExternalProcessProvider] CreateProcess 失敗。ErrorCode: {errorCode}");
+                LogLastWin32Error("CreateProcess");
+                CloseHandle(jobHandle);
                 return false;
             }
+
+            var assigned = AssignProcessToJobObject(jobHandle, processInfo.hProcess);
+            if (!assigned)
+            {
+                LogLastWin32Error("AssignProcessToJobObject");
+                TerminateProcess(processInfo.hProcess, 1);
+                WaitForSingleObject(processInfo.hProcess, StopWaitMilliseconds);
+                CloseHandle(processInfo.hThread);
+                CloseHandle(processInfo.hProcess);
+                CloseHandle(jobHandle);
+                return false;
+            }
+
+            if (ResumeThread(processInfo.hThread) == 0xFFFFFFFF)
+            {
+                LogLastWin32Error("ResumeThread");
+                TerminateJobObject(jobHandle, 1);
+                WaitForSingleObject(processInfo.hProcess, StopWaitMilliseconds);
+                CloseHandle(processInfo.hThread);
+                CloseHandle(processInfo.hProcess);
+                CloseHandle(jobHandle);
+                return false;
+            }
+
+            CloseHandle(processInfo.hThread);
+            _processHandle = processInfo.hProcess;
+            _jobHandle = jobHandle;
+            UnityEngine.Debug.Log($"[ExternalProcessProvider] Process started: {normalizedPath}");
+            return true;
+#endif
         }
 
         public void StopProcess()
         {
-            if (_processHandle != IntPtr.Zero)
+#if UNITY_STANDALONE_WIN || UNITY_EDITOR_WIN
+            if (_processHandle == IntPtr.Zero && _jobHandle == IntPtr.Zero)
+                return;
+
+            var processHandle = _processHandle;
+            var jobHandle = _jobHandle;
+            _processHandle = IntPtr.Zero;
+            _jobHandle = IntPtr.Zero;
+
+            if (jobHandle != IntPtr.Zero)
+                TerminateJobObject(jobHandle, 0);
+            else if (processHandle != IntPtr.Zero)
+                TerminateProcess(processHandle, 0);
+
+            if (processHandle != IntPtr.Zero)
             {
-                TerminateProcess(_processHandle, 0);
-                CloseHandle(_processHandle);
-                _processHandle = IntPtr.Zero;
+                var waitResult = WaitForSingleObject(processHandle, StopWaitMilliseconds);
+                if (waitResult == WAIT_TIMEOUT)
+                    UnityEngine.Debug.LogWarning("[ExternalProcessProvider] Process did not exit within the timeout.");
+                else if (waitResult == WAIT_FAILED)
+                    LogLastWin32Error("WaitForSingleObject");
+
+                CloseHandle(processHandle);
             }
+
+            if (jobHandle != IntPtr.Zero)
+                CloseHandle(jobHandle);
+#endif
         }
 
         public bool IsProcessRunning()
         {
-            if (_processHandle == IntPtr.Zero) return false;
-
-            // WindowsOSにプロセスの状態を直接問い合わせる
-            if (GetExitCodeProcess(_processHandle, out uint exitCode))
-            {
-                if (exitCode == STILL_ACTIVE)
-                {
-                    return true; // まだ元気に実行中
-                }
-                else
-                {
-                    UnityEngine.Debug.Log($"[ExternalProcessProvider] プロセスが終了しました。ExitCode: {exitCode}");
-                    CloseHandle(_processHandle);
-                    _processHandle = IntPtr.Zero;
-                    return false; // 終了した
-                }
-            }
-            
+#if !UNITY_STANDALONE_WIN && !UNITY_EDITOR_WIN
             return false;
+#else
+            if (_processHandle == IntPtr.Zero)
+                return false;
+
+            var waitResult = WaitForSingleObject(_processHandle, 0);
+            if (waitResult == WAIT_TIMEOUT)
+                return true;
+
+            if (waitResult == WAIT_OBJECT_0)
+            {
+                ReleaseFinishedProcess();
+                return false;
+            }
+
+            // APIエラーを終了扱いにすると、誤って結果画面へ遷移するため、
+            // ハンドルが有効な間は次回Tickで再確認する。
+            LogLastWin32Error("WaitForSingleObject");
+            return true;
+#endif
         }
 
-        public void UpdateProcessHandle()
+        private void ReleaseFinishedProcess()
         {
-            
+            if (_processHandle != IntPtr.Zero)
+            {
+                CloseHandle(_processHandle);
+                _processHandle = IntPtr.Zero;
+            }
+
+            // Jobを閉じると、万一残っている子孫プロセスも回収される。
+            if (_jobHandle != IntPtr.Zero)
+            {
+                CloseHandle(_jobHandle);
+                _jobHandle = IntPtr.Zero;
+            }
+        }
+
+        private static void LogLastWin32Error(string operation)
+        {
+            UnityEngine.Debug.LogError($"[ExternalProcessProvider] {operation} failed. ErrorCode: {Marshal.GetLastWin32Error()}");
         }
 
         public void Dispose()
         {
+            if (_disposed)
+                return;
+
+            _disposed = true;
+            UnityEngine.Application.quitting -= StopProcess;
             StopProcess();
         }
     }

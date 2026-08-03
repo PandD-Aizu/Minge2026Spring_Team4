@@ -7,13 +7,15 @@ namespace Minge2026Spring.Scripts.Application.UseCase
     public class ProcessUseCase
     {
         private readonly IExternalProcessProvider _externalProcessProvider;
+        private readonly ReadOnlyReactiveProperty<bool> _isProcessRunningReadOnly;
 
-        public ReadOnlyReactiveProperty<bool> IsProcessRunning => _isProcessRunning.ToReadOnlyReactiveProperty();
         private readonly ReactiveProperty<bool> _isProcessRunning = new (false);
+        public ReadOnlyReactiveProperty<bool> IsProcessRunning => _isProcessRunningReadOnly;
 
         public ProcessUseCase(IExternalProcessProvider externalProcessProvider)
         {
             _externalProcessProvider = externalProcessProvider;
+            _isProcessRunningReadOnly = _isProcessRunning.ToReadOnlyReactiveProperty();
         }
 
         /// <summary>
@@ -41,7 +43,6 @@ namespace Minge2026Spring.Scripts.Application.UseCase
         /// </summary>
         public void CheckProcessIsRunning()
         {
-            _externalProcessProvider.UpdateProcessHandle();
             _isProcessRunning.Value = _externalProcessProvider.IsProcessRunning();
         }
     }

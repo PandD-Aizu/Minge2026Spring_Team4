@@ -27,7 +27,12 @@ namespace Minge2026Spring.Scripts.Presenter
         private readonly ITmpMoraleJsonExporter _tmpMoraleJsonExporter;
         private readonly ProcessUseCase _processUseCase;
         private readonly ChatWindowView _chatWindowView;
+        private readonly IJsonUtilityProvider _jsonUtilityProvider;
+        private readonly NovelDmButtonView _dmButtonView;
         private SkipButtonHoldNotifier _skipButtonHoldNotifier;
+        private CancellationTokenSource _dmCancellationSource = new();
+        private bool _isDmMode;
+        private ChapterBlock _currentChapterBlock;
         
         private CompositeDisposable _disposables = new();
         private SkipMode _skipMode = SkipMode.None; // TODO: リファクタする
@@ -38,7 +43,9 @@ namespace Minge2026Spring.Scripts.Presenter
             MoraleUseCase moraleUseCase,
             ITmpMoraleJsonExporter tmpMoraleJsonExporter,
             ProcessUseCase processUseCase,
-            ChatWindowView chatWindowView)
+            ChatWindowView chatWindowView,
+            IJsonUtilityProvider jsonUtilityProvider,
+            NovelDmButtonView dmButtonView)
         {
             _chatUseCase = chatUseCase;
             _freeChatUseCase = freeChatUseCase;
@@ -46,6 +53,8 @@ namespace Minge2026Spring.Scripts.Presenter
             _tmpMoraleJsonExporter = tmpMoraleJsonExporter;
             _processUseCase = processUseCase;
             _chatWindowView = chatWindowView;
+            _jsonUtilityProvider = jsonUtilityProvider;
+            _dmButtonView = dmButtonView;
         }
         
         public void Initialize()
@@ -53,6 +62,9 @@ namespace Minge2026Spring.Scripts.Presenter
             _moraleUseCase.OnGameStart();
 
             BindSkipButton();
+            _dmButtonView.DmClicked += EnterDmMode;
+            _dmButtonView.CharacterDmClicked += StartCharacterDm;
+            _dmButtonView.DmBackClicked += ExitDmMode;
 
             // 章の会話ブロックの変化を監視して、チャットウィンドウに反映させる
             _chatUseCase.CurrentChapterBlock
@@ -91,8 +103,84 @@ namespace Minge2026Spring.Scripts.Presenter
                 _skipButtonHoldNotifier.Released -= StopSkipToInput;
             }
 
+            if (_dmButtonView is not null)
+            {
+                _dmButtonView.DmClicked -= EnterDmMode;
+                _dmButtonView.CharacterDmClicked -= StartCharacterDm;
+                _dmButtonView.DmBackClicked -= ExitDmMode;
+            }
+
             StopSkipToInput();
+            _dmCancellationSource.Cancel();
+            _dmCancellationSource.Dispose();
             _disposables.Dispose();
+        }
+
+        /// <summary>
+        /// 右側のシナリオ表示をDM表示へ切り替える
+        /// </summary>
+        private void EnterDmMode()
+        {
+            if (_isDmMode)
+                return;
+
+            _isDmMode = true;
+            _dmButtonView.Disable();
+            StopSkipToInput();
+            _chatWindowView.StopVoice();
+            _dmCancellationSource.Cancel();
+            _dmCancellationSource.Dispose();
+            _dmCancellationSource = new CancellationTokenSource();
+            _chatWindowView.ClearChatObjects();
+        }
+
+        /// <summary>
+        /// DM表示を終了して通常チャットを再開する
+        /// </summary>
+        private void ExitDmMode()
+        {
+            if (!_isDmMode)
+                return;
+
+            _isDmMode = false;
+            _dmCancellationSource.Cancel();
+            _dmCancellationSource.Dispose();
+            _dmCancellationSource = new CancellationTokenSource();
+            _chatWindowView.StopVoice();
+            _chatWindowView.ClearChatObjects();
+
+            if (_currentChapterBlock is not null)
+                HandleChapterBlockAsync(_currentChapterBlock, _dmCancellationSource.Token).Forget();
+        }
+
+        /// <summary>
+        /// 選択された人物のDMシナリオを開始する
+        /// </summary>
+        private void StartCharacterDm(string assetKey)
+        {
+            if (!_isDmMode)
+                return;
+
+            _dmCancellationSource.Cancel();
+            _dmCancellationSource.Dispose();
+            _dmCancellationSource = new CancellationTokenSource();
+            _chatWindowView.ClearChatObjects();
+            ShowCharacterDmAsync(assetKey, _dmCancellationSource.Token).Forget();
+        }
+
+        /// <summary>
+        /// DMシナリオを読み込み、チャットウィンドウへ表示する
+        /// </summary>
+        private async UniTaskVoid ShowCharacterDmAsync(string assetKey, CancellationToken token)
+        {
+            var chapter = await _jsonUtilityProvider.ConvertJsonToAnyObjectAsync<Chapter>(assetKey);
+            if (chapter?.blocks is null)
+                return;
+
+            foreach (var block in chapter.blocks)
+                await _chatWindowView.AddNewChatObject(block, token);
+
+            Debug.Log($"[NovelChatPresenter] Started DM scenario: {assetKey}");
         }
 
         private void BindSkipButton()
@@ -120,6 +208,7 @@ namespace Minge2026Spring.Scripts.Presenter
                 return;
 
             _skipMode = SkipMode.ToNextInputRequired;
+            _chatWindowView.StopVoice();
             Debug.Log("[NovelChatPresenter] Skip-to-input mode enabled.");
         }
 
@@ -133,9 +222,15 @@ namespace Minge2026Spring.Scripts.Presenter
 
         private async UniTask HandleChapterBlockAsync(ChapterBlock block, CancellationToken token)
         {
+            _currentChapterBlock = block;
+
+            if (_isDmMode)
+                return;
+
+            using var linkedCancellationSource = CancellationTokenSource.CreateLinkedTokenSource(token, _dmCancellationSource.Token);
             await _chatWindowView.AddNewChatObject(
                 block,
-                token,
+                linkedCancellationSource.Token,
                 choiceIndex =>
                 {
                     // 手動選択が発生した時点でスキップは不要になるため解除する
@@ -144,6 +239,9 @@ namespace Minge2026Spring.Scripts.Presenter
                     _chatUseCase.MoveToNextBlock(choiceIndex);
                 },
                 shouldSkipDelays: IsSkipToInputActive);
+
+            if (_isDmMode)
+                return;
 
             if (IsSkipToInputActive() && IsUserInputRequiredBlock(block))
             {

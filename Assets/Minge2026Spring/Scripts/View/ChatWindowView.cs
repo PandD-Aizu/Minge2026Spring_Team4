@@ -1,12 +1,16 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using FMODUnity;
 using Minge2026Spring.Scripts.Application.DTOs;
+using Minge2026Spring.Scripts.Application.Interface;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
+using VContainer;
 
 namespace Minge2026Spring.Scripts.View
 {
@@ -16,13 +20,41 @@ namespace Minge2026Spring.Scripts.View
         [SerializeField] public Transform scrollViewContentTransform;
         [SerializeField] public ScrollRect scrollRect;
         [SerializeField] public Button skipButton;
-
         [SerializeField] public StudioEventEmitter notificationEmitter;
-        
-        [Header("Prefabs")] 
+
+        [Header("Prefabs")]
         [SerializeField] public AssetReference chatPrefab;
         [SerializeField] public AssetReference choicePrefab;
-        
+
+        private static readonly string[] ChatIconAddresses =
+        {
+            "player_icon",
+            "goddo_icon",
+            "ryuta_icon",
+            "milu_icon",
+            "kashiwamochi_icon"
+        };
+
+        private readonly Dictionary<string, Sprite> _chatIconCache = new();
+        private readonly List<AsyncOperationHandle<Sprite>> _chatIconHandles = new();
+        private UniTask _chatIconPreloadTask;
+        private IFMODVoiceService _voiceService;
+
+        /// <summary>
+        /// シーン開始時にチャットアイコンの先読みを開始する
+        /// </summary>
+        private void Awake()
+        {
+            // プリロード結果を保持して複数回の await に対応させる
+            _chatIconPreloadTask = PreloadChatIconsAsync().Preserve();
+        }
+
+        [Inject]
+        public void Construct(IFMODVoiceService voiceService)
+        {
+            _voiceService = voiceService;
+        }
+
         /// <summary>
         /// スクロールビューに新しい会話オブジェクトを追加する
         /// </summary>
@@ -36,33 +68,85 @@ namespace Minge2026Spring.Scripts.View
             Action<int> onChoiceSelected = null,
             Func<bool> shouldSkipDelays = null)
         {
+            await _chatIconPreloadTask.AttachExternalCancellation(token);
             await RenderDialoguesAsync(chapterBlock, token, shouldSkipDelays);
             await RenderChoicesAsync(chapterBlock, token, onChoiceSelected);
         }
 
-        private async UniTask RenderDialoguesAsync(ChapterBlock chapterBlock, CancellationToken token, Func<bool> shouldSkipDelays)
+        /// <summary>
+        /// 会話メッセージを順番に生成して表示する
+        /// </summary>
+        private async UniTask RenderDialoguesAsync(
+            ChapterBlock chapterBlock,
+            CancellationToken token,
+            Func<bool> shouldSkipDelays)
         {
             if (chapterBlock.dialogues is null || chapterBlock.dialogues.Length == 0)
                 return;
 
-            // 待機時間を考慮しながら、UIを順に表示していく
             foreach (var dialogue in chapterBlock.dialogues)
             {
+                var shouldSkip = shouldSkipDelays?.Invoke() == true;
+                if (!shouldSkip)
+                    _voiceService?.Play(dialogue.voiceEventPath);
+
                 notificationEmitter.Play();
                 var chatHandle = Addressables.InstantiateAsync(chatPrefab, scrollViewContentTransform);
                 await chatHandle.ToUniTask(cancellationToken: token);
                 var chatObject = chatHandle.Result;
                 var chatUIView = chatObject.GetComponent<ChatUIView>();
-                chatUIView.SetData(dialogue).Forget();
+                _chatIconCache.TryGetValue(dialogue.iconId, out var iconAsset);
+                chatUIView.SetData(dialogue, iconAsset);
 
                 ScrollToBottom();
+
+                if (!shouldSkip && _voiceService is not null)
+                    await _voiceService.WaitUntilFinished(token);
 
                 if (dialogue.waitingTime > 0)
                     await WaitForDialogueDelayAsync(dialogue.waitingTime, token, shouldSkipDelays);
             }
         }
 
-        private static async UniTask WaitForDialogueDelayAsync(float waitingTime, CancellationToken token, Func<bool> shouldSkipDelays)
+        /// <summary>
+        /// チャットで使用するアイコンをAddressablesからまとめて読み込む
+        /// </summary>
+        private async UniTask PreloadChatIconsAsync()
+        {
+            foreach (var address in ChatIconAddresses)
+            {
+                var handle = Addressables.LoadAssetAsync<Sprite>(address);
+                _chatIconHandles.Add(handle);
+
+                var iconAsset = await handle.Task;
+                if (iconAsset is not null)
+                    _chatIconCache[address] = iconAsset;
+                else
+                    Debug.LogError($"[ChatWindowView] Failed to preload chat icon: {address}");
+            }
+        }
+
+        public void StopVoice()
+        {
+            _voiceService?.StopCurrentVoice(false);
+        }
+
+        /// <summary>
+        /// 右側チャット欄に表示中のメッセージをすべて削除する
+        /// </summary>
+        public void ClearChatObjects()
+        {
+            if (scrollViewContentTransform is null)
+                return;
+
+            for (var index = scrollViewContentTransform.childCount - 1; index >= 0; index--)
+                Destroy(scrollViewContentTransform.GetChild(index).gameObject);
+        }
+
+        private static async UniTask WaitForDialogueDelayAsync(
+            float waitingTime,
+            CancellationToken token,
+            Func<bool> shouldSkipDelays)
         {
             if (shouldSkipDelays?.Invoke() == true)
                 return;
@@ -81,9 +165,11 @@ namespace Minge2026Spring.Scripts.View
             }
         }
 
-        private async UniTask RenderChoicesAsync(ChapterBlock chapterBlock, CancellationToken token, Action<int> onChoiceSelected)
+        private async UniTask RenderChoicesAsync(
+            ChapterBlock chapterBlock,
+            CancellationToken token,
+            Action<int> onChoiceSelected)
         {
-            // 選択肢があれば、最後に表示する
             if (chapterBlock.choices is null || chapterBlock.choices.Length == 0)
                 return;
 
@@ -91,7 +177,7 @@ namespace Minge2026Spring.Scripts.View
             await choiceHandle.ToUniTask(cancellationToken: token);
             var choiceObject = choiceHandle.Result;
             var choiceUIView = choiceObject.GetComponent<ChoiceUIView>();
-            choiceUIView.SetData(chapterBlock.choices, onChoiceSelected);
+            await choiceUIView.SetData(chapterBlock.choices, onChoiceSelected, token);
 
             ScrollToBottom();
         }
@@ -104,13 +190,25 @@ namespace Minge2026Spring.Scripts.View
             if (scrollRect is null)
                 return;
 
-            // キャンバスの描画を更新
             Canvas.ForceUpdateCanvases();
-
-            // 一番下まで移動
             scrollRect
                 .DOVerticalNormalizedPos(0f, 0.3f)
                 .SetEase(Ease.OutQuart);
+        }
+
+        /// <summary>
+        /// シーン終了時に先読みしたAddressablesの参照を解放する
+        /// </summary>
+        private void OnDestroy()
+        {
+            foreach (var handle in _chatIconHandles)
+            {
+                if (handle.IsValid())
+                    Addressables.Release(handle);
+            }
+
+            _chatIconHandles.Clear();
+            _chatIconCache.Clear();
         }
     }
 }

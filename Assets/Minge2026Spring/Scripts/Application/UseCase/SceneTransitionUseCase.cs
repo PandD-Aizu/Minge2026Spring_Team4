@@ -24,6 +24,7 @@ namespace Minge2026Spring.Scripts.Application.UseCase
         
         public void LoadNovelSceneAsync()
             => _sceneTransitionProvider.LoadSceneAsync(SceneLabel.Novel);
+
         
         public void LoadResultSceneAsync()
             => _sceneTransitionProvider.LoadSceneAsync(SceneLabel.Ending);

@@ -31,6 +31,10 @@ namespace Minge2026Spring.Scripts.DI
             // Application Management
             builder.Register<ApplicationStopProvider>(Lifetime.Singleton)
                 .AsImplementedInterfaces();
+
+            // 外部プロセスはシーンをまたいで管理し、親ゲーム終了時に確実に回収する。
+            builder.Register<ExternalProcessProvider>(Lifetime.Singleton)
+                .AsImplementedInterfaces();
         }
     }
 }

@@ -1,0 +1,24 @@
+{
+  "blocks": [
+    {
+      "blockId": "DM_Kashiwamochi_0",
+      "nodeType": 0,
+      "nodePosX": 0.0,
+      "nodePosY": 0.0,
+      "dialogues": [
+        { "iconId": "player_icon", "speaker": "主人公", "message": "かしわもちくん", "waitingTime": 3.0 },
+        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "？", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "今度の南方同人イベントに出展するんだって？", "waitingTime": 3.0 },
+        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "そうですよ。興味ありますか？", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "CD一枚買わせてください", "waitingTime": 3.0 },
+        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "毎度ありです", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "和風オーケストラ、やっぱり良い", "waitingTime": 3.0 },
+        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "得意分野です", "waitingTime": 3.0 }
+      ],
+      "choices": [],
+      "nextBlockId": "",
+      "freeChats": [],
+      "waitingTime": 0.0
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using FMODUnity;
 using Minge2026Spring.Scripts.Application.DTOs;
 using UnityEditor;
 using UnityEditor.UIElements;
@@ -14,6 +15,12 @@ namespace Minge2026Spring.Scripts.Editor.ChapterGraphEditor
         private ChapterGraphView graphView;
         private IMGUIContainer inspectorContainer;
         private ChapterNode selectedNode;
+        private EventReferencePicker voiceEventPicker;
+
+        private sealed class EventReferencePicker : ScriptableObject
+        {
+            public EventReference EventReference;
+        }
 
         [MenuItem("Tools/Chapter Graph Editor")]
         public static void OpenWindow()
@@ -24,6 +31,8 @@ namespace Minge2026Spring.Scripts.Editor.ChapterGraphEditor
 
         private void OnEnable()
         {
+            voiceEventPicker = CreateInstance<EventReferencePicker>();
+            voiceEventPicker.hideFlags = HideFlags.HideAndDontSave;
             ConstructGraphView();
             ConstructSplitView();
             GenerateToolbar();
@@ -35,6 +44,12 @@ namespace Minge2026Spring.Scripts.Editor.ChapterGraphEditor
                 string path = UnityEditor.AssetDatabase.GUIDToAssetPath(guids[0]);
                 rootVisualElement.styleSheets.Add(UnityEditor.AssetDatabase.LoadAssetAtPath<StyleSheet>(path));
             }
+        }
+
+        private void OnDisable()
+        {
+            if (voiceEventPicker is not null)
+                DestroyImmediate(voiceEventPicker);
         }
 
         private void ConstructGraphView()
@@ -186,6 +201,18 @@ namespace Minge2026Spring.Scripts.Editor.ChapterGraphEditor
 
                     dialogue.speaker = EditorGUILayout.TextField("Speaker", dialogue.speaker);
                     dialogue.iconId = EditorGUILayout.TextField("Icon ID", dialogue.iconId);
+
+                    voiceEventPicker.EventReference = string.IsNullOrWhiteSpace(dialogue.voiceEventPath)
+                        ? default
+                        : RuntimeManager.PathToEventReference(dialogue.voiceEventPath);
+                    var pickerObject = new SerializedObject(voiceEventPicker);
+                    pickerObject.Update();
+                    var pickerProperty = pickerObject.FindProperty(nameof(EventReferencePicker.EventReference));
+                    EditorGUILayout.PropertyField(pickerProperty, new GUIContent("Voice Event"));
+                    pickerObject.ApplyModifiedProperties();
+                    dialogue.voiceEventPath = voiceEventPicker.EventReference.IsNull
+                        ? string.Empty
+                        : voiceEventPicker.EventReference.Path;
                     
                     GUILayout.Label("Message:");
                     dialogue.message = EditorGUILayout.TextArea(dialogue.message, GUILayout.MinHeight(50), GUILayout.ExpandHeight(true));

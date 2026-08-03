@@ -5,5 +5,6 @@
         public float MasterVolume;
         public float BgmVolume;
         public float SeVolume;
+        public float VoiceVolume;
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using Cysharp.Threading.Tasks;
 using Minge2026Spring.Scripts.Application.DTOs;
 using TMPro;
@@ -23,27 +24,35 @@ namespace Minge2026Spring.Scripts.View
         /// </summary>
         /// <param name="choices">選択肢データ</param>
         /// <param name="onChoiceSelected">選択時コールバック</param>
-        public async UniTaskVoid SetData(Choice[] choices, Action<int> onChoiceSelected = null)
+        public async UniTask SetData(
+            Choice[] choices,
+            Action<int> onChoiceSelected = null,
+            CancellationToken token = default)
         {
-            await LoadAsset();
-            
-            if (buttonParentObj is null)
+            try
             {
-                Debug.LogError("ChoiceUIView.buttonParentObj が設定されていません。", this);
-                return;
+                await LoadAsset(token);
+                token.ThrowIfCancellationRequested();
+
+                if (buttonParentObj is null)
+                {
+                    Debug.LogError("ChoiceUIView.buttonParentObj が設定されていません。", this);
+                    return;
+                }
+
+                ClearButtons();
+
+                if (choices is null || choices.Length == 0)
+                    return;
+
+                // 全ボタンの生成完了まで待ち、画面切替直後でも分岐UIを確実に表示する
+                for (int i = 0; i < choices.Length; i++)
+                    await CreateChoiceButton(choices[i], i, onChoiceSelected, token);
             }
-
-            ClearButtons();
-
-            if (choices is null || choices.Length == 0)
-                return;
-            
-            for (int i = 0; i < choices.Length; i++)
+            finally
             {
-                CreateChoiceButton(choices[i], i, onChoiceSelected).Forget();
+                ReleaseAsset();
             }
-
-            ReleaseAsset();
         }
 
         private void ClearButtons()
@@ -60,7 +69,11 @@ namespace Minge2026Spring.Scripts.View
         /// <param name="choice">選択肢データ</param>
         /// <param name="choiceIndex">選択肢のインデックス</param>
         /// <param name="onChoiceSelected">選択肢を押したときの処理</param>
-        private async UniTaskVoid CreateChoiceButton(Choice choice, int choiceIndex, Action<int> onChoiceSelected)
+        private async UniTask CreateChoiceButton(
+            Choice choice,
+            int choiceIndex,
+            Action<int> onChoiceSelected,
+            CancellationToken token)
         {
             var buttonObj = new GameObject($"ChoiceButton_{choiceIndex}",
                 typeof(RectTransform), typeof(Image), typeof(Button), typeof(LayoutElement));
@@ -93,16 +106,22 @@ namespace Minge2026Spring.Scripts.View
 
             var textComponent = textObj.GetComponent<TextMeshProUGUI>();
             var fontHandle = Addressables.LoadAssetAsync<TMP_FontAsset>("NotoSans_Regular");
-            var fontAsset = await fontHandle.Task;
-            textComponent.font = fontAsset;
-            textComponent.text = choice.choiceText;
-            textComponent.fontSize = 24;
-            textComponent.enableAutoSizing = true;
-            textComponent.color = Color.white;
-            textComponent.alignment = TextAlignmentOptions.Center;
-            textComponent.textWrappingMode = TextWrappingModes.Normal;
-
-            Addressables.Release(fontHandle);
+            try
+            {
+                await fontHandle.ToUniTask(cancellationToken: token);
+                textComponent.font = fontHandle.Result;
+                textComponent.text = choice.choiceText;
+                textComponent.fontSize = 24;
+                textComponent.enableAutoSizing = true;
+                textComponent.color = Color.white;
+                textComponent.alignment = TextAlignmentOptions.Center;
+                textComponent.textWrappingMode = TextWrappingModes.Normal;
+            }
+            finally
+            {
+                if (fontHandle.IsValid())
+                    Addressables.Release(fontHandle);
+            }
 
             button.onClick.AddListener(() =>
             {
@@ -124,16 +143,17 @@ namespace Minge2026Spring.Scripts.View
             }
         }
 
-        private async UniTask LoadAsset()
+        private async UniTask LoadAsset(CancellationToken token)
         { 
             if (choiceButtonSprite != null)
             {
                 var handle = choiceButtonSprite.LoadAssetAsync<Sprite>();
-                _choiceButtonSprite = await handle.Task;
+                await handle.ToUniTask(cancellationToken: token);
+                _choiceButtonSprite = handle.Result;
             }
         }
 
-        private async void ReleaseAsset()
+        private void ReleaseAsset()
         {
             if (choiceButtonSprite != null)
                 choiceButtonSprite.ReleaseAsset();

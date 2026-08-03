@@ -17,6 +17,7 @@ namespace Minge2026Spring.Scripts.Infrastructure.Repositories
         public float MasterVolume { get; set; } = 1.0f;
         public float BgmVolume { get; set; } = 1.0f;
         public float SeVolume { get; set; } = 1.0f;
+        public float VoiceVolume { get; set; } = 1.0f;
 
         public FMODSettingsRepository(
             IJsonUtilityProvider jsonUtilityProvider,
@@ -35,7 +36,8 @@ namespace Minge2026Spring.Scripts.Infrastructure.Repositories
             {
                 MasterVolume = MasterVolume,
                 BgmVolume = BgmVolume,
-                SeVolume = SeVolume
+                SeVolume = SeVolume,
+                VoiceVolume = VoiceVolume
             };
 
             string jsonText = _jsonUtilityProvider.ConvertAnyObjectToJsonAsync(settingsData);
@@ -64,6 +66,7 @@ namespace Minge2026Spring.Scripts.Infrastructure.Repositories
                 MasterVolume = settingsData.MasterVolume;
                 BgmVolume = settingsData.BgmVolume;
                 SeVolume = settingsData.SeVolume;
+                VoiceVolume = settingsData.VoiceVolume;
             }
             catch (System.Exception e)
             {

@@ -7,6 +7,7 @@ namespace Minge2026Spring.Scripts.Application.Interface
         public float MasterVolume { get; set; }
         public float BgmVolume { get; set; }
         public float SeVolume { get; set; }
+        public float VoiceVolume { get; set; }
         
         /// <summary>
         /// 現在の設定値をjsonファイルにセーブ

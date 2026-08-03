@@ -16,12 +16,8 @@
         /// <summary>
         /// プロセスが起動しているかどうかチェック
         /// </summary>
-        /// <returns>起動している: false</returns>
+        /// <returns>起動中なら true</returns>
         bool IsProcessRunning();
 
-        /// <summary>
-        /// ビルド版で null になったプロセスハンドルを復旧する
-        /// </summary>
-        void UpdateProcessHandle();
     }
 }

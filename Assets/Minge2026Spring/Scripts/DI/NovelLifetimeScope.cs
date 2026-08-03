@@ -27,6 +27,8 @@ namespace Minge2026Spring.Scripts.DI
             builder.RegisterEntryPoint<NovelChatPresenter>();
             builder.RegisterEntryPoint<NovelProcessPresenter>();
             builder.RegisterComponentInHierarchy<ChatWindowView>();
+            builder.RegisterComponentInHierarchy<NovelDmButtonView>();
+            builder.RegisterComponentInHierarchy<NovelMenuButtonView>();
 
             // Morale関係
             builder.Register<MoraleRepository>(Lifetime.Scoped)
@@ -50,16 +52,14 @@ namespace Minge2026Spring.Scripts.DI
             builder.Register<SpeechRecognitionProvider>(Lifetime.Scoped)
                 .AsImplementedInterfaces();
             
-            // 外部プロセス関係
-            builder.Register<ExternalProcessProvider>(Lifetime.Scoped)
-                .AsImplementedInterfaces();
-            
             // FMOD関係
             builder.Register<FMODAudioInputProvider>(Lifetime.Scoped)
                 .AsImplementedInterfaces();
             builder.Register<FMODBGMService>(Lifetime.Scoped)
                 .AsImplementedInterfaces();
             builder.Register<FMODSEService>(Lifetime.Scoped)
+                .AsImplementedInterfaces();
+            builder.Register<FMODVoiceService>(Lifetime.Scoped)
                 .AsImplementedInterfaces();
         }
     }

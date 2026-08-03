@@ -62,7 +62,11 @@ namespace Minge2026Spring.Scripts.Application.DTOs
         public string speaker;    // 発言者の名前
         public string message;    // 発言内容
 
-        public float waitingTime; // 次の会話を表示するまで待機する時間(s) 
+        // FMODのEventReferenceを章グラフエディターで選択し、JSONにはイベントパスとして保存する。
+        public string voiceEventPath;
+
+        // 音声再生終了後、次のセリフへ進むまでの追加待機時間(s)
+        public float waitingTime;
     }
 
     [Serializable]

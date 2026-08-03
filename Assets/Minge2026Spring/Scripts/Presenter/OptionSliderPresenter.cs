@@ -27,6 +27,8 @@ namespace Minge2026Spring.Scripts.Presenter
             _view.mainVolumeSlider.value = _fmodVcaService.GetMasterVolume();
             _view.bgmVolumeSlider.value = _fmodVcaService.GetBGMVolume();
             _view.seVolumeSlider.value = _fmodVcaService.GetSEVolume();
+            if (_view.voiceVolumeSlider is not null)
+                _view.voiceVolumeSlider.value = _fmodVcaService.GetVoiceVolume();
             
             _view.mainVolumeSlider.OnValueChangedAsObservable()
                 .Subscribe(value => _fmodVcaService.SetMasterVolume(value))
@@ -39,6 +41,13 @@ namespace Minge2026Spring.Scripts.Presenter
             _view.seVolumeSlider.OnValueChangedAsObservable()
                 .Subscribe(value => _fmodVcaService.SetSEVolume(value))
                 .AddTo(_disposables);
+
+            if (_view.voiceVolumeSlider is not null)
+            {
+                _view.voiceVolumeSlider.OnValueChangedAsObservable()
+                    .Subscribe(value => _fmodVcaService.SetVoiceVolume(value))
+                    .AddTo(_disposables);
+            }
             
             _view.backButton.OnClickAsObservable()
                 .Subscribe(_ => _sceneTransitionUseCase.LoadTitleSceneAsync())
