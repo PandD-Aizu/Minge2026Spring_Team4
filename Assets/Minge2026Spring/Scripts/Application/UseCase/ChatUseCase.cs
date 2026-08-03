@@ -77,5 +77,26 @@ namespace Minge2026Spring.Scripts.Application.UseCase
                 _isChapterEnded.Value = true;
             }
         }
+
+        /// <summary>
+        /// 指定した会話ブロックへ移動する
+        /// </summary>
+        /// <param name="blockId">移動先のブロックID</param>
+        /// <returns>移動先が存在した場合はtrue</returns>
+        public bool MoveToBlock(string blockId)
+        {
+            // ロード済みの章から移動先を検索する
+            var destination = _chapterBlocks?.FirstOrDefault(block => block.blockId == blockId);
+            if (destination is null)
+            {
+                Debug.LogError($"[ChatUseCase] Chapter block was not found: {blockId}");
+                return false;
+            }
+
+            // 終了状態を解除して対象ブロックの表示を開始する
+            _isChapterEnded.Value = false;
+            _currentChapterBlock.Value = destination;
+            return true;
+        }
     }
 }

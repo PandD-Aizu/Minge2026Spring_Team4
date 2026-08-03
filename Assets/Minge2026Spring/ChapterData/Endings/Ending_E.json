@@ -1,0 +1,25 @@
+{
+  "blocks": [
+    {
+      "blockId": "Ending_E",
+      "nodeType": 0,
+      "dialogues": [
+        { "iconId": "player_icon", "speaker": "主人公", "message": "……", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "……", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "milu_icon", "speaker": "Milu", "message": "……", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "……", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "……", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "どう？", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "……", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "面白くないね。", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "milu_icon", "speaker": "Milu", "message": "……はい。", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "曲だけ浮いてる気がします。", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "……", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "消す？", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "……", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "消そうか。", "voiceEventPath": "", "waitingTime": 3.0 }
+      ],
+      "choices": [], "nextBlockId": "", "freeChats": [], "waitingTime": 0.0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "blocks": [
+    {
+      "blockId": "Ending_G",
+      "nodeType": 0,
+      "dialogues": [
+        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "もっと追加しましょう！", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "milu_icon", "speaker": "Milu", "message": "じゃあキャラも増やします！", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "曲もあと三曲作ります！", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "いいね！！", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "もういっそ仕様変えます！", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "え？", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "さっき決めたのやめます！もはやこれはゲームではない！芸術だ！", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "それはさすがに……", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "milu_icon", "speaker": "Milu", "message": "ありです！", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "やりましょう！", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "え、ごっとくん……", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "うん、手遅れ", "voiceEventPath": "", "waitingTime": 3.0 }
+      ],
+      "choices": [], "nextBlockId": "", "freeChats": [], "waitingTime": 0.0
+    }
+  ]
+}

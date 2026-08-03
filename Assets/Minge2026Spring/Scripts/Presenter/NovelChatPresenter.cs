@@ -32,6 +32,7 @@ namespace Minge2026Spring.Scripts.Presenter
         private SkipButtonHoldNotifier _skipButtonHoldNotifier;
         private CancellationTokenSource _dmCancellationSource = new();
         private bool _isDmMode;
+        private bool _hasStartedExternalGame;
         private ChapterBlock _currentChapterBlock;
         
         private CompositeDisposable _disposables = new();
@@ -75,11 +76,13 @@ namespace Minge2026Spring.Scripts.Presenter
             // 章の終了を監視して、アイワナを起動する
             _chatUseCase.IsChapterEnded
                 .Skip(1)
-                .Where(isEnded => isEnded)
+                .Where(isEnded => isEnded && !_hasStartedExternalGame)
                 .Subscribe(isEnded =>
                 {
                     if (isEnded)
                     {
+                        // エンディング会話終了時の再起動を防ぐ
+                        _hasStartedExternalGame = true;
                         SaveMoraleToTmpJson();
                         
                         var path = Path.Combine(

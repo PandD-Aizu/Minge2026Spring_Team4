@@ -1,0 +1,24 @@
+{
+  "blocks": [
+    {
+      "blockId": "Ending_D",
+      "nodeType": 0,
+      "dialogues": [
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "マップジェネレーター完成。", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "システムも全部作り直した。", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "ステージ作る必要もうないんですか？", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "milu_icon", "speaker": "Milu", "message": "え……全部描き直しですか？", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "曲もステージごとに全部変えるんです？", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "ちょ、ちょっと待って！", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "ステージ自分で作っても...", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "いや、その前に設計変更する。", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "えぇ...", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "milu_icon", "speaker": "Milu", "message": "終わらない……", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "終わらないですねぇ……", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "…………ごめん、時間切れ。", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "……やりすぎたね。", "voiceEventPath": "", "waitingTime": 3.0 }
+      ],
+      "choices": [], "nextBlockId": "", "freeChats": [], "waitingTime": 0.0
+    }
+  ]
+}

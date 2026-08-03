@@ -1,0 +1,18 @@
+{
+  "blocks": [
+    {
+      "blockId": "Ending_I",
+      "nodeType": 0,
+      "dialogues": [
+        { "iconId": "player_icon", "speaker": "主人公", "message": "クリア！", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "え", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "え", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "milu_icon", "speaker": "Milu", "message": "え", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "ノーセーブクリア？", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "……", "voiceEventPath": "", "waitingTime": 3.0 },
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "それでこそ開発者。", "voiceEventPath": "", "waitingTime": 3.0 }
+      ],
+      "choices": [], "nextBlockId": "", "freeChats": [], "waitingTime": 0.0
+    }
+  ]
+}

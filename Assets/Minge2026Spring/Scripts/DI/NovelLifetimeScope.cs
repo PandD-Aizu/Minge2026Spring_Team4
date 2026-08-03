@@ -22,6 +22,7 @@ namespace Minge2026Spring.Scripts.DI
             builder.Register<MoraleUseCase>(Lifetime.Scoped);
             builder.Register<GameStarterUseCase>(Lifetime.Scoped);
             builder.Register<ProcessUseCase>(Lifetime.Scoped);
+            builder.Register<EndingUseCase>(Lifetime.Scoped);
             builder.Register<SceneTransitionUseCase>(Lifetime.Scoped);
             builder.Register<MoraleCheckService>(Lifetime.Scoped);
             builder.RegisterEntryPoint<NovelChatPresenter>();
@@ -32,6 +33,8 @@ namespace Minge2026Spring.Scripts.DI
 
             // Morale関係
             builder.Register<MoraleRepository>(Lifetime.Scoped)
+                .AsImplementedInterfaces();
+            builder.Register<EndingValueRepository>(Lifetime.Scoped)
                 .AsImplementedInterfaces();
             builder.Register<SharedMemoryService>(Lifetime.Scoped)
                 .AsImplementedInterfaces();
