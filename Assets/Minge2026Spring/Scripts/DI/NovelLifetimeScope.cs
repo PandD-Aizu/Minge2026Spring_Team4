@@ -36,6 +36,8 @@ namespace Minge2026Spring.Scripts.DI
                 .AsImplementedInterfaces();
             builder.Register<EndingValueRepository>(Lifetime.Scoped)
                 .AsImplementedInterfaces();
+            builder.Register<GameSaveRepository>(Lifetime.Scoped)
+                .AsImplementedInterfaces();
             builder.Register<SharedMemoryService>(Lifetime.Scoped)
                 .AsImplementedInterfaces();
             

@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Main
   m_GUID: 42cc0676aca0a7344a3c7c2d0f8f8c7c
   m_SerializeEntries:
+  - m_GUID: 01a1b3ec41a437440944d9a5ce392752
+    m_Address: ChatHeaderPrefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0898f6af0612f0a4d9cd6ec25b54f432
     m_Address: DM_Got_Icon
     m_ReadOnly: 0

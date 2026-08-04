@@ -23,6 +23,7 @@ namespace Minge2026Spring.Scripts.View
         [SerializeField] public StudioEventEmitter notificationEmitter;
 
         [Header("Prefabs")]
+        [SerializeField] public AssetReference chatHeaderPrefab;
         [SerializeField] public AssetReference chatPrefab;
         [SerializeField] public AssetReference choicePrefab;
 
@@ -74,6 +75,27 @@ namespace Minge2026Spring.Scripts.View
         }
 
         /// <summary>
+        /// 復元対象の過去ブロックを待機と選択肢なしで表示する
+        /// </summary>
+        /// <param name="chapterBlock">復元する章のブロック会話データ</param>
+        /// <param name="token">キャンセルトークン</param>
+        public async UniTask AddHistoricalChatObject(ChapterBlock chapterBlock, CancellationToken token)
+        {
+            await _chatIconPreloadTask.AttachExternalCancellation(token);
+            await RenderDialoguesAsync(chapterBlock, token, () => true);
+        }
+
+        /// <summary>
+        /// チュートリアルヘッダーをチャット履歴の先頭に表示する
+        /// </summary>
+        public async UniTask AddChatHeader(CancellationToken token)
+        {
+            var headerHandle = Addressables.InstantiateAsync(chatHeaderPrefab, scrollViewContentTransform);
+            await headerHandle.ToUniTask(cancellationToken: token);
+            headerHandle.Result.transform.SetAsFirstSibling();
+        }
+
+        /// <summary>
         /// 会話メッセージを順番に生成して表示する
         /// </summary>
         private async UniTask RenderDialoguesAsync(
@@ -90,7 +112,8 @@ namespace Minge2026Spring.Scripts.View
                 if (!shouldSkip)
                     _voiceService?.Play(dialogue.voiceEventPath);
 
-                notificationEmitter.Play();
+                if (!shouldSkip)
+                    notificationEmitter.Play();
                 var chatHandle = Addressables.InstantiateAsync(chatPrefab, scrollViewContentTransform);
                 await chatHandle.ToUniTask(cancellationToken: token);
                 var chatObject = chatHandle.Result;

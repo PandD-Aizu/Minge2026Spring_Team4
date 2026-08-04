@@ -1,4 +1,5 @@
 ﻿using Minge2026Spring.Scripts.Application.UseCase;
+using Minge2026Spring.Scripts.Infrastructure.Repositories;
 using Minge2026Spring.Scripts.Presenter;
 using Minge2026Spring.Scripts.View;
 using VContainer;
@@ -16,6 +17,8 @@ namespace Minge2026Spring.Scripts.DI
             
             // シーン遷移関係
             builder.Register<SceneTransitionUseCase>(Lifetime.Scoped);
+            builder.Register<EndingUseCase>(Lifetime.Scoped);
+            builder.Register<EndingValueRepository>(Lifetime.Scoped).AsImplementedInterfaces();
         }
     }
 }

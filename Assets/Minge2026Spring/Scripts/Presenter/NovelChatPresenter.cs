@@ -32,6 +32,7 @@ namespace Minge2026Spring.Scripts.Presenter
         private SkipButtonHoldNotifier _skipButtonHoldNotifier;
         private CancellationTokenSource _dmCancellationSource = new();
         private bool _isDmMode;
+        private bool _isRestoringMainScenario;
         private bool _hasStartedExternalGame;
         private ChapterBlock _currentChapterBlock;
         
@@ -70,6 +71,7 @@ namespace Minge2026Spring.Scripts.Presenter
             // 章の会話ブロックの変化を監視して、チャットウィンドウに反映させる
             _chatUseCase.CurrentChapterBlock
                 .Where(block => block is not null)
+                .Where(_ => !_isRestoringMainScenario)
                 .SubscribeAwait(async (block, token) => await HandleChapterBlockAsync(block, token))
                 .AddTo(_disposables);
             
@@ -95,7 +97,7 @@ namespace Minge2026Spring.Scripts.Presenter
                 .AddTo(_disposables);
             
             // 章の会話データをロードする
-            _chatUseCase.LoadChapter("Chapter").Forget();
+            LoadMainScenarioAsync().Forget();
         }
 
         public void Dispose()
@@ -152,8 +154,7 @@ namespace Minge2026Spring.Scripts.Presenter
             _chatWindowView.StopVoice();
             _chatWindowView.ClearChatObjects();
 
-            if (_currentChapterBlock is not null)
-                HandleChapterBlockAsync(_currentChapterBlock, _dmCancellationSource.Token).Forget();
+            RestoreMainScenarioAsync(_dmCancellationSource.Token).Forget();
         }
 
         /// <summary>
@@ -239,6 +240,7 @@ namespace Minge2026Spring.Scripts.Presenter
                     // 手動選択が発生した時点でスキップは不要になるため解除する
                     StopSkipToInput();
                     ApplyChoiceMorale(block, choiceIndex);
+                    _moraleUseCase.OnSave();
                     _chatUseCase.MoveToNextBlock(choiceIndex);
                 },
                 shouldSkipDelays: IsSkipToInputActive);
@@ -259,6 +261,69 @@ namespace Minge2026Spring.Scripts.Presenter
                 await WaitWithSkipAsync(block.waitingTime, token);
             
             _chatUseCase.MoveToNextBlock();
+        }
+
+        /// <summary>
+        /// メインシナリオと保存済みの会話履歴をロードする
+        /// </summary>
+        private async UniTaskVoid LoadMainScenarioAsync()
+        {
+            _isRestoringMainScenario = true;
+            try
+            {
+                await _chatUseCase.LoadChapter("Chapter");
+                await RestoreMainScenarioContentsAsync(_dmCancellationSource.Token);
+            }
+            catch (OperationCanceledException)
+            {
+                // シーン終了やDM切替によるキャンセルは正常終了として扱う
+            }
+            finally
+            {
+                _isRestoringMainScenario = false;
+            }
+        }
+
+        /// <summary>
+        /// DMから戻る際に保存済みのメインシナリオを復元する
+        /// </summary>
+        /// <param name="token">キャンセルトークン</param>
+        private async UniTaskVoid RestoreMainScenarioAsync(CancellationToken token)
+        {
+            _isRestoringMainScenario = true;
+            try
+            {
+                await RestoreMainScenarioContentsAsync(token);
+            }
+            catch (OperationCanceledException)
+            {
+                // 別のDM選択などによる復元中断は正常終了として扱う
+            }
+            finally
+            {
+                _isRestoringMainScenario = false;
+            }
+        }
+
+        /// <summary>
+        /// 到達済みブロックを再描画して現在位置の入力UIを復元する
+        /// </summary>
+        /// <param name="token">キャンセルトークン</param>
+        private async UniTask RestoreMainScenarioContentsAsync(CancellationToken token)
+        {
+            _chatWindowView.ClearChatObjects();
+            await _chatWindowView.AddChatHeader(token);
+            var reachedBlocks = _chatUseCase.ReachedChapterBlocks;
+            if (reachedBlocks.Count == 0)
+                return;
+
+            // 過去ブロックは会話だけを即時復元する
+            for (var index = 0; index < reachedBlocks.Count - 1; index++)
+                await _chatWindowView.AddHistoricalChatObject(reachedBlocks[index], token);
+
+            // 現在ブロックは分岐を含む通常処理で復元する
+            _isRestoringMainScenario = false;
+            await HandleChapterBlockAsync(reachedBlocks[^1], token);
         }
 
         private bool IsSkipToInputActive()

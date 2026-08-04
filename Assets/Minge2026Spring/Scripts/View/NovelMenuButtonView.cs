@@ -312,7 +312,7 @@ namespace Minge2026Spring.Scripts.View
             handleAreaRect.offsetMin = new Vector2(8f, 0f);
             handleAreaRect.offsetMax = new Vector2(-8f, 0f);
             var handle = CreatePanel("Handle", handleArea.transform, PrimaryTextColor,
-                Vector2.zero, new Vector2(20f, 20f));
+                Vector2.zero, new Vector2(12f, 20f));
 
             var slider = sliderObject.GetComponent<Slider>();
             slider.minValue = 0f;

@@ -21,6 +21,15 @@ namespace Minge2026Spring.Scripts.Infrastructure.ExternalServices
             
                 // モデルのパスを構築し初期化
                 ConstructPaths(out string modelPath);
+
+                // ネイティブプラグインは存在しないモデルパスを渡すと、マネージド例外を
+                // 経由せずプロセスごと終了する場合がある。呼び出す前に検証する。
+                if (!File.Exists(modelPath))
+                {
+                    _isInitialized = false;
+                    Debug.LogError($"[LLMProvider] Model file was not found. Free chat features are disabled. modelPath = {modelPath}");
+                    return;
+                }
             
                 // StreamingAssets内のモデルを読み込む
                 _isInitialized = LLMForUnityManager.Init(modelPath);

@@ -7,6 +7,11 @@ namespace Minge2026Spring.Scripts.Application.UseCase
     {
         private const int EndingCount = 10;
         private const int DefaultEndingValue = 0;
+        private static readonly string[] EndingTitles =
+        {
+            "Pass and Delivery", "Passive and Drift", "Plain and Dry", "Power and Disaster", "Pause and Delete",
+            "Panic and Deadlock", "Passion and Discord", "Perfect and Delight", "Pride and Determination", "Planning and Development"
+        };
         private readonly IEndingValueProvider _endingValueProvider;
 
         public EndingUseCase(IEndingValueProvider endingValueProvider)
@@ -20,18 +25,21 @@ namespace Minge2026Spring.Scripts.Application.UseCase
         /// <returns>Ending_AからEnding_JまでのブロックID</returns>
         public string GetEndingBlockId()
         {
-            // 読込失敗時はEnding_Aへフォールバックする
-            if (!_endingValueProvider.TryGetEndingValue(out var endingValue))
-                endingValue = DefaultEndingValue;
-
-            // 範囲外の値はログへ記録してEnding_Aへフォールバックする
-            if (endingValue < 0 || endingValue >= EndingCount)
-            {
-                Debug.LogError($"[EndingUseCase] Ending value is out of range: {endingValue}");
-                endingValue = DefaultEndingValue;
-            }
-
+            var endingValue = GetEndingValue();
             return $"Ending_{(char)('A' + endingValue)}";
+        }
+
+        public string GetEndingTitle() => EndingTitles[GetEndingValue()];
+
+        private int GetEndingValue()
+        {
+            if (!_endingValueProvider.TryGetEndingValue(out var endingValue))
+                return DefaultEndingValue;
+            if (endingValue >= 0 && endingValue < EndingCount)
+                return endingValue;
+
+            Debug.LogError($"[EndingUseCase] Ending value is out of range: {endingValue}");
+            return DefaultEndingValue;
         }
     }
 }

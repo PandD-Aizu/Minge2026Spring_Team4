@@ -1,40 +1,25 @@
-﻿# Minge2026Spring_Team4 Agents.md
+﻿# AGENTS.md
 
-## 1. アーキテクチャ
-### Applicationレイヤー
-* DomainとInfrastructureの実装を用いて、ゲーム内の挙動を実装する
-    * DTOs：Data Transfer Object
-    * UseCases：ユースケースを実装する
-    * Interfaces：依存性逆転を用いて、Infra層などの実装をインターフェイスとして定義する
+- Do not preserve backward compatibility. Remove obsolete paths instead of
+  adding compatibility layers, fallbacks, or migrations.
 
-### Domainレイヤー
-* ゲーム内キャラクターの定義などを実装する
-    * Entities：ゲーム内の敵やプレイヤーのパラメータなどを定義
-    * ValueObjects：ゲーム内の座標や速度などの値を定義
+- Choose the simplest implementation that fully meets the current
+  requirements. Avoid speculative abstractions, configuration, and
+  indirection.
 
-### Infrastructureレイヤー
-* 外部APIやゲームの動作に直接関係ないGraphicsAPIなどを実装する
-    * Repositories：データの永続化や取得を行う
-    * ExternalServices：外部APIの呼び出し
+- Grow the system in layers. Start from the smallest version that works end
+  to end, and add each new capability on top of a product that already
+  works. Never trade a working product for unfinished complexity.
 
-### Presentationレイヤー
-* ApplicationレイヤーとViewレイヤー間でデータの受け渡しをする
+- Keep components modular and concerns clearly separated.
 
-### Viewレイヤー
-* キャラクターやUIを描画する
+- Prefer established, well-maintained libraries when they reduce overall
+  complexity or improve reliability. Do not reimplement common
+  functionality without a clear reason.
 
-## 2. 使用可能なツール
+- Lean on the dependencies already in the project before writing your own
+  implementation or adding packages. Do not assume a library lacks a
+  capability without checking its documentation and types.
 
-* Unity CLI
-
-## 3. ワークフロー
-
-### Input prompt
-
-* If we input the ambiguous prompt, you have to question the user to clarify the prompt
-
-### Codespace comment
-
-* Please make comments based on Doxygen
-* No need for periods at the end of sentences
-* Please write a brief comment for each chunk of processing
+- Make architectural decisions for the long term. Do not accept a stopgap
+  that only works for now and is meant to be replaced later.

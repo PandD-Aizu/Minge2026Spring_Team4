@@ -11,6 +11,12 @@ namespace Minge2026Spring.Scripts.View
 {
     public class ChoiceUIView : MonoBehaviour
     {
+        private const float MaxButtonWidth = 440f;
+        private const float ButtonHeight = 72f;
+        private const float HorizontalTextPadding = 16f;
+        private const float MaxFontSize = 18f;
+        private const float MinFontSize = 14f;
+
         [Header("GameSettings")]
         [SerializeField] private Transform buttonParentObj;
 
@@ -45,9 +51,11 @@ namespace Minge2026Spring.Scripts.View
                 if (choices is null || choices.Length == 0)
                     return;
 
+                var buttonWidth = CalculateButtonWidth(choices.Length);
+
                 // 全ボタンの生成完了まで待ち、画面切替直後でも分岐UIを確実に表示する
                 for (int i = 0; i < choices.Length; i++)
-                    await CreateChoiceButton(choices[i], i, onChoiceSelected, token);
+                    await CreateChoiceButton(choices[i], i, buttonWidth, onChoiceSelected, token);
             }
             finally
             {
@@ -72,6 +80,7 @@ namespace Minge2026Spring.Scripts.View
         private async UniTask CreateChoiceButton(
             Choice choice,
             int choiceIndex,
+            float buttonWidth,
             Action<int> onChoiceSelected,
             CancellationToken token)
         {
@@ -80,8 +89,8 @@ namespace Minge2026Spring.Scripts.View
             buttonObj.transform.SetParent(buttonParentObj, false);
 
             var layoutElement = buttonObj.GetComponent<LayoutElement>();
-            layoutElement.preferredWidth = 200;
-            layoutElement.preferredHeight = 100;
+            layoutElement.preferredWidth = buttonWidth;
+            layoutElement.preferredHeight = ButtonHeight;
 
             var image = buttonObj.GetComponent<Image>();
             image.color = new Color(1f, 1f, 1f, 0.95f);
@@ -101,8 +110,8 @@ namespace Minge2026Spring.Scripts.View
             var textRect = (RectTransform)textObj.transform;
             textRect.anchorMin = Vector2.zero;
             textRect.anchorMax = Vector2.one;
-            textRect.offsetMin = new Vector2(12f, 6f);
-            textRect.offsetMax = new Vector2(-12f, -6f);
+            textRect.offsetMin = new Vector2(HorizontalTextPadding, 6f);
+            textRect.offsetMax = new Vector2(-HorizontalTextPadding, -6f);
 
             var textComponent = textObj.GetComponent<TextMeshProUGUI>();
             var fontHandle = Addressables.LoadAssetAsync<TMP_FontAsset>("NotoSans_Regular");
@@ -111,11 +120,14 @@ namespace Minge2026Spring.Scripts.View
                 await fontHandle.ToUniTask(cancellationToken: token);
                 textComponent.font = fontHandle.Result;
                 textComponent.text = choice.choiceText;
-                textComponent.fontSize = 24;
+                textComponent.fontSize = MaxFontSize;
                 textComponent.enableAutoSizing = true;
+                textComponent.fontSizeMin = MinFontSize;
+                textComponent.fontSizeMax = MaxFontSize;
                 textComponent.color = Color.white;
                 textComponent.alignment = TextAlignmentOptions.Center;
                 textComponent.textWrappingMode = TextWrappingModes.Normal;
+                textComponent.overflowMode = TextOverflowModes.Ellipsis;
             }
             finally
             {
@@ -128,6 +140,26 @@ namespace Minge2026Spring.Scripts.View
                 SetButtonsInteractable(false);
                 onChoiceSelected?.Invoke(choiceIndex);
             });
+        }
+
+        private float CalculateButtonWidth(int choiceCount)
+        {
+            var parentRect = buttonParentObj as RectTransform;
+            var availableWidth = parentRect != null ? parentRect.rect.width : 0f;
+            if (availableWidth <= 0f && parentRect != null)
+                availableWidth = parentRect.sizeDelta.x;
+
+            if (availableWidth <= 0f)
+                return MaxButtonWidth;
+
+            var layoutGroup = buttonParentObj.GetComponent<HorizontalLayoutGroup>();
+            var spacing = layoutGroup != null ? layoutGroup.spacing : 0f;
+            var horizontalPadding = layoutGroup != null
+                ? layoutGroup.padding.left + layoutGroup.padding.right
+                : 0f;
+            var usableWidth = availableWidth - horizontalPadding - spacing * (choiceCount - 1);
+
+            return Mathf.Min(MaxButtonWidth, usableWidth / choiceCount);
         }
 
         /// <summary>
