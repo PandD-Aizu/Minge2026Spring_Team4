@@ -1,0 +1,27 @@
+[
+  {
+    "Gimmiks": [
+      {
+        "gimmikName": "ワープ",
+        "gimmikPos": [
+          800.0,
+          512.0
+        ],
+        "value1": "low3"
+      },
+      {
+        "gimmikName": "ワープ",
+        "gimmikPos": [
+          800.0,
+          544.0
+        ],
+        "value1": "low3"
+      }
+    ],
+    "background": "cave",
+    "startPlayerPos": [
+      50.0,
+      550.0
+    ]
+  }
+]
