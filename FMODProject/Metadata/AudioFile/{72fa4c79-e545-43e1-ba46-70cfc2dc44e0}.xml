@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{72fa4c79-e545-43e1-ba46-70cfc2dc44e0}">
+		<property name="assetPath">
+			<value>Ryuta_学部二年のRyutaです！趣味は鬼畜アクション制作です！yorpsikuお願いします！.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>7.032</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7cef0a3e-b767-4358-b7f6-64653f0fef2d}</destination>
+		</relationship>
+	</object>
+</objects>

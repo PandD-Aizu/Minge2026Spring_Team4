@@ -1,6 +1,10 @@
 using System;
+using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.UI;
 
 namespace Minge2026Spring.Scripts.View
@@ -22,18 +26,42 @@ namespace Minge2026Spring.Scripts.View
         private Transform _leftPanel;
         private GameObject _dmMenuObject;
 
-        private static readonly (string AssetKey, string DisplayName)[] DmCharacters =
+        private const string ButtonBackgroundAddress = "DM_Button_Background";
+        private const string MenuTitleAddress = "DM_UI_TEXT";
+
+        private static readonly (string AssetKey, string IconAddress)[] DmCharacters =
         {
-            ("DM_Milu", "milu"),
-            ("DM_Kashiwamochi", "かしわもち"),
-            ("DM_Ryuta", "Ryuta"),
-            ("DM_Got", "ごっと")
+            ("DM_Milu", "DM_Milu_Icon"),
+            ("DM_Kashiwamochi", "DM_Kashiwamochi_Icon"),
+            ("DM_Ryuta", "DM_Ryuta_Icon"),
+            ("DM_Got", "DM_Got_Icon")
         };
+
+        private readonly Dictionary<string, Sprite> _spriteCache = new();
+        private readonly List<AsyncOperationHandle<Sprite>> _spriteHandles = new();
+        private UniTask _spritePreloadTask;
+
+        /// <summary>
+        /// DM UI素材の先読みを開始する
+        /// </summary>
+        private void Awake()
+        {
+            // 複数箇所から待機できるよう先読みタスクを保持する
+            _spritePreloadTask = PreloadSpritesAsync().Preserve();
+        }
 
         /// <summary>
         /// 左パネルへDiscord風のDMボタンを追加する
         /// </summary>
         private void Start()
+        {
+            InitializeAsync().Forget();
+        }
+
+        /// <summary>
+        /// 左パネルを取得してDMボタンを生成する
+        /// </summary>
+        private async UniTaskVoid InitializeAsync()
         {
             var leftPanel = GameObject.Find("LeftPanel");
             if (leftPanel is null)
@@ -43,7 +71,33 @@ namespace Minge2026Spring.Scripts.View
             }
 
             _leftPanel = leftPanel.transform;
+
+            // 素材が揃ってからUIを生成する
+            await _spritePreloadTask.AttachExternalCancellation(this.GetCancellationTokenOnDestroy());
             CreateDmButton();
+        }
+
+        /// <summary>
+        /// DM UI素材をAddressablesから読み込む
+        /// </summary>
+        private async UniTask PreloadSpritesAsync()
+        {
+            var addresses = new List<string> { ButtonBackgroundAddress, MenuTitleAddress };
+            foreach (var character in DmCharacters)
+                addresses.Add(character.IconAddress);
+
+            foreach (var address in addresses)
+            {
+                // 解放に必要なハンドルと読み込み結果を保持する
+                var handle = Addressables.LoadAssetAsync<Sprite>(address);
+                _spriteHandles.Add(handle);
+                var sprite = await handle.Task;
+
+                if (sprite is not null)
+                    _spriteCache[address] = sprite;
+                else
+                    Debug.LogError($"[NovelDmButtonView] Failed to preload sprite: {address}");
+            }
         }
 
         /// <summary>
@@ -51,7 +105,10 @@ namespace Minge2026Spring.Scripts.View
         /// </summary>
         private void CreateDmButton()
         {
-            var buttonObject = CreateButton("DmButton", "DM  メッセージ", 24f);
+            var buttonObject = CreateSpriteButton(
+                "DmButton",
+                _spriteCache[ButtonBackgroundAddress],
+                _spriteCache[MenuTitleAddress]);
             buttonObject.transform.SetParent(_leftPanel, false);
 
             var rectTransform = buttonObject.GetComponent<RectTransform>();
@@ -97,7 +154,7 @@ namespace Minge2026Spring.Scripts.View
             CreateBackButton();
 
             foreach (var character in DmCharacters)
-                CreateCharacterButton(character.AssetKey, character.DisplayName);
+                CreateCharacterButton(character.AssetKey, character.IconAddress);
         }
 
         /// <summary>
@@ -136,9 +193,12 @@ namespace Minge2026Spring.Scripts.View
         /// <summary>
         /// 個人別DMボタンを生成する
         /// </summary>
-        private void CreateCharacterButton(string assetKey, string displayName)
+        private void CreateCharacterButton(string assetKey, string iconAddress)
         {
-            var buttonObject = CreateButton($"DmButton_{assetKey}", displayName, 22f);
+            var buttonObject = CreateSpriteButton(
+                $"DmButton_{assetKey}",
+                null,
+                _spriteCache[iconAddress]);
             buttonObject.transform.SetParent(_dmMenuObject.transform, false);
 
             var layoutElement = buttonObject.AddComponent<LayoutElement>();
@@ -150,6 +210,39 @@ namespace Minge2026Spring.Scripts.View
             {
                 CharacterDmClicked?.Invoke(assetKey);
             });
+        }
+
+        /// <summary>
+        /// 指定した素材を重ねたDMボタンを生成する
+        /// </summary>
+        private static GameObject CreateSpriteButton(string objectName, Sprite backgroundSprite, Sprite contentSprite)
+        {
+            var buttonObject = new GameObject(objectName, typeof(RectTransform), typeof(Image), typeof(Button));
+            var rectTransform = buttonObject.GetComponent<RectTransform>();
+            rectTransform.sizeDelta = new Vector2(0f, 64f);
+
+            // 背景素材がない一覧項目は透明な当たり判定として使用する
+            var background = buttonObject.GetComponent<Image>();
+            background.sprite = backgroundSprite;
+            background.color = backgroundSprite is null ? Color.clear : Color.white;
+            background.type = Image.Type.Simple;
+            background.preserveAspect = true;
+
+            var button = buttonObject.GetComponent<Button>();
+            button.targetGraphic = background;
+
+            // 表示素材をボタン全面へ配置する
+            var contentObject = new GameObject("Content", typeof(RectTransform), typeof(Image));
+            contentObject.transform.SetParent(buttonObject.transform, false);
+            var content = contentObject.GetComponent<Image>();
+            content.sprite = contentSprite;
+            content.preserveAspect = true;
+            content.raycastTarget = false;
+            content.rectTransform.anchorMin = Vector2.zero;
+            content.rectTransform.anchorMax = Vector2.one;
+            content.rectTransform.sizeDelta = Vector2.zero;
+
+            return buttonObject;
         }
 
         /// <summary>
@@ -190,6 +283,21 @@ namespace Minge2026Spring.Scripts.View
         {
             if (_button is not null)
                 _button.interactable = false;
+        }
+
+        /// <summary>
+        /// 読み込んだAddressablesの参照を解放する
+        /// </summary>
+        private void OnDestroy()
+        {
+            foreach (var handle in _spriteHandles)
+            {
+                if (handle.IsValid())
+                    Addressables.Release(handle);
+            }
+
+            _spriteHandles.Clear();
+            _spriteCache.Clear();
         }
     }
 }

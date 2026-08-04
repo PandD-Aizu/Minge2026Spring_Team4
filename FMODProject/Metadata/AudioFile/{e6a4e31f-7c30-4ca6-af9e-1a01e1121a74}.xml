@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{e6a4e31f-7c30-4ca6-af9e-1a01e1121a74}">
+		<property name="assetPath">
+			<value>ごっと_いや、特には。それよりも、ちゃんとゲームとして動くもの作りたいから。.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>6.8639999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7cef0a3e-b767-4358-b7f6-64653f0fef2d}</destination>
+		</relationship>
+	</object>
+</objects>

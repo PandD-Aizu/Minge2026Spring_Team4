@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{a4d4e0d1-11d6-48d5-b31a-daa7f92b05a4}">
+		<property name="assetPath">
+			<value>主人公_そしたら、一旦テストプレイとしましょうか.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>4.7279999999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7cef0a3e-b767-4358-b7f6-64653f0fef2d}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -109,8 +109,7 @@
 			<value>true</value>
 		</property>
 		<relationship name="sounds">
-			<destination>{c9b1f2c9-5d61-46c5-8416-5d5114f8dd71}</destination>
-			<destination>{e7b5112f-9f06-4c49-92f3-6015aec69c66}</destination>
+			<destination>{9d9a4ebe-e34b-4a34-9703-2e1bc9c885ef}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{c1ce8740-e9f7-4d04-8176-c5cba5ed3040}">
@@ -154,14 +153,9 @@
 	</object>
 	<object class="MixerBusPanner" id="{55f8763d-57d1-4bd5-8a6a-f1a02a37e7a2}" />
 	<object class="MixerBusFader" id="{2d90e383-67a1-483c-8080-e84199118557}" />
-	<object class="SingleSound" id="{c9b1f2c9-5d61-46c5-8416-5d5114f8dd71}">
+	<object class="SingleSound" id="{9d9a4ebe-e34b-4a34-9703-2e1bc9c885ef}">
 		<relationship name="audioFile">
-			<destination>{81189fe7-514d-4ede-a262-b21967c600e6}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{e7b5112f-9f06-4c49-92f3-6015aec69c66}">
-		<relationship name="audioFile">
-			<destination>{76b417aa-ab7b-47c3-a3e4-8966c973f8dc}</destination>
+			<destination>{fedeb814-7384-40dc-a9b1-ac0385a07905}</destination>
 		</relationship>
 	</object>
 	<object class="ADSRModulator" id="{f6aed768-7fe2-4a17-9008-070955adb3d7}">

@@ -6,14 +6,14 @@
       "nodePosX": 0.0,
       "nodePosY": 0.0,
       "dialogues": [
-        { "iconId": "player_icon", "speaker": "主人公", "message": "(画像と共に)これMiluさんの？", "waitingTime": 3.0 },
-        { "iconId": "milu_icon", "speaker": "Milu", "message": "です。部室にありましたか？", "waitingTime": 3.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "うん。もう家帰ったよね？部室に置きっぱなしでもいい？", "waitingTime": 3.0 },
-        { "iconId": "milu_icon", "speaker": "Milu", "message": "本棚に隠しておいてもらえると助かります", "waitingTime": 3.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "隠す？", "waitingTime": 3.0 },
-        { "iconId": "milu_icon", "speaker": "Milu", "message": "あまり見られたくないので", "waitingTime": 3.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "了解。グラフィッカの棚に入れとくね", "waitingTime": 3.0 },
-        { "iconId": "milu_icon", "speaker": "Milu", "message": "ありがとうございます", "waitingTime": 3.0 }
+        { "iconId": "player_icon", "speaker": "主人公", "message": "(画像と共に)これMiluさんの？", "voiceEventPath": "event:/Serif/主人公_(画像と共に)これMiluさんの？", "waitingTime": 3.0 },
+        { "iconId": "milu_icon", "speaker": "Milu", "message": "です。部室にありましたか？", "voiceEventPath": "event:/Serif/Milu_です。部室にありましたか？", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "うん。もう家帰ったよね？部室に置きっぱなしでもいい？", "voiceEventPath": "event:/Serif/主人公_うん。もう家帰ったよね？部室に置きっぱなしでもいい？", "waitingTime": 3.0 },
+        { "iconId": "milu_icon", "speaker": "Milu", "message": "本棚に隠しておいてもらえると助かります", "voiceEventPath": "event:/Serif/Milu_本棚に隠しておいてもらえると助かります", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "隠す？", "voiceEventPath": "event:/Serif/主人公_隠す？", "waitingTime": 3.0 },
+        { "iconId": "milu_icon", "speaker": "Milu", "message": "あまり見られたくないので", "voiceEventPath": "event:/Serif/Milu_あまり見られたくないので", "waitingTime": 3.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "了解。グラフィッカの棚に入れとくね", "voiceEventPath": "event:/Serif/主人公_了解。グラフィッカの棚に入れとくね", "waitingTime": 3.0 },
+        { "iconId": "milu_icon", "speaker": "Milu", "message": "ありがとうございます", "voiceEventPath": "event:/Serif/Milu_ありがとうございます", "waitingTime": 3.0 }
       ],
       "choices": [],
       "nextBlockId": "",

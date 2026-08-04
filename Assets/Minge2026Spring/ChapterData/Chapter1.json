@@ -430,6 +430,7 @@
                     "iconId": "ryuta_icon",
                     "speaker": "Ryuta",
                     "message": "おなしゃす",
+                    "voiceEventPath": "event:/Serif/Ryuta_おなしゃす",
                     "waitingTime": 5.0
                 },
                 {
@@ -442,12 +443,14 @@
                     "iconId": "milu_icon",
                     "speaker": "Milu",
                     "message": "お、おねがいします",
+                    "voiceEventPath": "event:/Serif/Milu_お、おねがいします",
                     "waitingTime": 5.0
                 },
                 {
                     "iconId": "kashiwamochi_icon",
                     "speaker": "かしわもち",
                     "message": "おねがいしまぁす",
+                    "voiceEventPath": "event:/Serif/かしわもち_おねがいしまぁす",
                     "waitingTime": 5.0
                 },
                 {

@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Main
   m_GUID: 42cc0676aca0a7344a3c7c2d0f8f8c7c
   m_SerializeEntries:
+  - m_GUID: 0898f6af0612f0a4d9cd6ec25b54f432
+    m_Address: DM_Got_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 158fca97abfe8054cb934f1b0521c17a
     m_Address: goddo_icon
     m_ReadOnly: 0
@@ -32,28 +37,16 @@ MonoBehaviour:
     m_SerializedLabels:
     - Json
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36964b079ed46354c881315a4577714d
+    m_Address: kashiwamochi_icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 3e8a5b7d6c9f4120a4e7f8d9c0b1a2e3
     m_Address: DM_Kashiwamochi
     m_ReadOnly: 0
     m_SerializedLabels:
     - Json
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4f9b6c8e7d0a4231b5f809ead1c2b3f4
-    m_Address: DM_Milu
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Json
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 5a0c7d9f8e1b4342c6a910fbe2d3c4a5
-    m_Address: DM_Ryuta
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Json
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 36964b079ed46354c881315a4577714d
-    m_Address: kashiwamochi_icon
-    m_ReadOnly: 0
-    m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 43161b92db59e104abe34b5b27848aaa
     m_Address: Chapter1
@@ -65,6 +58,23 @@ MonoBehaviour:
     m_Address: player_icon
     m_ReadOnly: 0
     m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f9b6c8e7d0a4231b5f809ead1c2b3f4
+    m_Address: DM_Milu
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50a0e4e37fb99294094b180a489d7441
+    m_Address: Daittyan_DM_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a0c7d9f8e1b4342c6a910fbe2d3c4a5
+    m_Address: DM_Ryuta
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5a8e2a291a34eb24dad55469cc801465
     m_Address: ChoiceButtonTex
@@ -97,8 +107,33 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8e2e914591d956c4fab93dec287d1808
+    m_Address: DM_Ryuta_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f2fd87b0453c72488bc72addbe2498e
+    m_Address: DM_Kashiwamochi_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8f9f9b1d020301b46b673eaf355d5e34
+    m_Address: DM_UI_TEXT
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 91fb7344a62f8a84e873d566d4ce84e2
+    m_Address: DM_Button_Background
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9520edf0a9f745348a81e83c1fe5ebf7
     m_Address: TitleScene
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98d8d9cc6d676a84c9093649aad99723
+    m_Address: DM_Milu_Icon
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

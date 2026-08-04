@@ -10,168 +10,196 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "それでは企画開発部ゲームジャムを始めます。",
+          "voiceEventPath": "event:/Serif/主人公_それでは企画開発部ゲームジャムを始めます。",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "おなしゃす",
+          "voiceEventPath": "event:/Serif/Ryuta_おなしゃす",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "おねがいします",
+          "voiceEventPath": "event:/Serif/ごっと_おねがいします",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "お、おねがいします",
+          "voiceEventPath": "event:/Serif/Milu_お、おねがいします",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "おねがいしまぁす",
+          "voiceEventPath": "event:/Serif/かしわもち_おねがいしまぁす",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "じゃあ、まず自己紹介しましょうか。",
+          "voiceEventPath": "event:/Serif/主人公_じゃあ、まず自己紹介しましょうか。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "今回リーダー努めます。リーダーは初めてで少し緊張しています。よろしくお願いします。あと学部三年です。",
+          "voiceEventPath": "event:/Serif/主人公_今回リーダー努めます。リーダーは初めてで少し緊張しています。よろしくお願いします。あと学部三年です。",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "学部二年のRyutaです！趣味は鬼畜アクション制作です！yorpsikuお願いします！",
+          "voiceEventPath": "event:/Serif/Ryuta_学部二年のRyutaです！趣味は鬼畜アクション制作です！yorpsikuお願いします！",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "学部三年のごっとです。Ryutaくんと同じ、プログラマーやります。ちーす。",
+          "voiceEventPath": "event:/Serif/ごっと_学部三年のごっとです。Ryutaくんと同じ、プログラマーやります。ちーす。",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "学部一年のMiluです。えと、絵を描きます。お手柔らかに……",
+          "voiceEventPath": "event:/Serif/Milu_学部一年のMiluです。えと、絵を描きます。お手柔らかに……",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "学部一年のかしわもちです、サウンド担当させていただきます。一生懸命頑張ります。",
+          "voiceEventPath": "event:/Serif/かしわもち_学部一年のかしわもちです、サウンド担当させていただきます。一生懸命頑張ります。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "まず、今回のゲームジャムについて軽くおさらいするね",
+          "voiceEventPath": "event:/Serif/主人公_まず、今回のゲームジャムについて軽くおさらいするね",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "開発期間は今日一日のみ、オンラインでやっていきます",
+          "voiceEventPath": "event:/Serif/主人公_開発期間は今日一日のみ、オンラインでやっていきます",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "対面じゃないの若干しんどい……",
+          "voiceEventPath": "event:/Serif/ごっと_対面じゃないの若干しんどい……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "それは……しゃーない",
+          "voiceEventPath": "event:/Serif/主人公_それは……しゃーない",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "最初に企画会議をして、そのあとは各自作業とします。",
+          "voiceEventPath": "event:/Serif/主人公_最初に企画会議をして、そのあとは各自作業とします。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "実際にゲームとして遊べる状態まで持っていけるように頑張りましょう",
+          "voiceEventPath": "event:/Serif/主人公_実際にゲームとして遊べる状態まで持っていけるように頑張りましょう",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "さっそく、今回作るゲームについてなんだけど……",
+          "voiceEventPath": "event:/Serif/主人公_さっそく、今回作るゲームについてなんだけど……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "今回はアクションゲームにしようと思うんだけど、みんなどうかな",
+          "voiceEventPath": "event:/Serif/主人公_今回はアクションゲームにしようと思うんだけど、みんなどうかな",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "急にジャンル決めちゃっていいの？",
+          "voiceEventPath": "event:/Serif/ごっと_急にジャンル決めちゃっていいの？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "チーム編成するときのアンケートで、アクション作りたいって声が多かったんだよ",
+          "voiceEventPath": "event:/Serif/主人公_チーム編成するときのアンケートで、アクション作りたいって声が多かったんだよ",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "僕の専門分野キター",
+          "voiceEventPath": "event:/Serif/Ryuta_僕の専門分野キター",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "なるほどね",
+          "voiceEventPath": "event:/Serif/ごっと_なるほどね",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "Miluさんとかしわもち君は大丈夫？",
+          "voiceEventPath": "event:/Serif/主人公_Miluさんとかしわもち君は大丈夫？",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "大丈夫です……多分",
+          "voiceEventPath": "event:/Serif/Milu_大丈夫です……多分",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "まぁ、大丈夫ですよ",
+          "voiceEventPath": "event:/Serif/かしわもち_まぁ、大丈夫ですよ",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "そしたら、具体的なところを詰めていこうか",
+          "voiceEventPath": "event:/Serif/主人公_そしたら、具体的なところを詰めていこうか",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "まずは世界観を全員で認識を一緒にしたいんだけど",
+          "voiceEventPath": "event:/Serif/主人公_まずは世界観を全員で認識を一緒にしたいんだけど",
           "waitingTime": 3.0
         },
         {
@@ -240,30 +268,35 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "ごっとくん何か意見ある？",
+          "voiceEventPath": "event:/Serif/主人公_ごっとくん何か意見ある？",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "え、わたし？",
+          "voiceEventPath": "event:/Serif/ごっと_え、わたし？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "うん、ほら、開発経験豊富だし",
+          "voiceEventPath": "event:/Serif/主人公_うん、ほら、開発経験豊富だし",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "いや、私はいいので、下級生の意見を聞いたら？それに、私は全体の設計とか、仕様まとめる方が好きだから",
+          "voiceEventPath": "event:/Serif/ごっと_いや、私はいいので、下級生の意見を聞いたら？それに、私は全体の設計とか、仕様まとめる方が好きだから",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "あ、そっか",
+          "voiceEventPath": "event:/Serif/主人公_あ、そっか",
           "waitingTime": 3.0
         }
       ],
@@ -282,6 +315,7 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "Ryutaくん、何か意見ある？",
+          "voiceEventPath": "event:/Serif/主人公_Ryutaくん、何か意見ある？",
           "waitingTime": 3.0
         },
         {
@@ -294,18 +328,21 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "うん、アクションゲーム専門って言ってたし、意見聞きたいなって",
+          "voiceEventPath": "event:/Serif/主人公_うん、アクションゲーム専門って言ってたし、意見聞きたいなって",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "そうですねぇ、おやじブラザーズみたいな感じだと作りやすいですかねぇ。トラップとか作ってみたいので、洞窟みたいなのどうですか？",
+          "voiceEventPath": "event:/Serif/Ryuta_そうですねぇ、おやじブラザーズみたいな感じだと作りやすいですかねぇ。トラップとか作ってみたいので、洞窟みたいなのどうですか？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "なるほどね……了解",
+          "voiceEventPath": "event:/Serif/主人公_なるほどね……了解",
           "waitingTime": 3.0
         }
       ],
@@ -324,30 +361,35 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "かしわもちくん、何か意見ある？",
+          "voiceEventPath": "event:/Serif/主人公_かしわもちくん、何か意見ある？",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "うーん、俺は依頼されたらそれに合わせる主義なんでぇ……",
+          "voiceEventPath": "event:/Serif/かしわもち_うーん、俺は依頼されたらそれに合わせる主義なんでぇ……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "曲の得意不得意とかはないの？",
+          "voiceEventPath": "event:/Serif/主人公_曲の得意不得意とかはないの？",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "あー、オーケストラとか作れたら楽しいかもです。電子音はあんまり得意じゃないですね。",
+          "voiceEventPath": "event:/Serif/かしわもち_あー、オーケストラとか作れたら楽しいかもです。電子音はあんまり得意じゃないですね。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "オーケストラかぁ……",
+          "voiceEventPath": "event:/Serif/主人公_オーケストラかぁ……",
           "waitingTime": 3.0
         }
       ],
@@ -366,30 +408,35 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "Miluさん、何か意見ある？",
+          "voiceEventPath": "event:/Serif/主人公_Miluさん、何か意見ある？",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "わ、私ですか……",
+          "voiceEventPath": "event:/Serif/Milu_わ、私ですか……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "うん、こんなアクションゲーム作りたい、みたいなの",
+          "voiceEventPath": "event:/Serif/主人公_うん、こんなアクションゲーム作りたい、みたいなの",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "いかんせん、アクションゲームは専門外なので……",
+          "voiceEventPath": "event:/Serif/Milu_いかんせん、アクションゲームは専門外なので……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "そっか",
+          "voiceEventPath": "event:/Serif/主人公_そっか",
           "waitingTime": 3.0
         }
       ],
@@ -408,30 +455,35 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "じゃあ今回は、一般的な横スクロールアクションゲームをベースに作っていこうと思うんだけど、どうかな",
+          "voiceEventPath": "event:/Serif/主人公_じゃあ今回は、一般的な横スクロールアクションゲームをベースに作っていこうと思うんだけど、どうかな",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "いいとおもいます",
+          "voiceEventPath": "event:/Serif/かしわもち_いいとおもいます",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "そしたら、先にプログラマの二人にタスクを振ろうかな",
+          "voiceEventPath": "event:/Serif/主人公_そしたら、先にプログラマの二人にタスクを振ろうかな",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "まってました",
+          "voiceEventPath": "event:/Serif/Ryuta_まってました",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "じゃあまずは役割分担なんだけど……",
+          "voiceEventPath": "event:/Serif/主人公_じゃあまずは役割分担なんだけど……",
           "waitingTime": 3.0
         }
       ],
@@ -478,12 +530,14 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "Ryutaくんにシステム設計、ごっとくんはコンテンツをお願いするね",
+          "voiceEventPath": "event:/Serif/主人公_Ryutaくんにシステム設計、ごっとくんはコンテンツをお願いするね",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "え",
+          "voiceEventPath": "event:/Serif/ごっと_え",
           "waitingTime": 3.0
         },
         {
@@ -496,12 +550,14 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "あれ、まずかった？",
+          "voiceEventPath": "event:/Serif/主人公_あれ、まずかった？",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "いや、まずくはない、けど……",
+          "voiceEventPath": "event:/Serif/ごっと_いや、まずくはない、けど……",
           "waitingTime": 3.0
         },
         {
@@ -514,12 +570,14 @@
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "多分、逆の方がいいと思う",
+          "voiceEventPath": "event:/Serif/ごっと_多分、逆の方がいいと思う",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "そっか、ごめん……",
+          "voiceEventPath": "event:/Serif/主人公_そっか、ごめん……",
           "waitingTime": 3.0
         }
       ],
@@ -538,6 +596,7 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "ごっとくんにシステム設計、Ryutaくんはコンテンツをお願いするね",
+          "voiceEventPath": "event:/Serif/主人公_ごっとくんにシステム設計、Ryutaくんはコンテンツをお願いするね",
           "waitingTime": 3.0
         },
         {
@@ -562,24 +621,28 @@
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "開発ルールとかも、私が全部決めちゃうってことでいいの？",
+          "voiceEventPath": "event:/Serif/ごっと_開発ルールとかも、私が全部決めちゃうってことでいいの？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "うん、コード書くのは二人だけだから、話し合ってやりやすいようにしてもらえればいいよ",
+          "voiceEventPath": "event:/Serif/主人公_うん、コード書くのは二人だけだから、話し合ってやりやすいようにしてもらえればいいよ",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "ええと……なんか、要望とかあれば……",
+          "voiceEventPath": "event:/Serif/ごっと_ええと……なんか、要望とかあれば……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "要望かぁ……",
+          "voiceEventPath": "event:/Serif/主人公_要望かぁ……",
           "waitingTime": 3.0
         }
       ],
@@ -634,12 +697,14 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "まじで何にもないし、てかよくわかんないから一任するよ",
+          "voiceEventPath": "event:/Serif/主人公_まじで何にもないし、てかよくわかんないから一任するよ",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "……そう",
+          "voiceEventPath": "event:/Serif/ごっと_……そう",
           "waitingTime": 3.0
         }
       ],
@@ -658,24 +723,28 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "トラップの数とかボスの種類とか、どこまで増えるか不透明だから、増やせるだけ増やせるように設計してもらえるといいな",
+          "voiceEventPath": "event:/Serif/主人公_トラップの数とかボスの種類とか、どこまで増えるか不透明だから、増やせるだけ増やせるように設計してもらえるといいな",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "そんなに大規模なゲームになるの？",
+          "voiceEventPath": "event:/Serif/ごっと_そんなに大規模なゲームになるの？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "いや、そこまで大きくはできないけど、Ryutaくんのやる気しだいで変わるだろうから",
+          "voiceEventPath": "event:/Serif/主人公_いや、そこまで大きくはできないけど、Ryutaくんのやる気しだいで変わるだろうから",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "なるほどね、了解",
+          "voiceEventPath": "event:/Serif/ごっと_なるほどね、了解",
           "waitingTime": 3.0
         }
       ],
@@ -694,36 +763,42 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "素材の置き場だけ教えてほしいかな",
+          "voiceEventPath": "event:/Serif/主人公_素材の置き場だけ教えてほしいかな",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "まぁ、いつも通りチャット欄に直貼りでいいよ",
+          "voiceEventPath": "event:/Serif/ごっと_まぁ、いつも通りチャット欄に直貼りでいいよ",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "それだとチャット散らからない？",
+          "voiceEventPath": "event:/Serif/主人公_それだとチャット散らからない？",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "あー、じゃあgolegoleクラウド使いましょう",
+          "voiceEventPath": "event:/Serif/ごっと_あー、じゃあgolegoleクラウド使いましょう",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "じゃあ、サークルで使ってるやつにフォルダ作っておくね",
+          "voiceEventPath": "event:/Serif/主人公_じゃあ、サークルで使ってるやつにフォルダ作っておくね",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "了解",
+          "voiceEventPath": "event:/Serif/ごっと_了解",
           "waitingTime": 3.0
         }
       ],
@@ -742,30 +817,35 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "逆にごっとくんがやりたいこととかある？",
+          "voiceEventPath": "event:/Serif/主人公_逆にごっとくんがやりたいこととかある？",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "いや、特には。それよりも、ちゃんとゲームとして動くもの作りたいから。",
+          "voiceEventPath": "event:/Serif/ごっと_いや、特には。それよりも、ちゃんとゲームとして動くもの作りたいから。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "あー、そういえば、進捗報告ってどれくらいの頻度がやりやすい？",
+          "voiceEventPath": "event:/Serif/主人公_あー、そういえば、進捗報告ってどれくらいの頻度がやりやすい？",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "それは全体に合わせるよ。",
+          "voiceEventPath": "event:/Serif/ごっと_それは全体に合わせるよ。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "じゃあ……",
+          "voiceEventPath": "event:/Serif/主人公_じゃあ……",
           "waitingTime": 3.0
         }
       ],
@@ -820,36 +900,42 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "時間も少ないし、進捗報告いらないよね",
+          "voiceEventPath": "event:/Serif/主人公_時間も少ないし、進捗報告いらないよね",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "いや、それはさすがに……",
+          "voiceEventPath": "event:/Serif/ごっと_いや、それはさすがに……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "そう？",
+          "voiceEventPath": "event:/Serif/主人公_そう？",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "ゲームジャムだから設計シンプルなんだよ。その分リカバリー効かないし",
+          "voiceEventPath": "event:/Serif/ごっと_ゲームジャムだから設計シンプルなんだよ。その分リカバリー効かないし",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "へー、じゃあガッチガチに設計してよ",
+          "voiceEventPath": "event:/Serif/主人公_へー、じゃあガッチガチに設計してよ",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "そういうことじゃないんだよなぁ……",
+          "voiceEventPath": "event:/Serif/ごっと_そういうことじゃないんだよなぁ……",
           "waitingTime": 3.0
         }
       ],
@@ -868,24 +954,28 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "1時間ごとに軽く報告してもらおうかな",
+          "voiceEventPath": "event:/Serif/主人公_1時間ごとに軽く報告してもらおうかな",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "まぁ、そのくらいならちょうどいい",
+          "voiceEventPath": "event:/Serif/ごっと_まぁ、そのくらいならちょうどいい",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "Ryutaくんとの報連相はもっと密にしてほしい",
+          "voiceEventPath": "event:/Serif/主人公_Ryutaくんとの報連相はもっと密にしてほしい",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "そのつもりではいる。グラフィッカとサウンドは任せる。",
+          "voiceEventPath": "event:/Serif/ごっと_そのつもりではいる。グラフィッカとサウンドは任せる。",
           "waitingTime": 3.0
         }
       ],
@@ -904,36 +994,42 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "20分ごとに会議しよう",
+          "voiceEventPath": "event:/Serif/主人公_20分ごとに会議しよう",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "……さすがに多すぎない？",
+          "voiceEventPath": "event:/Serif/ごっと_……さすがに多すぎない？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "え、そうかな",
+          "voiceEventPath": "event:/Serif/主人公_え、そうかな",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "うん、普通に作業止まると思う",
+          "voiceEventPath": "event:/Serif/ごっと_うん、普通に作業止まると思う",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "まぁ、コミュニケーションは多いに越したことないじゃん？",
+          "voiceEventPath": "event:/Serif/主人公_まぁ、コミュニケーションは多いに越したことないじゃん？",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "は、はぁ",
+          "voiceEventPath": "event:/Serif/ごっと_は、はぁ",
           "waitingTime": 3.0
         }
       ],
@@ -952,36 +1048,42 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "じゃあRyutaくんだけど……",
+          "voiceEventPath": "event:/Serif/主人公_じゃあRyutaくんだけど……",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "僕は何から手を付けたらいいですかね",
+          "voiceEventPath": "event:/Serif/Ryuta_僕は何から手を付けたらいいですかね",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "割と自由でいいと思うんだけど、逆になにからやりたい？",
+          "voiceEventPath": "event:/Serif/主人公_割と自由でいいと思うんだけど、逆になにからやりたい？",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "初見殺し",
+          "voiceEventPath": "event:/Serif/Ryuta_初見殺し",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "だよね",
+          "voiceEventPath": "event:/Serif/主人公_だよね",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "そしたら……",
+          "voiceEventPath": "event:/Serif/主人公_そしたら……",
           "waitingTime": 3.0
         }
       ],
@@ -1036,66 +1138,77 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "トラップ好きなだけ作っていいよ",
+          "voiceEventPath": "event:/Serif/主人公_トラップ好きなだけ作っていいよ",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "いいんですか？！",
+          "voiceEventPath": "event:/Serif/Ryuta_いいんですか？！",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "ステージづくりのネタ欲しいしね",
+          "voiceEventPath": "event:/Serif/主人公_ステージづくりのネタ欲しいしね",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "それは……",
+          "voiceEventPath": "event:/Serif/ごっと_それは……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "なんかまずかった……？",
+          "voiceEventPath": "event:/Serif/主人公_なんかまずかった……？",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "グラフィッカ死なない？",
+          "voiceEventPath": "event:/Serif/ごっと_グラフィッカ死なない？",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "まぁ……はい",
+          "voiceEventPath": "event:/Serif/Milu_まぁ……はい",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "あ、たしかに……",
+          "voiceEventPath": "event:/Serif/主人公_あ、たしかに……",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "大丈夫です！僕が描くんで！",
+          "voiceEventPath": "event:/Serif/Ryuta_大丈夫です！僕が描くんで！",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "え、あ、そう……ですか……？",
+          "voiceEventPath": "event:/Serif/Milu_え、あ、そう……ですか……？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "じゃあ、まあ、うん……",
+          "voiceEventPath": "event:/Serif/主人公_じゃあ、まあ、うん……",
           "waitingTime": 3.0
         }
       ],
@@ -1114,24 +1227,28 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "ステージ作りを最初にしてほしいな",
+          "voiceEventPath": "event:/Serif/主人公_ステージ作りを最初にしてほしいな",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "ステージですか？",
+          "voiceEventPath": "event:/Serif/Ryuta_ステージですか？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "うん。グラフィッカの素材を明確にするためにも、どんなステージにしたいか考えてほしいんだ。",
+          "voiceEventPath": "event:/Serif/主人公_うん。グラフィッカの素材を明確にするためにも、どんなステージにしたいか考えてほしいんだ。",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "なるほどです。了解しました！",
+          "voiceEventPath": "event:/Serif/Ryuta_なるほどです。了解しました！",
           "waitingTime": 3.0
         }
       ],
@@ -1150,24 +1267,28 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "ごっとくんの指示を待っててくれるかな",
+          "voiceEventPath": "event:/Serif/主人公_ごっとくんの指示を待っててくれるかな",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "じゃあ、ごっとさんの指示があるまでは休憩ですか？",
+          "voiceEventPath": "event:/Serif/Ryuta_じゃあ、ごっとさんの指示があるまでは休憩ですか？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "そう、なるね",
+          "voiceEventPath": "event:/Serif/主人公_そう、なるね",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "設計が終わらない分には何もできないからね",
+          "voiceEventPath": "event:/Serif/主人公_設計が終わらない分には何もできないからね",
           "waitingTime": 3.0
         },
         {
@@ -1198,42 +1319,49 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "あ、トラップに手を付ける前に、プレイヤーの基本操作を任せちゃってもいいかな",
+          "voiceEventPath": "event:/Serif/主人公_あ、トラップに手を付ける前に、プレイヤーの基本操作を任せちゃってもいいかな",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "わかりました！",
+          "voiceEventPath": "event:/Serif/Ryuta_わかりました！",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "歩行以外の操作はごっとくんが拡張していく感じでお願いね",
+          "voiceEventPath": "event:/Serif/主人公_歩行以外の操作はごっとくんが拡張していく感じでお願いね",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "了解です",
+          "voiceEventPath": "event:/Serif/ごっと_了解です",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "あとは、レベルデザインだけど……",
+          "voiceEventPath": "event:/Serif/主人公_あとは、レベルデザインだけど……",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "そこはRyutaくんに任せたいかな。",
+          "voiceEventPath": "event:/Serif/ごっと_そこはRyutaくんに任せたいかな。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "そうだよね、じゃあ……",
+          "voiceEventPath": "event:/Serif/主人公_そうだよね、じゃあ……",
           "waitingTime": 3.0
         }
       ],
@@ -1288,36 +1416,42 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "Ryutaくんの好きな難易度で作ってみよう！",
+          "voiceEventPath": "event:/Serif/主人公_Ryutaくんの好きな難易度で作ってみよう！",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "え、いいんですか！",
+          "voiceEventPath": "event:/Serif/Ryuta_え、いいんですか！",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "いや……まぁ……うん……",
+          "voiceEventPath": "event:/Serif/ごっと_いや……まぁ……うん……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "え？まずかった？",
+          "voiceEventPath": "event:/Serif/主人公_え？まずかった？",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "全力出しますよ！",
+          "voiceEventPath": "event:/Serif/Ryuta_全力出しますよ！",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "……まぁ……うん",
+          "voiceEventPath": "event:/Serif/ごっと_……まぁ……うん",
           "waitingTime": 3.0
         }
       ],
@@ -1336,12 +1470,14 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "一旦、誰でもクリアできるくらいにしよう",
+          "voiceEventPath": "event:/Serif/主人公_一旦、誰でもクリアできるくらいにしよう",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "まぁ、その方が遊びやすいですもんね",
+          "voiceEventPath": "event:/Serif/Ryuta_まぁ、その方が遊びやすいですもんね",
           "waitingTime": 3.0
         }
       ],
@@ -1360,12 +1496,14 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "とにかく難しくしてインパクト出そう",
+          "voiceEventPath": "event:/Serif/主人公_とにかく難しくしてインパクト出そう",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "難しいだけだと理不尽になるかもです",
+          "voiceEventPath": "event:/Serif/Ryuta_難しいだけだと理不尽になるかもです",
           "waitingTime": 3.0
         }
       ],
@@ -1384,42 +1522,49 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "そしたら、Ryutaくん関連でグラフィッカ先にタスク決めようか",
+          "voiceEventPath": "event:/Serif/主人公_そしたら、Ryutaくん関連でグラフィッカ先にタスク決めようか",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "はい",
+          "voiceEventPath": "event:/Serif/Milu_はい",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "今回はタイルベースで作ろうと思うんだけど、イメージできる？",
+          "voiceEventPath": "event:/Serif/主人公_今回はタイルベースで作ろうと思うんだけど、イメージできる？",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "なんか、ブロックの組み合わせみたいな、あの感じですよね。",
+          "voiceEventPath": "event:/Serif/Milu_なんか、ブロックの組み合わせみたいな、あの感じですよね。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "そうそう。ハンドメイドステージだとステージ増えるごとに負担がすごいことになっちゃうからね",
+          "voiceEventPath": "event:/Serif/主人公_そうそう。ハンドメイドステージだとステージ増えるごとに負担がすごいことになっちゃうからね",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "わかりました。",
+          "voiceEventPath": "event:/Serif/Milu_わかりました。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "とりあえずステージの素材に関してなんだけど……",
+          "voiceEventPath": "event:/Serif/主人公_とりあえずステージの素材に関してなんだけど……",
           "waitingTime": 3.0
         }
       ],
@@ -1474,24 +1619,28 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "大変だろうからフリー素材でいいよ",
+          "voiceEventPath": "event:/Serif/主人公_大変だろうからフリー素材でいいよ",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "え、それでいいんですか",
+          "voiceEventPath": "event:/Serif/Milu_え、それでいいんですか",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "うん、だってすごい量あるよ",
+          "voiceEventPath": "event:/Serif/主人公_うん、だってすごい量あるよ",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "そう、ですか……",
+          "voiceEventPath": "event:/Serif/Milu_そう、ですか……",
           "waitingTime": 3.0
         }
       ],
@@ -1510,24 +1659,28 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "一旦後回しでいいや",
+          "voiceEventPath": "event:/Serif/主人公_一旦後回しでいいや",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "え、いいんですか？",
+          "voiceEventPath": "event:/Serif/Milu_え、いいんですか？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "Ryutaくんの案が出ないと描くものもかけないからね。先にプレイヤーを描いてほしいんだ",
+          "voiceEventPath": "event:/Serif/主人公_Ryutaくんの案が出ないと描くものもかけないからね。先にプレイヤーを描いてほしいんだ",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "なるほど、わかりました",
+          "voiceEventPath": "event:/Serif/Milu_なるほど、わかりました",
           "waitingTime": 3.0
         }
       ],
@@ -1546,36 +1699,42 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "仮素材だけ用意してほしいな",
+          "voiceEventPath": "event:/Serif/主人公_仮素材だけ用意してほしいな",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "仮ってどれくらい描けばいいですか？",
+          "voiceEventPath": "event:/Serif/Milu_仮ってどれくらい描けばいいですか？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "一色で塗りつぶした四角でいいよ。サイズは64×64でお願い。",
+          "voiceEventPath": "event:/Serif/主人公_一色で塗りつぶした四角でいいよ。サイズは64×64でお願い。",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "今回使うタイルはこのサイズで統一になるんですか？",
+          "voiceEventPath": "event:/Serif/Milu_今回使うタイルはこのサイズで統一になるんですか？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "うん。プレイヤーのサイズもこれを基準にしてほしい。",
+          "voiceEventPath": "event:/Serif/主人公_うん。プレイヤーのサイズもこれを基準にしてほしい。",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "イメージがつかめてきました。ありがとうございます",
+          "voiceEventPath": "event:/Serif/Milu_イメージがつかめてきました。ありがとうございます",
           "waitingTime": 3.0
         }
       ],
@@ -1594,36 +1753,42 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "じゃあ続けてプレイヤーについてなんだけど、描きたいイメージとかある？",
+          "voiceEventPath": "event:/Serif/主人公_じゃあ続けてプレイヤーについてなんだけど、描きたいイメージとかある？",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "まだ世界観が定まっていないので、想像できていないですね",
+          "voiceEventPath": "event:/Serif/Milu_まだ世界観が定まっていないので、想像できていないですね",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "人と動物だったら、どっちの方が描きやすい？",
+          "voiceEventPath": "event:/Serif/主人公_人と動物だったら、どっちの方が描きやすい？",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "圧倒的に人ですね。正直、モンスターを描けるか怪しいです。",
+          "voiceEventPath": "event:/Serif/Milu_圧倒的に人ですね。正直、モンスターを描けるか怪しいです。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "なるほどね。まぁ、モンスターに関しては後々決めようか。",
+          "voiceEventPath": "event:/Serif/主人公_なるほどね。まぁ、モンスターに関しては後々決めようか。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "じゃあ、そうだなぁ……",
+          "voiceEventPath": "event:/Serif/主人公_じゃあ、そうだなぁ……",
           "waitingTime": 3.0
         }
       ],
@@ -1678,36 +1843,42 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "世界観とか無視でもいいから好きなようにプレイヤーを描いてみて",
+          "voiceEventPath": "event:/Serif/主人公_世界観とか無視でもいいから好きなようにプレイヤーを描いてみて",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "え",
+          "voiceEventPath": "event:/Serif/Milu_え",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "ストーリーとかも決めなきゃいけなくなると思うから、Miluさんの思う主人公を描いてみてほしいんだ",
+          "voiceEventPath": "event:/Serif/主人公_ストーリーとかも決めなきゃいけなくなると思うから、Miluさんの思う主人公を描いてみてほしいんだ",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "キャラデザから連想してストーリーを決めるってことですか？",
+          "voiceEventPath": "event:/Serif/Milu_キャラデザから連想してストーリーを決めるってことですか？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "そういうこと",
+          "voiceEventPath": "event:/Serif/主人公_そういうこと",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "じゃあ、やりたいようにやってみます",
+          "voiceEventPath": "event:/Serif/Milu_じゃあ、やりたいようにやってみます",
           "waitingTime": 3.0
         }
       ],
@@ -1726,36 +1897,42 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "棒人間とかでもいいよ",
+          "voiceEventPath": "event:/Serif/主人公_棒人間とかでもいいよ",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "え、そんな感じでいいんですか？",
+          "voiceEventPath": "event:/Serif/Milu_え、そんな感じでいいんですか？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "うん。差分だって描かなきゃいけないし、大変でしょ？",
+          "voiceEventPath": "event:/Serif/主人公_うん。差分だって描かなきゃいけないし、大変でしょ？",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "それは、そうですけど……",
+          "voiceEventPath": "event:/Serif/Milu_それは、そうですけど……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "それくらい楽な感じでいいからね",
+          "voiceEventPath": "event:/Serif/主人公_それくらい楽な感じでいいからね",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "は、はぁ……",
+          "voiceEventPath": "event:/Serif/Milu_は、はぁ……",
           "waitingTime": 3.0
         }
       ],
@@ -1774,24 +1951,28 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "差分二枚で、探検者っぽい少年、ってイメージで描けそう？",
+          "voiceEventPath": "event:/Serif/主人公_差分二枚で、探検者っぽい少年、ってイメージで描けそう？",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "……なんとなく、描けると思います。",
+          "voiceEventPath": "event:/Serif/Milu_……なんとなく、描けると思います。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "細かいデザインは一任するけど、アドベンチャー的な世界観ならストーリーも組みやすそうだし。",
+          "voiceEventPath": "event:/Serif/主人公_細かいデザインは一任するけど、アドベンチャー的な世界観ならストーリーも組みやすそうだし。",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "いいと思います。了解しました。",
+          "voiceEventPath": "event:/Serif/Milu_いいと思います。了解しました。",
           "waitingTime": 3.0
         }
       ],
@@ -1810,18 +1991,21 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "じゃあ、最後にかしわもちくん。おまたせです。",
+          "voiceEventPath": "event:/Serif/主人公_じゃあ、最後にかしわもちくん。おまたせです。",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "はーい",
+          "voiceEventPath": "event:/Serif/かしわもち_はーい",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "BGMと効果音をお願いしたいんだけど……",
+          "voiceEventPath": "event:/Serif/主人公_BGMと効果音をお願いしたいんだけど……",
           "waitingTime": 3.0
         }
       ],
@@ -1876,36 +2060,42 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "緊張感のあるアドベンチャーっぽい曲を作ってほしいんだ",
+          "voiceEventPath": "event:/Serif/主人公_緊張感のあるアドベンチャーっぽい曲を作ってほしいんだ",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "緊張感、ですか",
+          "voiceEventPath": "event:/Serif/かしわもち_緊張感、ですか",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "音楽に詳しくないから、雰囲気でしか言えないんだけど、いけそう？",
+          "voiceEventPath": "event:/Serif/主人公_音楽に詳しくないから、雰囲気でしか言えないんだけど、いけそう？",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "世界観とかは取り込まなくていいんですか？",
+          "voiceEventPath": "event:/Serif/かしわもち_世界観とかは取り込まなくていいんですか？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "世界観がぶれないようにするのが一番だけど、どんなステージでも汎用的に使える方がいいかなと思って",
+          "voiceEventPath": "event:/Serif/主人公_世界観がぶれないようにするのが一番だけど、どんなステージでも汎用的に使える方がいいかなと思って",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "そういうことですか。なるほど、作ってみますね。",
+          "voiceEventPath": "event:/Serif/かしわもち_そういうことですか。なるほど、作ってみますね。",
           "waitingTime": 3.0
         }
       ],
@@ -1924,24 +2114,28 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "まぁ、いい感じで宜しく",
+          "voiceEventPath": "event:/Serif/主人公_まぁ、いい感じで宜しく",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "い、いい感じって、どんな……",
+          "voiceEventPath": "event:/Serif/かしわもち_い、いい感じって、どんな……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "なんか、いい感じ！",
+          "voiceEventPath": "event:/Serif/主人公_なんか、いい感じ！",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "まぁ、はい……",
+          "voiceEventPath": "event:/Serif/かしわもち_まぁ、はい……",
           "waitingTime": 3.0
         }
       ],
@@ -1960,30 +2154,35 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "オーケストラとかどうかな",
+          "voiceEventPath": "event:/Serif/主人公_オーケストラとかどうかな",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "お、いいですね",
+          "voiceEventPath": "event:/Serif/かしわもち_お、いいですね",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "基本的にかしわもちくんのやりたいことを尊重するよ",
+          "voiceEventPath": "event:/Serif/主人公_基本的にかしわもちくんのやりたいことを尊重するよ",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "ありがとうございます",
+          "voiceEventPath": "event:/Serif/かしわもち_ありがとうございます",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "好きにしてもらって大丈夫だからね",
+          "voiceEventPath": "event:/Serif/主人公_好きにしてもらって大丈夫だからね",
           "waitingTime": 3.0
         }
       ],
@@ -2002,12 +2201,14 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "あとは効果音だけど",
+          "voiceEventPath": "event:/Serif/主人公_あとは効果音だけど",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "言ってもらえればいくらでも作りますよ",
+          "voiceEventPath": "event:/Serif/かしわもち_言ってもらえればいくらでも作りますよ",
           "waitingTime": 3.0
         },
         {
@@ -2068,36 +2269,42 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "いい感じのフリー効果音持ってきて",
+          "voiceEventPath": "event:/Serif/主人公_いい感じのフリー効果音持ってきて",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "え",
+          "voiceEventPath": "event:/Serif/かしわもち_え",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "BGMも作って効果音も作ってだなんて大変でしょ",
+          "voiceEventPath": "event:/Serif/主人公_BGMも作って効果音も作ってだなんて大変でしょ",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "まぁ、それはそうですけど",
+          "voiceEventPath": "event:/Serif/かしわもち_まぁ、それはそうですけど",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "効果音くらい手を抜いてもらって大丈夫だから",
+          "voiceEventPath": "event:/Serif/主人公_効果音くらい手を抜いてもらって大丈夫だから",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "ううん……",
+          "voiceEventPath": "event:/Serif/かしわもち_ううん……",
           "waitingTime": 3.0
         }
       ],
@@ -2116,24 +2323,28 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "できるだけたくさん作ってほしいな",
+          "voiceEventPath": "event:/Serif/主人公_できるだけたくさん作ってほしいな",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "了解です",
+          "voiceEventPath": "event:/Serif/かしわもち_了解です",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "本当に大丈夫？無理言ってない？",
+          "voiceEventPath": "event:/Serif/主人公_本当に大丈夫？無理言ってない？",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "全然ですよ。任せてください。",
+          "voiceEventPath": "event:/Serif/かしわもち_全然ですよ。任せてください。",
           "waitingTime": 3.0
         }
       ],
@@ -2152,30 +2363,35 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "BGMに気合入れてもらって、効果音は少しで大丈夫だよ",
+          "voiceEventPath": "event:/Serif/主人公_BGMに気合入れてもらって、効果音は少しで大丈夫だよ",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "いいんですか？",
+          "voiceEventPath": "event:/Serif/かしわもち_いいんですか？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "うん、使いまわせる効果音とか作ってもらえれば助かるな",
+          "voiceEventPath": "event:/Serif/主人公_うん、使いまわせる効果音とか作ってもらえれば助かるな",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "わかりました",
+          "voiceEventPath": "event:/Serif/かしわもち_わかりました",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "かしわもちくんの音楽に期待してるよ",
+          "voiceEventPath": "event:/Serif/主人公_かしわもちくんの音楽に期待してるよ",
           "waitingTime": 3.0
         }
       ],
@@ -2194,84 +2410,98 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "よし、こんな感じかな",
+          "voiceEventPath": "event:/Serif/主人公_よし、こんな感じかな",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "まぁ、一旦開発の全体像は見えたかな",
+          "voiceEventPath": "event:/Serif/ごっと_まぁ、一旦開発の全体像は見えたかな",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "気合い入れて開発しますよ",
+          "voiceEventPath": "event:/Serif/Ryuta_気合い入れて開発しますよ",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "素材できたら報告しますね",
+          "voiceEventPath": "event:/Serif/Milu_素材できたら報告しますね",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "僕もそうします",
+          "voiceEventPath": "event:/Serif/かしわもち_僕もそうします",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "そしたら、みんな作業に移ってください",
+          "voiceEventPath": "event:/Serif/主人公_そしたら、みんな作業に移ってください",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "最後の実装、マージしました",
+          "voiceEventPath": "event:/Serif/Ryuta_最後の実装、マージしました",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "ありがとう。そしたらビルドするね",
+          "voiceEventPath": "event:/Serif/ごっと_ありがとう。そしたらビルドするね",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "お、ついに完成？",
+          "voiceEventPath": "event:/Serif/主人公_お、ついに完成？",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "うん。なんとか完成したよ。",
+          "voiceEventPath": "event:/Serif/ごっと_うん。なんとか完成したよ。",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "もう一か月はタブレット見たくないかも……",
+          "voiceEventPath": "event:/Serif/Milu_もう一か月はタブレット見たくないかも……",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "僕は若干物足りないかも",
+          "voiceEventPath": "event:/Serif/かしわもち_僕は若干物足りないかも",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "そしたら、一旦テストプレイとしましょうか",
+          "voiceEventPath": "event:/Serif/主人公_そしたら、一旦テストプレイとしましょうか",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "ビルドは終わってるので、いつでもどうぞ。",
+          "voiceEventPath": "event:/Serif/ごっと_ビルドは終わってるので、いつでもどうぞ。",
           "waitingTime": 3.0
         }
       ],
@@ -2290,120 +2520,140 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "これは……いいね",
+          "voiceEventPath": "event:/Serif/主人公_これは……いいね",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "onedayゲームジャムにしては、いい出来だと思うな。",
+          "voiceEventPath": "event:/Serif/ごっと_onedayゲームジャムにしては、いい出来だと思うな。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "ごっとくん、満足そうだね",
+          "voiceEventPath": "event:/Serif/主人公_ごっとくん、満足そうだね",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "まぁ、合格点ってところ、かな",
+          "voiceEventPath": "event:/Serif/ごっと_まぁ、合格点ってところ、かな",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "さらに上を目指す姿勢、見習わなきゃだなぁ",
+          "voiceEventPath": "event:/Serif/Ryuta_さらに上を目指す姿勢、見習わなきゃだなぁ",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "Miluさんとかしわもちくんは、実際遊んでみてどう？",
+          "voiceEventPath": "event:/Serif/主人公_Miluさんとかしわもちくんは、実際遊んでみてどう？",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "素材足りててよかった……",
+          "voiceEventPath": "event:/Serif/Milu_素材足りててよかった……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "あ、そっちの感想？",
+          "voiceEventPath": "event:/Serif/主人公_あ、そっちの感想？",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "効果音の実装完璧じゃないですか",
+          "voiceEventPath": "event:/Serif/ごっと_効果音の実装完璧じゃないですか",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "イメージ通りに実装できてよかったぁ",
+          "voiceEventPath": "event:/Serif/Ryuta_イメージ通りに実装できてよかったぁ",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "と、まぁこんな感じ、かな",
+          "voiceEventPath": "event:/Serif/主人公_と、まぁこんな感じ、かな",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "え？",
+          "voiceEventPath": "event:/Serif/ごっと_え？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "え？って何？",
+          "voiceEventPath": "event:/Serif/主人公_え？って何？",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "これで終わりなわけないでしょ？",
+          "voiceEventPath": "event:/Serif/ごっと_これで終わりなわけないでしょ？",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "え？",
+          "voiceEventPath": "event:/Serif/Ryuta_え？",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "一日で終わらせたらもったいないじゃないですか",
+          "voiceEventPath": "event:/Serif/ごっと_一日で終わらせたらもったいないじゃないですか",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "……ってことは",
+          "voiceEventPath": "event:/Serif/Milu_……ってことは",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "継続開発らしいですよ",
+          "voiceEventPath": "event:/Serif/かしわもち_継続開発らしいですよ",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "まぁ、頑張りましょうよ！",
+          "voiceEventPath": "event:/Serif/Ryuta_まぁ、頑張りましょうよ！",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "は、はは……",
+          "voiceEventPath": "event:/Serif/主人公_は、はは……",
           "waitingTime": 3.0
         }
       ],
@@ -2422,78 +2672,91 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "……完成、かな？",
+          "voiceEventPath": "event:/Serif/主人公_……完成、かな？",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "まぁ、動きますね。",
+          "voiceEventPath": "event:/Serif/Ryuta_まぁ、動きますね。",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "素材も、一応全部あります。",
+          "voiceEventPath": "event:/Serif/Milu_素材も、一応全部あります。",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "曲も流れてますねぇ。",
+          "voiceEventPath": "event:/Serif/かしわもち_曲も流れてますねぇ。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "なんか……ゲームっぽくはなったね。",
+          "voiceEventPath": "event:/Serif/主人公_なんか……ゲームっぽくはなったね。",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "でも、このゲームって結局何が面白いの？",
+          "voiceEventPath": "event:/Serif/ごっと_でも、このゲームって結局何が面白いの？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "……",
+          "voiceEventPath": "event:/Serif/主人公_……",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "途中から誰も何も決めなくなっちゃいましたもんね。",
+          "voiceEventPath": "event:/Serif/Ryuta_途中から誰も何も決めなくなっちゃいましたもんね。",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "私は言われたものを描いただけですし……",
+          "voiceEventPath": "event:/Serif/Milu_私は言われたものを描いただけですし……",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "僕も依頼通り作っただけですね。",
+          "voiceEventPath": "event:/Serif/かしわもち_僕も依頼通り作っただけですね。",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "誰も間違ってはいない。",
+          "voiceEventPath": "event:/Serif/ごっと_誰も間違ってはいない。",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "誰もゲームを作ってなかった。",
+          "voiceEventPath": "event:/Serif/ごっと_誰もゲームを作ってなかった。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "……ごめん。",
+          "voiceEventPath": "event:/Serif/主人公_……ごめん。",
           "waitingTime": 3.0
         }
       ],
@@ -2512,30 +2775,35 @@
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "クリアできます。",
+          "voiceEventPath": "event:/Serif/Ryuta_クリアできます。",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "素材も全部あります。",
+          "voiceEventPath": "event:/Serif/Milu_素材も全部あります。",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "音も鳴ります。",
+          "voiceEventPath": "event:/Serif/かしわもち_音も鳴ります。",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "バグもありません。",
+          "voiceEventPath": "event:/Serif/ごっと_バグもありません。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "……",
+          "voiceEventPath": "event:/Serif/主人公_……",
           "waitingTime": 3.0
         },
         {
@@ -2548,18 +2816,21 @@
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "……",
+          "voiceEventPath": "event:/Serif/Milu_……",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "……",
+          "voiceEventPath": "event:/Serif/かしわもち_……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "……なんか、面白くないね。",
+          "voiceEventPath": "event:/Serif/主人公_……なんか、面白くないね。",
           "waitingTime": 3.0
         },
         {
@@ -2572,6 +2843,7 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "そうだね……",
+          "voiceEventPath": "event:/Serif/主人公_そうだね……",
           "waitingTime": 3.0
         }
       ],
@@ -2590,36 +2862,42 @@
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "マップジェネレーター完成。",
+          "voiceEventPath": "event:/Serif/ごっと_マップジェネレーター完成。",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "システムも全部作り直した。",
+          "voiceEventPath": "event:/Serif/ごっと_システムも全部作り直した。",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "ステージ作る必要もうないんですか？",
+          "voiceEventPath": "event:/Serif/Ryuta_ステージ作る必要もうないんですか？",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "え……全部描き直しですか？",
+          "voiceEventPath": "event:/Serif/Milu_え……全部描き直しですか？",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "曲もステージごとに全部変えるんです？",
+          "voiceEventPath": "event:/Serif/かしわもち_曲もステージごとに全部変えるんです？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "ちょ、ちょっと待って！",
+          "voiceEventPath": "event:/Serif/主人公_ちょ、ちょっと待って！",
           "waitingTime": 3.0
         },
         {
@@ -2632,6 +2910,7 @@
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "いや、その前に設計変更する。",
+          "voiceEventPath": "event:/Serif/ごっと_いや、その前に設計変更する。",
           "waitingTime": 3.0
         },
         {
@@ -2644,24 +2923,28 @@
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "終わらない……",
+          "voiceEventPath": "event:/Serif/Milu_終わらない……",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "終わらないですねぇ……",
+          "voiceEventPath": "event:/Serif/かしわもち_終わらないですねぇ……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "…………ごめん、時間切れ。",
+          "voiceEventPath": "event:/Serif/主人公_…………ごめん、時間切れ。",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "……やりすぎたね。",
+          "voiceEventPath": "event:/Serif/ごっと_……やりすぎたね。",
           "waitingTime": 3.0
         }
       ],
@@ -2680,6 +2963,7 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "……",
+          "voiceEventPath": "event:/Serif/主人公_……",
           "waitingTime": 3.0
         },
         {
@@ -2692,24 +2976,28 @@
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "……",
+          "voiceEventPath": "event:/Serif/Milu_……",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "……",
+          "voiceEventPath": "event:/Serif/かしわもち_……",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "……",
+          "voiceEventPath": "event:/Serif/ごっと_……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "どう？",
+          "voiceEventPath": "event:/Serif/主人公_どう？",
           "waitingTime": 3.0
         },
         {
@@ -2722,42 +3010,49 @@
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "面白くないね。",
+          "voiceEventPath": "event:/Serif/ごっと_面白くないね。",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "……はい。",
+          "voiceEventPath": "event:/Serif/Milu_……はい。",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "曲だけ浮いてる気がします。",
+          "voiceEventPath": "event:/Serif/かしわもち_曲だけ浮いてる気がします。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "……",
+          "voiceEventPath": "event:/Serif/主人公_……",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "消す？",
+          "voiceEventPath": "event:/Serif/ごっと_消す？",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "……",
+          "voiceEventPath": "event:/Serif/主人公_……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "消そうか。",
+          "voiceEventPath": "event:/Serif/主人公_消そうか。",
           "waitingTime": 3.0
         }
       ],
@@ -2776,60 +3071,70 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "あ。",
+          "voiceEventPath": "event:/Serif/主人公_あ。",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "あれ。",
+          "voiceEventPath": "event:/Serif/Ryuta_あれ。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "リスタートしてもすぐやられるんだけど。",
+          "voiceEventPath": "event:/Serif/主人公_リスタートしてもすぐやられるんだけど。",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "あー。",
+          "voiceEventPath": "event:/Serif/ごっと_あー。",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "詰みだね。",
+          "voiceEventPath": "event:/Serif/ごっと_詰みだね。",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "針の上でセーブされちゃいましたね……",
+          "voiceEventPath": "event:/Serif/Milu_針の上でセーブされちゃいましたね……",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "永遠に死に続けるホラーゲームになりましたね。",
+          "voiceEventPath": "event:/Serif/かしわもち_永遠に死に続けるホラーゲームになりましたね。",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "想定できなかった……",
+          "voiceEventPath": "event:/Serif/Ryuta_想定できなかった……",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "……これは監督者責任のわたしのせいだ",
+          "voiceEventPath": "event:/Serif/ごっと_……これは監督者責任のわたしのせいだ",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "まぁ、はは……",
+          "voiceEventPath": "event:/Serif/主人公_まぁ、はは……",
           "waitingTime": 3.0
         }
       ],
@@ -2848,72 +3153,84 @@
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "もっと追加しましょう！",
+          "voiceEventPath": "event:/Serif/Ryuta_もっと追加しましょう！",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "じゃあキャラも増やします！",
+          "voiceEventPath": "event:/Serif/Milu_じゃあキャラも増やします！",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "曲もあと三曲作ります！",
+          "voiceEventPath": "event:/Serif/かしわもち_曲もあと三曲作ります！",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "いいね！！",
+          "voiceEventPath": "event:/Serif/主人公_いいね！！",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "もういっそ仕様変えます！",
+          "voiceEventPath": "event:/Serif/Ryuta_もういっそ仕様変えます！",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "え？",
+          "voiceEventPath": "event:/Serif/主人公_え？",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "さっき決めたのやめます！もはやこれはゲームではない！芸術だ！",
+          "voiceEventPath": "event:/Serif/Ryuta_さっき決めたのやめます！もはやこれはゲームではない！芸術だ！",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "それはさすがに……",
+          "voiceEventPath": "event:/Serif/主人公_それはさすがに……",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "ありです！",
+          "voiceEventPath": "event:/Serif/Milu_ありです！",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "やりましょう！",
+          "voiceEventPath": "event:/Serif/かしわもち_やりましょう！",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "え、ごっとくん……",
+          "voiceEventPath": "event:/Serif/主人公_え、ごっとくん……",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "うん、手遅れ",
+          "voiceEventPath": "event:/Serif/ごっと_うん、手遅れ",
           "waitingTime": 3.0
         }
       ],
@@ -2932,24 +3249,28 @@
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "……完璧",
+          "voiceEventPath": "event:/Serif/ごっと_……完璧",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "バグなし！",
+          "voiceEventPath": "event:/Serif/Ryuta_バグなし！",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "素材全部間に合いました",
+          "voiceEventPath": "event:/Serif/Milu_素材全部間に合いました",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "BGMも効果音も実装確認済みです。",
+          "voiceEventPath": "event:/Serif/かしわもち_BGMも効果音も実装確認済みです。",
           "waitingTime": 3.0
         },
         {
@@ -2962,66 +3283,77 @@
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "最後まで遊んでもらえた……",
+          "voiceEventPath": "event:/Serif/Milu_最後まで遊んでもらえた……",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "全部見てもらえて嬉しいですね。",
+          "voiceEventPath": "event:/Serif/かしわもち_全部見てもらえて嬉しいですね。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "このゲーム、ちゃんと最後まで面白かった。",
+          "voiceEventPath": "event:/Serif/主人公_このゲーム、ちゃんと最後まで面白かった。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "……",
+          "voiceEventPath": "event:/Serif/主人公_……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "みんな、本当にありがとう。",
+          "voiceEventPath": "event:/Serif/主人公_みんな、本当にありがとう。",
           "waitingTime": 3.0
         },
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "楽しかったです！",
+          "voiceEventPath": "event:/Serif/Ryuta_楽しかったです！",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "ゲームジャムってこんなに面白いんですね。",
+          "voiceEventPath": "event:/Serif/Milu_ゲームジャムってこんなに面白いんですね。",
           "waitingTime": 3.0
         },
         {
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "またやりたいです。",
+          "voiceEventPath": "event:/Serif/かしわもち_またやりたいです。",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "……まぁ。",
+          "voiceEventPath": "event:/Serif/ごっと_……まぁ。",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "次はもっと面白いもの作ろう。",
+          "voiceEventPath": "event:/Serif/ごっと_次はもっと面白いもの作ろう。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "......もちろん!",
+          "voiceEventPath": "event:/Serif/主人公_......もちろん!",
           "waitingTime": 3.0
         }
       ],
@@ -3040,6 +3372,7 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "クリア！",
+          "voiceEventPath": "event:/Serif/主人公_クリア！",
           "waitingTime": 3.0
         },
         {
@@ -3052,12 +3385,14 @@
           "iconId": "kashiwamochi_icon",
           "speaker": "かしわもち",
           "message": "え",
+          "voiceEventPath": "event:/Serif/かしわもち_え",
           "waitingTime": 3.0
         },
         {
           "iconId": "milu_icon",
           "speaker": "Milu",
           "message": "え",
+          "voiceEventPath": "event:/Serif/Milu_え",
           "waitingTime": 3.0
         },
         {
@@ -3070,12 +3405,14 @@
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "……",
+          "voiceEventPath": "event:/Serif/ごっと_……",
           "waitingTime": 3.0
         },
         {
           "iconId": "goddo_icon",
           "speaker": "ごっと",
           "message": "それでこそ開発者。",
+          "voiceEventPath": "event:/Serif/ごっと_それでこそ開発者。",
           "waitingTime": 3.0
         }
       ],
@@ -3094,114 +3431,133 @@
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "ここまで全部見たんだね。",
+          "voiceEventPath": "event:/Serif/主人公_ここまで全部見たんだね。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "ありがとう。",
+          "voiceEventPath": "event:/Serif/主人公_ありがとう。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "君は知っているかもしれないけど、",
+          "voiceEventPath": "event:/Serif/主人公_君は知っているかもしれないけど、",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "開発には正解なんてない。",
+          "voiceEventPath": "event:/Serif/主人公_開発には正解なんてない。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "誰が悪いわけでもない。",
+          "voiceEventPath": "event:/Serif/主人公_誰が悪いわけでもない。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "指示に最適解もない。",
+          "voiceEventPath": "event:/Serif/主人公_指示に最適解もない。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "実装方法の",
+          "voiceEventPath": "event:/Serif/主人公_実装方法の",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "世界観の",
+          "voiceEventPath": "event:/Serif/主人公_世界観の",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "答えはひとつじゃない。",
+          "voiceEventPath": "event:/Serif/主人公_答えはひとつじゃない。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "それに",
+          "voiceEventPath": "event:/Serif/主人公_それに",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "正しさを持つのは、",
+          "voiceEventPath": "event:/Serif/主人公_正しさを持つのは、",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "君だけじゃない。",
+          "voiceEventPath": "event:/Serif/主人公_君だけじゃない。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "……",
+          "voiceEventPath": "event:/Serif/主人公_……",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "これ以上は語らなくてもいいかな。",
+          "voiceEventPath": "event:/Serif/主人公_これ以上は語らなくてもいいかな。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "ここまで遊んでくれた君なら、",
+          "voiceEventPath": "event:/Serif/主人公_ここまで遊んでくれた君なら、",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "きっと良い企画開発者になれる。",
+          "voiceEventPath": "event:/Serif/主人公_きっと良い企画開発者になれる。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "最後に、",
+          "voiceEventPath": "event:/Serif/主人公_最後に、",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "ここまで遊んでくれてありがとう。",
+          "voiceEventPath": "event:/Serif/主人公_ここまで遊んでくれてありがとう。",
           "waitingTime": 3.0
         },
         {
           "iconId": "player_icon",
           "speaker": "主人公",
           "message": "Thank you for Playing",
+          "voiceEventPath": "event:/Serif/主人公_Thank you for Playing",
           "waitingTime": 3.0
         }
       ],

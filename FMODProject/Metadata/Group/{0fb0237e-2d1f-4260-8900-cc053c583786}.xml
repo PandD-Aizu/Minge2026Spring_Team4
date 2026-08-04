@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="MixerGroup" id="{0fb0237e-2d1f-4260-8900-cc053c583786}">
+		<property name="name">
+			<value>Voice Bus</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{62d3958f-4b7b-4deb-a8e3-b41ad9c8036e}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{58da31ba-e135-4f93-9924-94c4e95bc7ae}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{194d8d51-8f0b-453c-85da-fb5443ea76c3}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{62d3958f-4b7b-4deb-a8e3-b41ad9c8036e}">
+		<relationship name="effects">
+			<destination>{c0e8b5be-92bd-4015-a30e-fcaad758538f}</destination>
+			<destination>{47f949fc-6572-4c6e-a889-efcbdbc9ca39}</destination>
+			<destination>{3d49df69-7b7f-4298-a634-decde02878ba}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{58da31ba-e135-4f93-9924-94c4e95bc7ae}" />
+	<object class="LimiterEffect" id="{c0e8b5be-92bd-4015-a30e-fcaad758538f}">
+		<property name="boost">
+			<value>6</value>
+		</property>
+	</object>
+	<object class="Sidechain" id="{47f949fc-6572-4c6e-a889-efcbdbc9ca39}" />
+	<object class="MixerBusFader" id="{3d49df69-7b7f-4298-a634-decde02878ba}" />
+</objects>

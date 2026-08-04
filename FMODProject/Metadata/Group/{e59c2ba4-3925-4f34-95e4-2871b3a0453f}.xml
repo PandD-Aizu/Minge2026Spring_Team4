@@ -28,11 +28,15 @@
 		<property name="ratio">
 			<value>1.95000005</value>
 		</property>
-		<property name="releaseTime">
+		<property name="attackTime">
 			<value>50</value>
+		</property>
+		<property name="releaseTime">
+			<value>60</value>
 		</property>
 		<relationship name="sidechains">
 			<destination>{5814b69c-0581-4ecf-91d4-d6ec1c946f04}</destination>
+			<destination>{47f949fc-6572-4c6e-a889-efcbdbc9ca39}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{2583f3a7-8202-4f6e-9924-d5aba3aa03f4}" />
