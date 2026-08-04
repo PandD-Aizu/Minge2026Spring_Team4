@@ -2,16 +2,6 @@
   {
     "Gimmiks": [
       {
-        "gimmikName": "罠針_上",
-        "gimmikPos": [
-          96.0,
-          96.0
-        ],
-        "value1": 0,
-        "value2": 0.0,
-        "value3": 0.0
-      },
-      {
         "gimmikName": "罠針_下",
         "gimmikPos": [
           192.0,
@@ -105,7 +95,7 @@
           96.0
         ],
         "value1": 1,
-        "value2": 0.0
+        "value2": 5.0
       },
       {
         "gimmikName": "昇降針",
@@ -114,7 +104,7 @@
           96.0
         ],
         "value1": 3,
-        "value2": 0.0
+        "value2": 5.0
       },
       {
         "gimmikName": "昇降針",
@@ -123,7 +113,7 @@
           32.0
         ],
         "value1": 1,
-        "value2": 0.0
+        "value2": 5.0
       },
       {
         "gimmikName": "昇降針",
@@ -132,7 +122,7 @@
           32.0
         ],
         "value1": 3,
-        "value2": 0.0
+        "value2": 5.0
       },
       {
         "gimmikName": "罠針_上",
@@ -172,7 +162,7 @@
         ],
         "value1": -98,
         "value2": 30.0,
-        "value3": 90.0
+        "value3": 10.0
       },
       {
         "gimmikName": "罠トリガー",
@@ -299,12 +289,247 @@
         ],
         "value1": 2,
         "value2": 5.0
+      },
+      {
+        "gimmikName": "移動針_左",
+        "gimmikPos": [
+          192.0,
+          480.0
+        ],
+        "value1": 22,
+        "value2": -0.5,
+        "value3": 0.0,
+        "value4": 0.1
+      },
+      {
+        "gimmikName": "移動針_上",
+        "gimmikPos": [
+          224.0,
+          512.0
+        ],
+        "value1": 23,
+        "value2": 0.0,
+        "value3": -1.2,
+        "value4": 0.1
+      },
+      {
+        "gimmikName": "移動針_右",
+        "gimmikPos": [
+          256.0,
+          480.0
+        ],
+        "value1": 24,
+        "value2": 0.5,
+        "value3": 0.0,
+        "value4": 0.1
+      },
+      {
+        "gimmikName": "移動針_左",
+        "gimmikPos": [
+          352.0,
+          480.0
+        ],
+        "value1": 25,
+        "value2": -0.5,
+        "value3": 0.0,
+        "value4": 0.1
+      },
+      {
+        "gimmikName": "移動針_上",
+        "gimmikPos": [
+          384.0,
+          512.0
+        ],
+        "value1": 26,
+        "value2": 0.0,
+        "value3": -1.2,
+        "value4": 0.1
+      },
+      {
+        "gimmikName": "移動針_右",
+        "gimmikPos": [
+          416.0,
+          480.0
+        ],
+        "value1": 27,
+        "value2": 0.5,
+        "value3": 0.0,
+        "value4": 0.1
+      },
+      {
+        "gimmikName": "移動針_左",
+        "gimmikPos": [
+          512.0,
+          480.0
+        ],
+        "value1": 28,
+        "value2": -0.5,
+        "value3": 0.0,
+        "value4": 0.1
+      },
+      {
+        "gimmikName": "移動針_上",
+        "gimmikPos": [
+          544.0,
+          512.0
+        ],
+        "value1": 29,
+        "value2": 0.0,
+        "value3": -1.2,
+        "value4": 0.1
+      },
+      {
+        "gimmikName": "移動針_右",
+        "gimmikPos": [
+          576.0,
+          480.0
+        ],
+        "value1": 30,
+        "value2": 0.5,
+        "value3": 0.0,
+        "value4": 0.1
+      },
+      {
+        "gimmikName": "罠トリガー",
+        "gimmikPos": [
+          160.0,
+          480.0
+        ],
+        "value1": 22,
+        "value2": 1.0,
+        "value3": 1.0
+      },
+      {
+        "gimmikName": "罠トリガー",
+        "gimmikPos": [
+          224.0,
+          448.0
+        ],
+        "value1": 23,
+        "value2": 1.0,
+        "value3": 1.0
+      },
+      {
+        "gimmikName": "罠トリガー",
+        "gimmikPos": [
+          288.0,
+          480.0
+        ],
+        "value1": 24,
+        "value2": 1.0,
+        "value3": 1.0
+      },
+      {
+        "gimmikName": "罠トリガー",
+        "gimmikPos": [
+          320.0,
+          480.0
+        ],
+        "value1": 25,
+        "value2": 1.0,
+        "value3": 1.0
+      },
+      {
+        "gimmikName": "罠トリガー",
+        "gimmikPos": [
+          384.0,
+          448.0
+        ],
+        "value1": 26,
+        "value2": 1.0,
+        "value3": 1.0
+      },
+      {
+        "gimmikName": "罠トリガー",
+        "gimmikPos": [
+          448.0,
+          480.0
+        ],
+        "value1": 27,
+        "value2": 1.0,
+        "value3": 1.0
+      },
+      {
+        "gimmikName": "罠トリガー",
+        "gimmikPos": [
+          480.0,
+          480.0
+        ],
+        "value1": 28,
+        "value2": 1.0,
+        "value3": 1.0
+      },
+      {
+        "gimmikName": "罠トリガー",
+        "gimmikPos": [
+          544.0,
+          448.0
+        ],
+        "value1": 29,
+        "value2": 1.0,
+        "value3": 1.0
+      },
+      {
+        "gimmikName": "罠トリガー",
+        "gimmikPos": [
+          608.0,
+          480.0
+        ],
+        "value1": 30,
+        "value2": 1.0,
+        "value3": 1.0
+      },
+      {
+        "gimmikName": "ワープ",
+        "gimmikPos": [
+          704.0,
+          608.0
+        ],
+        "value1": "ExRyutaArea"
+      },
+      {
+        "gimmikName": "ワープ",
+        "gimmikPos": [
+          736.0,
+          608.0
+        ],
+        "value1": "ExRyutaArea"
+      },
+      {
+        "gimmikName": "罠針_上",
+        "gimmikPos": [
+          288.0,
+          96.0
+        ],
+        "value1": 0,
+        "value2": 0.0,
+        "value3": 0.0
+      },
+      {
+        "gimmikName": "罠針_下",
+        "gimmikPos": [
+          288.0,
+          32.0
+        ],
+        "value1": 0,
+        "value2": 0.0,
+        "value3": 0.0
+      },
+      {
+        "gimmikName": "罠針_下",
+        "gimmikPos": [
+          704.0,
+          32.0
+        ],
+        "value1": 0,
+        "value2": 0.0,
+        "value3": 0.0
       }
     ],
     "background": "sample",
     "startPlayerPos": [
-      430.0,
-      336.0
+      64.0,
+      64.0
     ]
   }
 ]
