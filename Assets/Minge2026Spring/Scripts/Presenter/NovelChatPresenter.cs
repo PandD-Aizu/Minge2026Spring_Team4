@@ -34,8 +34,6 @@ namespace Minge2026Spring.Scripts.Presenter
         private bool _isDmMode;
         private bool _isRestoringMainScenario;
         private bool _hasStartedExternalGame;
-        private ChapterBlock _currentChapterBlock;
-        
         private CompositeDisposable _disposables = new();
         private SkipMode _skipMode = SkipMode.None; // TODO: リファクタする
 
@@ -226,41 +224,51 @@ namespace Minge2026Spring.Scripts.Presenter
 
         private async UniTask HandleChapterBlockAsync(ChapterBlock block, CancellationToken token)
         {
-            _currentChapterBlock = block;
-
             if (_isDmMode)
                 return;
 
             using var linkedCancellationSource = CancellationTokenSource.CreateLinkedTokenSource(token, _dmCancellationSource.Token);
-            await _chatWindowView.AddNewChatObject(
-                block,
-                linkedCancellationSource.Token,
-                choiceIndex =>
-                {
-                    // 手動選択が発生した時点でスキップは不要になるため解除する
-                    StopSkipToInput();
-                    ApplyChoiceMorale(block, choiceIndex);
-                    _moraleUseCase.OnSave();
-                    _chatUseCase.MoveToNextBlock(choiceIndex);
-                },
-                shouldSkipDelays: IsSkipToInputActive);
-
-            if (_isDmMode)
-                return;
-
-            if (IsSkipToInputActive() && IsUserInputRequiredBlock(block))
+            try
             {
-                StopSkipToInput();
-                return;
+                await _chatWindowView.AddNewChatObject(
+                    block,
+                    linkedCancellationSource.Token,
+                    choiceIndex =>
+                    {
+                        // 手動選択が発生した時点でスキップは不要になるため解除する
+                        StopSkipToInput();
+                        ApplyChoiceMorale(block, choiceIndex);
+                        _moraleUseCase.OnSave();
+                        _chatUseCase.MoveToNextBlock(choiceIndex);
+                    },
+                    shouldSkipDelays: IsSkipToInputActive);
+
+                if (_isDmMode)
+                    return;
+
+                if (IsSkipToInputActive() && IsUserInputRequiredBlock(block))
+                {
+                    StopSkipToInput();
+                    return;
+                }
+
+                if (!ShouldAutoAdvance(block))
+                    return;
+
+                if (block.waitingTime > 0)
+                    await WaitWithSkipAsync(block.waitingTime, linkedCancellationSource.Token);
+
+                // DM表示中にメインシナリオを進行させない
+                linkedCancellationSource.Token.ThrowIfCancellationRequested();
+                if (_isDmMode)
+                    return;
+
+                _chatUseCase.MoveToNextBlock();
             }
-
-            if (!ShouldAutoAdvance(block))
-                return;
-
-            if (block.waitingTime > 0)
-                await WaitWithSkipAsync(block.waitingTime, token);
-            
-            _chatUseCase.MoveToNextBlock();
+            catch (OperationCanceledException) when (linkedCancellationSource.IsCancellationRequested)
+            {
+                // DM切替やシーン終了による表示中断は正常終了として扱う
+            }
         }
 
         /// <summary>

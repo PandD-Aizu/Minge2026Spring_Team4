@@ -10,37 +10,37 @@
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "せっかくだし、コンテストとかを見越した\nすごいの作りたいんだけど、どう？",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "goddo_icon",
                     "speaker": "ごっと",
                     "message": "アバウトなうえに無茶言うじゃん……\nまぁ、やるならやるで全然コード書くけど……",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "他のみんなはどう思う？",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "ryuta_icon",
                     "speaker": "Ryuta",
                     "message": "全然ありだと思います！\n即死トラップ満載の詰みアクションゲーとか作りたいな",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "milu_icon",
                     "speaker": "Milu",
                     "message": "演出凝ってみたいな……\nアニメーションとかエフェクトいっぱいにして……",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "kashiwamochi_icon",
                     "speaker": "かしわもち",
                     "message": "音重ねまくって、\n深みのあるオーケストラとか作ってみたいかも",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 }
             ],
             "choices": [],
@@ -58,37 +58,37 @@
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "自分は特に希望ないから、皆に任せるよ",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "kashiwamochi_icon",
                     "speaker": "かしわもち",
                     "message": "えぇと……俺もサウンドだし、他の人に合わせますよ",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "milu_icon",
                     "speaker": "Milu",
                     "message": "グラフィッカからも、特に希望はないです……",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "プログラマ二人はどう思う？",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "ryuta_icon",
                     "speaker": "Ryuta",
                     "message": "皆が何でもいいって言うなら\n僕アクション作りたいです！",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "goddo_icon",
                     "speaker": "ごっと",
                     "message": "まぁ、Ryuta君がこう言ってるから……\nアクションでいいんじゃない？",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 }
             ],
             "choices": [],
@@ -106,37 +106,37 @@
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "アクションかシューティングを作りたいなって思うんだけど\nみんなはどう思う？",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "ryuta_icon",
                     "speaker": "Ryuta",
                     "message": "え、めっちゃいいじゃないですか\n僕アクション作るの得意ですよ！",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "他のみんなはどう思う？",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "goddo_icon",
                     "speaker": "ごっと",
                     "message": "無難なシステムなら実装も難しくないだろうし、\nいいんじゃない？",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "milu_icon",
                     "speaker": "Milu",
                     "message": "えと……メカっぽいの描くの苦手なんですけど……\nそれで大丈夫なら、いいと思います",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "kashiwamochi_icon",
                     "speaker": "かしわもち",
                     "message": "まぁ、いいと思います\n曲の雰囲気とか言ってもらえれば、全然作るので",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 }
             ],
             "choices": [],
@@ -154,37 +154,37 @@
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "じゃあ、アクションゲームを作る方向で",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "次に、みんなにタスクを振っていこうと思うんだけど...",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "まずはごっと",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "goddo_icon",
                     "speaker": "ごっと",
                     "message": "あ、私からですか",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "設計はごっとに任せたいからね",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "goddo_icon",
                     "speaker": "ごっと",
                     "message": "あぁ、そうですか",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
@@ -208,49 +208,49 @@
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "全体の設計を作って僕に先に見せてほしいな",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "とりあえず、”プレイヤー操作・罠・ステージ１つ”くらいの規模で",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "goddo_icon",
                     "speaker": "ごっど",
                     "message": "なるほど、スコープは小さめですね",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "うん、あとでみんなが見れるようにドキュメントもまとめてほしい",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "goddo_icon",
                     "speaker": "ごっど",
                     "message": "了解です。\nじゃあ、全体の構造だけ先に決めて、細かいところはあとで詰めます",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "本当に大まかでいいからね？！\nごっどにお願いするといつも細部までこだわりつくしちゃうから......",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "goddo_icon",
                     "speaker": "ごっど",
                     "message": "まぁ.......とりあえず、動かせる程度までは作っておきます",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "優秀だなぁ......",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 }
             ],
             "choices": [],
@@ -268,37 +268,37 @@
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "明日までに簡単にまとめてきてほしいんだ。",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "goddo_icon",
                     "speaker": "ごっど",
                     "message": "......明日？",
-                    "waitingTime": 1.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "うん、雑でいいよ。\n設計なんて開発が進につ入れて確立していくでしょ。",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "goddo_icon",
                     "speaker": "ごっど",
                     "message": "え、でも......まぁ、いいか......",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "とりあえずたたき台みたいな感じだから、よろしく",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "goddo_icon",
                     "speaker": "ごっど",
                     "message": "......",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 }
             ],
             "choices": [],
@@ -352,25 +352,25 @@
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "僕は設計よくわかんないから、とりあえず全部よろしく",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "goddo_icon",
                     "speaker": "ごっど",
                     "message": "......全部、ですか",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "うん、好きにやっていいよ",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "goddo_icon",
                     "speaker": "ごっど",
                     "message": "え....あぁ....はい....",
-                    "waitingTime": 3.0
+                    "waitingTime": 0.0
                 }
             ],
             "choices": [],
@@ -424,118 +424,118 @@
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "それでは、春みんげ～第一回オンラインミーティングを始めます",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "ryuta_icon",
                     "speaker": "Ryuta",
                     "message": "おなしゃす",
                     "voiceEventPath": "event:/Serif/Ryuta_おなしゃす",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "goddo_icon",
                     "speaker": "ごっと",
                     "message": "お願いします",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "milu_icon",
                     "speaker": "Milu",
                     "message": "お、おねがいします",
                     "voiceEventPath": "event:/Serif/Milu_お、おねがいします",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "kashiwamochi_icon",
                     "speaker": "かしわもち",
                     "message": "おねがいしまぁす",
                     "voiceEventPath": "event:/Serif/かしわもち_おねがいしまぁす",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "じゃあ、まず自己紹介しましょうか",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "今回リーダーを務めます。学部三年の[name]です\nリーダーは初めてで少し緊張していますが、宜しくお願いします",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "ryuta_icon",
                     "speaker": "Ryuta",
                     "message": "学部二年のRyutaです\nあ、プログラマです。好きなゲームはトラップマンです",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "goddo_icon",
                     "speaker": "ごっと",
                     "message": "学部三年のごっとです\nプログラマで、Ryutaくんのサポートやります",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "milu_icon",
                     "speaker": "Milu",
                     "message": "が、学部一年のMiluです\nえと、グラフィッカでが、がんばります！",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "kashiwamochi_icon",
                     "speaker": "かしわもち",
                     "message": "学部二年のかしわもちです\nえーと、サウンドやります。　はーい",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "今後の予定だけど",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "今回は、全体ミーティングをもとに\n",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "作業は各々進めてください",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "goddo_icon",
                     "speaker": "ごっと",
                     "message": "今回はオフラインで集まりはしないんだね",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",
                     "speaker": "主人公",
                     "message": "うん、大学の立ち入り禁止期間とかぶちゃっててね",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "milu_icon",
                     "speaker": "Milu",
                     "message": "あぁ、入試ですか……",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "ryuta_icon",
                     "speaker": "Ryuta",
                     "message": "あと卒業式もあるからね",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "kashiwamochi_icon",
                     "speaker": "かしわもち",
                     "message": "俺は実家変えるから、オンラインしか難しいね",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "player_icon",

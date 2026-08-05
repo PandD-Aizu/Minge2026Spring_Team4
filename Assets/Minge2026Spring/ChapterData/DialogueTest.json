@@ -7,7 +7,7 @@
                     "iconId": "PlayerIcon",
                     "speaker": "Player",
                     "message": "おなかすいたー",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 },
                 {
                     "iconId": "PlayerIcon",
@@ -27,7 +27,7 @@
                     "iconId": "PlayerIcon",
                     "speaker": "Player",
                     "message": "おすしたべたい",
-                    "waitingTime": 5.0
+                    "waitingTime": 0.0
                 }
             ],
             "choices": [],

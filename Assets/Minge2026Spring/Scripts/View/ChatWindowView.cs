@@ -6,6 +6,7 @@ using DG.Tweening;
 using FMODUnity;
 using Minge2026Spring.Scripts.Application.DTOs;
 using Minge2026Spring.Scripts.Application.Interface;
+using TMPro;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -27,6 +28,19 @@ namespace Minge2026Spring.Scripts.View
         [SerializeField] public AssetReference chatPrefab;
         [SerializeField] public AssetReference choicePrefab;
 
+        [Header("Chapter Separator")]
+        [SerializeField] private TMP_FontAsset separatorFont;
+        [SerializeField] private float separatorFontSize = 20f;
+        [SerializeField] private FontStyles separatorFontStyle = FontStyles.Bold;
+        [SerializeField] private Color separatorTextColor = new(0.72f, 0.74f, 0.78f, 1f);
+        [SerializeField] private Color separatorLineColor = new(0.28f, 0.30f, 0.34f, 1f);
+        [SerializeField] private float separatorWidth = 1150f;
+        [SerializeField] private float separatorHeight = 48f;
+        [SerializeField] private float separatorLabelWidth = 180f;
+        [SerializeField] private float separatorHorizontalPadding = 24f;
+        [SerializeField] private float separatorLineGap = 10f;
+        [SerializeField] private float separatorLineThickness = 1f;
+
         private static readonly string[] ChatIconAddresses =
         {
             "player_icon",
@@ -40,6 +54,8 @@ namespace Minge2026Spring.Scripts.View
         private readonly List<AsyncOperationHandle<Sprite>> _chatIconHandles = new();
         private UniTask _chatIconPreloadTask;
         private IFMODVoiceService _voiceService;
+        private int _chapterSeparatorCount;
+        private int _choiceSeparatorCount;
 
         /// <summary>
         /// シーン開始時にチャットアイコンの先読みを開始する
@@ -70,6 +86,7 @@ namespace Minge2026Spring.Scripts.View
             Func<bool> shouldSkipDelays = null)
         {
             await _chatIconPreloadTask.AttachExternalCancellation(token);
+            AddChapterSeparator(chapterBlock);
             await RenderDialoguesAsync(chapterBlock, token, shouldSkipDelays);
             await RenderChoicesAsync(chapterBlock, token, onChoiceSelected);
         }
@@ -82,6 +99,7 @@ namespace Minge2026Spring.Scripts.View
         public async UniTask AddHistoricalChatObject(ChapterBlock chapterBlock, CancellationToken token)
         {
             await _chatIconPreloadTask.AttachExternalCancellation(token);
+            AddChapterSeparator(chapterBlock);
             await RenderDialoguesAsync(chapterBlock, token, () => true);
         }
 
@@ -164,6 +182,118 @@ namespace Minge2026Spring.Scripts.View
 
             for (var index = scrollViewContentTransform.childCount - 1; index >= 0; index--)
                 Destroy(scrollViewContentTransform.GetChild(index).gameObject);
+
+            _chapterSeparatorCount = 0;
+            _choiceSeparatorCount = 0;
+        }
+
+        private void AddChapterSeparator(ChapterBlock chapterBlock)
+        {
+            if (scrollViewContentTransform is null || chapterBlock is null)
+                return;
+
+            var isChoice = chapterBlock.nodeType == ChapterNodeType.Choice ||
+                           chapterBlock.choices is { Length: > 0 };
+            var hasContent = isChoice || chapterBlock.dialogues is { Length: > 0 };
+            if (!hasContent)
+                return;
+
+            var number = isChoice ? ++_choiceSeparatorCount : ++_chapterSeparatorCount;
+            var label = isChoice ? $"選択肢 {number}" : $"チャプター {number}";
+            var resolvedFont = ResolveSeparatorFont();
+
+            var separator = new GameObject(
+                $"ChapterSeparator_{label}",
+                typeof(RectTransform),
+                typeof(LayoutElement));
+            separator.layer = scrollViewContentTransform.gameObject.layer;
+            separator.transform.SetParent(scrollViewContentTransform, false);
+            var separatorRect = separator.GetComponent<RectTransform>();
+            separatorRect.sizeDelta = new Vector2(separatorWidth, separatorHeight);
+
+            var separatorLayout = separator.GetComponent<LayoutElement>();
+            separatorLayout.preferredWidth = separatorWidth;
+            separatorLayout.preferredHeight = separatorHeight;
+
+            var labelObject = new GameObject(
+                "Label",
+                typeof(RectTransform),
+                typeof(CanvasRenderer),
+                typeof(TextMeshProUGUI));
+            labelObject.layer = separator.layer;
+            labelObject.transform.SetParent(separator.transform, false);
+
+            var labelRect = labelObject.GetComponent<RectTransform>();
+            labelRect.anchorMin = new Vector2(0.5f, 0f);
+            labelRect.anchorMax = new Vector2(0.5f, 1f);
+            labelRect.sizeDelta = new Vector2(separatorLabelWidth, 0f);
+
+            var labelText = labelObject.GetComponent<TextMeshProUGUI>();
+            labelText.text = label;
+            labelText.font = resolvedFont;
+            labelText.fontSize = separatorFontSize;
+            labelText.fontStyle = separatorFontStyle;
+            labelText.color = separatorTextColor;
+            labelText.alignment = TextAlignmentOptions.Center;
+            labelText.raycastTarget = false;
+
+            var labelHalfWidthWithGap = separatorLabelWidth * 0.5f + separatorLineGap;
+            AddSeparatorLine(
+                separator.transform,
+                "LeftLine",
+                0f,
+                0.5f,
+                separatorHorizontalPadding,
+                -labelHalfWidthWithGap);
+            AddSeparatorLine(
+                separator.transform,
+                "RightLine",
+                0.5f,
+                1f,
+                labelHalfWidthWithGap,
+                -separatorHorizontalPadding);
+        }
+
+        private TMP_FontAsset ResolveSeparatorFont()
+        {
+            if (separatorFont is not null)
+                return separatorFont;
+
+            foreach (var existingText in scrollViewContentTransform.GetComponentsInChildren<TMP_Text>(true))
+            {
+                if (existingText.font is not null)
+                    return existingText.font;
+            }
+
+            return TMP_Settings.defaultFontAsset;
+        }
+
+        private void AddSeparatorLine(
+            Transform parent,
+            string objectName,
+            float anchorMinX,
+            float anchorMaxX,
+            float leftOffset,
+            float rightOffset)
+        {
+            var lineObject = new GameObject(
+                objectName,
+                typeof(RectTransform),
+                typeof(CanvasRenderer),
+                typeof(Image));
+            lineObject.layer = parent.gameObject.layer;
+            lineObject.transform.SetParent(parent, false);
+
+            var lineRect = lineObject.GetComponent<RectTransform>();
+            lineRect.anchorMin = new Vector2(anchorMinX, 0.5f);
+            lineRect.anchorMax = new Vector2(anchorMaxX, 0.5f);
+            var halfThickness = separatorLineThickness * 0.5f;
+            lineRect.offsetMin = new Vector2(leftOffset, -halfThickness);
+            lineRect.offsetMax = new Vector2(rightOffset, halfThickness);
+
+            var lineImage = lineObject.GetComponent<Image>();
+            lineImage.color = separatorLineColor;
+            lineImage.raycastTarget = false;
         }
 
         private static async UniTask WaitForDialogueDelayAsync(

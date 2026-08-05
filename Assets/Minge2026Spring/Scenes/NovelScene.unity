@@ -3021,6 +3021,17 @@ MonoBehaviour:
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
+  separatorFont: {fileID: 11400000, guid: e8077101bbbcc774096d56bef6bd4305, type: 2}
+  separatorFontSize: 20
+  separatorFontStyle: 1
+  separatorTextColor: {r: 0.72, g: 0.74, b: 0.78, a: 1}
+  separatorLineColor: {r: 0.28, g: 0.3, b: 0.34, a: 1}
+  separatorWidth: 1150
+  separatorHeight: 48
+  separatorLabelWidth: 180
+  separatorHorizontalPadding: 24
+  separatorLineGap: 10
+  separatorLineThickness: 1
 --- !u!4 &1933025974
 Transform:
   m_ObjectHideFlags: 0
