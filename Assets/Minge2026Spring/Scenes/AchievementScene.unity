@@ -2383,7 +2383,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: -100}
+  m_AnchoredPosition: {x: -300, y: -100}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &910811949
@@ -4114,8 +4114,8 @@ MonoBehaviour:
     descriptionText: {fileID: 716146442}
   extraStageButton: {fileID: 843512045}
   extraStageButtonText: {fileID: 1560831421}
-  hiddenItem1Image: {fileID: 1166176455}
-  hiddenItem2Image: {fileID: 1010206651}
+  hiddenItem1Image: {fileID: 1010206651}
+  hiddenItem2Image: {fileID: 1166176455}
   endingEllipseRadius: {x: 700, y: 380}
   endingEllipseOffsetY: 100
   endingPanelSize: {x: 500, y: 90}
@@ -4953,9 +4953,9 @@ RectTransform:
   - {fileID: 1983395104}
   - {fileID: 309575839}
   - {fileID: 1729428926}
-  - {fileID: 1534375762}
-  - {fileID: 2081234852}
   - {fileID: 884301428}
+  - {fileID: 2081234852}
+  - {fileID: 1534375762}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5355,7 +5355,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: -100}
+  m_AnchoredPosition: {x: 300, y: -100}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2119799752
