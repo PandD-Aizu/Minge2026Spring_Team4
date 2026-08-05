@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.03.00">
 	<object class="Event" id="{64bd83eb-bb64-41c2-85e3-8163abb381ef}">
 		<property name="name">
-			<value>Ryuta_想定できなかった……</value>
+			<value>Ryuta_あれ。</value>
 		</property>
 		<property name="outputFormat">
 			<value>0</value>

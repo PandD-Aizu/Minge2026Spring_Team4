@@ -58,8 +58,8 @@
         {
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
-          "message": "学部二年のRyutaです！趣味は鬼畜アクション制作です！yorpsikuお願いします！",
-          "voiceEventPath": "event:/Serif/Ryuta_学部二年のRyutaです！趣味は鬼畜アクション制作です！yorpsikuお願いします！",
+          "message": "学部二年のRyutaです！趣味は鬼畜アクション制作です！よろしくお願いします！",
+          "voiceEventPath": "event:/Serif/Ryuta_学部二年のRyutaです！趣味は鬼畜アクション制作です！よろしくお願いします！",
           "waitingTime": 0.0
         },
         {

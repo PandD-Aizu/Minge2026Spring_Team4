@@ -8,7 +8,7 @@
         { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "バグなし！", "voiceEventPath": "event:/Serif/Ryuta_バグなし！", "waitingTime": 0.0 },
         { "iconId": "milu_icon", "speaker": "Milu", "message": "素材全部間に合いました", "voiceEventPath": "event:/Serif/Milu_素材全部間に合いました", "waitingTime": 0.0 },
         { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "BGMも効果音も実装確認済みです。", "voiceEventPath": "event:/Serif/かしわもち_BGMも効果音も実装確認済みです。", "waitingTime": 0.0 },
-        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "細かいとこまでみてくれてありがとうございます！", "voiceEventPath": "", "waitingTime": 0.0 },
+        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "細かいとこまでみてくれてありがとうございます！", "voiceEventPath": "event:/Serif/Ryuta_細かいところまで見てくれてありがとうございます", "waitingTime": 0.0 },
         { "iconId": "milu_icon", "speaker": "Milu", "message": "最後まで遊んでもらえた……", "voiceEventPath": "event:/Serif/Milu_最後まで遊んでもらえた……", "waitingTime": 0.0 },
         { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "全部見てもらえて嬉しいですね。", "voiceEventPath": "event:/Serif/かしわもち_全部見てもらえて嬉しいですね。", "waitingTime": 0.0 },
         { "iconId": "player_icon", "speaker": "主人公", "message": "このゲーム、ちゃんと最後まで面白かった。", "voiceEventPath": "event:/Serif/主人公_このゲーム、ちゃんと最後まで面白かった。", "waitingTime": 0.0 },
