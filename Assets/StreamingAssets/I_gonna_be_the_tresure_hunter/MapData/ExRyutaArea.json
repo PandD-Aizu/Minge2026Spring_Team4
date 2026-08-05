@@ -8,6 +8,309 @@
           544.0
         ],
         "value1": "ExBoss"
+      },
+      {
+        "gimmikName": "ループ移動針",
+        "gimmikPos": [
+          192.0,
+          512.0
+        ],
+        "value1": 2,
+        "value2": 12.0,
+        "value3": 0.0,
+        "value4": 1.5
+      },
+      {
+        "gimmikName": "ループ移動針",
+        "gimmikPos": [
+          576.0,
+          544.0
+        ],
+        "value1": 0,
+        "value2": -12.0,
+        "value3": 0.0,
+        "value4": 1.5
+      },
+      {
+        "gimmikName": "移動針_上",
+        "gimmikPos": [
+          32.0,
+          544.0
+        ],
+        "value1": 1,
+        "value2": 21.0,
+        "value3": 0.0,
+        "value4": 0.5
+      },
+      {
+        "gimmikName": "罠トリガー",
+        "gimmikPos": [
+          608.0,
+          544.0
+        ],
+        "value1": 1,
+        "value2": 1.0,
+        "value3": 1.0
+      },
+      {
+        "gimmikName": "昇降針",
+        "gimmikPos": [
+          416.0,
+          96.0
+        ],
+        "value1": 0,
+        "value2": 1.0
+      },
+      {
+        "gimmikName": "昇降針",
+        "gimmikPos": [
+          352.0,
+          96.0
+        ],
+        "value1": 0,
+        "value2": 1.0
+      },
+      {
+        "gimmikName": "罠針_上",
+        "gimmikPos": [
+          272.0,
+          64.0
+        ],
+        "value1": 0,
+        "value2": 0.0,
+        "value3": 0.0
+      },
+      {
+        "gimmikName": "罠トリガー",
+        "gimmikPos": [
+          192.0,
+          32.0
+        ],
+        "value1": 2,
+        "value2": 1.0,
+        "value3": 2.0
+      },
+      {
+        "gimmikName": "罠ブロック",
+        "gimmikPos": [
+          160.0,
+          32.0
+        ],
+        "value1": 2
+      },
+      {
+        "gimmikName": "罠ブロック",
+        "gimmikPos": [
+          160.0,
+          64.0
+        ],
+        "value1": 2
+      },
+      {
+        "gimmikName": "移動針_上",
+        "gimmikPos": [
+          128.0,
+          352.0
+        ],
+        "value1": 2,
+        "value2": -2.0,
+        "value3": -7.0,
+        "value4": 1.0
+      },
+      {
+        "gimmikName": "移動針_下",
+        "gimmikPos": [
+          192.0,
+          128.0
+        ],
+        "value1": 2,
+        "value2": -3.0,
+        "value3": 2.0,
+        "value4": 1.0
+      },
+      {
+        "gimmikName": "移動針_右",
+        "gimmikPos": [
+          192.0,
+          352.0
+        ],
+        "value1": 2,
+        "value2": -5.0,
+        "value3": 0.0,
+        "value4": 0.0
+      },
+      {
+        "gimmikName": "移動針_下",
+        "gimmikPos": [
+          384.0,
+          128.0
+        ],
+        "value1": 2,
+        "value2": -8.0,
+        "value3": 9.0,
+        "value4": 1.0
+      },
+      {
+        "gimmikName": "移動針_上",
+        "gimmikPos": [
+          480.0,
+          448.0
+        ],
+        "value1": 2,
+        "value2": 0.0,
+        "value3": -12.0,
+        "value4": 1.0
+      },
+      {
+        "gimmikName": "罠針_上",
+        "gimmikPos": [
+          544.0,
+          64.0
+        ],
+        "value1": 2,
+        "value2": 90.0,
+        "value3": 5.0
+      },
+      {
+        "gimmikName": "移動針_下",
+        "gimmikPos": [
+          576.0,
+          128.0
+        ],
+        "value1": 2,
+        "value2": 0.0,
+        "value3": -3.0,
+        "value4": 1.0
+      },
+      {
+        "gimmikName": "移動針_左",
+        "gimmikPos": [
+          736.0,
+          160.0
+        ],
+        "value1": 2,
+        "value2": -3.0,
+        "value3": 0.0,
+        "value4": 1.0
+      },
+      {
+        "gimmikName": "移動針_上",
+        "gimmikPos": [
+          576.0,
+          448.0
+        ],
+        "value1": 2,
+        "value2": 3.0,
+        "value3": -10.0,
+        "value4": 1.0
+      },
+      {
+        "gimmikName": "移動針_右",
+        "gimmikPos": [
+          672.0,
+          288.0
+        ],
+        "value1": 2,
+        "value2": 2.0,
+        "value3": 0.0,
+        "value4": 1.0
+      },
+      {
+        "gimmikName": "移動針_上",
+        "gimmikPos": [
+          544.0,
+          448.0
+        ],
+        "value1": 2,
+        "value2": 5.0,
+        "value3": -6.0,
+        "value4": 1.0
+      },
+      {
+        "gimmikName": "移動針_上",
+        "gimmikPos": [
+          512.0,
+          448.0
+        ],
+        "value1": 2,
+        "value2": 5.0,
+        "value3": -3.0,
+        "value4": 1.0
+      },
+      {
+        "gimmikName": "罠針_左",
+        "gimmikPos": [
+          736.0,
+          512.0
+        ],
+        "value1": 2,
+        "value2": 180.0,
+        "value3": 10.0
+      },
+      {
+        "gimmikName": "移動針_上",
+        "gimmikPos": [
+          640.0,
+          608.0
+        ],
+        "value1": 2,
+        "value2": 0.0,
+        "value3": -2.0,
+        "value4": 1.0
+      },
+      {
+        "gimmikName": "移動針_上",
+        "gimmikPos": [
+          672.0,
+          608.0
+        ],
+        "value1": 2,
+        "value2": 0.0,
+        "value3": -2.0,
+        "value4": 1.0
+      },
+      {
+        "gimmikName": "罠針_下",
+        "gimmikPos": [
+          160.0,
+          512.0
+        ],
+        "value1": 2,
+        "value2": 270.0,
+        "value3": 5.0
+      },
+      {
+        "gimmikName": "移動針_上",
+        "gimmikPos": [
+          384.0,
+          448.0
+        ],
+        "value1": 2,
+        "value2": 0.0,
+        "value3": 3.0,
+        "value4": 1.0
+      },
+      {
+        "gimmikName": "移動針_左",
+        "gimmikPos": [
+          576.0,
+          352.0
+        ],
+        "value1": 2,
+        "value2": 2.0,
+        "value3": 1.0,
+        "value4": 1.0
+      },
+      {
+        "gimmikName": "移動針_上",
+        "gimmikPos": [
+          192.0,
+          448.0
+        ],
+        "value1": 2,
+        "value2": 16.0,
+        "value3": 0.0,
+        "value4": 1.0
       }
     ],
     "background": "",
