@@ -1,0 +1,29 @@
+﻿[
+  {
+    "Gimmiks": [
+      {
+        "gimmikName": "罠りんご",
+        "gimmikPos": [
+          240.0,
+          368.0
+        ],
+        "value1": 0,
+        "value2": 0.0,
+        "value3": 0.0
+      },
+      {
+        "gimmikName": "ワープ",
+        "gimmikPos": [
+          736.0,
+          544.0
+        ],
+        "value1": "tutorial"
+      }
+    ],
+    "background": "black",
+    "startPlayerPos": [
+      50.0,
+      50.0
+    ]
+  }
+]
