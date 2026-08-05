@@ -62,6 +62,7 @@ namespace Minge2026Spring.Scripts.Presenter
             _moraleUseCase.OnGameStart();
 
             BindSkipButton();
+            BindNextDialogueButton();
             _dmButtonView.DmClicked += EnterDmMode;
             _dmButtonView.CharacterDmClicked += StartCharacterDm;
             _dmButtonView.DmBackClicked += ExitDmMode;
@@ -105,6 +106,9 @@ namespace Minge2026Spring.Scripts.Presenter
                 _skipButtonHoldNotifier.Pressed -= StartSkipToInput;
                 _skipButtonHoldNotifier.Released -= StopSkipToInput;
             }
+
+            if (_chatWindowView.nextDialogueButton is not null)
+                _chatWindowView.nextDialogueButton.onClick.RemoveListener(OnNextDialogueClicked);
 
             if (_dmButtonView is not null)
             {
@@ -199,6 +203,22 @@ namespace Minge2026Spring.Scripts.Presenter
 
             _skipButtonHoldNotifier.Pressed += StartSkipToInput;
             _skipButtonHoldNotifier.Released += StopSkipToInput;
+        }
+
+        private void BindNextDialogueButton()
+        {
+            if (_chatWindowView.nextDialogueButton is null)
+            {
+                Debug.LogWarning("[NovelChatPresenter] nextDialogueButton is not assigned.");
+                return;
+            }
+
+            _chatWindowView.nextDialogueButton.onClick.AddListener(OnNextDialogueClicked);
+        }
+
+        private void OnNextDialogueClicked()
+        {
+            _chatWindowView.RequestNextDialogue();
         }
 
         /// <summary>

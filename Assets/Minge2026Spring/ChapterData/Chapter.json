@@ -3430,6 +3430,60 @@
         {
           "iconId": "player_icon",
           "speaker": "主人公",
+          "message": "......",
+          "voiceEventPath": "event:/Serif/主人公_……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speaker": "ごっと",
+          "message": "......",
+          "voiceEventPath": "event:/Serif/ごっと_……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speaker": "Ryuta",
+          "message": "......",
+          "voiceEventPath": "event:/Serif/Ryuta_......",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speaker": "Milu",
+          "message": "......",
+          "voiceEventPath": "event:/Serif/Milu_……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speaker": "かしわもち",
+          "message": "......",
+          "voiceEventPath": "event:/Serif/かしわもち_……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speaker": "ごっと",
+          "message": "だめだこりゃ",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        }
+      ],
+      "choices": [],
+      "nextBlockId": "",
+      "freeChats": [],
+      "waitingTime": 0.0
+    },
+    {
+      "blockId": "Ending_K",
+      "nodeType": 0,
+      "nodePosX": 0.0,
+      "nodePosY": 0.0,
+      "dialogues": [
+        {
+          "iconId": "player_icon",
+          "speaker": "主人公",
           "message": "ここまで全部見たんだね。",
           "voiceEventPath": "event:/Serif/主人公_ここまで全部見たんだね。",
           "waitingTime": 0.0

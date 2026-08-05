@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using FMOD.Studio;
+using FMODUnity;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,8 +32,51 @@ namespace Minge2026Spring.Scripts.View
             [Min(1f)] public float height;
         }
 
+        private readonly struct ExtraDialogue
+        {
+            public readonly string Text;
+            public readonly string EventPath;
+
+            public ExtraDialogue(string text)
+            {
+                Text = text;
+                EventPath = $"event:/Serif/主人公_{text}";
+            }
+        }
+
+        private static readonly ExtraDialogue[] ExtraDialogues =
+        {
+            new("ここまで全部見たんだね。"),
+            new("ありがとう。"),
+            new("君は知っているかもしれないけど、"),
+            new("開発には正解なんてない。"),
+            new("誰が悪いわけでもない。"),
+            new("指示に最適解もない。"),
+            new("実装方法の"),
+            new("世界観の"),
+            new("答えはひとつじゃない。"),
+            new("それに"),
+            new("正しさを持つのは、"),
+            new("君だけじゃない。"),
+            new("……"),
+            new("これ以上は語らなくてもいいかな。"),
+            new("ここまで遊んでくれた君なら、"),
+            new("きっと良い企画開発者になれる。"),
+            new("最後に、"),
+            new("ここまで遊んでくれてありがとう。"),
+            new("Thank you for Playing")
+        };
+
         [Header("Scene References")]
-        [SerializeField] public Button backButton;
+        [SerializeField] private GameObject _speedUpButtonObject;
+        [SerializeField] private GameObject _skipButtonObject;
+
+        public Button SpeedUpButton => _speedUpButtonObject != null
+            ? _speedUpButtonObject.GetComponentInChildren<Button>(true)
+            : null;
+        public Button SkipButton => _skipButtonObject != null
+            ? _skipButtonObject.GetComponentInChildren<Button>(true)
+            : null;
 
         [Header("Scroll Settings")]
         [SerializeField] private float _scrollSpeed = 72f;
@@ -44,10 +89,13 @@ namespace Minge2026Spring.Scripts.View
         [SerializeField, Range(0.1f, 1f)] private float _contentWidth = 0.76f;
 
         [Header("Credit Settings")]
+        [SerializeField] private TMP_FontAsset _fontAsset;
         [SerializeField] private string _title = "I GONNA BE THE TREASURE HUNTER";
         [SerializeField] private string _finalMessage = "THANK YOU FOR PLAYING!";
-        [SerializeField] private Color _textShadowColor = new(0f, 0f, 0f, 0.7f);
-        [SerializeField] private Vector2 _textShadowDistance = new(3f, -3f);
+        [SerializeField] private Color _textOutlineColor = new(0f, 0f, 0f, 0.8f);
+        [SerializeField] private Vector2 _textOutlineDistance = new(1.5f, -1.5f);
+        [SerializeField] private Color _textShadowColor = new(0f, 0f, 0f, 0.9f);
+        [SerializeField] private Vector2 _textShadowDistance = new(4f, -4f);
         [SerializeField] private List<CreditSection> _credits = new()
         {
             new CreditSection("PLANNING / DIRECTOR", "主人公"),
@@ -58,36 +106,85 @@ namespace Minge2026Spring.Scripts.View
         };
         [SerializeField] private List<CreditImage> _images = new();
 
+        [Header("Extra Ending Dialogue")]
+        [SerializeField] private float _extraDialogueFontSize = 38f;
+        [SerializeField, Min(0f)] private float _extraDialogueInterval = 0.35f;
+
         public event Action CreditFinished;
+        public event Action ExtraDialogueFinished;
 
         private RectTransform _viewport;
         private RectTransform _content;
         private RectTransform _finalEntry;
         private TextMeshProUGUI _endingTitleText;
+        private GameObject _extraDialogueOverlay;
+        private TextMeshProUGUI _extraDialogueText;
         private TMP_FontAsset _font;
         private bool _isFastForwardPressed;
         private bool _isScrolling;
         private bool _hasFinished;
+        private bool _shouldShowSkipButton;
         private float _speedMultiplier = 1f;
+        private EventInstance _extraDialogueInstance;
+        private int _extraDialogueIndex;
+        private float _nextDialogueTime;
+        private bool _isPlayingExtraDialogue;
+        private bool _isWaitingForNextDialogue;
 
         private void Awake()
         {
-            if (backButton == null)
+            if (_speedUpButtonObject == null)
             {
-                Debug.LogError("[EndingDefaultUIView] SpeedUpButton is not assigned.");
+                Debug.LogError("[EndingDefaultUIView] SpeedUpButtonObject is not assigned.");
                 enabled = false;
                 return;
             }
 
-            var buttonLabel = backButton.GetComponentInChildren<TextMeshProUGUI>();
-            _font = buttonLabel != null ? buttonLabel.font : null;
+            if (SpeedUpButton == null)
+            {
+                Debug.LogError("[EndingDefaultUIView] A Button component was not found under SpeedUpButtonObject.");
+                enabled = false;
+                return;
+            }
+
+            if (_skipButtonObject != null && SkipButton == null)
+                Debug.LogError("[EndingDefaultUIView] A Button component was not found under SkipButtonObject.");
+
+            var buttonLabel = SpeedUpButton.GetComponentInChildren<TextMeshProUGUI>();
+            _font = _fontAsset != null ? _fontAsset : buttonLabel.font;
 
             BuildCreditRoll();
+            BuildExtraDialogueOverlay();
+        }
+
+        private void OnDestroy()
+        {
+            StopExtraDialogueInstance();
         }
 
         public void StartScroll()
         {
+            if (_extraDialogueOverlay != null)
+                _extraDialogueOverlay.SetActive(false);
+            if (_viewport != null)
+                _viewport.gameObject.SetActive(true);
+            _speedUpButtonObject.SetActive(true);
+            if (_skipButtonObject != null)
+                _skipButtonObject.SetActive(_shouldShowSkipButton);
             _isScrolling = true;
+        }
+
+        public void StartExtraDialogue()
+        {
+            _isScrolling = false;
+            _viewport.gameObject.SetActive(false);
+            _speedUpButtonObject.SetActive(false);
+            if (_skipButtonObject != null)
+                _skipButtonObject.SetActive(false);
+            _extraDialogueOverlay.SetActive(true);
+            _extraDialogueIndex = 0;
+            _isPlayingExtraDialogue = true;
+            PlayExtraDialogue();
         }
 
         public void SetEndingTitle(string endingTitle)
@@ -96,8 +193,17 @@ namespace Minge2026Spring.Scripts.View
                 _endingTitleText.text = endingTitle;
         }
 
+        public void SetSkipButtonVisible(bool isVisible)
+        {
+            _shouldShowSkipButton = isVisible;
+            if (_skipButtonObject != null)
+                _skipButtonObject.SetActive(isVisible);
+        }
+
         public void UpdateScroll()
         {
+            UpdateExtraDialogue();
+
             if (!_isScrolling || _content == null)
                 return;
 
@@ -128,7 +234,7 @@ namespace Minge2026Spring.Scripts.View
 
         private void BuildCreditRoll()
         {
-            var canvas = backButton.GetComponentInParent<Canvas>();
+            var canvas = _speedUpButtonObject.GetComponentInParent<Canvas>();
             if (canvas == null)
             {
                 Debug.LogError("[EndingDefaultUIView] Canvas was not found.");
@@ -191,6 +297,117 @@ namespace Minge2026Spring.Scripts.View
             LayoutRebuilder.ForceRebuildLayoutImmediate(_content);
         }
 
+        private void BuildExtraDialogueOverlay()
+        {
+            var canvas = _speedUpButtonObject.GetComponentInParent<Canvas>();
+            _extraDialogueOverlay = new GameObject("ExtraEndingDialogue", typeof(RectTransform));
+            _extraDialogueOverlay.layer = 5;
+            _extraDialogueOverlay.transform.SetParent(canvas.transform, false);
+
+            var overlayRect = _extraDialogueOverlay.GetComponent<RectTransform>();
+            overlayRect.anchorMin = Vector2.zero;
+            overlayRect.anchorMax = Vector2.one;
+            overlayRect.offsetMin = Vector2.zero;
+            overlayRect.offsetMax = Vector2.zero;
+
+            var textObject = new GameObject("DialogueText", typeof(RectTransform), typeof(TextMeshProUGUI));
+            textObject.layer = 5;
+            textObject.transform.SetParent(overlayRect, false);
+            var textRect = textObject.GetComponent<RectTransform>();
+            textRect.anchorMin = new Vector2(0.1f, 0.25f);
+            textRect.anchorMax = new Vector2(0.9f, 0.75f);
+            textRect.offsetMin = Vector2.zero;
+            textRect.offsetMax = Vector2.zero;
+
+            _extraDialogueText = textObject.GetComponent<TextMeshProUGUI>();
+            _extraDialogueText.font = _font;
+            _extraDialogueText.fontSize = _extraDialogueFontSize;
+            _extraDialogueText.fontStyle = FontStyles.Bold;
+            _extraDialogueText.color = Color.white;
+            _extraDialogueText.alignment = TextAlignmentOptions.Center;
+            _extraDialogueText.textWrappingMode = TextWrappingModes.Normal;
+            _extraDialogueText.raycastTarget = false;
+
+            var outline = textObject.AddComponent<Outline>();
+            outline.effectColor = _textOutlineColor;
+            outline.effectDistance = _textOutlineDistance;
+            outline.useGraphicAlpha = true;
+            var shadow = textObject.AddComponent<Shadow>();
+            shadow.effectColor = _textShadowColor;
+            shadow.effectDistance = _textShadowDistance;
+            shadow.useGraphicAlpha = true;
+
+            _extraDialogueOverlay.SetActive(false);
+        }
+
+        private void UpdateExtraDialogue()
+        {
+            if (!_isPlayingExtraDialogue)
+                return;
+
+            if (_isWaitingForNextDialogue)
+            {
+                if (Time.unscaledTime < _nextDialogueTime)
+                    return;
+
+                _isWaitingForNextDialogue = false;
+                _extraDialogueIndex++;
+                if (_extraDialogueIndex >= ExtraDialogues.Length)
+                {
+                    _isPlayingExtraDialogue = false;
+                    ExtraDialogueFinished?.Invoke();
+                    return;
+                }
+
+                PlayExtraDialogue();
+                return;
+            }
+
+            if (!_extraDialogueInstance.isValid())
+            {
+                WaitForNextDialogue();
+                return;
+            }
+
+            _extraDialogueInstance.getPlaybackState(out var playbackState);
+            if (playbackState != PLAYBACK_STATE.STOPPED)
+                return;
+
+            StopExtraDialogueInstance();
+            WaitForNextDialogue();
+        }
+
+        private void PlayExtraDialogue()
+        {
+            var dialogue = ExtraDialogues[_extraDialogueIndex];
+            _extraDialogueText.text = dialogue.Text;
+            _extraDialogueInstance = RuntimeManager.CreateInstance(dialogue.EventPath);
+            if (!_extraDialogueInstance.isValid())
+            {
+                Debug.LogError($"[EndingDefaultUIView] Extra ending dialogue event was not found: {dialogue.EventPath}");
+                WaitForNextDialogue();
+                return;
+            }
+
+            _extraDialogueInstance.start();
+        }
+
+        private void WaitForNextDialogue()
+        {
+            _nextDialogueTime = Time.unscaledTime + _extraDialogueInterval;
+            _isWaitingForNextDialogue = true;
+        }
+
+        private void StopExtraDialogueInstance()
+        {
+            if (!_extraDialogueInstance.isValid())
+                return;
+
+            _extraDialogueInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            _extraDialogueInstance.release();
+            _extraDialogueInstance.clearHandle();
+        }
+
         private void CreateImagesAt(int sectionIndex)
         {
             foreach (var creditImage in _images)
@@ -216,7 +433,7 @@ namespace Minge2026Spring.Scripts.View
 
         private TextMeshProUGUI CreateText(string value, float fontSize, FontStyles style, Color color)
         {
-            var textObject = new GameObject("CreditText", typeof(RectTransform), typeof(TextMeshProUGUI), typeof(Shadow), typeof(LayoutElement));
+            var textObject = new GameObject("CreditText", typeof(RectTransform), typeof(TextMeshProUGUI), typeof(LayoutElement));
             textObject.layer = 5;
             textObject.transform.SetParent(_content, false);
 
@@ -230,7 +447,12 @@ namespace Minge2026Spring.Scripts.View
             text.textWrappingMode = TextWrappingModes.Normal;
             text.raycastTarget = false;
 
-            var shadow = textObject.GetComponent<Shadow>();
+            var outline = textObject.AddComponent<Outline>();
+            outline.effectColor = _textOutlineColor;
+            outline.effectDistance = _textOutlineDistance;
+            outline.useGraphicAlpha = true;
+
+            var shadow = textObject.AddComponent<Shadow>();
             shadow.effectColor = _textShadowColor;
             shadow.effectDistance = _textShadowDistance;
             shadow.useGraphicAlpha = true;

@@ -10,6 +10,8 @@ namespace Minge2026Spring.Scripts.Infrastructure.tmp
     [Serializable]
     public class CharacterMoraleValueJson
     {
+        public bool GetItem1;
+        public bool GetItem2;
         public int MoraleValue1;
         public int MoraleValue2;
         public int MoraleValue3;
@@ -20,7 +22,7 @@ namespace Minge2026Spring.Scripts.Infrastructure.tmp
     /// Temporary JSON utility for external executables that require MoraleValue1-4 schema.
     /// Existing save flow is kept untouched.
     /// </summary>
-    public class TmpMoraleValueJsonService : ITmpMoraleJsonExporter
+    public class TmpMoraleValueJsonService : ITmpMoraleJsonExporter, IHiddenItemStatusRepository
     {
         public const string DefaultRelativePath = "I_gonna_be_the_tresure_hunter/CharactersMoraleValue.json";
 
@@ -100,6 +102,12 @@ namespace Minge2026Spring.Scripts.Infrastructure.tmp
                 MoraleValue3 = moraleC,
                 MoraleValue4 = moraleD,
             });
+        }
+
+        public HiddenItemStatus LoadHiddenItemStatus()
+        {
+            var moraleJson = LoadRaw();
+            return new HiddenItemStatus(moraleJson.GetItem1, moraleJson.GetItem2);
         }
     }
 }

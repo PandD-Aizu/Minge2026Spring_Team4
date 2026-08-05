@@ -21,6 +21,7 @@ namespace Minge2026Spring.Scripts.View
         [SerializeField] public Transform scrollViewContentTransform;
         [SerializeField] public ScrollRect scrollRect;
         [SerializeField] public Button skipButton;
+        [SerializeField] public Button nextDialogueButton;
         [SerializeField] public StudioEventEmitter notificationEmitter;
 
         [Header("Prefabs")]
@@ -47,7 +48,8 @@ namespace Minge2026Spring.Scripts.View
             "goddo_icon",
             "ryuta_icon",
             "milu_icon",
-            "kashiwamochi_icon"
+            "kashiwamochi_icon",
+            "daittyan_icon"
         };
 
         private readonly Dictionary<string, Sprite> _chatIconCache = new();
@@ -56,6 +58,8 @@ namespace Minge2026Spring.Scripts.View
         private IFMODVoiceService _voiceService;
         private int _chapterSeparatorCount;
         private int _choiceSeparatorCount;
+        private bool _isRenderingDialogue;
+        private bool _isNextDialogueRequested;
 
         /// <summary>
         /// シーン開始時にチャットアイコンの先読みを開始する
@@ -126,27 +130,48 @@ namespace Minge2026Spring.Scripts.View
 
             foreach (var dialogue in chapterBlock.dialogues)
             {
-                var shouldSkip = shouldSkipDelays?.Invoke() == true;
-                if (!shouldSkip)
-                    _voiceService?.Play(dialogue.voiceEventPath);
+                _isRenderingDialogue = true;
+                _isNextDialogueRequested = false;
+                try
+                {
+                    var shouldSkip = ShouldSkipCurrentDialogue(shouldSkipDelays);
+                    if (!shouldSkip)
+                        _voiceService?.Play(dialogue.voiceEventPath);
 
-                if (!shouldSkip)
-                    notificationEmitter.Play();
-                var chatHandle = Addressables.InstantiateAsync(chatPrefab, scrollViewContentTransform);
-                await chatHandle.ToUniTask(cancellationToken: token);
-                var chatObject = chatHandle.Result;
-                var chatUIView = chatObject.GetComponent<ChatUIView>();
-                _chatIconCache.TryGetValue(dialogue.iconId, out var iconAsset);
-                chatUIView.SetData(dialogue, iconAsset);
+                    if (!shouldSkip)
+                        notificationEmitter.Play();
+                    var chatHandle = Addressables.InstantiateAsync(chatPrefab, scrollViewContentTransform);
+                    await chatHandle.ToUniTask(cancellationToken: token);
+                    var chatObject = chatHandle.Result;
+                    var chatUIView = chatObject.GetComponent<ChatUIView>();
+                    _chatIconCache.TryGetValue(dialogue.iconId, out var iconAsset);
+                    chatUIView.SetData(dialogue, iconAsset);
 
-                ScrollToBottom();
+                    ScrollToBottom();
 
-                if (!shouldSkip && _voiceService is not null)
-                    await _voiceService.WaitUntilFinished(token);
+                    if (!shouldSkip && _voiceService is not null)
+                        await _voiceService.WaitUntilFinished(token);
 
-                if (dialogue.waitingTime > 0)
-                    await WaitForDialogueDelayAsync(dialogue.waitingTime, token, shouldSkipDelays);
+                    if (dialogue.waitingTime > 0)
+                        await WaitForDialogueDelayAsync(dialogue.waitingTime, token, shouldSkipDelays);
+                }
+                finally
+                {
+                    _isRenderingDialogue = false;
+                }
             }
+        }
+
+        /// <summary>
+        /// 現在表示中の会話のボイスと待機時間を終了し、次の会話へ進める
+        /// </summary>
+        public void RequestNextDialogue()
+        {
+            if (!_isRenderingDialogue)
+                return;
+
+            _isNextDialogueRequested = true;
+            StopVoice();
         }
 
         /// <summary>
@@ -296,12 +321,12 @@ namespace Minge2026Spring.Scripts.View
             lineImage.raycastTarget = false;
         }
 
-        private static async UniTask WaitForDialogueDelayAsync(
+        private async UniTask WaitForDialogueDelayAsync(
             float waitingTime,
             CancellationToken token,
             Func<bool> shouldSkipDelays)
         {
-            if (shouldSkipDelays?.Invoke() == true)
+            if (ShouldSkipCurrentDialogue(shouldSkipDelays))
                 return;
 
             const float stepSeconds = 0.1f;
@@ -309,13 +334,18 @@ namespace Minge2026Spring.Scripts.View
 
             while (remaining > 0f)
             {
-                if (shouldSkipDelays?.Invoke() == true)
+                if (ShouldSkipCurrentDialogue(shouldSkipDelays))
                     return;
 
                 var waitSeconds = Mathf.Min(stepSeconds, remaining);
                 await UniTask.WaitForSeconds(waitSeconds, cancellationToken: token);
                 remaining -= waitSeconds;
             }
+        }
+
+        private bool ShouldSkipCurrentDialogue(Func<bool> shouldSkipDelays)
+        {
+            return _isNextDialogueRequested || shouldSkipDelays?.Invoke() == true;
         }
 
         private async UniTask RenderChoicesAsync(

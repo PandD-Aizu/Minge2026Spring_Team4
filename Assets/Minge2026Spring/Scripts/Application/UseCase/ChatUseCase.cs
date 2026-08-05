@@ -134,6 +134,7 @@ namespace Minge2026Spring.Scripts.Application.UseCase
                 endingIds.Add(endingBlockId);
 
             _saveData.reachedEndingIds = endingIds.ToArray();
+            _saveData.endingClearCount++;
             SaveProgress();
         }
 

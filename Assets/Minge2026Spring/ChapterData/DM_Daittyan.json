@@ -1,0 +1,20 @@
+{
+  "blocks": [
+    {
+      "blockId": "DM_Daittyan_0",
+      "nodeType": 0,
+      "nodePosX": 0.0,
+      "nodePosY": 0.0,
+      "dialogues": [
+        { "iconId": "daittyan_icon", "speaker": "だいっちゃん", "message": "おつかれ！今ちょっと話せる？", "waitingTime": 0.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "話せるよ。どうしたの？", "waitingTime": 0.0 },
+        { "iconId": "daittyan_icon", "speaker": "だいっちゃん", "message": "また今度、みんなで遊ぼうと思って連絡した！", "waitingTime": 0.0 },
+        { "iconId": "player_icon", "speaker": "主人公", "message": "いいね、楽しみにしてる！", "waitingTime": 0.0 }
+      ],
+      "choices": [],
+      "nextBlockId": "",
+      "freeChats": [],
+      "waitingTime": 0.0
+    }
+  ]
+}

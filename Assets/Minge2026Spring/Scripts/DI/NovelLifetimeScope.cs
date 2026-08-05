@@ -23,13 +23,16 @@ namespace Minge2026Spring.Scripts.DI
             builder.Register<GameStarterUseCase>(Lifetime.Scoped);
             builder.Register<ProcessUseCase>(Lifetime.Scoped);
             builder.Register<EndingUseCase>(Lifetime.Scoped);
+            builder.Register<AchievementUseCase>(Lifetime.Scoped);
             builder.Register<SceneTransitionUseCase>(Lifetime.Scoped);
             builder.Register<MoraleCheckService>(Lifetime.Scoped);
             builder.RegisterEntryPoint<NovelChatPresenter>();
             builder.RegisterEntryPoint<NovelProcessPresenter>();
+            builder.RegisterEntryPoint<NovelAchievementPresenter>();
             builder.RegisterComponentInHierarchy<ChatWindowView>();
             builder.RegisterComponentInHierarchy<NovelDmButtonView>();
             builder.RegisterComponentInHierarchy<NovelMenuButtonView>();
+            builder.RegisterComponentInHierarchy<NovelAchievementUIView>();
 
             // Morale関係
             builder.Register<MoraleRepository>(Lifetime.Scoped)

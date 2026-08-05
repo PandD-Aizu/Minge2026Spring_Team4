@@ -6,12 +6,13 @@ using VContainer.Unity;
 
 namespace Minge2026Spring.Scripts.Presenter
 {
-    public class AchievementDefaultUIPresenter : IInitializable, IDisposable
+    public class AchievementDefaultUIPresenter : IInitializable, ITickable, IDisposable
     {
         private readonly SceneTransitionUseCase _sceneTransitionUseCase;
         private readonly AchievementUseCase _achievementUseCase;
         private readonly AchievementDefaultUIView _view;
         private readonly CompositeDisposable _disposables = new();
+        private bool _hasObservedExtraStageRunning;
 
         public AchievementDefaultUIPresenter(SceneTransitionUseCase sceneTransitionUseCase, AchievementUseCase achievementUseCase, AchievementDefaultUIView view)
         {
@@ -23,29 +24,73 @@ namespace Minge2026Spring.Scripts.Presenter
         public void Initialize()
         {
             _view.CaptureUnlockedTexts();
-            var reachedEndingIds = _achievementUseCase.GetReachedEndingIds();
-            var hasReachedEnding = reachedEndingIds.Count > 0;
-            for (var index = 0; index < AchievementUseCase.EndingCount; index++)
-            {
-                var unlocked = reachedEndingIds.Contains(AchievementUseCase.GetEndingId(index));
-                var showDescription = hasReachedEnding && index != AchievementUseCase.EndingCount - 1;
-                _view.SetEndingUnlocked(index, unlocked, showDescription);
-            }
+            RefreshAchievements();
+            var hiddenItemStatus = _achievementUseCase.GetHiddenItemStatus();
+            _view.SetHiddenItemStatus(hiddenItemStatus.GetItem1, hiddenItemStatus.GetItem2);
+            var extraStageUnlocked = _achievementUseCase.IsExtraStageUnlocked(
+                _achievementUseCase.GetReachedEndingIds());
+            _view.SetExtraStageUnlocked(extraStageUnlocked);
 
-            var allEndingsReached = _achievementUseCase.AreAllEndingsReached(reachedEndingIds);
-            _view.SetExtraStageUnlocked(allEndingsReached);
+            _achievementUseCase.IsExtraStageRunning
+                .Skip(1)
+                .Subscribe(HandleExtraStageProcessState)
+                .AddTo(_disposables);
 
             _view.BackButton.OnClickAsObservable()
                 .ThrottleFirst(TimeSpan.FromSeconds(0.5f))
                 .Subscribe(_ => _sceneTransitionUseCase.LoadTitleSceneAsync())
                 .AddTo(_disposables);
             _view.ExtraStageButton.OnClickAsObservable()
-                .Where(_ => allEndingsReached)
+                .Where(_ => extraStageUnlocked)
                 .ThrottleFirst(TimeSpan.FromSeconds(0.5f))
                 .Subscribe(_ => _achievementUseCase.StartExtraStage())
                 .AddTo(_disposables);
         }
 
+        public void Tick() => _achievementUseCase.CheckExtraStageProcessIsRunning();
+
         public void Dispose() => _disposables.Dispose();
+
+        private void RefreshAchievements()
+        {
+            var reachedEndingIds = _achievementUseCase.GetReachedEndingIds();
+            var endingStatistics = _achievementUseCase.GetEndingPlayStatistics();
+            var hasReachedEnding = reachedEndingIds.Count > 0;
+            long totalClearTimeSeconds = 0;
+            long totalDeathCount = 0;
+            for (var index = 0; index < AchievementUseCase.EndingCount; index++)
+            {
+                var unlocked = reachedEndingIds.Contains(AchievementUseCase.GetEndingId(index));
+                var showDescription = hasReachedEnding && index != AchievementUseCase.EndingCount - 1;
+                _view.SetEndingUnlocked(index, unlocked, showDescription);
+                _view.SetEndingStatistics(
+                    index,
+                    endingStatistics[index].ClearTimeSeconds,
+                    endingStatistics[index].DeathCount);
+                totalClearTimeSeconds += endingStatistics[index].ClearTimeSeconds;
+                totalDeathCount += endingStatistics[index].DeathCount;
+            }
+
+            _view.SetTotalStatistics(totalClearTimeSeconds, totalDeathCount);
+        }
+
+        private void HandleExtraStageProcessState(bool isRunning)
+        {
+            if (isRunning)
+            {
+                _hasObservedExtraStageRunning = true;
+                return;
+            }
+
+            if (!_hasObservedExtraStageRunning)
+                return;
+
+            _hasObservedExtraStageRunning = false;
+            if (_achievementUseCase.TryRecordExtraStageClear())
+            {
+                RefreshAchievements();
+                _sceneTransitionUseCase.LoadResultSceneAsync();
+            }
+        }
     }
 }

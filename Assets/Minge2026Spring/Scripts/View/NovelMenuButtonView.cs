@@ -17,21 +17,22 @@ namespace Minge2026Spring.Scripts.View
         [Tooltip("メニュー画面で使用するフォント。未設定時は既定フォントを使用")]
         private TMP_FontAsset menuFont;
 
-        private static readonly Color32 OverlayColor = new(5, 6, 8, 190);
-        private static readonly Color32 WindowColor = new(24, 25, 28, 255);
-        private static readonly Color32 HeaderColor = new(17, 18, 20, 255);
-        private static readonly Color32 RowColor = new(34, 35, 39, 255);
-        private static readonly Color32 TrackColor = new(14, 15, 17, 255);
-        private static readonly Color32 AccentColor = new(116, 139, 223, 255);
-        private static readonly Color32 AccentHoverColor = new(132, 153, 230, 255);
-        private static readonly Color32 PrimaryTextColor = new(242, 243, 245, 255);
-        private static readonly Color32 SecondaryTextColor = new(181, 186, 193, 255);
-        private static readonly Color32 MutedTextColor = new(128, 132, 142, 255);
+        private static readonly Color32 OverlayColor = new(5, 5, 6, 190);
+        private static readonly Color32 WindowColor = new(18, 18, 20, 255);
+        private static readonly Color32 HeaderColor = new(18, 18, 20, 255);
+        private static readonly Color32 RowColor = new(54, 54, 54, 255);
+        private static readonly Color32 TrackColor = new(35, 35, 35, 255);
+        private static readonly Color32 AccentColor = new(102, 102, 102, 255);
+        private static readonly Color32 AccentHoverColor = new(76, 76, 76, 255);
+        private static readonly Color32 PrimaryTextColor = new(245, 245, 245, 255);
+        private static readonly Color32 SecondaryTextColor = new(205, 205, 205, 255);
+        private static readonly Color32 MutedTextColor = new(150, 150, 150, 255);
         private static readonly Color32 SuccessColor = new(59, 165, 93, 255);
 
         private SceneTransitionUseCase _sceneTransitionUseCase;
         private IFMODVCAService _fmodVcaService;
         private Button _menuButton;
+        private Transform _menuRoot;
         private GameObject _menuWindow;
         private GameObject _optionWindow;
         private Sprite _roundedSprite;
@@ -61,6 +62,15 @@ namespace Minge2026Spring.Scripts.View
                 return;
             }
 
+            var hudDynamic = GameObject.Find("HUD_Dynamic");
+            if (hudDynamic is null)
+            {
+                Debug.LogError("[NovelMenuButtonView] HUD_Dynamic was not found");
+                return;
+            }
+
+            _menuRoot = hudDynamic.transform;
+
             _menuButton.onClick.AddListener(OpenMenu);
         }
 
@@ -72,15 +82,8 @@ namespace Minge2026Spring.Scripts.View
             if (_menuWindow is not null)
                 return;
 
-            var canvas = GetComponentInParent<Canvas>();
-            if (canvas is null)
-            {
-                Debug.LogWarning("[NovelMenuButtonView] Parent Canvas was not found");
-                return;
-            }
-
             _menuButton.interactable = false;
-            _menuWindow = CreatePanel("NovelMenuWindow", canvas.transform, WindowColor,
+            _menuWindow = CreatePanel("NovelMenuWindow", _menuRoot, WindowColor,
                 Vector2.zero, new Vector2(460f, 430f));
 
             // メニュー項目を縦方向へ整理
@@ -115,14 +118,10 @@ namespace Minge2026Spring.Scripts.View
             if (_optionWindow is not null || _fmodVcaService is null)
                 return;
 
-            var canvas = GetComponentInParent<Canvas>();
-            if (canvas is null)
-                return;
-
             _menuWindow.SetActive(false);
 
             // 背景を暗くしてゲーム画面との視覚的な階層を作る
-            _optionWindow = CreateStretchObject("NovelOptionOverlay", canvas.transform);
+            _optionWindow = CreateStretchObject("NovelOptionOverlay", _menuRoot);
             var overlayImage = _optionWindow.AddComponent<Image>();
             overlayImage.color = OverlayColor;
             var overlayButton = _optionWindow.AddComponent<Button>();
@@ -258,7 +257,7 @@ namespace Minge2026Spring.Scripts.View
         private void CreateMenuItem(string text, UnityAction action)
         {
             var buttonObject = CreateButton($"MenuItem_{text}", text, 22f,
-                new Color32(46, 48, 54, 255), AccentColor);
+                RowColor, AccentHoverColor);
             buttonObject.transform.SetParent(_menuWindow.transform, false);
 
             var layoutElement = buttonObject.AddComponent<LayoutElement>();

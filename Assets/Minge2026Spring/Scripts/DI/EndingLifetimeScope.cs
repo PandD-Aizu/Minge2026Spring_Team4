@@ -18,6 +18,7 @@ namespace Minge2026Spring.Scripts.DI
             // シーン遷移関係
             builder.Register<SceneTransitionUseCase>(Lifetime.Scoped);
             builder.Register<EndingUseCase>(Lifetime.Scoped);
+            builder.Register<GameSaveRepository>(Lifetime.Scoped).AsImplementedInterfaces();
             builder.Register<EndingValueRepository>(Lifetime.Scoped).AsImplementedInterfaces();
         }
     }

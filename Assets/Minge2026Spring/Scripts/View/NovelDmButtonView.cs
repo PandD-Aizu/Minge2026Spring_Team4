@@ -10,7 +10,7 @@ using UnityEngine.UI;
 namespace Minge2026Spring.Scripts.View
 {
     /// <summary>
-    /// ノベルシーン左上にDMボタンを生成するView
+    /// ノベルシーンのDMボタンとDMメニューを制御するView
     /// </summary>
     public sealed class NovelDmButtonView : MonoBehaviour
     {
@@ -18,19 +18,24 @@ namespace Minge2026Spring.Scripts.View
         [Tooltip("DM機能UIで使用するTextMeshProフォント。未設定時は既定フォントを使用")]
         private TMP_FontAsset dmFont;
 
+        [SerializeField]
+        [Tooltip("DM画面を開くボタン")]
+        private Button dmButton;
+
         public event Action DmClicked;
         public event Action<string> CharacterDmClicked;
         public event Action DmBackClicked;
 
-        private Button _button;
         private Transform _leftPanel;
         private GameObject _dmMenuObject;
-
-        private const string ButtonBackgroundAddress = "DM_Button_Background";
-        private const string MenuTitleAddress = "DM_UI_TEXT";
+        private GameObject _channelPanel;
+        private GameObject _serverPanel;
+        private GameObject _separatorLeft;
+        private Button _sceneButtonStyleSource;
 
         private static readonly (string AssetKey, string IconAddress)[] DmCharacters =
         {
+            ("DM_Daittyan", "Daittyan_DM_Icon"),
             ("DM_Milu", "DM_Milu_Icon"),
             ("DM_Kashiwamochi", "DM_Kashiwamochi_Icon"),
             ("DM_Ryuta", "DM_Ryuta_Icon"),
@@ -51,7 +56,7 @@ namespace Minge2026Spring.Scripts.View
         }
 
         /// <summary>
-        /// 左パネルへDiscord風のDMボタンを追加する
+        /// DMボタンとDMメニューを初期化する
         /// </summary>
         private void Start()
         {
@@ -59,7 +64,7 @@ namespace Minge2026Spring.Scripts.View
         }
 
         /// <summary>
-        /// 左パネルを取得してDMボタンを生成する
+        /// 左パネルを取得してDMボタンを初期化する
         /// </summary>
         private async UniTaskVoid InitializeAsync()
         {
@@ -71,10 +76,21 @@ namespace Minge2026Spring.Scripts.View
             }
 
             _leftPanel = leftPanel.transform;
+            _channelPanel = GameObject.Find("ChannelPanel");
+            _serverPanel = GameObject.Find("ServerPanel");
+            _separatorLeft = GameObject.Find("SeparatorLeft");
+            _sceneButtonStyleSource = GameObject.Find("SkipButton")?.GetComponent<Button>();
 
-            // 素材が揃ってからUIを生成する
+            if (dmButton is null)
+            {
+                Debug.LogError("[NovelDmButtonView] Dm Button is not assigned.", this);
+                return;
+            }
+
+            dmButton.onClick.AddListener(OpenDmMenu);
+
+            // DM一覧の素材を先読みする
             await _spritePreloadTask.AttachExternalCancellation(this.GetCancellationTokenOnDestroy());
-            CreateDmButton();
         }
 
         /// <summary>
@@ -82,7 +98,7 @@ namespace Minge2026Spring.Scripts.View
         /// </summary>
         private async UniTask PreloadSpritesAsync()
         {
-            var addresses = new List<string> { ButtonBackgroundAddress, MenuTitleAddress };
+            var addresses = new List<string>();
             foreach (var character in DmCharacters)
                 addresses.Add(character.IconAddress);
 
@@ -101,28 +117,6 @@ namespace Minge2026Spring.Scripts.View
         }
 
         /// <summary>
-        /// DMメニューボタンを生成する
-        /// </summary>
-        private void CreateDmButton()
-        {
-            var buttonObject = CreateSpriteButton(
-                "DmButton",
-                _spriteCache[ButtonBackgroundAddress],
-                _spriteCache[MenuTitleAddress]);
-            buttonObject.transform.SetParent(_leftPanel, false);
-
-            var rectTransform = buttonObject.GetComponent<RectTransform>();
-            rectTransform.anchorMin = new Vector2(0.08f, 1f);
-            rectTransform.anchorMax = new Vector2(0.92f, 1f);
-            rectTransform.pivot = new Vector2(0.5f, 1f);
-            rectTransform.anchoredPosition = new Vector2(0f, -24f);
-            rectTransform.sizeDelta = new Vector2(0f, 64f);
-
-            _button = buttonObject.GetComponent<Button>();
-            _button.onClick.AddListener(OpenDmMenu);
-        }
-
-        /// <summary>
         /// 左パネルを個人別DM一覧へ切り替える
         /// </summary>
         private void OpenDmMenu()
@@ -130,18 +124,19 @@ namespace Minge2026Spring.Scripts.View
             if (_dmMenuObject is not null)
                 return;
 
-            _button.interactable = false;
-            _button.gameObject.SetActive(false);
+            dmButton.interactable = false;
+            dmButton.gameObject.SetActive(false);
+            SetChatNavigationActive(false);
             DmClicked?.Invoke();
 
             _dmMenuObject = new GameObject("DmCharacterMenu", typeof(RectTransform));
             _dmMenuObject.transform.SetParent(_leftPanel, false);
 
             var menuRect = _dmMenuObject.GetComponent<RectTransform>();
-            menuRect.anchorMin = new Vector2(0.08f, 1f);
-            menuRect.anchorMax = new Vector2(0.92f, 1f);
+            menuRect.anchorMin = new Vector2(0f, 1f);
+            menuRect.anchorMax = new Vector2(1f, 1f);
             menuRect.pivot = new Vector2(0.5f, 1f);
-            menuRect.anchoredPosition = new Vector2(0f, -24f);
+            menuRect.anchoredPosition = Vector2.zero;
             menuRect.sizeDelta = new Vector2(0f, 320f);
 
             var layout = _dmMenuObject.AddComponent<VerticalLayoutGroup>();
@@ -166,8 +161,8 @@ namespace Minge2026Spring.Scripts.View
             buttonObject.transform.SetParent(_dmMenuObject.transform, false);
 
             var layoutElement = buttonObject.AddComponent<LayoutElement>();
-            layoutElement.minHeight = 56f;
-            layoutElement.preferredHeight = 56f;
+            layoutElement.minHeight = 60f;
+            layoutElement.preferredHeight = 60f;
 
             buttonObject.GetComponent<Button>().onClick.AddListener(() =>
             {
@@ -186,8 +181,24 @@ namespace Minge2026Spring.Scripts.View
 
             Destroy(_dmMenuObject);
             _dmMenuObject = null;
-            _button.gameObject.SetActive(true);
-            _button.interactable = true;
+            SetChatNavigationActive(true);
+            dmButton.gameObject.SetActive(true);
+            dmButton.interactable = true;
+        }
+
+        /// <summary>
+        /// 通常チャット用の左側ナビゲーション表示を切り替える
+        /// </summary>
+        private void SetChatNavigationActive(bool isActive)
+        {
+            if (_channelPanel is not null)
+                _channelPanel.SetActive(isActive);
+
+            if (_serverPanel is not null)
+                _serverPanel.SetActive(isActive);
+
+            if (_separatorLeft is not null)
+                _separatorLeft.SetActive(isActive);
         }
 
         /// <summary>
@@ -260,6 +271,20 @@ namespace Minge2026Spring.Scripts.View
             var button = buttonObject.GetComponent<Button>();
             button.targetGraphic = background;
 
+            if (_sceneButtonStyleSource is not null)
+            {
+                var sourceBackground = _sceneButtonStyleSource.targetGraphic as Image;
+                if (sourceBackground is not null)
+                {
+                    background.sprite = sourceBackground.sprite;
+                    background.type = sourceBackground.type;
+                    background.color = sourceBackground.color;
+                }
+
+                button.transition = _sceneButtonStyleSource.transition;
+                button.colors = _sceneButtonStyleSource.colors;
+            }
+
             // ボタンラベルを生成する
             var labelObject = new GameObject("Label", typeof(RectTransform), typeof(TextMeshProUGUI));
             labelObject.transform.SetParent(buttonObject.transform, false);
@@ -281,8 +306,8 @@ namespace Minge2026Spring.Scripts.View
         /// </summary>
         public void Disable()
         {
-            if (_button is not null)
-                _button.interactable = false;
+            if (dmButton is not null)
+                dmButton.interactable = false;
         }
 
         /// <summary>
@@ -290,6 +315,9 @@ namespace Minge2026Spring.Scripts.View
         /// </summary>
         private void OnDestroy()
         {
+            if (dmButton is not null)
+                dmButton.onClick.RemoveListener(OpenDmMenu);
+
             foreach (var handle in _spriteHandles)
             {
                 if (handle.IsValid())
