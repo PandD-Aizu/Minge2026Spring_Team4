@@ -97,15 +97,13 @@
 	<object class="MixerBusPanner" id="{6acdaa1a-881f-489a-9af1-f5ec2f9dcfcf}" />
 	<object class="MultiSound" id="{4a0cd5b7-9e5a-4c12-ac8c-124d769af3fc}">
 		<property name="length">
-			<value>5.4000000000000004</value>
+			<value>6.2000000000000002</value>
 		</property>
 		<relationship name="sounds">
 			<destination>{6efb2fbe-78fc-4d0a-a791-3e79bf47e443}</destination>
 			<destination>{91107bc7-20b1-41ce-8490-b2febb1b5997}</destination>
 			<destination>{7a1ca306-4db5-44a4-8011-a6f8fea8abce}</destination>
-		</relationship>
-		<relationship name="playPercentages">
-			<destination>{b0ecbe99-d41d-498e-b6a4-32a061901562}</destination>
+			<destination>{2eecf042-fb3d-4162-bb62-2b0694be1dea}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{bba07b81-c6cf-42e0-8215-4fc1bdab5623}">
@@ -147,25 +145,28 @@
 			<destination>{e03bc27b-65ee-4b25-9ec2-85f01c7ce46f}</destination>
 		</relationship>
 	</object>
-	<object class="PlayPercentage" id="{b0ecbe99-d41d-498e-b6a4-32a061901562}">
-		<property name="percentage">
-			<value>2</value>
+	<object class="SingleSound" id="{2eecf042-fb3d-4162-bb62-2b0694be1dea}">
+		<property name="volume">
+			<value>10</value>
 		</property>
-		<relationship name="sound">
-			<destination>{7a1ca306-4db5-44a4-8011-a6f8fea8abce}</destination>
+		<relationship name="audioFile">
+			<destination>{257154f1-ae13-4767-b09e-4632f49403ff}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{4cb5e156-1189-4835-907f-cca9db50e5d0}">
 		<relationship name="effects">
-			<destination>{214de39a-f96e-411d-a525-b0bb559b15ce}</destination>
+			<destination>{c08dfa53-e5a1-43bb-aefd-8dcd041e2298}</destination>
 			<destination>{c78bb53e-35c6-4d83-80f7-605c35b1fac7}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{a3051729-9541-47a8-b8d8-797c61ae0d3b}" />
 	<object class="MixerBusFader" id="{cf4d6bce-ddc7-4ae8-a65b-556973946fc3}" />
-	<object class="CompressorEffect" id="{214de39a-f96e-411d-a525-b0bb559b15ce}">
-		<property name="threshold">
-			<value>-25</value>
+	<object class="LimiterEffect" id="{c08dfa53-e5a1-43bb-aefd-8dcd041e2298}">
+		<property name="boost">
+			<value>4</value>
+		</property>
+		<property name="ceiling">
+			<value>-1</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{c78bb53e-35c6-4d83-80f7-605c35b1fac7}" />

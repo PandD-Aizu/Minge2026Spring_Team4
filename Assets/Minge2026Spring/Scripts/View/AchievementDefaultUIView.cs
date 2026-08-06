@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Cysharp.Threading.Tasks;
+using FMOD.Studio;
 using FMODUnity;
 using Minge2026Spring.Scripts.Application.UseCase;
 using TMPro;
@@ -136,11 +137,14 @@ namespace Minge2026Spring.Scripts.View
         private bool[] _haibokusyaFlags = new bool[EndingCount];
         private int _hoveredEndingIndex = -1;
         private AsyncOperationHandle<Sprite> _haibokusyaMarkHandle;
+        private EventInstance _haibokusyaVoiceInstance;
 
         public Button ExtraStageButton => extraStageButton;
 
         private void OnDestroy()
         {
+            StopHaibokusyaVoice();
+
             if (_haibokusyaMarkHandle.IsValid())
                 Addressables.Release(_haibokusyaMarkHandle);
         }
@@ -347,7 +351,7 @@ namespace Minge2026Spring.Scripts.View
             _tooltipTextRect.offsetMax = new Vector2(showHaibokusyaMark ? -92f : -18f, -12f);
             _tooltipHaibokusyaMarkImage.gameObject.SetActive(showHaibokusyaMark && _tooltipHaibokusyaMarkImage.sprite != null);
             if (showHaibokusyaMark)
-                RuntimeManager.PlayOneShot(HaibokusyaVoiceEventPath);
+                PlayHaibokusyaVoice();
             PositionTooltip(eventData.position);
             _tooltip.gameObject.SetActive(true);
             _tooltip.SetAsLastSibling();
@@ -369,6 +373,30 @@ namespace Minge2026Spring.Scripts.View
         {
             _hoveredEndingIndex = -1;
             _tooltip.gameObject.SetActive(false);
+        }
+
+        private void PlayHaibokusyaVoice()
+        {
+            StopHaibokusyaVoice();
+
+            _haibokusyaVoiceInstance = RuntimeManager.CreateInstance(HaibokusyaVoiceEventPath);
+            if (!_haibokusyaVoiceInstance.isValid())
+            {
+                Debug.LogError($"[AchievementDefaultUIView] FMOD event was not found: {HaibokusyaVoiceEventPath}");
+                return;
+            }
+
+            _haibokusyaVoiceInstance.start();
+        }
+
+        private void StopHaibokusyaVoice()
+        {
+            if (!_haibokusyaVoiceInstance.isValid())
+                return;
+
+            _haibokusyaVoiceInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            _haibokusyaVoiceInstance.release();
+            _haibokusyaVoiceInstance.clearHandle();
         }
 
         private async UniTaskVoid LoadHaibokusyaMarkAsync()
