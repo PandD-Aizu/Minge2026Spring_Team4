@@ -40,6 +40,6 @@
 実行例:
 
 ```bash
-git tag -a v1.0.0
+git tag -a v1.0.0 -m "Realease v1.0.0"
 git push origin v1.0.0
 ```
