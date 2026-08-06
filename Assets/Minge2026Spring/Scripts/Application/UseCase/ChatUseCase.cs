@@ -127,8 +127,9 @@ namespace Minge2026Spring.Scripts.Application.UseCase
             if (string.IsNullOrWhiteSpace(endingBlockId))
                 return;
 
-            // 既存実績を維持したまま新しいエンディングだけを追加する
-            _saveData ??= _gameSaveRepository.Load() ?? new GameSaveData();
+            // actionプロセスが書き込んだプレイ時間とデス数を取り込んでから保存する。
+            // 起動前のキャッシュを保存すると、外部プロセスが更新した記録を上書きしてしまう。
+            _saveData = _gameSaveRepository.Load() ?? _saveData ?? new GameSaveData();
             var endingIds = (_saveData.reachedEndingIds ?? Array.Empty<string>()).ToList();
             if (!endingIds.Contains(endingBlockId))
                 endingIds.Add(endingBlockId);
