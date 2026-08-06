@@ -90,7 +90,9 @@ namespace Minge2026Spring.Scripts.View
         [SerializeField] private TMP_Text extraStageButtonText;
         [Header("隠しアイテム")]
         [SerializeField] private Image hiddenItem1Image;
+        [SerializeField] private TMP_Text hiddenItem1DescriptionText;
         [SerializeField] private Image hiddenItem2Image;
+        [SerializeField] private TMP_Text hiddenItem2DescriptionText;
         [Header("円形レイアウト")]
         [SerializeField] private Vector2 endingEllipseRadius = new(650f, 380f);
         [SerializeField] private float endingEllipseOffsetY;
@@ -169,6 +171,8 @@ namespace Minge2026Spring.Scripts.View
         {
             hiddenItem1Image.color = hasItem1 ? Color.white : Color.black;
             hiddenItem2Image.color = hasItem2 ? Color.white : Color.black;
+            hiddenItem1DescriptionText.gameObject.SetActive(hasItem1);
+            hiddenItem2DescriptionText.gameObject.SetActive(hasItem2);
         }
 
         private void Update()

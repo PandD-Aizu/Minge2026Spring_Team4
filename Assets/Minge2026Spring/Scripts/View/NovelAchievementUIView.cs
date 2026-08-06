@@ -36,14 +36,17 @@ namespace Minge2026Spring.Scripts.View
             if (endingTexts.Count != AchievementEndingText.EndingCount)
                 throw new InvalidOperationException("Novel ending text pairs must contain exactly 11 entries (A-K).");
 
+            var extraStageCleared = reachedEndingIds.Contains("Ending_K");
             for (var index = 0; index < endingTexts.Count; index++)
             {
                 var unlocked = reachedEndingIds.Contains($"Ending_{(char)('A' + index)}");
-                endingTexts[index].SetText(index, unlocked, showDescriptions);
+                var isExtraStageEnding = index == AchievementEndingText.RainbowEndingIndex;
+                var showDescription = showDescriptions && (!isExtraStageEnding || extraStageCleared);
+                endingTexts[index].SetText(index, unlocked, showDescription);
             }
 
             _rainbowTitle = endingTexts[AchievementEndingText.RainbowEndingIndex].TitleText;
-            _rainbowEnabled = reachedEndingIds.Contains("Ending_K");
+            _rainbowEnabled = extraStageCleared;
         }
 
         private void Update()
