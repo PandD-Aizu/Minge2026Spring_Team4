@@ -25,3 +25,21 @@
 * Reactive: R3
 * Async: UniTask
 * Asset Management: Addressables
+
+## GitHub Actionsによるビルド
+
+タグをpushすると、Unity `6000.3.6f1`でWindows向けビルドが実行されます。
+ビルド完了後、タグと同名のGitHub Releaseが作成され、`Minge2026Spring_Team4-Windows.zip`が添付されます。
+
+初回のみ、リポジトリの Settings > Secrets and variables > Actions に次のRepository Secretsを登録してください。
+
+* `UNITY_EMAIL`: Unity IDのメールアドレス
+* `UNITY_PASSWORD`: Unity IDのパスワード
+* `UNITY_LICENSE`: Unityライセンスファイルの内容
+
+実行例:
+
+```bash
+git tag -a v1.0.0
+git push origin v1.0.0
+```

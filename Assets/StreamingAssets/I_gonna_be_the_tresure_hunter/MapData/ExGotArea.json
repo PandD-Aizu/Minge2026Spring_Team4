@@ -245,33 +245,6 @@
         "value3": 0.0
       },
       {
-        "gimmikName": "昇降針",
-        "gimmikPos": [
-          288.0,
-          256.0
-        ],
-        "value1": 3,
-        "value2": 3.0
-      },
-      {
-        "gimmikName": "昇降針",
-        "gimmikPos": [
-          320.0,
-          288.0
-        ],
-        "value1": 3,
-        "value2": 1.5
-      },
-      {
-        "gimmikName": "昇降針",
-        "gimmikPos": [
-          288.0,
-          160.0
-        ],
-        "value1": 2,
-        "value2": 5.0
-      },
-      {
         "gimmikName": "移動針_左",
         "gimmikPos": [
           192.0,
@@ -513,6 +486,36 @@
           224.0
         ],
         "value1": 1000,
+        "value2": 0.0,
+        "value3": 0.0
+      },
+      {
+        "gimmikName": "罠針_右",
+        "gimmikPos": [
+          288.0,
+          256.0
+        ],
+        "value1": 0,
+        "value2": 0.0,
+        "value3": 0.0
+      },
+      {
+        "gimmikName": "罠針_右",
+        "gimmikPos": [
+          320.0,
+          288.0
+        ],
+        "value1": 0,
+        "value2": 0.0,
+        "value3": 0.0
+      },
+      {
+        "gimmikName": "罠針_下",
+        "gimmikPos": [
+          288.0,
+          160.0
+        ],
+        "value1": 0,
         "value2": 0.0,
         "value3": 0.0
       }
