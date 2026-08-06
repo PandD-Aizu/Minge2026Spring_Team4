@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using Minge2026Spring.Scripts.Application.DTOs;
 using Minge2026Spring.Scripts.Application.Interface;
@@ -62,13 +62,11 @@ namespace Minge2026Spring.Scripts.Infrastructure.tmp
         {
             if (collection == null) throw new ArgumentNullException(nameof(collection));
 
-            var moraleJson = new CharacterMoraleValueJson
-            {
-                MoraleValue1 = collection.GetParameter("CharacterA")?.Morale ?? 0,
-                MoraleValue2 = collection.GetParameter("CharacterB")?.Morale ?? 0,
-                MoraleValue3 = collection.GetParameter("CharacterC")?.Morale ?? 0,
-                MoraleValue4 = collection.GetParameter("CharacterD")?.Morale ?? 0,
-            };
+            var moraleJson = LoadRaw(filePath);
+            moraleJson.MoraleValue1 = collection.GetParameter("CharacterA")?.Morale ?? 0;
+            moraleJson.MoraleValue2 = collection.GetParameter("CharacterB")?.Morale ?? 0;
+            moraleJson.MoraleValue3 = collection.GetParameter("CharacterC")?.Morale ?? 0;
+            moraleJson.MoraleValue4 = collection.GetParameter("CharacterD")?.Morale ?? 0;
 
             SaveRaw(moraleJson, filePath);
         }
@@ -95,13 +93,12 @@ namespace Minge2026Spring.Scripts.Infrastructure.tmp
             moraleDto.MoraleMap.TryGetValue(CharacterMoraleKeys.CharacterC, out var moraleC);
             moraleDto.MoraleMap.TryGetValue(CharacterMoraleKeys.CharacterD, out var moraleD);
 
-            SaveRaw(new CharacterMoraleValueJson
-            {
-                MoraleValue1 = moraleA,
-                MoraleValue2 = moraleB,
-                MoraleValue3 = moraleC,
-                MoraleValue4 = moraleD,
-            });
+            var moraleJson = LoadRaw();
+            moraleJson.MoraleValue1 = moraleA;
+            moraleJson.MoraleValue2 = moraleB;
+            moraleJson.MoraleValue3 = moraleC;
+            moraleJson.MoraleValue4 = moraleD;
+            SaveRaw(moraleJson);
         }
 
         public HiddenItemStatus LoadHiddenItemStatus()
