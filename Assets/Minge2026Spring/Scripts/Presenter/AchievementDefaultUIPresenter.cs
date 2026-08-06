@@ -26,7 +26,11 @@ namespace Minge2026Spring.Scripts.Presenter
             _view.CaptureUnlockedTexts();
             RefreshAchievements();
             var hiddenItemStatus = _achievementUseCase.GetHiddenItemStatus();
-            _view.SetHiddenItemStatus(hiddenItemStatus.GetItem1, hiddenItemStatus.GetItem2);
+            var showHiddenItemDescriptions = _achievementUseCase.GetEndingClearCount() > 0;
+            _view.SetHiddenItemStatus(
+                hiddenItemStatus.GetItem1,
+                hiddenItemStatus.GetItem2,
+                showHiddenItemDescriptions);
             var extraStageUnlocked = _achievementUseCase.IsExtraStageUnlocked(
                 _achievementUseCase.GetReachedEndingIds());
             _view.SetExtraStageUnlocked(extraStageUnlocked);
@@ -55,6 +59,7 @@ namespace Minge2026Spring.Scripts.Presenter
         {
             var reachedEndingIds = _achievementUseCase.GetReachedEndingIds();
             var endingStatistics = _achievementUseCase.GetEndingPlayStatistics();
+            _view.SetHaibokusyaFlags(_achievementUseCase.GetHaibokusyaFlags());
             var hasReachedEnding = reachedEndingIds.Count > 0;
             long totalClearTimeSeconds = 0;
             long totalDeathCount = 0;

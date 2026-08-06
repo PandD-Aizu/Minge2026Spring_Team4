@@ -12,6 +12,7 @@ namespace Minge2026Spring.Scripts.Application.DTOs
         public int endingClearCount;
         public EndingMetricMap eachEndingClearTime = new();
         public EndingMetricMap eachEndingDeathCount = new();
+        public EndingFlagMap eachHaibokusyaFlag = new();
     }
 
     [Serializable]
@@ -30,6 +31,38 @@ namespace Minge2026Spring.Scripts.Application.DTOs
         public int Ending_K;
 
         public int GetValue(string endingId) => endingId switch
+        {
+            "Ending_A" => Ending_A,
+            "Ending_B" => Ending_B,
+            "Ending_C" => Ending_C,
+            "Ending_D" => Ending_D,
+            "Ending_E" => Ending_E,
+            "Ending_F" => Ending_F,
+            "Ending_G" => Ending_G,
+            "Ending_H" => Ending_H,
+            "Ending_I" => Ending_I,
+            "Ending_J" => Ending_J,
+            "Ending_K" => Ending_K,
+            _ => throw new ArgumentOutOfRangeException(nameof(endingId), endingId, null)
+        };
+    }
+
+    [Serializable]
+    public class EndingFlagMap
+    {
+        public bool Ending_A;
+        public bool Ending_B;
+        public bool Ending_C;
+        public bool Ending_D;
+        public bool Ending_E;
+        public bool Ending_F;
+        public bool Ending_G;
+        public bool Ending_H;
+        public bool Ending_I;
+        public bool Ending_J;
+        public bool Ending_K;
+
+        public bool GetValue(string endingId) => endingId switch
         {
             "Ending_A" => Ending_A,
             "Ending_B" => Ending_B,

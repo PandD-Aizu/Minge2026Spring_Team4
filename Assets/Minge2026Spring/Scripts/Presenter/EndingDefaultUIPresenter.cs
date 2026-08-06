@@ -38,8 +38,13 @@ namespace Minge2026Spring.Scripts.Presenter
             if (_view.SkipButton != null)
                 _view.SkipButton.onClick.AddListener(OnSkipClicked);
             _view.CreditFinished += OnCreditFinished;
-            _view.SetSkipButtonVisible((_gameSaveRepository.Load()?.endingClearCount ?? 0) >= 2);
-            _view.SetEndingTitle(_endingUseCase.GetEndingTitle());
+            var saveData = _gameSaveRepository.Load();
+            var endingId = _endingUseCase.GetEndingBlockId();
+            _view.SetSkipButtonVisible((saveData?.endingClearCount ?? 0) >= 2);
+            _view.SetEndingTitle(
+                _endingUseCase.GetEndingIndex(),
+                saveData?.eachHaibokusyaFlag?.GetValue(endingId) == true,
+                saveData?.eachEndingDeathCount?.GetValue(endingId) ?? 0);
             if (_endingUseCase.IsExtraStageEnding())
             {
                 _view.ExtraDialogueFinished += OnExtraDialogueFinished;

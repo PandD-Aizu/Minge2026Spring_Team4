@@ -1566,6 +1566,7 @@ MonoBehaviour:
   _endPadding: 420
   _contentWidth: 0.85
   _fontAsset: {fileID: 11400000, guid: d4aa1b8e570635a409ce60346fec5485, type: 2}
+  _haibokusyaMarkSprite: {fileID: 21300000, guid: 66a8f2b724e2477409fa19098fa864fa, type: 3}
   _title: "\u3010\u30B5\u30FC\u30AF\u30EBPandD\u3011\\nPlan\u901A\u308A\u306E\u30B2\u30FC\u30E0\u3092\u7D20\u76F4\u306B\u4F5C\u3089\u305B\u3066\u304F\u308C\u306A\u3044\u30E4\u30D0\u3044\u958B\u767A\u8005\u305F\u3061"
   _finalMessage: THANK YOU FOR PLAYING!
   _textOutlineColor: {r: 0, g: 0, b: 0, a: 0.8}
@@ -1578,30 +1579,31 @@ MonoBehaviour:
   - title: LEAD GAME DESIGNER
     names: Ryota
   - title: GAME DESIGNERS
-    names: "\u307C\u305F\u3082\u3061\nlumi\n\u308C\u306E\u308B\u3044\u304C"
+    names: "\u3053\u3068\u3000\u307C\u305F\u3082\u3061\u3000lumi\u3000\u308C\u306E\u308B\u3044\u304C"
   - title: LEAD LEVEL DESIGNER
     names: Ryota
   - title: LEVEL DESIGNERS
-    names: "\u307C\u305F\u3082\u3061\nlumi\n\u308C\u306E\u308B\u3044\u304C"
+    names: "\u3053\u3068\u3000\u307C\u305F\u3082\u3061\u3000lumi\u3000\u308C\u306E\u308B\u3044\u304C"
   - title: LEAD 2D ARTISTS
-    names: "lumi\n\u308C\u306E\u308B\u3044\u304C"
+    names: "lumi\u3000\u308C\u306E\u308B\u3044\u304C"
   - title: 2D ARTISTS
-    names: "\u3053\u3068\\nRyota"
+    names: "\u3053\u3068\u3000Ryota"
   - title: LEAD PROGRAMMER
-    names: "\u3053\u3068\\nRyota"
+    names: "\u3053\u3068\u3000Ryota"
   - title: LEAD EDITOR TOOL PROGRAMMER
-    names: "\u3053\u3068\nRyota"
+    names: "\u3053\u3068\u3000Ryota"
   - title: VOICE ACTORS
     names: "\u3054\u3063\u3068(cv. \u3053\u3068)\nRyuta(cv. Ryota)\n\u304B\u3057\u308F\u3082\u3061(cv.
-      \u307C\u305F\u3082\u3061)\nmilu(cv. lumi)\n\u4E3B\u4EBA\u516C(cv. \u308C\u306E\u308B\u3044\u304C)"
+      \u307C\u305F\u3082\u3061)\nmilu(cv. lumi)\n\u4E3B\u4EBA\u516C(cv. \u308C\u306E\u308B\u3044\u304C)\n\u3060\u3044\u3063\u3061\u3083\u3093(cv.
+      \u305F\u3044\u3063\u3061\u3083\u3093)"
   - title: LEAD SOUND DESIGNER
-    names: "\u3053\u3068\n\u307C\u305F\u3082\u3061"
+    names: "\u3053\u3068\u3000\u307C\u305F\u3082\u3061"
   - title: MIXING
     names: "\u3053\u3068"
   - title: PV MANAGER
     names: Ryota
   - title: SPECIAL THANKS
-    names: "\u50D5\u3089\u306E\u5C0A\u656C\u3059\u308B\u5927\u5148\u8F29\u305F\u3044\u3063\u3061\u3083\u3093\ntessho\n\u3082\u307F\u3058\n\u3044\u3063\u3057\u30FC\n\u4F01\u753B\u958B\u767A\u90E8"
+    names: "\u50D5\u3089\u306E\u5C0A\u656C\u3059\u308B\u5927\u5148\u8F29\u305F\u3044\u3063\u3061\u3083\u3093\ntessho\n\u4F01\u753B\u958B\u767A\u90E8\n\n\u30C1\u30FC\u30E0\uFF11\n\u30CA\u30AA\n\u7DD1\n\u305F\u304B\n\u30CA\u30F3\n\u305F\u3093\u3059\nkingyo\n\n\u30C1\u30FC\u30E0\uFF12\n\u3082\u307F\u3058\nTT\n\u304B\u3084\ncarelessmth\n\u304B\u306D\u3053\nKazArt.\nkora\n\n\u30C1\u30FC\u30E0\uFF13\n\u3042\u3084\n\u03B1lion\n\u53E4\u624B(\u30EA\u30AF)\n\u3070\u3084\u3057\nseika\n\u3044\u3063\u3057\u30FC\n\u84B2\u713C\u3055\u3093\u592A\u90CE(\u4EE5\u964D\u9577\u3044\u306E\u3067\u304B\u3070\u3084\u304D\u3068\u304A\u547C\u3073\u304F\u3060\u3055\u3044)"
   - title: FONTS
     names: Noto Sans JP
   - title: IMAGES
@@ -1626,11 +1628,12 @@ MonoBehaviour:
   - insertAfterSection: 0
     sprite: {fileID: 21300000, guid: 8661f3ad47cb07d42864be05eb6d3036, type: 3}
     height: 0
-  - insertAfterSection: 17
+  - insertAfterSection: 19
     sprite: {fileID: 21300000, guid: a6c297c8e92a8fb46a296beee5642c88, type: 3}
     height: 0
   _extraDialogueFontSize: 38
   _extraDialogueInterval: 0.35
+  _rainbowSpeed: 0.2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

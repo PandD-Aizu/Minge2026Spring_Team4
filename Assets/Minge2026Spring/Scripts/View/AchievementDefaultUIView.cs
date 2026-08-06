@@ -1,8 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Cysharp.Threading.Tasks;
+using FMODUnity;
 using TMPro;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -12,6 +16,8 @@ namespace Minge2026Spring.Scripts.View
     {
         private const int EndingCount = 11;
         private const int RainbowEndingIndex = 10;
+        private const string HaibokusyaMarkAddress = "HaibokusyaMark";
+        private const string HaibokusyaVoiceEventPath = "event:/Serif/Ryuta_敗北者じゃけぇ";
 
         [Serializable]
         public class EndingTextPair
@@ -117,11 +123,24 @@ namespace Minge2026Spring.Scripts.View
         private RectTransform _tooltip;
         private RectTransform _tooltipTail;
         private TMP_Text _tooltipText;
+        private RectTransform _tooltipTextRect;
+        private Image _tooltipHaibokusyaMarkImage;
         private Canvas _canvas;
         private TMP_Text _allPlayTimeText;
         private TMP_Text _allDeathCountText;
+        private string _hiddenItem1Description;
+        private string _hiddenItem2Description;
+        private bool[] _haibokusyaFlags = new bool[EndingCount];
+        private int _hoveredEndingIndex = -1;
+        private AsyncOperationHandle<Sprite> _haibokusyaMarkHandle;
 
         public Button ExtraStageButton => extraStageButton;
+
+        private void OnDestroy()
+        {
+            if (_haibokusyaMarkHandle.IsValid())
+                Addressables.Release(_haibokusyaMarkHandle);
+        }
 
         public void CaptureUnlockedTexts()
         {
@@ -134,6 +153,8 @@ namespace Minge2026Spring.Scripts.View
             _allPlayTimeText = FindSceneText("ALLPlayTimeText");
             _allDeathCountText = FindSceneText("ALLDeathCount");
             _unlockedExtraStageText = extraStageButtonText.text;
+            _hiddenItem1Description = hiddenItem1DescriptionText.text;
+            _hiddenItem2Description = hiddenItem2DescriptionText.text;
             ArrangeEndingPanels();
             CreateTooltip();
             ConfigureHoverTargets();
@@ -147,6 +168,16 @@ namespace Minge2026Spring.Scripts.View
             endingTexts[index].SetUnlocked(unlocked, showDescription, index);
             if (index == RainbowEndingIndex)
                 _rainbowEnabled = unlocked;
+        }
+
+        public void SetHaibokusyaFlags(bool[] flags)
+        {
+            if (flags == null || flags.Length != EndingCount)
+                throw new ArgumentException("Haibokusya flags must contain exactly 11 entries (A-K).", nameof(flags));
+
+            _haibokusyaFlags = flags;
+            if (Array.Exists(flags, flag => flag))
+                LoadHaibokusyaMarkAsync().Forget();
         }
 
         public void SetEndingStatistics(int index, int clearTimeSeconds, int deathCount)
@@ -167,12 +198,14 @@ namespace Minge2026Spring.Scripts.View
             extraStageButtonText.text = unlocked ? _unlockedExtraStageText : "???";
         }
 
-        public void SetHiddenItemStatus(bool hasItem1, bool hasItem2)
+        public void SetHiddenItemStatus(bool hasItem1, bool hasItem2, bool showDescriptions)
         {
             hiddenItem1Image.color = hasItem1 ? Color.white : Color.black;
             hiddenItem2Image.color = hasItem2 ? Color.white : Color.black;
-            hiddenItem1DescriptionText.gameObject.SetActive(hasItem1);
-            hiddenItem2DescriptionText.gameObject.SetActive(hasItem2);
+            hiddenItem1DescriptionText.text = showDescriptions ? _hiddenItem1Description : "???";
+            hiddenItem2DescriptionText.text = showDescriptions ? _hiddenItem2Description : "???";
+            hiddenItem1DescriptionText.gameObject.SetActive(true);
+            hiddenItem2DescriptionText.gameObject.SetActive(true);
         }
 
         private void Update()
@@ -268,24 +301,71 @@ namespace Minge2026Spring.Scripts.View
             _tooltipText.color = Color.white;
             _tooltipText.alignment = TextAlignmentOptions.MidlineLeft;
             _tooltipText.raycastTarget = false;
-            var textRect = _tooltipText.rectTransform;
-            textRect.anchorMin = Vector2.zero;
-            textRect.anchorMax = Vector2.one;
-            textRect.offsetMin = new Vector2(22f, 12f);
-            textRect.offsetMax = new Vector2(-18f, -12f);
+            _tooltipTextRect = _tooltipText.rectTransform;
+            _tooltipTextRect.anchorMin = Vector2.zero;
+            _tooltipTextRect.anchorMax = Vector2.one;
+            _tooltipTextRect.offsetMin = new Vector2(22f, 12f);
+            _tooltipTextRect.offsetMax = new Vector2(-18f, -12f);
+
+            var markObject = new GameObject("HaibokusyaMark", typeof(RectTransform), typeof(Image));
+            markObject.layer = _canvas.gameObject.layer;
+            markObject.transform.SetParent(_tooltip, false);
+            var markRect = markObject.GetComponent<RectTransform>();
+            markRect.anchorMin = new Vector2(1f, 0.5f);
+            markRect.anchorMax = new Vector2(1f, 0.5f);
+            markRect.pivot = new Vector2(1f, 0.5f);
+            markRect.anchoredPosition = new Vector2(-12f, 0f);
+            markRect.sizeDelta = new Vector2(68f, 68f);
+            _tooltipHaibokusyaMarkImage = markObject.GetComponent<Image>();
+            _tooltipHaibokusyaMarkImage.preserveAspect = true;
+            _tooltipHaibokusyaMarkImage.raycastTarget = false;
+            markObject.SetActive(false);
 
             _tooltip.gameObject.SetActive(false);
         }
 
         private void ShowTooltip(int endingIndex, PointerEventData eventData)
         {
+            _hoveredEndingIndex = endingIndex;
             _tooltipText.text = $"ENDING {(char)('A' + endingIndex)}\n{endingTexts[endingIndex].StatisticsText}";
+            var showHaibokusyaMark = _haibokusyaFlags[endingIndex];
+            _tooltipTextRect.offsetMax = new Vector2(showHaibokusyaMark ? -92f : -18f, -12f);
+            _tooltipHaibokusyaMarkImage.gameObject.SetActive(showHaibokusyaMark && _tooltipHaibokusyaMarkImage.sprite != null);
+            if (showHaibokusyaMark)
+                RuntimeManager.PlayOneShot(HaibokusyaVoiceEventPath);
             PositionTooltip(eventData.position);
             _tooltip.gameObject.SetActive(true);
             _tooltip.SetAsLastSibling();
         }
 
-        private void HideTooltip() => _tooltip.gameObject.SetActive(false);
+        private void HideTooltip()
+        {
+            _hoveredEndingIndex = -1;
+            _tooltip.gameObject.SetActive(false);
+        }
+
+        private async UniTaskVoid LoadHaibokusyaMarkAsync()
+        {
+            if (_tooltipHaibokusyaMarkImage == null || _haibokusyaMarkHandle.IsValid())
+                return;
+
+            try
+            {
+                _haibokusyaMarkHandle = Addressables.LoadAssetAsync<Sprite>(HaibokusyaMarkAddress);
+                var sprite = await _haibokusyaMarkHandle.Task;
+                if (this == null || sprite == null)
+                    return;
+
+                _tooltipHaibokusyaMarkImage.sprite = sprite;
+                if (_hoveredEndingIndex >= 0 && _haibokusyaFlags[_hoveredEndingIndex])
+                    _tooltipHaibokusyaMarkImage.gameObject.SetActive(true);
+            }
+            catch (Exception exception)
+            {
+                Debug.LogError($"[AchievementDefaultUIView] Failed to load Addressable sprite: {HaibokusyaMarkAddress}");
+                Debug.LogException(exception);
+            }
+        }
 
         private void PositionTooltip(Vector2 screenPosition)
         {

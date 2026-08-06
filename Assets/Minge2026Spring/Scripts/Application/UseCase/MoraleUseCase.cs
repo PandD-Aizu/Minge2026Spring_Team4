@@ -11,6 +11,8 @@ namespace Minge2026Spring.Scripts.Application.UseCase
 {
     public class MoraleUseCase
     {
+        public event System.Action MoraleChanged;
+
         private readonly IInternalParameterRepository _repository;
         private readonly ISharedMemoryService _sharedMemory;
         private readonly MoraleCheckService _moraleCheckService;
@@ -36,6 +38,7 @@ namespace Minge2026Spring.Scripts.Application.UseCase
             _cache = await _repository.LoadAsync();
             EnsureDefaultCharacters();
             _sharedMemory.WriteData(ToSharedData(_cache));
+            MoraleChanged?.Invoke();
         }
 
         /// <summary>
@@ -71,6 +74,18 @@ namespace Minge2026Spring.Scripts.Application.UseCase
             return dto;
         }
 
+        public bool TryGetMoraleDto(out MoraleDto moraleDto)
+        {
+            if (_cache == null)
+            {
+                moraleDto = null;
+                return false;
+            }
+
+            moraleDto = GetMoraleDto();
+            return true;
+        }
+
         /// <summary>
         /// 士気度を加算する
         /// </summary>
@@ -93,6 +108,7 @@ namespace Minge2026Spring.Scripts.Application.UseCase
             
             parameter.Morale += amount;
             _sharedMemory.WriteData(ToSharedData(_cache));
+            MoraleChanged?.Invoke();
         }
         
         /// <summary>

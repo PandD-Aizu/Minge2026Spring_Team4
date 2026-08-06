@@ -35,6 +35,8 @@ namespace Minge2026Spring.Scripts.Application.UseCase
 
         public bool IsExtraStageEnding() => GetEndingValue() == ExtraStageEndingValue;
 
+        public int GetEndingIndex() => GetEndingValue();
+
         private int GetEndingValue()
         {
             if (!_endingValueProvider.TryGetEndingValue(out var endingValue))

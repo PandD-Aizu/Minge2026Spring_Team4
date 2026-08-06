@@ -42,6 +42,15 @@ namespace Minge2026Spring.Scripts.Application.UseCase
 
         public int GetEndingClearCount() => Math.Max(0, _gameSaveRepository.Load()?.endingClearCount ?? 0);
 
+        public bool[] GetHaibokusyaFlags()
+        {
+            var flags = _gameSaveRepository.Load()?.eachHaibokusyaFlag;
+            var result = new bool[EndingCount];
+            for (var index = 0; index < EndingCount; index++)
+                result[index] = flags?.GetValue(GetEndingId(index)) == true;
+            return result;
+        }
+
         public HiddenItemStatus GetHiddenItemStatus() => _hiddenItemStatusRepository.LoadHiddenItemStatus();
 
         public EndingPlayStatistics[] GetEndingPlayStatistics()

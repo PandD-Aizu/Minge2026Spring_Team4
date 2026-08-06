@@ -20,6 +20,7 @@ namespace Minge2026Spring.Scripts.DI
             builder.Register<ChatUseCase>(Lifetime.Scoped);
             builder.Register<FreeChatUseCase>(Lifetime.Scoped);
             builder.Register<MoraleUseCase>(Lifetime.Scoped);
+            builder.Register<MoraleEndingSelector>(Lifetime.Scoped);
             builder.Register<GameStarterUseCase>(Lifetime.Scoped);
             builder.Register<ProcessUseCase>(Lifetime.Scoped);
             builder.Register<EndingUseCase>(Lifetime.Scoped);
