@@ -13,6 +13,15 @@ namespace Minge2026Spring.Scripts.Application.DTOs
         public EndingMetricMap eachEndingClearTime = new();
         public EndingMetricMap eachEndingDeathCount = new();
         public EndingFlagMap eachHaibokusyaFlag = new();
+        public ExtraProgressData extraProgress = new();
+    }
+
+    [Serializable]
+    public class ExtraProgressData
+    {
+        public int deathCount;
+        public float elapsedPlayTime;
+        public string roomName;
     }
 
     [Serializable]

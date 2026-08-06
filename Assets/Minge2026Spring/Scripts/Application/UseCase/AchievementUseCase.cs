@@ -64,11 +64,20 @@ namespace Minge2026Spring.Scripts.Application.UseCase
             {
                 var endingId = GetEndingId(index);
                 statistics[index] = new EndingPlayStatistics(
-                    clearTimes?.GetValue(endingId) ?? 0,
-                    deathCounts?.GetValue(endingId) ?? 0);
+                        clearTimes?.GetValue(endingId) ?? 0,
+                        deathCounts?.GetValue(endingId) ?? 0);
             }
 
             return statistics;
+        }
+
+        public ExtraStageProgress GetExtraStageProgress()
+        {
+            var progress = _gameSaveRepository.Load()?.extraProgress;
+            return new ExtraStageProgress(
+                progress?.elapsedPlayTime ?? 0f,
+                progress?.deathCount ?? 0,
+                progress?.roomName);
         }
 
         public bool IsExtraStageUnlocked(HashSet<string> reachedEndingIds)
@@ -123,13 +132,27 @@ namespace Minge2026Spring.Scripts.Application.UseCase
 
     public readonly struct EndingPlayStatistics
     {
-        public int ClearTimeSeconds { get; }
+        public float ClearTimeSeconds { get; }
         public int DeathCount { get; }
 
-        public EndingPlayStatistics(int clearTimeSeconds, int deathCount)
+        public EndingPlayStatistics(float clearTimeSeconds, int deathCount)
         {
-            ClearTimeSeconds = Math.Max(0, clearTimeSeconds);
+            ClearTimeSeconds = Math.Max(0f, clearTimeSeconds);
             DeathCount = Math.Max(0, deathCount);
+        }
+    }
+
+    public readonly struct ExtraStageProgress
+    {
+        public float ElapsedPlayTimeSeconds { get; }
+        public int DeathCount { get; }
+        public string RoomName { get; }
+
+        public ExtraStageProgress(float elapsedPlayTimeSeconds, int deathCount, string roomName)
+        {
+            ElapsedPlayTimeSeconds = Math.Max(0f, elapsedPlayTimeSeconds);
+            DeathCount = Math.Max(0, deathCount);
+            RoomName = roomName ?? string.Empty;
         }
     }
 }

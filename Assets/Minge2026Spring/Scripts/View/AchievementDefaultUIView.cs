@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Cysharp.Threading.Tasks;
 using FMODUnity;
+using Minge2026Spring.Scripts.Application.UseCase;
 using TMPro;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -109,7 +110,8 @@ namespace Minge2026Spring.Scripts.View
         [SerializeField, Min(1f)] private float endingDescriptionFontSize = 16f;
         [SerializeField, Min(1f)] private float extraStageFontSize = 32f;
         [Header("ホバー吹き出し")]
-        [SerializeField] private Vector2 tooltipSize = new(330f, 105f);
+        [SerializeField] private Vector2 tooltipSize = new(330f, 130f);
+        [SerializeField] private Vector2 extraStageTooltipSize = new(330f, 160f);
         [SerializeField] private Vector2 tooltipOffset = new(22f, 18f);
         [SerializeField] private Color tooltipColor = new(0.04f, 0.06f, 0.1f, 0.96f);
         [SerializeField] private Color tooltipBorderColor = new(0.55f, 0.85f, 1f, 0.95f);
@@ -128,6 +130,7 @@ namespace Minge2026Spring.Scripts.View
         private Canvas _canvas;
         private TMP_Text _allPlayTimeText;
         private TMP_Text _allDeathCountText;
+        private string _extraStageStatisticsText;
         private string _hiddenItem1Description;
         private string _hiddenItem2Description;
         private bool[] _haibokusyaFlags = new bool[EndingCount];
@@ -158,6 +161,8 @@ namespace Minge2026Spring.Scripts.View
             ArrangeEndingPanels();
             CreateTooltip();
             ConfigureHoverTargets();
+            var extraStageHoverTarget = extraStageButton.gameObject.AddComponent<AchievementHoverTarget>();
+            extraStageHoverTarget.Configure(ShowExtraStageTooltip, HideTooltip);
             extraStageButtonText.enableAutoSizing = false;
             extraStageButtonText.fontSize = extraStageFontSize;
             _rainbowTitle = endingTexts[RainbowEndingIndex].TitleText;
@@ -180,13 +185,13 @@ namespace Minge2026Spring.Scripts.View
                 LoadHaibokusyaMarkAsync().Forget();
         }
 
-        public void SetEndingStatistics(int index, int clearTimeSeconds, int deathCount)
+        public void SetEndingStatistics(int index, float clearTimeSeconds, int deathCount)
         {
             endingTexts[index].StatisticsText =
                 $"総プレイ時間  {FormatElapsedTime(clearTimeSeconds)}\nデス数            {deathCount:N0} 回";
         }
 
-        public void SetTotalStatistics(long clearTimeSeconds, long deathCount)
+        public void SetTotalStatistics(float clearTimeSeconds, long deathCount)
         {
             _allPlayTimeText.text = $"総プレイ時間: {FormatElapsedTime(clearTimeSeconds)}";
             _allDeathCountText.text = $"総デス数: {deathCount:N0} 回";
@@ -196,6 +201,15 @@ namespace Minge2026Spring.Scripts.View
         {
             extraStageButton.interactable = unlocked;
             extraStageButtonText.text = unlocked ? _unlockedExtraStageText : "???";
+        }
+
+        public void SetExtraStageProgress(ExtraStageProgress progress)
+        {
+            var roomName = string.IsNullOrWhiteSpace(progress.RoomName) ? "---" : progress.RoomName;
+            _extraStageStatisticsText =
+                $"総プレイ時間  {FormatElapsedTime(progress.ElapsedPlayTimeSeconds)}\n" +
+                $"デス数            {progress.DeathCount:N0} 回\n" +
+                $"ルーム名          {roomName}";
         }
 
         public void SetHiddenItemStatus(bool hasItem1, bool hasItem2, bool showDescriptions)
@@ -327,12 +341,25 @@ namespace Minge2026Spring.Scripts.View
         private void ShowTooltip(int endingIndex, PointerEventData eventData)
         {
             _hoveredEndingIndex = endingIndex;
+            _tooltip.sizeDelta = tooltipSize;
             _tooltipText.text = $"ENDING {(char)('A' + endingIndex)}\n{endingTexts[endingIndex].StatisticsText}";
             var showHaibokusyaMark = _haibokusyaFlags[endingIndex];
             _tooltipTextRect.offsetMax = new Vector2(showHaibokusyaMark ? -92f : -18f, -12f);
             _tooltipHaibokusyaMarkImage.gameObject.SetActive(showHaibokusyaMark && _tooltipHaibokusyaMarkImage.sprite != null);
             if (showHaibokusyaMark)
                 RuntimeManager.PlayOneShot(HaibokusyaVoiceEventPath);
+            PositionTooltip(eventData.position);
+            _tooltip.gameObject.SetActive(true);
+            _tooltip.SetAsLastSibling();
+        }
+
+        private void ShowExtraStageTooltip(PointerEventData eventData)
+        {
+            _hoveredEndingIndex = -1;
+            _tooltip.sizeDelta = extraStageTooltipSize;
+            _tooltipText.text = $"EXTRA STAGE\n{_extraStageStatisticsText}";
+            _tooltipTextRect.offsetMax = new Vector2(-18f, -12f);
+            _tooltipHaibokusyaMarkImage.gameObject.SetActive(false);
             PositionTooltip(eventData.position);
             _tooltip.gameObject.SetActive(true);
             _tooltip.SetAsLastSibling();
@@ -383,12 +410,13 @@ namespace Minge2026Spring.Scripts.View
             localPoint += new Vector2(showOnLeft ? -tooltipOffset.x : tooltipOffset.x,
                 showAbove ? tooltipOffset.y : -tooltipOffset.y);
             var rect = canvasRect.rect;
+            var currentTooltipSize = _tooltip.sizeDelta;
             localPoint.x = Mathf.Clamp(localPoint.x,
-                rect.xMin + tooltipSize.x * _tooltip.pivot.x,
-                rect.xMax - tooltipSize.x * (1f - _tooltip.pivot.x));
+                rect.xMin + currentTooltipSize.x * _tooltip.pivot.x,
+                rect.xMax - currentTooltipSize.x * (1f - _tooltip.pivot.x));
             localPoint.y = Mathf.Clamp(localPoint.y,
-                rect.yMin + tooltipSize.y * _tooltip.pivot.y,
-                rect.yMax - tooltipSize.y * (1f - _tooltip.pivot.y));
+                rect.yMin + currentTooltipSize.y * _tooltip.pivot.y,
+                rect.yMax - currentTooltipSize.y * (1f - _tooltip.pivot.y));
             _tooltip.anchoredPosition = localPoint;
         }
 
@@ -427,12 +455,12 @@ namespace Minge2026Spring.Scripts.View
             return text;
         }
 
-        private static string FormatElapsedTime(long totalSeconds)
+        private static string FormatElapsedTime(float totalSeconds)
         {
-            totalSeconds = Math.Max(0L, totalSeconds);
-            var hours = totalSeconds / 3600L;
-            var minutes = totalSeconds % 3600L / 60L;
-            var seconds = totalSeconds % 60L;
+            var roundedSeconds = Math.Max(0L, (long)Math.Round(totalSeconds));
+            var hours = roundedSeconds / 3600L;
+            var minutes = roundedSeconds % 3600L / 60L;
+            var seconds = roundedSeconds % 60L;
             return $"{hours:00}:{minutes:00}:{seconds:00}";
         }
     }
