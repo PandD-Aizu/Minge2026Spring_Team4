@@ -1604,6 +1604,10 @@ MonoBehaviour:
     names: "\u50D5\u3089\u306E\u5C0A\u656C\u3059\u308B\u5927\u5148\u8F29\u305F\u3044\u3063\u3061\u3083\u3093\ntessho\n\u3082\u307F\u3058\n\u3044\u3063\u3057\u30FC\n\u4F01\u753B\u958B\u767A\u90E8"
   - title: FONTS
     names: Noto Sans JP
+  - title: IMAGES
+    names: "\u3044\u3089\u3059\u3068\u3084\nICOON MONO"
+  - title: SOUND EFFECT
+    names: "\u52B9\u679C\u97F3\u30E9\u30DC"
   - title: THIRD-PARTY LIBRARIES
     names: 'R3
 
@@ -1625,6 +1629,8 @@ MonoBehaviour:
   - insertAfterSection: 17
     sprite: {fileID: 21300000, guid: a6c297c8e92a8fb46a296beee5642c88, type: 3}
     height: 0
+  _extraDialogueFontSize: 38
+  _extraDialogueInterval: 0.35
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

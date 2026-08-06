@@ -19,7 +19,7 @@
         { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "またやりたいです。", "voiceEventPath": "event:/Serif/かしわもち_またやりたいです。", "waitingTime": 0.0 },
         { "iconId": "goddo_icon", "speaker": "ごっと", "message": "……まぁ。", "voiceEventPath": "event:/Serif/ごっと_……まぁ。", "waitingTime": 0.0 },
         { "iconId": "goddo_icon", "speaker": "ごっと", "message": "次はもっと面白いもの作ろう。", "voiceEventPath": "event:/Serif/ごっと_次はもっと面白いもの作ろう。", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "......もちろん!", "voiceEventPath": "event:/Serif/主人公_......もちろん!", "waitingTime": 0.0 }
+        { "iconId": "player_icon", "speaker": "主人公", "message": "......もちろん!", "voiceEventPath": "event:/Serif/主人公_......もちろん!", "waitingTime": 5.0 }
       ],
       "choices": [], "nextBlockId": "", "freeChats": [], "waitingTime": 0.0
     }

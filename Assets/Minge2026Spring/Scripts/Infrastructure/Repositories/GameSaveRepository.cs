@@ -9,7 +9,9 @@ namespace Minge2026Spring.Scripts.Infrastructure.Repositories
     public class GameSaveRepository : IGameSaveRepository
     {
         private const string SaveFileName = "GameSave.json";
+        private const string MoraleFilePath = "I_gonna_be_the_tresure_hunter/CharactersMoraleValue.json";
         private readonly string _savePath = Path.Combine(UnityEngine.Application.persistentDataPath, SaveFileName);
+        private readonly string _moraleSavePath = Path.Combine(UnityEngine.Application.streamingAssetsPath, MoraleFilePath);
 
         /// <inheritdoc />
         public GameSaveData Load()
@@ -64,6 +66,11 @@ namespace Minge2026Spring.Scripts.Infrastructure.Repositories
                 // 将来のオプション画面から利用する削除処理を集約する
                 if (File.Exists(_savePath))
                     File.Delete(_savePath);
+
+                // 隠しアイテム用
+                // Ryotaくんは私に感謝してください！！！！！！！！！！
+                if (File.Exists(_moraleSavePath))
+                    File.Delete(_moraleSavePath);
             }
             catch (Exception exception)
             {

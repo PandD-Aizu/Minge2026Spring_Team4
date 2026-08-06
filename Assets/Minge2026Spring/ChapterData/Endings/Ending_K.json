@@ -22,7 +22,7 @@
         { "iconId": "player_icon", "speaker": "主人公", "message": "きっと良い企画開発者になれる。", "voiceEventPath": "event:/Serif/主人公_きっと良い企画開発者になれる。", "waitingTime": 0.0 },
         { "iconId": "player_icon", "speaker": "主人公", "message": "最後に、", "voiceEventPath": "event:/Serif/主人公_最後に、", "waitingTime": 0.0 },
         { "iconId": "player_icon", "speaker": "主人公", "message": "ここまで遊んでくれてありがとう。", "voiceEventPath": "event:/Serif/主人公_ここまで遊んでくれてありがとう。", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "Thank you for Playing", "voiceEventPath": "event:/Serif/主人公_Thank you for Playing", "waitingTime": 0.0 }
+        { "iconId": "player_icon", "speaker": "主人公", "message": "Thank you for Playing", "voiceEventPath": "event:/Serif/主人公_Thank you for Playing", "waitingTime": 5.0 }
       ],
       "choices": [], "nextBlockId": "", "freeChats": [], "waitingTime": 0.0
     }

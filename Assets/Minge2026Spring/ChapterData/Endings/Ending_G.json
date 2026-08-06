@@ -15,7 +15,7 @@
         { "iconId": "milu_icon", "speaker": "Milu", "message": "ありです！", "voiceEventPath": "event:/Serif/Milu_ありです！", "waitingTime": 0.0 },
         { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "やりましょう！", "voiceEventPath": "event:/Serif/かしわもち_やりましょう！", "waitingTime": 0.0 },
         { "iconId": "player_icon", "speaker": "主人公", "message": "え、ごっとくん……", "voiceEventPath": "event:/Serif/主人公_え、ごっとくん……", "waitingTime": 0.0 },
-        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "うん、手遅れ", "voiceEventPath": "event:/Serif/ごっと_うん、手遅れ", "waitingTime": 0.0 }
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "うん、手遅れ", "voiceEventPath": "event:/Serif/ごっと_うん、手遅れ", "waitingTime": 5.0 }
       ],
       "choices": [], "nextBlockId": "", "freeChats": [], "waitingTime": 0.0
     }

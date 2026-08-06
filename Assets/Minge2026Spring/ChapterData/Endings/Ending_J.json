@@ -9,7 +9,7 @@
         { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "......", "voiceEventPath": "event:/Serif/Ryuta_......", "waitingTime": 0.0 },
         { "iconId": "milu_icon", "speaker": "Milu", "message": "......", "voiceEventPath": "event:/Serif/Milu_……", "waitingTime": 0.0 },
         { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "......", "voiceEventPath": "event:/Serif/かしわもち_……", "waitingTime": 0.0 },
-        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "だめだこりゃ", "voiceEventPath": "event:/Serif/ごっと_ダメだこりゃ", "waitingTime": 0.0 }
+        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "だめだこりゃ", "voiceEventPath": "event:/Serif/ごっと_ダメだこりゃ", "waitingTime": 5.0 }
       ],
       "choices": [], "nextBlockId": "", "freeChats": [], "waitingTime": 0.0
     }

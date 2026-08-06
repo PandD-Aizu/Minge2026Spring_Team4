@@ -23,7 +23,7 @@
         { "iconId": "milu_icon", "speaker": "Milu", "message": "……ってことは", "voiceEventPath": "event:/Serif/Milu_……ってことは", "waitingTime": 0.0 },
         { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "継続開発らしいですよ", "voiceEventPath": "event:/Serif/かしわもち_継続開発らしいですよ", "waitingTime": 0.0 },
         { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "まぁ、頑張りましょうよ！", "voiceEventPath": "event:/Serif/Ryuta_まぁ、頑張りましょうよ！", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "は、はは……", "voiceEventPath": "event:/Serif/主人公_は、はは……", "waitingTime": 0.0 }
+        { "iconId": "player_icon", "speaker": "主人公", "message": "は、はは……", "voiceEventPath": "event:/Serif/主人公_は、はは……", "waitingTime": 5.0 }
       ],
       "choices": [], "nextBlockId": "", "freeChats": [], "waitingTime": 0.0
     }

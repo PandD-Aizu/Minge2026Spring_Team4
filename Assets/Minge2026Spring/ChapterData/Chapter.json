@@ -322,6 +322,7 @@
           "iconId": "ryuta_icon",
           "speaker": "Ryuta",
           "message": "え？僕ですか？！",
+          "voiceEventPath": "event:/Serif/Ryuta_え？ぼくですか？！",
           "waitingTime": 0.0
         },
         {

@@ -16,7 +16,7 @@
         { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "僕も依頼通り作っただけですね。", "voiceEventPath": "event:/Serif/かしわもち_僕も依頼通り作っただけですね。", "waitingTime": 0.0 },
         { "iconId": "goddo_icon", "speaker": "ごっと", "message": "誰も間違ってはいない。", "voiceEventPath": "event:/Serif/ごっと_誰も間違ってはいない。", "waitingTime": 0.0 },
         { "iconId": "goddo_icon", "speaker": "ごっと", "message": "誰もゲームを作ってなかった。", "voiceEventPath": "event:/Serif/ごっと_誰もゲームを作ってなかった。", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "……ごめん。", "voiceEventPath": "event:/Serif/主人公_……ごめん。", "waitingTime": 0.0 }
+        { "iconId": "player_icon", "speaker": "主人公", "message": "……ごめん。", "voiceEventPath": "event:/Serif/主人公_……ごめん。", "waitingTime": 5.0 }
       ],
       "choices": [], "nextBlockId": "", "freeChats": [], "waitingTime": 0.0
     }

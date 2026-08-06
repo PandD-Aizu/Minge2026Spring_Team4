@@ -17,7 +17,7 @@
         { "iconId": "player_icon", "speaker": "主人公", "message": "……", "voiceEventPath": "event:/Serif/主人公_……", "waitingTime": 0.0 },
         { "iconId": "goddo_icon", "speaker": "ごっと", "message": "消す？", "voiceEventPath": "event:/Serif/ごっと_消す？", "waitingTime": 0.0 },
         { "iconId": "player_icon", "speaker": "主人公", "message": "……", "voiceEventPath": "event:/Serif/主人公_……", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "消そうか。", "voiceEventPath": "event:/Serif/主人公_消そうか。", "waitingTime": 0.0 }
+        { "iconId": "player_icon", "speaker": "主人公", "message": "消そうか。", "voiceEventPath": "event:/Serif/主人公_消そうか。", "waitingTime": 5.0 }
       ],
       "choices": [], "nextBlockId": "", "freeChats": [], "waitingTime": 0.0
     }
