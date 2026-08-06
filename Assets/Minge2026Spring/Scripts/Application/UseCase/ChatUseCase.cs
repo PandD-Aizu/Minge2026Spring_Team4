@@ -132,11 +132,13 @@ namespace Minge2026Spring.Scripts.Application.UseCase
             _saveData = _gameSaveRepository.Load() ?? _saveData ?? new GameSaveData();
             var endingIds = (_saveData.reachedEndingIds ?? Array.Empty<string>()).ToList();
             if (!endingIds.Contains(endingBlockId))
+            {
                 endingIds.Add(endingBlockId);
+                _saveData.endingClearCount++;
+            }
 
             _saveData.reachedEndingIds = endingIds.ToArray();
-            _saveData.endingClearCount++;
-            SaveProgress();
+            SaveCurrentProgress();
         }
 
         /// <summary>
@@ -191,7 +193,19 @@ namespace Minge2026Spring.Scripts.Application.UseCase
 
         private void SaveProgress()
         {
-            _saveData ??= new GameSaveData();
+            // 外部ゲームが終了時にプレイ時間・デス数を書き込むため、
+            // 起動時に保持したキャッシュでその記録を上書きしないようにする。
+            var latestSaveData = _gameSaveRepository.Load();
+            if (latestSaveData is not null)
+                _saveData = latestSaveData;
+            else
+                _saveData ??= new GameSaveData();
+
+            SaveCurrentProgress();
+        }
+
+        private void SaveCurrentProgress()
+        {
             _saveData.chapterId = _chapterId;
             _saveData.currentBlockId = _currentChapterBlock.Value?.blockId;
             _saveData.reachedBlockIds = _reachedChapterBlocks.Select(block => block.blockId).ToArray();

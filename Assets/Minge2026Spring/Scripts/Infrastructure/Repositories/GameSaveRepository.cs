@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using Minge2026Spring.Scripts.Application.DTOs;
 using Minge2026Spring.Scripts.Application.Interface;
+using Minge2026Spring.Scripts.Infrastructure.tmp;
 using UnityEngine;
 
 namespace Minge2026Spring.Scripts.Infrastructure.Repositories
@@ -42,6 +43,10 @@ namespace Minge2026Spring.Scripts.Infrastructure.Repositories
             try
             {
                 // 一時ファイルを完成させてから本体へ置き換える
+                var saveDirectory = Path.GetDirectoryName(_savePath);
+                if (!string.IsNullOrEmpty(saveDirectory))
+                    Directory.CreateDirectory(saveDirectory);
+
                 var json = JsonUtility.ToJson(saveData, true);
                 var temporaryPath = $"{_savePath}.tmp";
                 File.WriteAllText(temporaryPath, json);
@@ -67,10 +72,13 @@ namespace Minge2026Spring.Scripts.Infrastructure.Repositories
                 if (File.Exists(_savePath))
                     File.Delete(_savePath);
 
-                // 隠しアイテム用
-                // Ryotaくんは私に感謝してください！！！！！！！！！！
-                if (File.Exists(_moraleSavePath))
-                    File.Delete(_moraleSavePath);
+                // 外部ゲームがこのファイルを必ず読み込むため、削除ではなく
+                // 初期値を書き戻す。隠しアイテムは未取得状態へ戻す。
+                var resetMoraleData = new CharacterMoraleValueJson();
+                var moraleDirectory = Path.GetDirectoryName(_moraleSavePath);
+                if (!string.IsNullOrEmpty(moraleDirectory))
+                    Directory.CreateDirectory(moraleDirectory);
+                File.WriteAllText(_moraleSavePath, JsonUtility.ToJson(resetMoraleData, true));
             }
             catch (Exception exception)
             {
