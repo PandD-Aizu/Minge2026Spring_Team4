@@ -112,15 +112,6 @@
         "value3": 1.0
       },
       {
-        "gimmikName": "昇降針",
-        "gimmikPos": [
-          256.0,
-          448.0
-        ],
-        "value1": 0,
-        "value2": 1.0
-      },
-      {
         "gimmikName": "罠ブロック",
         "gimmikPos": [
           32.0,
