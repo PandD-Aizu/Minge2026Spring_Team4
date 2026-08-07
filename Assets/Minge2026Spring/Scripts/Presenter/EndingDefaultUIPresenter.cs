@@ -29,6 +29,7 @@ namespace Minge2026Spring.Scripts.Presenter
 
         public void Initialize()
         {
+            _view.Initialize();
             _holdNotifier = _view.SpeedUpButton.GetComponent<SkipButtonHoldNotifier>();
             if (_holdNotifier == null)
                 _holdNotifier = _view.SpeedUpButton.gameObject.AddComponent<SkipButtonHoldNotifier>();

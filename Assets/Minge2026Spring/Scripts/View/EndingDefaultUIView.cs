@@ -152,9 +152,18 @@ namespace Minge2026Spring.Scripts.View
         private int _endingDeathCount;
         private bool _showHaibokusyaMark;
         private bool _haibokusyaVoicePlayed;
+        private bool _isInitialized;
 
         private void Awake()
         {
+            Initialize();
+        }
+
+        public void Initialize()
+        {
+            if (_isInitialized)
+                return;
+
             if (_speedUpButtonObject == null)
             {
                 Debug.LogError("[EndingDefaultUIView] SpeedUpButtonObject is not assigned.");
@@ -178,6 +187,7 @@ namespace Minge2026Spring.Scripts.View
             BuildCreditRoll();
             BuildEndingTitleOverlay();
             BuildExtraDialogueOverlay();
+            _isInitialized = true;
         }
 
         private void OnDestroy()

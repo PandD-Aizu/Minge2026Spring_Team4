@@ -67,7 +67,8 @@ namespace Minge2026Spring.Scripts.Presenter
             for (var index = 0; index < AchievementUseCase.EndingCount; index++)
             {
                 var unlocked = reachedEndingIds.Contains(AchievementUseCase.GetEndingId(index));
-                var showDescription = hasReachedEnding && index != AchievementUseCase.EndingCount - 1;
+                var isExtraStageEnding = index == AchievementUseCase.ExtraStageEndingIndex;
+                var showDescription = hasReachedEnding && (!isExtraStageEnding || unlocked);
                 _view.SetEndingUnlocked(index, unlocked, showDescription);
                 _view.SetEndingStatistics(
                     index,
