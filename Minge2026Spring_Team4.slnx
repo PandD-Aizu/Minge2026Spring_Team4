@@ -1,0 +1,18 @@
+﻿<Solution>
+  <Project Path="Infrastructure.csproj" />
+  <Project Path="Application.csproj" />
+  <Project Path="FMODUnityResonanceEditor.csproj" />
+  <Project Path="FMODUnityEditor.csproj" />
+  <Project Path="DOTween.Modules.csproj" />
+  <Project Path="Main.csproj" />
+  <Project Path="FMODUnity.csproj" />
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="FMODUnityHaptics.csproj" />
+  <Project Path="Domain.csproj" />
+  <Project Path="FMODUnityResonance.csproj" />
+  <Project Path="View.csproj" />
+  <Project Path="Editor.csproj" />
+  <Project Path="Presentation.csproj" />
+  <Project Path="VoiceRecognition.csproj" />
+  <Project Path="LLMForUnityManagement.csproj" />
+</Solution>
