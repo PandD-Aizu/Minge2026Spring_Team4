@@ -12,36 +12,16 @@ env:
   UNITY_VERSION: 6000.3.6f1
   BUILD_PATH: build/Windows
   BUILD_NAME: Minge2026Spring_Team4
+  UNITY_IMAGE_VERSION: 3
 
 jobs:
   build:
     name: Build Windows player
-    runs-on: ubuntu-latest
+    runs-on: windows-2022
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
-      # UnityのDockerイメージを展開するための空き容量を確保
-      - name: Free disk space
-        shell: bash
-        run: |
-          echo "=== Disk space before cleanup ==="
-          df -h
-
-          # Windows向けUnityビルドでは使用しない大容量ツールを削除
-          sudo rm -rf /usr/local/lib/android
-          sudo rm -rf /usr/share/dotnet
-          sudo rm -rf /opt/ghc
-          sudo rm -rf /usr/local/share/boost
-
-          # Runnerにプリインストールされた不要なDockerイメージを削除
-          docker system prune --all --force || true
-
-          sudo apt-get clean
-
-          echo "=== Disk space after cleanup ==="
-          df -h
 
       - name: Build Unity project
         uses: game-ci/unity-builder@v4
@@ -51,25 +31,27 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
           unityVersion: ${{ env.UNITY_VERSION }}
+          customImage: unityci/editor:windows-${{ env.UNITY_VERSION }}-windows-il2cpp-${{ env.UNITY_IMAGE_VERSION }}
           targetPlatform: StandaloneWindows64
           buildName: ${{ env.BUILD_NAME }}
           buildsPath: ${{ env.BUILD_PATH }}
+          customParameters: -scriptingBackend IL2CPP
 
       - name: Show build output
         run: |
           echo "=== Build output ==="
-          find "${BUILD_PATH}" -maxdepth 3 -type f | head -100
-          df -h
+          Get-ChildItem -Path $env:BUILD_PATH -File -Recurse |
+            Select-Object -First 100 -ExpandProperty FullName
+          Get-PSDrive -Name C
 
       - name: Package build
-        shell: bash
         run: |
-          cd "${BUILD_PATH}"
-          zip -r "../${BUILD_NAME}-Windows.zip" .
+          $archivePath = Join-Path (Split-Path $env:BUILD_PATH -Parent) "$env:BUILD_NAME-Windows-IL2CPP.zip"
+          Compress-Archive -Path (Join-Path $env:BUILD_PATH '*') -DestinationPath $archivePath -Force
 
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v3
         with:
           name: ${{ github.ref_name }}
           generate_release_notes: true
-          files: build/${{ env.BUILD_NAME }}-Windows.zip
+          files: build/${{ env.BUILD_NAME }}-Windows-IL2CPP.zip

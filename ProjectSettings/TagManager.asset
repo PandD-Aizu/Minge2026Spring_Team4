@@ -47,6 +47,9 @@ TagManager:
   - name: UI_Dynamic
     uniqueID: 3712934139
     locked: 0
+  - name: HUDDynamic
+    uniqueID: 4123456789
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1

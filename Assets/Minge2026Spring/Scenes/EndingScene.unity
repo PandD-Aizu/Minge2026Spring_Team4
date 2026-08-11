@@ -1566,7 +1566,6 @@ MonoBehaviour:
   _endPadding: 420
   _contentWidth: 0.85
   _fontAsset: {fileID: 11400000, guid: d4aa1b8e570635a409ce60346fec5485, type: 2}
-  _haibokusyaMarkSprite: {fileID: 21300000, guid: 66a8f2b724e2477409fa19098fa864fa, type: 3}
   _title: "\u3010\u30B5\u30FC\u30AF\u30EBPandD\u3011\\nPlan\u901A\u308A\u306E\u30B2\u30FC\u30E0\u3092\u7D20\u76F4\u306B\u4F5C\u3089\u305B\u3066\u304F\u308C\u306A\u3044\u30E4\u30D0\u3044\u958B\u767A\u8005\u305F\u3061"
   _finalMessage: THANK YOU FOR PLAYING!
   _textOutlineColor: {r: 0, g: 0, b: 0, a: 0.8}
@@ -1593,9 +1592,9 @@ MonoBehaviour:
   - title: LEAD EDITOR TOOL PROGRAMMER
     names: "\u3053\u3068\u3000Ryota"
   - title: VOICE ACTORS
-    names: "\u3054\u3063\u3068(cv. \u3053\u3068)\nRyuta(cv. Ryota)\n\u304B\u3057\u308F\u3082\u3061(cv.
-      \u307C\u305F\u3082\u3061)\nmilu(cv. lumi)\n\u4E3B\u4EBA\u516C(cv. \u308C\u306E\u308B\u3044\u304C)\n\u3060\u3044\u3063\u3061\u3083\u3093(cv.
-      \u305F\u3044\u3063\u3061\u3083\u3093)"
+    names: "\u4E3B\u4EBA\u516C(cv. \u308C\u306E\u308B\u3044\u304C)\n\n\u3054\u3063\u3068(cv.
+      \u3053\u3068)\n\nRyuta(cv. Ryota)\n\n\u304B\u3057\u308F\u3082\u3061(cv. \u307C\u305F\u3082\u3061)\n\nmilu(cv.
+      lumi)\n\n\u3060\u3044\u3063\u3061\u3083\u3093(cv. \u305F\u3044\u3063\u3061\u3083\u3093)"
   - title: LEAD SOUND DESIGNER
     names: "\u3053\u3068\u3000\u307C\u305F\u3082\u3061"
   - title: MIXING
@@ -1608,6 +1607,19 @@ MonoBehaviour:
     names: Noto Sans JP
   - title: IMAGES
     names: "\u3044\u3089\u3059\u3068\u3084\nICOON MONO"
+  - title: BGM
+    names: "I gonna be the game developer! - \u4F5C\u66F2\uFF1A\u3053\u3068\u3001\u7DE8\u66F2\uFF1A\u3053\u3068\u3001SUNO
+      AI\n\nThe history - \u4F5C\u66F2\uFF1A\u3053\u3068\u3001\u7DE8\u66F2\uFF1A\u3053\u3068\u3001SUNO
+      AI\n\nAdjustment time - \u4F5C\u66F2\uFF1A\u3053\u3068\u3001\u7DE8\u66F2\uFF1A\u3053\u3068\u3001SUNO
+      AI\n\nMeeting time - \u4F5C\u66F2\uFF1A\u3053\u3068\u3001\u7DE8\u66F2\uFF1A\u3053\u3068\u3001SUNO
+      AI\n\nPlaning and Development - \u4F5C\u66F2\uFF1A\u3053\u3068\u3001\u7DE8\u66F2\uFF1A\u3053\u3068\u3001SUNO
+      AI\n\n\u7121\u984C - \u4F5C\u66F2\uFF1A\u307C\u305F\u3082\u3061\u3001\u7DE8\u66F2\uFF1A\u307C\u305F\u3082\u3061\n\n\u7121\u984C
+      - \u4F5C\u66F2\uFF1A\u307C\u305F\u3082\u3061\u3001\u7DE8\u66F2\uFF1A\u307C\u305F\u3082\u3061\n\n\u7121\u984C
+      - \u4F5C\u66F2\uFF1A\u307C\u305F\u3082\u3061\u3001\u7DE8\u66F2\uFF1A\u307C\u305F\u3082\u3061\n\n\u7121\u984C
+      - \u4F5C\u66F2\uFF1A\u307C\u305F\u3082\u3061\u3001\u7DE8\u66F2\uFF1A\u307C\u305F\u3082\u3061\n\n\u7121\u984C
+      - \u4F5C\u66F2\uFF1A\u307C\u305F\u3082\u3061\u3001\u7DE8\u66F2\uFF1A\u307C\u305F\u3082\u3061\n\n\u7121\u984C
+      - \u4F5C\u66F2\uFF1A\u307C\u305F\u3082\u3061\u3001\u7DE8\u66F2\uFF1A\u307C\u305F\u3082\u3061\n\n\u7121\u984C
+      - \u4F5C\u66F2\uFF1A\u307C\u305F\u3082\u3061\u3001\u7DE8\u66F2\uFF1A\u307C\u305F\u3082\u3061"
   - title: SOUND EFFECT
     names: "\u52B9\u679C\u97F3\u30E9\u30DC"
   - title: THIRD-PARTY LIBRARIES
@@ -1628,12 +1640,15 @@ MonoBehaviour:
   - insertAfterSection: 0
     sprite: {fileID: 21300000, guid: 8661f3ad47cb07d42864be05eb6d3036, type: 3}
     height: 0
-  - insertAfterSection: 19
+  - insertAfterSection: 20
     sprite: {fileID: 21300000, guid: a6c297c8e92a8fb46a296beee5642c88, type: 3}
     height: 0
   _extraDialogueFontSize: 38
   _extraDialogueInterval: 0.35
   _rainbowSpeed: 0.2
+  _endingTitleFadeDuration: 1
+  _endingTitleHoldDuration: 5
+  _haibokusyaMarkSprite: {fileID: 21300000, guid: 66a8f2b724e2477409fa19098fa864fa, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

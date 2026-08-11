@@ -30,6 +30,8 @@ namespace Minge2026Spring.Scripts.View
         private static readonly Color32 SuccessColor = new(59, 165, 93, 255);
 
         private SceneTransitionUseCase _sceneTransitionUseCase;
+        private ChatUseCase _chatUseCase;
+        private MoraleUseCase _moraleUseCase;
         private IFMODVCAService _fmodVcaService;
         private Button _menuButton;
         private Transform _menuRoot;
@@ -42,11 +44,16 @@ namespace Minge2026Spring.Scripts.View
         /// シーン遷移と音量設定の依存を注入する
         /// </summary>
         /// <param name="sceneTransitionUseCase">シーン遷移ユースケース</param>
+        /// <param name="chatUseCase">会話進行ユースケース</param>
+        /// <param name="moraleUseCase">やる気度ユースケース</param>
         /// <param name="fmodVcaService">音量設定サービス</param>
         [Inject]
-        private void Construct(SceneTransitionUseCase sceneTransitionUseCase, IFMODVCAService fmodVcaService)
+        private void Construct(SceneTransitionUseCase sceneTransitionUseCase, ChatUseCase chatUseCase,
+            MoraleUseCase moraleUseCase, IFMODVCAService fmodVcaService)
         {
             _sceneTransitionUseCase = sceneTransitionUseCase;
+            _chatUseCase = chatUseCase;
+            _moraleUseCase = moraleUseCase;
             _fmodVcaService = fmodVcaService;
         }
 
@@ -223,6 +230,22 @@ namespace Minge2026Spring.Scripts.View
             backButton.transform.SetParent(parent, false);
             SetRect(backButton.GetComponent<RectTransform>(), new Vector2(274f, -266f), new Vector2(176f, 46f));
             backButton.GetComponent<Button>().onClick.AddListener(CloseOption);
+
+            var restartButton = CreateButton("RestartButton", "最初から始める", 15f,
+                new Color32(91, 61, 61, 255), new Color32(116, 74, 74, 255));
+            restartButton.transform.SetParent(parent, false);
+            SetRect(restartButton.GetComponent<RectTransform>(), new Vector2(70f, -266f), new Vector2(176f, 46f));
+            restartButton.GetComponent<Button>().onClick.AddListener(RestartNovel);
+        }
+
+        /// <summary>
+        /// 現在の周回とやる気度を初期化してNovelSceneを先頭から読み直す
+        /// </summary>
+        private void RestartNovel()
+        {
+            _chatUseCase.ResetProgressForRestart();
+            _moraleUseCase.ResetForRestart();
+            _sceneTransitionUseCase.LoadNovelSceneAsync();
         }
 
         /// <summary>

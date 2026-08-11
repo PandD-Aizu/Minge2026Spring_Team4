@@ -47,8 +47,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - Json
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 35495101bd7b825448bbbd170c09e0bf
+    m_Address: UITutorial
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 36964b079ed46354c881315a4577714d
     m_Address: kashiwamochi_icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 38bf06b4183a3ad4c8545dfbbf02244b
+    m_Address: Hukidashi
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

@@ -19,7 +19,9 @@ namespace Minge2026Spring.Scripts.View
 
             public void SetText(int index, bool unlocked, bool showDescription)
             {
-                titleText.text = unlocked ? AchievementEndingText.FormatTitle(index) : "???";
+                titleText.text = unlocked
+                    ? AchievementEndingText.FormatTitle(index)
+                    : $"{(char)('A' + index)}. ？？？";
                 descriptionText.text = showDescription ? AchievementEndingText.GetDescription(index) : "???";
                 titleText.color = Color.white;
             }

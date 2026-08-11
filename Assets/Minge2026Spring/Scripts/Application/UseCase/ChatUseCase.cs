@@ -155,6 +155,19 @@ namespace Minge2026Spring.Scripts.Application.UseCase
             _gameSaveRepository.Save(_saveData);
         }
 
+        /// <summary>
+        /// 現在の周回だけを最初からやり直す。実績の記録は保持する。
+        /// </summary>
+        public void ResetProgressForRestart()
+        {
+            _saveData = _gameSaveRepository.Load() ?? new GameSaveData();
+            _saveData.chapterId = null;
+            _saveData.currentBlockId = null;
+            _saveData.reachedBlockIds = Array.Empty<string>();
+            _saveData.extraProgress = new ExtraProgressData();
+            _gameSaveRepository.Save(_saveData);
+        }
+
         private void RestoreProgress()
         {
             _reachedChapterBlocks.Clear();

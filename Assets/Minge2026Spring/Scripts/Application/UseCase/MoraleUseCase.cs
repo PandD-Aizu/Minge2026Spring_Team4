@@ -57,6 +57,18 @@ namespace Minge2026Spring.Scripts.Application.UseCase
         }
 
         /// <summary>
+        /// 全キャラクターのやる気度を初期化する。
+        /// </summary>
+        public void ResetForRestart()
+        {
+            _cache = new InternalParameterCollection();
+            EnsureDefaultCharacters();
+            _sharedMemory.WriteData(ToSharedData(_cache));
+            _repository.SaveAsync(_cache);
+            MoraleChanged?.Invoke();
+        }
+
+        /// <summary>
         /// 現在の士気度をDTOとして取得する
         /// </summary>
         /// <returns></returns>
