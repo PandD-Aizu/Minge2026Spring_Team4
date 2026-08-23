@@ -17,8 +17,8 @@ namespace Minge2026Spring.Scripts.View
         public void SetData(Dialogue dialogue, Sprite iconAsset)
         {
             iconImage.sprite = iconAsset;
-            speakerText.text = dialogue.speaker;
-            chatText.text = dialogue.message;
+            UILocalization.Bind(speakerText, "Characters", dialogue.speakerKey);
+            UILocalization.Bind(chatText, "Dialogue", dialogue.messageKey);
             chatText.fontSizeMax = 18;
         }
     }

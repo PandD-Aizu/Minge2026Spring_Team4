@@ -8,204 +8,205 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "それでは企画開発部ゲームジャムを始めます。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_0.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_それでは企画開発部ゲームジャムを始めます。",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "おなしゃす",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_0.dialogue.001",
           "voiceEventPath": "event:/Serif/Ryuta_おなしゃす",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "おねがいします",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_0.dialogue.002",
           "voiceEventPath": "event:/Serif/ごっと_おねがいします",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "お、おねがいします",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_0.dialogue.003",
           "voiceEventPath": "event:/Serif/Milu_お、おねがいします",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "おねがいしまぁす",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_0.dialogue.004",
           "voiceEventPath": "event:/Serif/かしわもち_おねがいしまぁす",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "じゃあ、まず自己紹介しましょうか。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_0.dialogue.005",
           "voiceEventPath": "event:/Serif/主人公_じゃあ、まず自己紹介しましょうか。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "今回リーダー努めます。リーダーは初めてで少し緊張しています。よろしくお願いします。あと学部三年です。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_0.dialogue.006",
           "voiceEventPath": "event:/Serif/主人公_今回リーダー努めます。リーダーは初めてで少し緊張しています。よろしくお願いします。あと学部三年です。",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "学部二年のRyutaです！趣味は鬼畜アクション制作です！よろしくお願いします！",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_0.dialogue.007",
           "voiceEventPath": "event:/Serif/Ryuta_学部二年のRyutaです！趣味は鬼畜アクション制作です！よろしくお願いします！",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "学部三年のごっとです。Ryutaくんと同じ、プログラマーやります。ちーす。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_0.dialogue.008",
           "voiceEventPath": "event:/Serif/ごっと_学部三年のごっとです。Ryutaくんと同じ、プログラマーやります。ちーす。",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "学部一年のMiluです。えと、絵を描きます。お手柔らかに……",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_0.dialogue.009",
           "voiceEventPath": "event:/Serif/Milu_学部一年のMiluです。えと、絵を描きます。お手柔らかに……",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "学部一年のかしわもちです、サウンド担当させていただきます。一生懸命頑張ります。",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_0.dialogue.010",
           "voiceEventPath": "event:/Serif/かしわもち_学部一年のかしわもちです、サウンド担当させていただきます。一生懸命頑張ります。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "まず、今回のゲームジャムについて軽くおさらいするね",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_0.dialogue.011",
           "voiceEventPath": "event:/Serif/主人公_まず、今回のゲームジャムについて軽くおさらいするね",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "開発期間は今日一日のみ、オンラインでやっていきます",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_0.dialogue.012",
           "voiceEventPath": "event:/Serif/主人公_開発期間は今日一日のみ、オンラインでやっていきます",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "対面じゃないの若干しんどい……",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_0.dialogue.013",
           "voiceEventPath": "event:/Serif/ごっと_対面じゃないの若干しんどい……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "それは……しゃーない",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_0.dialogue.014",
           "voiceEventPath": "event:/Serif/主人公_それは……しゃーない",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "最初に企画会議をして、そのあとは各自作業とします。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_0.dialogue.015",
           "voiceEventPath": "event:/Serif/主人公_最初に企画会議をして、そのあとは各自作業とします。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "実際にゲームとして遊べる状態まで持っていけるように頑張りましょう",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_0.dialogue.016",
           "voiceEventPath": "event:/Serif/主人公_実際にゲームとして遊べる状態まで持っていけるように頑張りましょう",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "さっそく、今回作るゲームについてなんだけど……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_0.dialogue.017",
           "voiceEventPath": "event:/Serif/主人公_さっそく、今回作るゲームについてなんだけど……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "今回はアクションゲームにしようと思うんだけど、みんなどうかな",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_0.dialogue.018",
           "voiceEventPath": "event:/Serif/主人公_今回はアクションゲームにしようと思うんだけど、みんなどうかな",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "急にジャンル決めちゃっていいの？",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_0.dialogue.019",
           "voiceEventPath": "event:/Serif/ごっと_急にジャンル決めちゃっていいの？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "チーム編成するときのアンケートで、アクション作りたいって声が多かったんだよ",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_0.dialogue.020",
           "voiceEventPath": "event:/Serif/主人公_チーム編成するときのアンケートで、アクション作りたいって声が多かったんだよ",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "僕の専門分野キター",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_0.dialogue.021",
           "voiceEventPath": "event:/Serif/Ryuta_僕の専門分野キター",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "なるほどね",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_0.dialogue.022",
           "voiceEventPath": "event:/Serif/ごっと_なるほどね",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "Miluさんとかしわもち君は大丈夫？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_0.dialogue.023",
           "voiceEventPath": "event:/Serif/主人公_Miluさんとかしわもち君は大丈夫？",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "大丈夫です……多分",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_0.dialogue.024",
           "voiceEventPath": "event:/Serif/Milu_大丈夫です……多分",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "まぁ、大丈夫ですよ",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_0.dialogue.025",
           "voiceEventPath": "event:/Serif/かしわもち_まぁ、大丈夫ですよ",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "そしたら、具体的なところを詰めていこうか",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_0.dialogue.026",
           "voiceEventPath": "event:/Serif/主人公_そしたら、具体的なところを詰めていこうか",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "まずは世界観を全員で認識を一緒にしたいんだけど",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_0.dialogue.027",
           "voiceEventPath": "event:/Serif/主人公_まずは世界観を全員で認識を一緒にしたいんだけど",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "(誰に意見を聞こうか)",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_0.dialogue.028",
+          "voiceEventPath": "",
           "waitingTime": 0.0
         }
       ],
@@ -222,7 +223,7 @@
       "dialogues": [],
       "choices": [
         {
-          "choiceText": "ごっとに意見を聞く",
+          "choiceTextKey": "chapter.choice_1.choice.000",
           "nextBlockId": "Part1_1_Branch_Ans0",
           "characterAMoraleDelta": -15,
           "characterBMoraleDelta": 0,
@@ -230,7 +231,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "Ryutaに意見を聞く",
+          "choiceTextKey": "chapter.choice_1.choice.001",
           "nextBlockId": "Part1_1_Branch_Ans1",
           "characterAMoraleDelta": 35,
           "characterBMoraleDelta": 35,
@@ -238,7 +239,7 @@
           "characterDMoraleDelta": 35
         },
         {
-          "choiceText": "かしわもちに意見を聞く",
+          "choiceTextKey": "chapter.choice_1.choice.002",
           "nextBlockId": "Part1_1_Branch_Ans2",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -246,7 +247,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "Miluに意見を聞く",
+          "choiceTextKey": "chapter.choice_1.choice.003",
           "nextBlockId": "Part1_1_Branch_Ans3",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -266,36 +267,36 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "ごっとくん何か意見ある？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_1_branch_ans0.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_ごっとくん何か意見ある？",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "え、わたし？",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_1_branch_ans0.dialogue.001",
           "voiceEventPath": "event:/Serif/ごっと_え、わたし？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "うん、ほら、開発経験豊富だし",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_1_branch_ans0.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_うん、ほら、開発経験豊富だし",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "いや、私はいいので、下級生の意見を聞いたら？それに、私は全体の設計とか、仕様まとめる方が好きだから",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_1_branch_ans0.dialogue.003",
           "voiceEventPath": "event:/Serif/ごっと_いや、私はいいので、下級生の意見を聞いたら？それに、私は全体の設計とか、仕様まとめる方が好きだから",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "あ、そっか",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_1_branch_ans0.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_あ、そっか",
           "waitingTime": 0.0
         }
@@ -313,36 +314,36 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "Ryutaくん、何か意見ある？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_1_branch_ans1.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_Ryutaくん、何か意見ある？",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "え？僕ですか？！",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_1_branch_ans1.dialogue.001",
           "voiceEventPath": "event:/Serif/Ryuta_え？ぼくですか？！",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "うん、アクションゲーム専門って言ってたし、意見聞きたいなって",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_1_branch_ans1.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_うん、アクションゲーム専門って言ってたし、意見聞きたいなって",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "そうですねぇ、おやじブラザーズみたいな感じだと作りやすいですかねぇ。トラップとか作ってみたいので、洞窟みたいなのどうですか？",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_1_branch_ans1.dialogue.003",
           "voiceEventPath": "event:/Serif/Ryuta_そうですねぇ、おやじブラザーズみたいな感じだと作りやすいですかねぇ。トラップとか作ってみたいので、洞窟みたいなのどうですか？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "なるほどね……了解",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_1_branch_ans1.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_なるほどね……了解",
           "waitingTime": 0.0
         }
@@ -360,36 +361,36 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "かしわもちくん、何か意見ある？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_1_branch_ans2.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_かしわもちくん、何か意見ある？",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "うーん、俺は依頼されたらそれに合わせる主義なんでぇ……",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_1_branch_ans2.dialogue.001",
           "voiceEventPath": "event:/Serif/かしわもち_うーん、俺は依頼されたらそれに合わせる主義なんでぇ……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "曲の得意不得意とかはないの？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_1_branch_ans2.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_曲の得意不得意とかはないの？",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "あー、オーケストラとか作れたら楽しいかもです。電子音はあんまり得意じゃないですね。",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_1_branch_ans2.dialogue.003",
           "voiceEventPath": "event:/Serif/かしわもち_あー、オーケストラとか作れたら楽しいかもです。電子音はあんまり得意じゃないですね。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "オーケストラかぁ……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_1_branch_ans2.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_オーケストラかぁ……",
           "waitingTime": 0.0
         }
@@ -407,36 +408,36 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "Miluさん、何か意見ある？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_1_branch_ans3.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_Miluさん、何か意見ある？",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "わ、私ですか……",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_1_branch_ans3.dialogue.001",
           "voiceEventPath": "event:/Serif/Milu_わ、私ですか……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "うん、こんなアクションゲーム作りたい、みたいなの",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_1_branch_ans3.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_うん、こんなアクションゲーム作りたい、みたいなの",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "いかんせん、アクションゲームは専門外なので……",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_1_branch_ans3.dialogue.003",
           "voiceEventPath": "event:/Serif/Milu_いかんせん、アクションゲームは専門外なので……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "そっか",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_1_branch_ans3.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_そっか",
           "waitingTime": 0.0
         }
@@ -454,36 +455,36 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "じゃあ今回は、一般的な横スクロールアクションゲームをベースに作っていこうと思うんだけど、どうかな",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_1.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_じゃあ今回は、一般的な横スクロールアクションゲームをベースに作っていこうと思うんだけど、どうかな",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "いいとおもいます",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_1.dialogue.001",
           "voiceEventPath": "event:/Serif/かしわもち_いいとおもいます",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "そしたら、先にプログラマの二人にタスクを振ろうかな",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_1.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_そしたら、先にプログラマの二人にタスクを振ろうかな",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "まってました",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_1.dialogue.003",
           "voiceEventPath": "event:/Serif/Ryuta_まってました",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "じゃあまずは役割分担なんだけど……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_1.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_じゃあまずは役割分担なんだけど……",
           "waitingTime": 0.0
         }
@@ -501,7 +502,7 @@
       "dialogues": [],
       "choices": [
         {
-          "choiceText": "Ryuta：システム設計 / ごっと：コンテンツ",
+          "choiceTextKey": "chapter.choice_2.choice.000",
           "nextBlockId": "Part1_2_Branch_Ans0",
           "characterAMoraleDelta": -15,
           "characterBMoraleDelta": -15,
@@ -509,7 +510,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "ごっと：システム設計 / Ryuta：コンテンツ",
+          "choiceTextKey": "chapter.choice_2.choice.001",
           "nextBlockId": "Part1_2_Branch_Ans1",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -529,55 +530,57 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "Ryutaくんにシステム設計、ごっとくんはコンテンツをお願いするね",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_2_branch_ans0.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_Ryutaくんにシステム設計、ごっとくんはコンテンツをお願いするね",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "え",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_2_branch_ans0.dialogue.001",
           "voiceEventPath": "event:/Serif/ごっと_え",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "え",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_2_branch_ans0.dialogue.002",
+          "voiceEventPath": "",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "あれ、まずかった？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_2_branch_ans0.dialogue.003",
           "voiceEventPath": "event:/Serif/主人公_あれ、まずかった？",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "いや、まずくはない、けど……",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_2_branch_ans0.dialogue.004",
           "voiceEventPath": "event:/Serif/ごっと_いや、まずくはない、けど……",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "設計、できるかな……",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_2_branch_ans0.dialogue.005",
+          "voiceEventPath": "",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "多分、逆の方がいいと思う",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_2_branch_ans0.dialogue.006",
           "voiceEventPath": "event:/Serif/ごっと_多分、逆の方がいいと思う",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "そっか、ごめん……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_2_branch_ans0.dialogue.007",
           "voiceEventPath": "event:/Serif/主人公_そっか、ごめん……",
           "waitingTime": 0.0
         }
@@ -595,15 +598,16 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "ごっとくんにシステム設計、Ryutaくんはコンテンツをお願いするね",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_2_branch_ans1.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_ごっとくんにシステム設計、Ryutaくんはコンテンツをお願いするね",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "任せてください！",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_2_branch_ans1.dialogue.001",
+          "voiceEventPath": "",
           "waitingTime": 0.0
         }
       ],
@@ -620,29 +624,29 @@
       "dialogues": [
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "開発ルールとかも、私が全部決めちゃうってことでいいの？",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_2.dialogue.000",
           "voiceEventPath": "event:/Serif/ごっと_開発ルールとかも、私が全部決めちゃうってことでいいの？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "うん、コード書くのは二人だけだから、話し合ってやりやすいようにしてもらえればいいよ",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_2.dialogue.001",
           "voiceEventPath": "event:/Serif/主人公_うん、コード書くのは二人だけだから、話し合ってやりやすいようにしてもらえればいいよ",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "ええと……なんか、要望とかあれば……",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_2.dialogue.002",
           "voiceEventPath": "event:/Serif/ごっと_ええと……なんか、要望とかあれば……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "要望かぁ……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_2.dialogue.003",
           "voiceEventPath": "event:/Serif/主人公_要望かぁ……",
           "waitingTime": 0.0
         }
@@ -660,7 +664,7 @@
       "dialogues": [],
       "choices": [
         {
-          "choiceText": "要望1：一任",
+          "choiceTextKey": "chapter.choice_3.choice.000",
           "nextBlockId": "Part1_3_Branch_Ans0",
           "characterAMoraleDelta": -15,
           "characterBMoraleDelta": 0,
@@ -668,7 +672,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "要望2：拡張性重視",
+          "choiceTextKey": "chapter.choice_3.choice.001",
           "nextBlockId": "Part1_3_Branch_Ans1",
           "characterAMoraleDelta": 35,
           "characterBMoraleDelta": 0,
@@ -676,7 +680,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "要望3：素材置き場",
+          "choiceTextKey": "chapter.choice_3.choice.002",
           "nextBlockId": "Part1_3_Branch_Ans2",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -696,15 +700,15 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "まじで何にもないし、てかよくわかんないから一任するよ",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_3_branch_ans0.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_まじで何にもないし、てかよくわかんないから一任するよ",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "……そう",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_3_branch_ans0.dialogue.001",
           "voiceEventPath": "event:/Serif/ごっと_……そう",
           "waitingTime": 0.0
         }
@@ -722,29 +726,29 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "トラップの数とかボスの種類とか、どこまで増えるか不透明だから、増やせるだけ増やせるように設計してもらえるといいな",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_3_branch_ans1.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_トラップの数とかボスの種類とか、どこまで増えるか不透明だから、増やせるだけ増やせるように設計してもらえるといいな",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "そんなに大規模なゲームになるの？",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_3_branch_ans1.dialogue.001",
           "voiceEventPath": "event:/Serif/ごっと_そんなに大規模なゲームになるの？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "いや、そこまで大きくはできないけど、Ryutaくんのやる気しだいで変わるだろうから",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_3_branch_ans1.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_いや、そこまで大きくはできないけど、Ryutaくんのやる気しだいで変わるだろうから",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "なるほどね、了解",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_3_branch_ans1.dialogue.003",
           "voiceEventPath": "event:/Serif/ごっと_なるほどね、了解",
           "waitingTime": 0.0
         }
@@ -762,43 +766,43 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "素材の置き場だけ教えてほしいかな",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_3_branch_ans2.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_素材の置き場だけ教えてほしいかな",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "まぁ、いつも通りチャット欄に直貼りでいいよ",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_3_branch_ans2.dialogue.001",
           "voiceEventPath": "event:/Serif/ごっと_まぁ、いつも通りチャット欄に直貼りでいいよ",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "それだとチャット散らからない？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_3_branch_ans2.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_それだとチャット散らからない？",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "あー、じゃあgolegoleクラウド使いましょう",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_3_branch_ans2.dialogue.003",
           "voiceEventPath": "event:/Serif/ごっと_あー、じゃあgolegoleクラウド使いましょう",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "じゃあ、サークルで使ってるやつにフォルダ作っておくね",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_3_branch_ans2.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_じゃあ、サークルで使ってるやつにフォルダ作っておくね",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "了解",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_3_branch_ans2.dialogue.005",
           "voiceEventPath": "event:/Serif/ごっと_了解",
           "waitingTime": 0.0
         }
@@ -816,36 +820,36 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "逆にごっとくんがやりたいこととかある？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_3.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_逆にごっとくんがやりたいこととかある？",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "いや、特には。それよりも、ちゃんとゲームとして動くもの作りたいから。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_3.dialogue.001",
           "voiceEventPath": "event:/Serif/ごっと_いや、特には。それよりも、ちゃんとゲームとして動くもの作りたいから。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "あー、そういえば、進捗報告ってどれくらいの頻度がやりやすい？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_3.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_あー、そういえば、進捗報告ってどれくらいの頻度がやりやすい？",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "それは全体に合わせるよ。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_3.dialogue.003",
           "voiceEventPath": "event:/Serif/ごっと_それは全体に合わせるよ。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "じゃあ……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_3.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_じゃあ……",
           "waitingTime": 0.0
         }
@@ -863,7 +867,7 @@
       "dialogues": [],
       "choices": [
         {
-          "choiceText": "頻度1：なし",
+          "choiceTextKey": "chapter.choice_4.choice.000",
           "nextBlockId": "Part1_4_Branch_Ans0",
           "characterAMoraleDelta": -15,
           "characterBMoraleDelta": 0,
@@ -871,7 +875,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "頻度2：1時間ごと",
+          "choiceTextKey": "chapter.choice_4.choice.001",
           "nextBlockId": "Part1_4_Branch_Ans1",
           "characterAMoraleDelta": 35,
           "characterBMoraleDelta": 0,
@@ -879,7 +883,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "頻度3：20分ごと",
+          "choiceTextKey": "chapter.choice_4.choice.002",
           "nextBlockId": "Part1_4_Branch_Ans2",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -899,43 +903,43 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "時間も少ないし、進捗報告いらないよね",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_4_branch_ans0.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_時間も少ないし、進捗報告いらないよね",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "いや、それはさすがに……",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_4_branch_ans0.dialogue.001",
           "voiceEventPath": "event:/Serif/ごっと_いや、それはさすがに……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "そう？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_4_branch_ans0.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_そう？",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "ゲームジャムだから設計シンプルなんだよ。その分リカバリー効かないし",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_4_branch_ans0.dialogue.003",
           "voiceEventPath": "event:/Serif/ごっと_ゲームジャムだから設計シンプルなんだよ。その分リカバリー効かないし",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "へー、じゃあガッチガチに設計してよ",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_4_branch_ans0.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_へー、じゃあガッチガチに設計してよ",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "そういうことじゃないんだよなぁ……",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_4_branch_ans0.dialogue.005",
           "voiceEventPath": "event:/Serif/ごっと_そういうことじゃないんだよなぁ……",
           "waitingTime": 0.0
         }
@@ -953,29 +957,29 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "1時間ごとに軽く報告してもらおうかな",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_4_branch_ans1.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_1時間ごとに軽く報告してもらおうかな",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "まぁ、そのくらいならちょうどいい",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_4_branch_ans1.dialogue.001",
           "voiceEventPath": "event:/Serif/ごっと_まぁ、そのくらいならちょうどいい",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "Ryutaくんとの報連相はもっと密にしてほしい",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_4_branch_ans1.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_Ryutaくんとの報連相はもっと密にしてほしい",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "そのつもりではいる。グラフィッカとサウンドは任せる。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_4_branch_ans1.dialogue.003",
           "voiceEventPath": "event:/Serif/ごっと_そのつもりではいる。グラフィッカとサウンドは任せる。",
           "waitingTime": 0.0
         }
@@ -993,43 +997,43 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "20分ごとに会議しよう",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_4_branch_ans2.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_20分ごとに会議しよう",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "……さすがに多すぎない？",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_4_branch_ans2.dialogue.001",
           "voiceEventPath": "event:/Serif/ごっと_……さすがに多すぎない？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "え、そうかな",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_4_branch_ans2.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_え、そうかな",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "うん、普通に作業止まると思う",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_4_branch_ans2.dialogue.003",
           "voiceEventPath": "event:/Serif/ごっと_うん、普通に作業止まると思う",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "まぁ、コミュニケーションは多いに越したことないじゃん？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_4_branch_ans2.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_まぁ、コミュニケーションは多いに越したことないじゃん？",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "は、はぁ",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_4_branch_ans2.dialogue.005",
           "voiceEventPath": "event:/Serif/ごっと_は、はぁ",
           "waitingTime": 0.0
         }
@@ -1047,43 +1051,43 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "じゃあRyutaくんだけど……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_4.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_じゃあRyutaくんだけど……",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "僕は何から手を付けたらいいですかね",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_4.dialogue.001",
           "voiceEventPath": "event:/Serif/Ryuta_僕は何から手を付けたらいいですかね",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "割と自由でいいと思うんだけど、逆になにからやりたい？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_4.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_割と自由でいいと思うんだけど、逆になにからやりたい？",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "初見殺し",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_4.dialogue.003",
           "voiceEventPath": "event:/Serif/Ryuta_初見殺し",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "だよね",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_4.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_だよね",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "そしたら……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_4.dialogue.005",
           "voiceEventPath": "event:/Serif/主人公_そしたら……",
           "waitingTime": 0.0
         }
@@ -1101,7 +1105,7 @@
       "dialogues": [],
       "choices": [
         {
-          "choiceText": "タスク1：トラップ自由",
+          "choiceTextKey": "chapter.choice_5.choice.000",
           "nextBlockId": "Part1_5_Branch_Ans0",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 35,
@@ -1109,7 +1113,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "タスク2：ステージ作り優先",
+          "choiceTextKey": "chapter.choice_5.choice.001",
           "nextBlockId": "Part1_5_Branch_Ans1",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -1117,7 +1121,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "タスク3：設計待ち",
+          "choiceTextKey": "chapter.choice_5.choice.002",
           "nextBlockId": "Part1_5_Branch_Ans2",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": -15,
@@ -1137,78 +1141,78 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "トラップ好きなだけ作っていいよ",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_5_branch_ans0.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_トラップ好きなだけ作っていいよ",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "いいんですか？！",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_5_branch_ans0.dialogue.001",
           "voiceEventPath": "event:/Serif/Ryuta_いいんですか？！",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "ステージづくりのネタ欲しいしね",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_5_branch_ans0.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_ステージづくりのネタ欲しいしね",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "それは……",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_5_branch_ans0.dialogue.003",
           "voiceEventPath": "event:/Serif/ごっと_それは……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "なんかまずかった……？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_5_branch_ans0.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_なんかまずかった……？",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "グラフィッカ死なない？",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_5_branch_ans0.dialogue.005",
           "voiceEventPath": "event:/Serif/ごっと_グラフィッカ死なない？",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "まぁ……はい",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_5_branch_ans0.dialogue.006",
           "voiceEventPath": "event:/Serif/Milu_まぁ……はい",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "あ、たしかに……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_5_branch_ans0.dialogue.007",
           "voiceEventPath": "event:/Serif/主人公_あ、たしかに……",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "大丈夫です！僕が描くんで！",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_5_branch_ans0.dialogue.008",
           "voiceEventPath": "event:/Serif/Ryuta_大丈夫です！僕が描くんで！",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "え、あ、そう……ですか……？",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_5_branch_ans0.dialogue.009",
           "voiceEventPath": "event:/Serif/Milu_え、あ、そう……ですか……？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "じゃあ、まあ、うん……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_5_branch_ans0.dialogue.010",
           "voiceEventPath": "event:/Serif/主人公_じゃあ、まあ、うん……",
           "waitingTime": 0.0
         }
@@ -1226,29 +1230,29 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "ステージ作りを最初にしてほしいな",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_5_branch_ans1.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_ステージ作りを最初にしてほしいな",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "ステージですか？",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_5_branch_ans1.dialogue.001",
           "voiceEventPath": "event:/Serif/Ryuta_ステージですか？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "うん。グラフィッカの素材を明確にするためにも、どんなステージにしたいか考えてほしいんだ。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_5_branch_ans1.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_うん。グラフィッカの素材を明確にするためにも、どんなステージにしたいか考えてほしいんだ。",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "なるほどです。了解しました！",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_5_branch_ans1.dialogue.003",
           "voiceEventPath": "event:/Serif/Ryuta_なるほどです。了解しました！",
           "waitingTime": 0.0
         }
@@ -1266,42 +1270,44 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "ごっとくんの指示を待っててくれるかな",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_5_branch_ans2.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_ごっとくんの指示を待っててくれるかな",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "じゃあ、ごっとさんの指示があるまでは休憩ですか？",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_5_branch_ans2.dialogue.001",
           "voiceEventPath": "event:/Serif/Ryuta_じゃあ、ごっとさんの指示があるまでは休憩ですか？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "そう、なるね",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_5_branch_ans2.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_そう、なるね",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "設計が終わらない分には何もできないからね",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_5_branch_ans2.dialogue.003",
           "voiceEventPath": "event:/Serif/主人公_設計が終わらない分には何もできないからね",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "急いで終わらせます",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_5_branch_ans2.dialogue.004",
+          "voiceEventPath": "",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "了解しました",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_5_branch_ans2.dialogue.005",
+          "voiceEventPath": "",
           "waitingTime": 0.0
         }
       ],
@@ -1318,50 +1324,50 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "あ、トラップに手を付ける前に、プレイヤーの基本操作を任せちゃってもいいかな",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_5.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_あ、トラップに手を付ける前に、プレイヤーの基本操作を任せちゃってもいいかな",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "わかりました！",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_5.dialogue.001",
           "voiceEventPath": "event:/Serif/Ryuta_わかりました！",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "歩行以外の操作はごっとくんが拡張していく感じでお願いね",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_5.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_歩行以外の操作はごっとくんが拡張していく感じでお願いね",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "了解です",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_5.dialogue.003",
           "voiceEventPath": "event:/Serif/ごっと_了解です",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "あとは、レベルデザインだけど……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_5.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_あとは、レベルデザインだけど……",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "そこはRyutaくんに任せたいかな。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_5.dialogue.005",
           "voiceEventPath": "event:/Serif/ごっと_そこはRyutaくんに任せたいかな。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "そうだよね、じゃあ……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_5.dialogue.006",
           "voiceEventPath": "event:/Serif/主人公_そうだよね、じゃあ……",
           "waitingTime": 0.0
         }
@@ -1379,7 +1385,7 @@
       "dialogues": [],
       "choices": [
         {
-          "choiceText": "難易度1：好きに作る",
+          "choiceTextKey": "chapter.choice_6.choice.000",
           "nextBlockId": "Part1_6_Branch_Ans0",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 35,
@@ -1387,7 +1393,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "難易度2：初心者向け",
+          "choiceTextKey": "chapter.choice_6.choice.001",
           "nextBlockId": "Part1_6_Branch_Ans1",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -1395,7 +1401,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "難易度3：高難易度",
+          "choiceTextKey": "chapter.choice_6.choice.002",
           "nextBlockId": "Part1_6_Branch_Ans2",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -1415,43 +1421,43 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "Ryutaくんの好きな難易度で作ってみよう！",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_6_branch_ans0.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_Ryutaくんの好きな難易度で作ってみよう！",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "え、いいんですか！",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_6_branch_ans0.dialogue.001",
           "voiceEventPath": "event:/Serif/Ryuta_え、いいんですか！",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "いや……まぁ……うん……",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_6_branch_ans0.dialogue.002",
           "voiceEventPath": "event:/Serif/ごっと_いや……まぁ……うん……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "え？まずかった？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_6_branch_ans0.dialogue.003",
           "voiceEventPath": "event:/Serif/主人公_え？まずかった？",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "全力出しますよ！",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_6_branch_ans0.dialogue.004",
           "voiceEventPath": "event:/Serif/Ryuta_全力出しますよ！",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "……まぁ……うん",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_6_branch_ans0.dialogue.005",
           "voiceEventPath": "event:/Serif/ごっと_……まぁ……うん",
           "waitingTime": 0.0
         }
@@ -1469,15 +1475,15 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "一旦、誰でもクリアできるくらいにしよう",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_6_branch_ans1.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_一旦、誰でもクリアできるくらいにしよう",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "まぁ、その方が遊びやすいですもんね",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_6_branch_ans1.dialogue.001",
           "voiceEventPath": "event:/Serif/Ryuta_まぁ、その方が遊びやすいですもんね",
           "waitingTime": 0.0
         }
@@ -1495,15 +1501,15 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "とにかく難しくしてインパクト出そう",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_6_branch_ans2.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_とにかく難しくしてインパクト出そう",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "難しいだけだと理不尽になるかもです",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_6_branch_ans2.dialogue.001",
           "voiceEventPath": "event:/Serif/Ryuta_難しいだけだと理不尽になるかもです",
           "waitingTime": 0.0
         }
@@ -1521,50 +1527,50 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "そしたら、Ryutaくん関連でグラフィッカ先にタスク決めようか",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_6.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_そしたら、Ryutaくん関連でグラフィッカ先にタスク決めようか",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "はい",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_6.dialogue.001",
           "voiceEventPath": "event:/Serif/Milu_はい",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "今回はタイルベースで作ろうと思うんだけど、イメージできる？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_6.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_今回はタイルベースで作ろうと思うんだけど、イメージできる？",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "なんか、ブロックの組み合わせみたいな、あの感じですよね。",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_6.dialogue.003",
           "voiceEventPath": "event:/Serif/Milu_なんか、ブロックの組み合わせみたいな、あの感じですよね。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "そうそう。ハンドメイドステージだとステージ増えるごとに負担がすごいことになっちゃうからね",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_6.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_そうそう。ハンドメイドステージだとステージ増えるごとに負担がすごいことになっちゃうからね",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "わかりました。",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_6.dialogue.005",
           "voiceEventPath": "event:/Serif/Milu_わかりました。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "とりあえずステージの素材に関してなんだけど……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_6.dialogue.006",
           "voiceEventPath": "event:/Serif/主人公_とりあえずステージの素材に関してなんだけど……",
           "waitingTime": 0.0
         }
@@ -1582,7 +1588,7 @@
       "dialogues": [],
       "choices": [
         {
-          "choiceText": "素材1：フリー素材推奨",
+          "choiceTextKey": "chapter.choice_7.choice.000",
           "nextBlockId": "Part1_7_Branch_Ans0",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -1590,7 +1596,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "素材2：後回し",
+          "choiceTextKey": "chapter.choice_7.choice.001",
           "nextBlockId": "Part1_7_Branch_Ans1",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -1598,7 +1604,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "素材3：仮素材作成",
+          "choiceTextKey": "chapter.choice_7.choice.002",
           "nextBlockId": "Part1_7_Branch_Ans2",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -1618,29 +1624,29 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "大変だろうからフリー素材でいいよ",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_7_branch_ans0.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_大変だろうからフリー素材でいいよ",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "え、それでいいんですか",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_7_branch_ans0.dialogue.001",
           "voiceEventPath": "event:/Serif/Milu_え、それでいいんですか",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "うん、だってすごい量あるよ",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_7_branch_ans0.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_うん、だってすごい量あるよ",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "そう、ですか……",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_7_branch_ans0.dialogue.003",
           "voiceEventPath": "event:/Serif/Milu_そう、ですか……",
           "waitingTime": 0.0
         }
@@ -1658,29 +1664,29 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "一旦後回しでいいや",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_7_branch_ans1.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_一旦後回しでいいや",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "え、いいんですか？",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_7_branch_ans1.dialogue.001",
           "voiceEventPath": "event:/Serif/Milu_え、いいんですか？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "Ryutaくんの案が出ないと描くものもかけないからね。先にプレイヤーを描いてほしいんだ",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_7_branch_ans1.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_Ryutaくんの案が出ないと描くものもかけないからね。先にプレイヤーを描いてほしいんだ",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "なるほど、わかりました",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_7_branch_ans1.dialogue.003",
           "voiceEventPath": "event:/Serif/Milu_なるほど、わかりました",
           "waitingTime": 0.0
         }
@@ -1698,43 +1704,43 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "仮素材だけ用意してほしいな",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_7_branch_ans2.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_仮素材だけ用意してほしいな",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "仮ってどれくらい描けばいいですか？",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_7_branch_ans2.dialogue.001",
           "voiceEventPath": "event:/Serif/Milu_仮ってどれくらい描けばいいですか？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "一色で塗りつぶした四角でいいよ。サイズは64×64でお願い。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_7_branch_ans2.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_一色で塗りつぶした四角でいいよ。サイズは64×64でお願い。",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "今回使うタイルはこのサイズで統一になるんですか？",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_7_branch_ans2.dialogue.003",
           "voiceEventPath": "event:/Serif/Milu_今回使うタイルはこのサイズで統一になるんですか？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "うん。プレイヤーのサイズもこれを基準にしてほしい。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_7_branch_ans2.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_うん。プレイヤーのサイズもこれを基準にしてほしい。",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "イメージがつかめてきました。ありがとうございます",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_7_branch_ans2.dialogue.005",
           "voiceEventPath": "event:/Serif/Milu_イメージがつかめてきました。ありがとうございます",
           "waitingTime": 0.0
         }
@@ -1752,43 +1758,43 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "じゃあ続けてプレイヤーについてなんだけど、描きたいイメージとかある？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_7.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_じゃあ続けてプレイヤーについてなんだけど、描きたいイメージとかある？",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "まだ世界観が定まっていないので、想像できていないですね",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_7.dialogue.001",
           "voiceEventPath": "event:/Serif/Milu_まだ世界観が定まっていないので、想像できていないですね",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "人と動物だったら、どっちの方が描きやすい？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_7.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_人と動物だったら、どっちの方が描きやすい？",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "圧倒的に人ですね。正直、モンスターを描けるか怪しいです。",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_7.dialogue.003",
           "voiceEventPath": "event:/Serif/Milu_圧倒的に人ですね。正直、モンスターを描けるか怪しいです。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "なるほどね。まぁ、モンスターに関しては後々決めようか。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_7.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_なるほどね。まぁ、モンスターに関しては後々決めようか。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "じゃあ、そうだなぁ……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_7.dialogue.005",
           "voiceEventPath": "event:/Serif/主人公_じゃあ、そうだなぁ……",
           "waitingTime": 0.0
         }
@@ -1806,7 +1812,7 @@
       "dialogues": [],
       "choices": [
         {
-          "choiceText": "デザイン1：自由発想",
+          "choiceTextKey": "chapter.choice_8.choice.000",
           "nextBlockId": "Part1_8_Branch_Ans0",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -1814,7 +1820,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "デザイン2：棒人間",
+          "choiceTextKey": "chapter.choice_8.choice.001",
           "nextBlockId": "Part1_8_Branch_Ans1",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -1822,7 +1828,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "デザイン3：具体的な指定",
+          "choiceTextKey": "chapter.choice_8.choice.002",
           "nextBlockId": "Part1_8_Branch_Ans2",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -1842,43 +1848,43 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "世界観とか無視でもいいから好きなようにプレイヤーを描いてみて",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_8_branch_ans0.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_世界観とか無視でもいいから好きなようにプレイヤーを描いてみて",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "え",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_8_branch_ans0.dialogue.001",
           "voiceEventPath": "event:/Serif/Milu_え",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "ストーリーとかも決めなきゃいけなくなると思うから、Miluさんの思う主人公を描いてみてほしいんだ",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_8_branch_ans0.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_ストーリーとかも決めなきゃいけなくなると思うから、Miluさんの思う主人公を描いてみてほしいんだ",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "キャラデザから連想してストーリーを決めるってことですか？",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_8_branch_ans0.dialogue.003",
           "voiceEventPath": "event:/Serif/Milu_キャラデザから連想してストーリーを決めるってことですか？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "そういうこと",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_8_branch_ans0.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_そういうこと",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "じゃあ、やりたいようにやってみます",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_8_branch_ans0.dialogue.005",
           "voiceEventPath": "event:/Serif/Milu_じゃあ、やりたいようにやってみます",
           "waitingTime": 0.0
         }
@@ -1896,43 +1902,43 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "棒人間とかでもいいよ",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_8_branch_ans1.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_棒人間とかでもいいよ",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "え、そんな感じでいいんですか？",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_8_branch_ans1.dialogue.001",
           "voiceEventPath": "event:/Serif/Milu_え、そんな感じでいいんですか？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "うん。差分だって描かなきゃいけないし、大変でしょ？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_8_branch_ans1.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_うん。差分だって描かなきゃいけないし、大変でしょ？",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "それは、そうですけど……",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_8_branch_ans1.dialogue.003",
           "voiceEventPath": "event:/Serif/Milu_それは、そうですけど……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "それくらい楽な感じでいいからね",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_8_branch_ans1.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_それくらい楽な感じでいいからね",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "は、はぁ……",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_8_branch_ans1.dialogue.005",
           "voiceEventPath": "event:/Serif/Milu_は、はぁ……",
           "waitingTime": 0.0
         }
@@ -1950,29 +1956,29 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "差分二枚で、探検者っぽい少年、ってイメージで描けそう？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_8_branch_ans2.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_差分二枚で、探検者っぽい少年、ってイメージで描けそう？",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "……なんとなく、描けると思います。",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_8_branch_ans2.dialogue.001",
           "voiceEventPath": "event:/Serif/Milu_……なんとなく、描けると思います。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "細かいデザインは一任するけど、アドベンチャー的な世界観ならストーリーも組みやすそうだし。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_8_branch_ans2.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_細かいデザインは一任するけど、アドベンチャー的な世界観ならストーリーも組みやすそうだし。",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "いいと思います。了解しました。",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_8_branch_ans2.dialogue.003",
           "voiceEventPath": "event:/Serif/Milu_いいと思います。了解しました。",
           "waitingTime": 0.0
         }
@@ -1990,22 +1996,22 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "じゃあ、最後にかしわもちくん。おまたせです。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_8.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_じゃあ、最後にかしわもちくん。おまたせです。",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "はーい",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_8.dialogue.001",
           "voiceEventPath": "event:/Serif/かしわもち_はーい",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "BGMと効果音をお願いしたいんだけど……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_8.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_BGMと効果音をお願いしたいんだけど……",
           "waitingTime": 0.0
         }
@@ -2023,7 +2029,7 @@
       "dialogues": [],
       "choices": [
         {
-          "choiceText": "BGM1：緊張感のある曲",
+          "choiceTextKey": "chapter.choice_9.choice.000",
           "nextBlockId": "Part1_9_Branch_Ans0",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -2031,7 +2037,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "BGM2：おまかせ",
+          "choiceTextKey": "chapter.choice_9.choice.001",
           "nextBlockId": "Part1_9_Branch_Ans1",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -2039,7 +2045,7 @@
           "characterDMoraleDelta": -15
         },
         {
-          "choiceText": "BGM3：オーケストラ提案",
+          "choiceTextKey": "chapter.choice_9.choice.002",
           "nextBlockId": "Part1_9_Branch_Ans2",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -2059,43 +2065,43 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "緊張感のあるアドベンチャーっぽい曲を作ってほしいんだ",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_9_branch_ans0.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_緊張感のあるアドベンチャーっぽい曲を作ってほしいんだ",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "緊張感、ですか",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_9_branch_ans0.dialogue.001",
           "voiceEventPath": "event:/Serif/かしわもち_緊張感、ですか",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "音楽に詳しくないから、雰囲気でしか言えないんだけど、いけそう？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_9_branch_ans0.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_音楽に詳しくないから、雰囲気でしか言えないんだけど、いけそう？",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "世界観とかは取り込まなくていいんですか？",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_9_branch_ans0.dialogue.003",
           "voiceEventPath": "event:/Serif/かしわもち_世界観とかは取り込まなくていいんですか？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "世界観がぶれないようにするのが一番だけど、どんなステージでも汎用的に使える方がいいかなと思って",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_9_branch_ans0.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_世界観がぶれないようにするのが一番だけど、どんなステージでも汎用的に使える方がいいかなと思って",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "そういうことですか。なるほど、作ってみますね。",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_9_branch_ans0.dialogue.005",
           "voiceEventPath": "event:/Serif/かしわもち_そういうことですか。なるほど、作ってみますね。",
           "waitingTime": 0.0
         }
@@ -2113,29 +2119,29 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "まぁ、いい感じで宜しく",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_9_branch_ans1.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_まぁ、いい感じで宜しく",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "い、いい感じって、どんな……",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_9_branch_ans1.dialogue.001",
           "voiceEventPath": "event:/Serif/かしわもち_い、いい感じって、どんな……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "なんか、いい感じ！",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_9_branch_ans1.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_なんか、いい感じ！",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "まぁ、はい……",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_9_branch_ans1.dialogue.003",
           "voiceEventPath": "event:/Serif/かしわもち_まぁ、はい……",
           "waitingTime": 0.0
         }
@@ -2153,36 +2159,36 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "オーケストラとかどうかな",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_9_branch_ans2.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_オーケストラとかどうかな",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "お、いいですね",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_9_branch_ans2.dialogue.001",
           "voiceEventPath": "event:/Serif/かしわもち_お、いいですね",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "基本的にかしわもちくんのやりたいことを尊重するよ",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_9_branch_ans2.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_基本的にかしわもちくんのやりたいことを尊重するよ",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "ありがとうございます",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_9_branch_ans2.dialogue.003",
           "voiceEventPath": "event:/Serif/かしわもち_ありがとうございます",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "好きにしてもらって大丈夫だからね",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_9_branch_ans2.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_好きにしてもらって大丈夫だからね",
           "waitingTime": 0.0
         }
@@ -2200,22 +2206,23 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "あとは効果音だけど",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_9.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_あとは効果音だけど",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "言ってもらえればいくらでも作りますよ",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_9.dialogue.001",
           "voiceEventPath": "event:/Serif/かしわもち_言ってもらえればいくらでも作りますよ",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "本当に心強いなぁ　そしたら……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_9.dialogue.002",
+          "voiceEventPath": "",
           "waitingTime": 0.0
         }
       ],
@@ -2232,7 +2239,7 @@
       "dialogues": [],
       "choices": [
         {
-          "choiceText": "効果音1：フリー効果音",
+          "choiceTextKey": "chapter.choice_10.choice.000",
           "nextBlockId": "Part1_10_Branch_Ans0",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -2240,7 +2247,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "効果音2：自作大量要求",
+          "choiceTextKey": "chapter.choice_10.choice.001",
           "nextBlockId": "Part1_10_Branch_Ans1",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -2248,7 +2255,7 @@
           "characterDMoraleDelta": 0
         },
         {
-          "choiceText": "効果音3：少量・汎用要求",
+          "choiceTextKey": "chapter.choice_10.choice.002",
           "nextBlockId": "Part1_10_Branch_Ans2",
           "characterAMoraleDelta": 0,
           "characterBMoraleDelta": 0,
@@ -2268,43 +2275,43 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "いい感じのフリー効果音持ってきて",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_10_branch_ans0.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_いい感じのフリー効果音持ってきて",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "え",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_10_branch_ans0.dialogue.001",
           "voiceEventPath": "event:/Serif/かしわもち_え",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "BGMも作って効果音も作ってだなんて大変でしょ",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_10_branch_ans0.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_BGMも作って効果音も作ってだなんて大変でしょ",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "まぁ、それはそうですけど",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_10_branch_ans0.dialogue.003",
           "voiceEventPath": "event:/Serif/かしわもち_まぁ、それはそうですけど",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "効果音くらい手を抜いてもらって大丈夫だから",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_10_branch_ans0.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_効果音くらい手を抜いてもらって大丈夫だから",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "ううん……",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_10_branch_ans0.dialogue.005",
           "voiceEventPath": "event:/Serif/かしわもち_ううん……",
           "waitingTime": 0.0
         }
@@ -2322,29 +2329,29 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "できるだけたくさん作ってほしいな",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_10_branch_ans1.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_できるだけたくさん作ってほしいな",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "了解です",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_10_branch_ans1.dialogue.001",
           "voiceEventPath": "event:/Serif/かしわもち_了解です",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "本当に大丈夫？無理言ってない？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_10_branch_ans1.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_本当に大丈夫？無理言ってない？",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "全然ですよ。任せてください。",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_10_branch_ans1.dialogue.003",
           "voiceEventPath": "event:/Serif/かしわもち_全然ですよ。任せてください。",
           "waitingTime": 0.0
         }
@@ -2362,36 +2369,36 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "BGMに気合入れてもらって、効果音は少しで大丈夫だよ",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_10_branch_ans2.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_BGMに気合入れてもらって、効果音は少しで大丈夫だよ",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "いいんですか？",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_10_branch_ans2.dialogue.001",
           "voiceEventPath": "event:/Serif/かしわもち_いいんですか？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "うん、使いまわせる効果音とか作ってもらえれば助かるな",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_10_branch_ans2.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_うん、使いまわせる効果音とか作ってもらえれば助かるな",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "わかりました",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_10_branch_ans2.dialogue.003",
           "voiceEventPath": "event:/Serif/かしわもち_わかりました",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "かしわもちくんの音楽に期待してるよ",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_10_branch_ans2.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_かしわもちくんの音楽に期待してるよ",
           "waitingTime": 0.0
         }
@@ -2409,99 +2416,99 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "よし、こんな感じかな",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_10.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_よし、こんな感じかな",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "まぁ、一旦開発の全体像は見えたかな",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_10.dialogue.001",
           "voiceEventPath": "event:/Serif/ごっと_まぁ、一旦開発の全体像は見えたかな",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "気合い入れて開発しますよ",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_10.dialogue.002",
           "voiceEventPath": "event:/Serif/Ryuta_気合い入れて開発しますよ",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "素材できたら報告しますね",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_10.dialogue.003",
           "voiceEventPath": "event:/Serif/Milu_素材できたら報告しますね",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "僕もそうします",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_10.dialogue.004",
           "voiceEventPath": "event:/Serif/かしわもち_僕もそうします",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "そしたら、みんな作業に移ってください",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_10.dialogue.005",
           "voiceEventPath": "event:/Serif/主人公_そしたら、みんな作業に移ってください",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "最後の実装、マージしました",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.part1_10.dialogue.006",
           "voiceEventPath": "event:/Serif/Ryuta_最後の実装、マージしました",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "ありがとう。そしたらビルドするね",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_10.dialogue.007",
           "voiceEventPath": "event:/Serif/ごっと_ありがとう。そしたらビルドするね",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "お、ついに完成？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_10.dialogue.008",
           "voiceEventPath": "event:/Serif/主人公_お、ついに完成？",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "うん。なんとか完成したよ。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_10.dialogue.009",
           "voiceEventPath": "event:/Serif/ごっと_うん。なんとか完成したよ。",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "もう一か月はタブレット見たくないかも……",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.part1_10.dialogue.010",
           "voiceEventPath": "event:/Serif/Milu_もう一か月はタブレット見たくないかも……",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "僕は若干物足りないかも",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.part1_10.dialogue.011",
           "voiceEventPath": "event:/Serif/かしわもち_僕は若干物足りないかも",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "そしたら、一旦テストプレイとしましょうか",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.part1_10.dialogue.012",
           "voiceEventPath": "event:/Serif/主人公_そしたら、一旦テストプレイとしましょうか",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "ビルドは終わってるので、いつでもどうぞ。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.part1_10.dialogue.013",
           "voiceEventPath": "event:/Serif/ごっと_ビルドは終わってるので、いつでもどうぞ。",
           "waitingTime": 0.0
         }
@@ -2519,141 +2526,141 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "これは……いいね",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_a.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_これは……いいね",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "onedayゲームジャムにしては、いい出来だと思うな。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_a.dialogue.001",
           "voiceEventPath": "event:/Serif/ごっと_onedayゲームジャムにしては、いい出来だと思うな。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "ごっとくん、満足そうだね",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_a.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_ごっとくん、満足そうだね",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "まぁ、合格点ってところ、かな",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_a.dialogue.003",
           "voiceEventPath": "event:/Serif/ごっと_まぁ、合格点ってところ、かな",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "さらに上を目指す姿勢、見習わなきゃだなぁ",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_a.dialogue.004",
           "voiceEventPath": "event:/Serif/Ryuta_さらに上を目指す姿勢、見習わなきゃだなぁ",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "Miluさんとかしわもちくんは、実際遊んでみてどう？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_a.dialogue.005",
           "voiceEventPath": "event:/Serif/主人公_Miluさんとかしわもちくんは、実際遊んでみてどう？",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "素材足りててよかった……",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_a.dialogue.006",
           "voiceEventPath": "event:/Serif/Milu_素材足りててよかった……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "あ、そっちの感想？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_a.dialogue.007",
           "voiceEventPath": "event:/Serif/主人公_あ、そっちの感想？",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "効果音の実装完璧じゃないですか",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_a.dialogue.008",
           "voiceEventPath": "event:/Serif/ごっと_効果音の実装完璧じゃないですか",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "イメージ通りに実装できてよかったぁ",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_a.dialogue.009",
           "voiceEventPath": "event:/Serif/Ryuta_イメージ通りに実装できてよかったぁ",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "と、まぁこんな感じ、かな",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_a.dialogue.010",
           "voiceEventPath": "event:/Serif/主人公_と、まぁこんな感じ、かな",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "え？",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_a.dialogue.011",
           "voiceEventPath": "event:/Serif/ごっと_え？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "え？って何？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_a.dialogue.012",
           "voiceEventPath": "event:/Serif/主人公_え？って何？",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "これで終わりなわけないでしょ？",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_a.dialogue.013",
           "voiceEventPath": "event:/Serif/ごっと_これで終わりなわけないでしょ？",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "え？",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_a.dialogue.014",
           "voiceEventPath": "event:/Serif/Ryuta_え？",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "一日で終わらせたらもったいないじゃないですか",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_a.dialogue.015",
           "voiceEventPath": "event:/Serif/ごっと_一日で終わらせたらもったいないじゃないですか",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "……ってことは",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_a.dialogue.016",
           "voiceEventPath": "event:/Serif/Milu_……ってことは",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "継続開発らしいですよ",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.ending_a.dialogue.017",
           "voiceEventPath": "event:/Serif/かしわもち_継続開発らしいですよ",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "まぁ、頑張りましょうよ！",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_a.dialogue.018",
           "voiceEventPath": "event:/Serif/Ryuta_まぁ、頑張りましょうよ！",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "は、はは……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_a.dialogue.019",
           "voiceEventPath": "event:/Serif/主人公_は、はは……",
           "waitingTime": 0.0
         }
@@ -2671,92 +2678,92 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "……完成、かな？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_b.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_……完成、かな？",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "まぁ、動きますね。",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_b.dialogue.001",
           "voiceEventPath": "event:/Serif/Ryuta_まぁ、動きますね。",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "素材も、一応全部あります。",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_b.dialogue.002",
           "voiceEventPath": "event:/Serif/Milu_素材も、一応全部あります。",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "曲も流れてますねぇ。",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.ending_b.dialogue.003",
           "voiceEventPath": "event:/Serif/かしわもち_曲も流れてますねぇ。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "なんか……ゲームっぽくはなったね。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_b.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_なんか……ゲームっぽくはなったね。",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "でも、このゲームって結局何が面白いの？",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_b.dialogue.005",
           "voiceEventPath": "event:/Serif/ごっと_でも、このゲームって結局何が面白いの？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_b.dialogue.006",
           "voiceEventPath": "event:/Serif/主人公_……",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "途中から誰も何も決めなくなっちゃいましたもんね。",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_b.dialogue.007",
           "voiceEventPath": "event:/Serif/Ryuta_途中から誰も何も決めなくなっちゃいましたもんね。",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "私は言われたものを描いただけですし……",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_b.dialogue.008",
           "voiceEventPath": "event:/Serif/Milu_私は言われたものを描いただけですし……",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "僕も依頼通り作っただけですね。",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.ending_b.dialogue.009",
           "voiceEventPath": "event:/Serif/かしわもち_僕も依頼通り作っただけですね。",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "誰も間違ってはいない。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_b.dialogue.010",
           "voiceEventPath": "event:/Serif/ごっと_誰も間違ってはいない。",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "誰もゲームを作ってなかった。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_b.dialogue.011",
           "voiceEventPath": "event:/Serif/ごっと_誰もゲームを作ってなかった。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "……ごめん。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_b.dialogue.012",
           "voiceEventPath": "event:/Serif/主人公_……ごめん。",
           "waitingTime": 0.0
         }
@@ -2774,76 +2781,78 @@
       "dialogues": [
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "クリアできます。",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_c.dialogue.000",
           "voiceEventPath": "event:/Serif/Ryuta_クリアできます。",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "素材も全部あります。",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_c.dialogue.001",
           "voiceEventPath": "event:/Serif/Milu_素材も全部あります。",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "音も鳴ります。",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.ending_c.dialogue.002",
           "voiceEventPath": "event:/Serif/かしわもち_音も鳴ります。",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "バグもありません。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_c.dialogue.003",
           "voiceEventPath": "event:/Serif/ごっと_バグもありません。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_c.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_……",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "……",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_c.dialogue.005",
+          "voiceEventPath": "",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "……",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_c.dialogue.006",
           "voiceEventPath": "event:/Serif/Milu_……",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "……",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.ending_c.dialogue.007",
           "voiceEventPath": "event:/Serif/かしわもち_……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "……なんか、面白くないね。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_c.dialogue.008",
           "voiceEventPath": "event:/Serif/主人公_……なんか、面白くないね。",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "\"完成\"と\"面白い\"は違うから。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_c.dialogue.009",
+          "voiceEventPath": "",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "そうだね……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_c.dialogue.010",
           "voiceEventPath": "event:/Serif/主人公_そうだね……",
           "waitingTime": 0.0
         }
@@ -2861,90 +2870,92 @@
       "dialogues": [
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "マップジェネレーター完成。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_d.dialogue.000",
           "voiceEventPath": "event:/Serif/ごっと_マップジェネレーター完成。",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "システムも全部作り直した。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_d.dialogue.001",
           "voiceEventPath": "event:/Serif/ごっと_システムも全部作り直した。",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "ステージ作る必要もうないんですか？",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_d.dialogue.002",
           "voiceEventPath": "event:/Serif/Ryuta_ステージ作る必要もうないんですか？",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "え……全部描き直しですか？",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_d.dialogue.003",
           "voiceEventPath": "event:/Serif/Milu_え……全部描き直しですか？",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "曲もステージごとに全部変えるんです？",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.ending_d.dialogue.004",
           "voiceEventPath": "event:/Serif/かしわもち_曲もステージごとに全部変えるんです？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "ちょ、ちょっと待って！",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_d.dialogue.005",
           "voiceEventPath": "event:/Serif/主人公_ちょ、ちょっと待って！",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "ステージ自分で作っても...",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_d.dialogue.006",
+          "voiceEventPath": "",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "いや、その前に設計変更する。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_d.dialogue.007",
           "voiceEventPath": "event:/Serif/ごっと_いや、その前に設計変更する。",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "えぇ...",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_d.dialogue.008",
+          "voiceEventPath": "",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "終わらない……",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_d.dialogue.009",
           "voiceEventPath": "event:/Serif/Milu_終わらない……",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "終わらないですねぇ……",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.ending_d.dialogue.010",
           "voiceEventPath": "event:/Serif/かしわもち_終わらないですねぇ……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "…………ごめん、時間切れ。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_d.dialogue.011",
           "voiceEventPath": "event:/Serif/主人公_…………ごめん、時間切れ。",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "……やりすぎたね。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_d.dialogue.012",
           "voiceEventPath": "event:/Serif/ごっと_……やりすぎたね。",
           "waitingTime": 0.0
         }
@@ -2962,97 +2973,99 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_e.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_……",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "……",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_e.dialogue.001",
+          "voiceEventPath": "",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "……",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_e.dialogue.002",
           "voiceEventPath": "event:/Serif/Milu_……",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "……",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.ending_e.dialogue.003",
           "voiceEventPath": "event:/Serif/かしわもち_……",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "……",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_e.dialogue.004",
           "voiceEventPath": "event:/Serif/ごっと_……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "どう？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_e.dialogue.005",
           "voiceEventPath": "event:/Serif/主人公_どう？",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "……",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_e.dialogue.006",
+          "voiceEventPath": "",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "面白くないね。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_e.dialogue.007",
           "voiceEventPath": "event:/Serif/ごっと_面白くないね。",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "……はい。",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_e.dialogue.008",
           "voiceEventPath": "event:/Serif/Milu_……はい。",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "曲だけ浮いてる気がします。",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.ending_e.dialogue.009",
           "voiceEventPath": "event:/Serif/かしわもち_曲だけ浮いてる気がします。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_e.dialogue.010",
           "voiceEventPath": "event:/Serif/主人公_……",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "消す？",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_e.dialogue.011",
           "voiceEventPath": "event:/Serif/ごっと_消す？",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_e.dialogue.012",
           "voiceEventPath": "event:/Serif/主人公_……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "消そうか。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_e.dialogue.013",
           "voiceEventPath": "event:/Serif/主人公_消そうか。",
           "waitingTime": 0.0
         }
@@ -3070,71 +3083,71 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "あ。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_f.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_あ。",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "あれ。",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_f.dialogue.001",
           "voiceEventPath": "event:/Serif/Ryuta_あれ。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "リスタートしてもすぐやられるんだけど。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_f.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_リスタートしてもすぐやられるんだけど。",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "あー。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_f.dialogue.003",
           "voiceEventPath": "event:/Serif/ごっと_あー。",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "詰みだね。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_f.dialogue.004",
           "voiceEventPath": "event:/Serif/ごっと_詰みだね。",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "針の上でセーブされちゃいましたね……",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_f.dialogue.005",
           "voiceEventPath": "event:/Serif/Milu_針の上でセーブされちゃいましたね……",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "永遠に死に続けるホラーゲームになりましたね。",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.ending_f.dialogue.006",
           "voiceEventPath": "event:/Serif/かしわもち_永遠に死に続けるホラーゲームになりましたね。",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "想定できなかった……",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_f.dialogue.007",
           "voiceEventPath": "event:/Serif/Ryuta_想定できなかった……",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "……これは監督者責任のわたしのせいだ",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_f.dialogue.008",
           "voiceEventPath": "event:/Serif/ごっと_……これは監督者責任のわたしのせいだ",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "まぁ、はは……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_f.dialogue.009",
           "voiceEventPath": "event:/Serif/主人公_まぁ、はは……",
           "waitingTime": 0.0
         }
@@ -3152,85 +3165,85 @@
       "dialogues": [
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "もっと追加しましょう！",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_g.dialogue.000",
           "voiceEventPath": "event:/Serif/Ryuta_もっと追加しましょう！",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "じゃあキャラも増やします！",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_g.dialogue.001",
           "voiceEventPath": "event:/Serif/Milu_じゃあキャラも増やします！",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "曲もあと三曲作ります！",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.ending_g.dialogue.002",
           "voiceEventPath": "event:/Serif/かしわもち_曲もあと三曲作ります！",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "いいね！！",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_g.dialogue.003",
           "voiceEventPath": "event:/Serif/主人公_いいね！！",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "もういっそ仕様変えます！",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_g.dialogue.004",
           "voiceEventPath": "event:/Serif/Ryuta_もういっそ仕様変えます！",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "え？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_g.dialogue.005",
           "voiceEventPath": "event:/Serif/主人公_え？",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "さっき決めたのやめます！もはやこれはゲームではない！芸術だ！",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_g.dialogue.006",
           "voiceEventPath": "event:/Serif/Ryuta_さっき決めたのやめます！もはやこれはゲームではない！芸術だ！",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "それはさすがに……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_g.dialogue.007",
           "voiceEventPath": "event:/Serif/主人公_それはさすがに……",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "ありです！",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_g.dialogue.008",
           "voiceEventPath": "event:/Serif/Milu_ありです！",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "やりましょう！",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.ending_g.dialogue.009",
           "voiceEventPath": "event:/Serif/かしわもち_やりましょう！",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "え、ごっとくん……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_g.dialogue.010",
           "voiceEventPath": "event:/Serif/主人公_え、ごっとくん……",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "うん、手遅れ",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_g.dialogue.011",
           "voiceEventPath": "event:/Serif/ごっと_うん、手遅れ",
           "waitingTime": 0.0
         }
@@ -3248,112 +3261,113 @@
       "dialogues": [
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "……完璧",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_h.dialogue.000",
           "voiceEventPath": "event:/Serif/ごっと_……完璧",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "バグなし！",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_h.dialogue.001",
           "voiceEventPath": "event:/Serif/Ryuta_バグなし！",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "素材全部間に合いました",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_h.dialogue.002",
           "voiceEventPath": "event:/Serif/Milu_素材全部間に合いました",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "BGMも効果音も実装確認済みです。",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.ending_h.dialogue.003",
           "voiceEventPath": "event:/Serif/かしわもち_BGMも効果音も実装確認済みです。",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "細かいとこまでみてくれてありがとうございます！",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_h.dialogue.004",
+          "voiceEventPath": "",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "最後まで遊んでもらえた……",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_h.dialogue.005",
           "voiceEventPath": "event:/Serif/Milu_最後まで遊んでもらえた……",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "全部見てもらえて嬉しいですね。",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.ending_h.dialogue.006",
           "voiceEventPath": "event:/Serif/かしわもち_全部見てもらえて嬉しいですね。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "このゲーム、ちゃんと最後まで面白かった。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_h.dialogue.007",
           "voiceEventPath": "event:/Serif/主人公_このゲーム、ちゃんと最後まで面白かった。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_h.dialogue.008",
           "voiceEventPath": "event:/Serif/主人公_……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "みんな、本当にありがとう。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_h.dialogue.009",
           "voiceEventPath": "event:/Serif/主人公_みんな、本当にありがとう。",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "楽しかったです！",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_h.dialogue.010",
           "voiceEventPath": "event:/Serif/Ryuta_楽しかったです！",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "ゲームジャムってこんなに面白いんですね。",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_h.dialogue.011",
           "voiceEventPath": "event:/Serif/Milu_ゲームジャムってこんなに面白いんですね。",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "またやりたいです。",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.ending_h.dialogue.012",
           "voiceEventPath": "event:/Serif/かしわもち_またやりたいです。",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "……まぁ。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_h.dialogue.013",
           "voiceEventPath": "event:/Serif/ごっと_……まぁ。",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "次はもっと面白いもの作ろう。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_h.dialogue.014",
           "voiceEventPath": "event:/Serif/ごっと_次はもっと面白いもの作ろう。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "......もちろん!",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_h.dialogue.015",
           "voiceEventPath": "event:/Serif/主人公_......もちろん!",
           "waitingTime": 0.0
         }
@@ -3371,48 +3385,50 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "クリア！",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_i.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_クリア！",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "え",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_i.dialogue.001",
+          "voiceEventPath": "",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "え",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.ending_i.dialogue.002",
           "voiceEventPath": "event:/Serif/かしわもち_え",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "え",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_i.dialogue.003",
           "voiceEventPath": "event:/Serif/Milu_え",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "ノーセーブクリア？",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_i.dialogue.004",
+          "voiceEventPath": "",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "……",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_i.dialogue.005",
           "voiceEventPath": "event:/Serif/ごっと_……",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "それでこそ開発者。",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_i.dialogue.006",
           "voiceEventPath": "event:/Serif/ごっと_それでこそ開発者。",
           "waitingTime": 0.0
         }
@@ -3430,43 +3446,43 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "......",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_j.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_……",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "......",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_j.dialogue.001",
           "voiceEventPath": "event:/Serif/ごっと_……",
           "waitingTime": 0.0
         },
         {
           "iconId": "ryuta_icon",
-          "speaker": "Ryuta",
-          "message": "......",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter.ending_j.dialogue.002",
           "voiceEventPath": "event:/Serif/Ryuta_......",
           "waitingTime": 0.0
         },
         {
           "iconId": "milu_icon",
-          "speaker": "Milu",
-          "message": "......",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter.ending_j.dialogue.003",
           "voiceEventPath": "event:/Serif/Milu_……",
           "waitingTime": 0.0
         },
         {
           "iconId": "kashiwamochi_icon",
-          "speaker": "かしわもち",
-          "message": "......",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter.ending_j.dialogue.004",
           "voiceEventPath": "event:/Serif/かしわもち_……",
           "waitingTime": 0.0
         },
         {
           "iconId": "goddo_icon",
-          "speaker": "ごっと",
-          "message": "だめだこりゃ",
+          "speakerKey": "character.got",
+          "messageKey": "chapter.ending_j.dialogue.005",
           "voiceEventPath": "",
           "waitingTime": 0.0
         }
@@ -3484,134 +3500,134 @@
       "dialogues": [
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "ここまで全部見たんだね。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.000",
           "voiceEventPath": "event:/Serif/主人公_ここまで全部見たんだね。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "ありがとう。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.001",
           "voiceEventPath": "event:/Serif/主人公_ありがとう。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "君は知っているかもしれないけど、",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.002",
           "voiceEventPath": "event:/Serif/主人公_君は知っているかもしれないけど、",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "開発には正解なんてない。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.003",
           "voiceEventPath": "event:/Serif/主人公_開発には正解なんてない。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "誰が悪いわけでもない。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.004",
           "voiceEventPath": "event:/Serif/主人公_誰が悪いわけでもない。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "指示に最適解もない。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.005",
           "voiceEventPath": "event:/Serif/主人公_指示に最適解もない。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "実装方法の",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.006",
           "voiceEventPath": "event:/Serif/主人公_実装方法の",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "世界観の",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.007",
           "voiceEventPath": "event:/Serif/主人公_世界観の",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "答えはひとつじゃない。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.008",
           "voiceEventPath": "event:/Serif/主人公_答えはひとつじゃない。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "それに",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.009",
           "voiceEventPath": "event:/Serif/主人公_それに",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "正しさを持つのは、",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.010",
           "voiceEventPath": "event:/Serif/主人公_正しさを持つのは、",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "君だけじゃない。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.011",
           "voiceEventPath": "event:/Serif/主人公_君だけじゃない。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "……",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.012",
           "voiceEventPath": "event:/Serif/主人公_……",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "これ以上は語らなくてもいいかな。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.013",
           "voiceEventPath": "event:/Serif/主人公_これ以上は語らなくてもいいかな。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "ここまで遊んでくれた君なら、",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.014",
           "voiceEventPath": "event:/Serif/主人公_ここまで遊んでくれた君なら、",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "きっと良い企画開発者になれる。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.015",
           "voiceEventPath": "event:/Serif/主人公_きっと良い企画開発者になれる。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "最後に、",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.016",
           "voiceEventPath": "event:/Serif/主人公_最後に、",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "ここまで遊んでくれてありがとう。",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.017",
           "voiceEventPath": "event:/Serif/主人公_ここまで遊んでくれてありがとう。",
           "waitingTime": 0.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "Thank you for Playing",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter.ending_k.dialogue.018",
           "voiceEventPath": "event:/Serif/主人公_Thank you for Playing",
           "waitingTime": 0.0
         }

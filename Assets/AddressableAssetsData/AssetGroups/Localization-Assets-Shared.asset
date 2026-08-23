@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Localization-Assets-Shared
+  m_GUID: 5a4dbb921e6e22d45a351b733ddfeb9c
+  m_SerializeEntries:
+  - m_GUID: 15c144085b85143479760f2bd641925a
+    m_Address: Assets/Minge2026Spring/Localization/String Tables/Ending Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7697fbc2df64d644c88a5b7db0d8b811
+    m_Address: Assets/Minge2026Spring/Localization/String Tables/Common Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76e4184f73747b54aa1a77b55363464a
+    m_Address: Assets/Minge2026Spring/Localization/Scenario/Dialogue Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79a4ba0263d9da74f869d442e94a15d9
+    m_Address: Assets/Minge2026Spring/Localization/String Tables/Title Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92213e1651701954f84926ad3c88cc90
+    m_Address: Assets/Minge2026Spring/Localization/String Tables/Achievements Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a526ea5be5681c3409435a58c13c2369
+    m_Address: Assets/Minge2026Spring/Localization/Scenario/Choices Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b8f92f613ecaf584c990488ca883f206
+    m_Address: Assets/Minge2026Spring/Localization/String Tables/Options Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7c513a6217630545b3493daac896844
+    m_Address: Assets/Minge2026Spring/Localization/Scenario/Characters Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d80efcc89e1a0734994a295809b6a9bf
+    m_Address: Assets/Minge2026Spring/Localization/String Tables/NovelUI Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 6a806814891a0e146a3160f8438919ae, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 3bf9544ab00e15d40960b7fe3d8cc933, type: 2}
+    - {fileID: 11400000, guid: 8a37ee98360ec29408d09405d2ca1588, type: 2}

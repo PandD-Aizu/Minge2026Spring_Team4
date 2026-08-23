@@ -59,8 +59,8 @@ namespace Minge2026Spring.Scripts.Application.DTOs
     {
         public string iconId;     // 読み込むアイコン画像のID
         
-        public string speaker;    // 発言者の名前
-        public string message;    // 発言内容
+        public string speakerKey; // Charactersテーブルの発言者キー
+        public string messageKey; // Dialogueテーブルの発言内容キー
 
         // FMODのEventReferenceを章グラフエディターで選択し、JSONにはイベントパスとして保存する。
         public string voiceEventPath;
@@ -72,7 +72,7 @@ namespace Minge2026Spring.Scripts.Application.DTOs
     [Serializable]
     public struct Choice
     {
-        public string choiceText;  // 選択肢のテキスト
+        public string choiceTextKey; // Choicesテーブルの選択肢キー
         public string nextBlockId; // 選択肢を選んだ場合の次のブロックのID
 
         public int characterAMoraleDelta; // CharacterAの士気変化量

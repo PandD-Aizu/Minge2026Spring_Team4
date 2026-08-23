@@ -8,134 +8,156 @@
       "dialogues": [
         {
           "iconId": "daittyan_icon",
-          "speaker": "だいっちゃん",
-          "message": "おっすおっす。今ちょっといいすか？",
+          "speakerKey": "character.daittyan",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.000",
+          "voiceEventPath": "",
           "waitingTime": 2.4
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "大丈夫です。どうしました？",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.001",
+          "voiceEventPath": "",
           "waitingTime": 2.0
         },
         {
           "iconId": "daittyan_icon",
-          "speaker": "だいっちゃん",
-          "message": "お前ら今、ゲーム作ってるらしいじゃん？",
+          "speakerKey": "character.daittyan",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.002",
+          "voiceEventPath": "",
           "waitingTime": 2.8
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "はい。ゲームジャムで作ってますけど",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.003",
+          "voiceEventPath": "",
           "waitingTime": 2.4
         },
         {
           "iconId": "daittyan_icon",
-          "speaker": "だいっちゃん",
-          "message": "じゃあさ、そのゲームに俺を出してくれよ～。頼むよ～",
+          "speakerKey": "character.daittyan",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.004",
+          "voiceEventPath": "",
           "waitingTime": 3.6
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "急に何を言い出すんですか",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.005",
+          "voiceEventPath": "",
           "waitingTime": 2.0
         },
         {
           "iconId": "daittyan_icon",
-          "speaker": "だいっちゃん",
-          "message": "いいじゃんいいじゃん。隠しキャラとかでさ。俺そういうの好きだから",
+          "speakerKey": "character.daittyan",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.006",
+          "voiceEventPath": "",
           "waitingTime": 4.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "だいっちゃん先輩を出す理由がないんですけど",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.007",
+          "voiceEventPath": "",
           "waitingTime": 2.6
         },
         {
           "iconId": "daittyan_icon",
-          "speaker": "だいっちゃん",
-          "message": "理由？　俺が出たいから。はい論破",
+          "speakerKey": "character.daittyan",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.008",
+          "voiceEventPath": "",
           "waitingTime": 2.6
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "論破できてないですよ",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.009",
+          "voiceEventPath": "",
           "waitingTime": 1.8
         },
         {
           "iconId": "daittyan_icon",
-          "speaker": "だいっちゃん",
-          "message": "ファッ！？　じゃあ敵キャラでもいいゾ。倒されたら『やりますねぇ！』って言うから",
+          "speakerKey": "character.daittyan",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.010",
+          "voiceEventPath": "",
           "waitingTime": 4.4
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "それ、倒された側の台詞じゃないですよね",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.011",
+          "voiceEventPath": "",
           "waitingTime": 2.4
         },
         {
           "iconId": "daittyan_icon",
-          "speaker": "だいっちゃん",
-          "message": "細かいこと気にするとハゲるゾ。俺はもうキャラ設定まで考えてるから",
+          "speakerKey": "character.daittyan",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.012",
+          "voiceEventPath": "",
           "waitingTime": 4.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "聞いてないですけど、一応聞きます",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.013",
+          "voiceEventPath": "",
           "waitingTime": 2.4
         },
         {
           "iconId": "daittyan_icon",
-          "speaker": "だいっちゃん",
-          "message": "最強の助っ人キャラ。攻撃力カンスト、体力無限、俺が来た瞬間ゲームクリア",
+          "speakerKey": "character.daittyan",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.014",
+          "voiceEventPath": "",
           "waitingTime": 4.4
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "ゲームを壊しに来てるじゃないですか",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.015",
+          "voiceEventPath": "",
           "waitingTime": 2.2
         },
         {
           "iconId": "daittyan_icon",
-          "speaker": "だいっちゃん",
-          "message": "最強キャラはロマンだろ？　当たり前だよなぁ？",
+          "speakerKey": "character.daittyan",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.016",
+          "voiceEventPath": "",
           "waitingTime": 3.2
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "せめて背景のポスターくらいなら考えます",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.017",
+          "voiceEventPath": "",
           "waitingTime": 2.8
         },
         {
           "iconId": "daittyan_icon",
-          "speaker": "だいっちゃん",
-          "message": "マジ？　やったぜ。じゃあ写真送るわ。盛れてるやつ厳選するから見とけよ見とけよ～",
+          "speakerKey": "character.daittyan",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.018",
+          "voiceEventPath": "",
           "waitingTime": 4.8
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "別に実写で出すとは言ってないです",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.019",
+          "voiceEventPath": "",
           "waitingTime": 2.4
         },
         {
           "iconId": "daittyan_icon",
-          "speaker": "だいっちゃん",
-          "message": "えぇ……。まあ多少はね？　採用されたら教えてくれよな～頼むよ～",
+          "speakerKey": "character.daittyan",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.020",
+          "voiceEventPath": "",
           "waitingTime": 4.0
         },
         {
           "iconId": "player_icon",
-          "speaker": "主人公",
-          "message": "はいはい。余裕があったら入れておきます",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_daittyan.dm_daittyan_0.dialogue.021",
+          "voiceEventPath": "",
           "waitingTime": 2.6
         }
       ],

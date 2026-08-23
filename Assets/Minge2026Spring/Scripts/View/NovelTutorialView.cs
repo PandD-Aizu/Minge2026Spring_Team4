@@ -77,8 +77,8 @@ namespace Minge2026Spring.Scripts.View
             if (!IsValid(handle))
                 return;
 
-            CreateTutorial("DMButton", "ここを押すと\nDM画面へ！", new Vector2(0.25f, 0.90f), true);
-            CreateTutorial("MenuButton", "ここを押すと\nオプション画面へ！", new Vector2(0.30f, 0.17f), false);
+            CreateTutorial("DMButton", "tutorial.dm", new Vector2(0.25f, 0.90f), true);
+            CreateTutorial("MenuButton", "tutorial.menu", new Vector2(0.30f, 0.17f), false);
         }
 
         private bool IsValid(AsyncOperationHandle<GameObject> handle)
@@ -90,7 +90,7 @@ namespace Minge2026Spring.Scripts.View
             return false;
         }
 
-        private void CreateTutorial(string targetName, string message,
+        private void CreateTutorial(string targetName, string entryKey,
             Vector2 normalizedPosition, bool flipHukidashi)
         {
             if (GameObject.Find(targetName) is null)
@@ -123,7 +123,7 @@ namespace Minge2026Spring.Scripts.View
             image.raycastTarget = true;
 
             var label = bubble.GetComponentInChildren<TextMeshProUGUI>(true);
-            label.text = message;
+            UILocalization.Bind(label, "NovelUI", entryKey);
             label.font = tutorialFont is not null ? tutorialFont : label.font;
             label.color = DiscordTextColor;
             label.alignment = TextAlignmentOptions.Center;

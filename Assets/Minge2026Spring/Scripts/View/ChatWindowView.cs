@@ -224,11 +224,11 @@ namespace Minge2026Spring.Scripts.View
                 return;
 
             var number = isChoice ? ++_choiceSeparatorCount : ++_chapterSeparatorCount;
-            var label = isChoice ? $"選択肢 {number}" : $"チャプター {number}";
+            var labelEntry = isChoice ? "separator.choice" : "separator.chapter";
             var resolvedFont = ResolveSeparatorFont();
 
             var separator = new GameObject(
-                $"ChapterSeparator_{label}",
+                $"ChapterSeparator_{(isChoice ? "Choice" : "Chapter")}_{number}",
                 typeof(RectTransform),
                 typeof(LayoutElement));
             separator.layer = scrollViewContentTransform.gameObject.layer;
@@ -254,13 +254,13 @@ namespace Minge2026Spring.Scripts.View
             labelRect.sizeDelta = new Vector2(separatorLabelWidth, 0f);
 
             var labelText = labelObject.GetComponent<TextMeshProUGUI>();
-            labelText.text = label;
             labelText.font = resolvedFont;
             labelText.fontSize = separatorFontSize;
             labelText.fontStyle = separatorFontStyle;
             labelText.color = separatorTextColor;
             labelText.alignment = TextAlignmentOptions.Center;
             labelText.raycastTarget = false;
+            UILocalization.Bind(labelText, "NovelUI", labelEntry, number);
 
             var labelHalfWidthWithGap = separatorLabelWidth * 0.5f + separatorLineGap;
             AddSeparatorLine(

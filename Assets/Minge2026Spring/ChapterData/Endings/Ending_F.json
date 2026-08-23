@@ -3,19 +3,84 @@
     {
       "blockId": "Ending_F",
       "nodeType": 0,
+      "nodePosX": 0.0,
+      "nodePosY": 0.0,
       "dialogues": [
-        { "iconId": "player_icon", "speaker": "主人公", "message": "あ。", "voiceEventPath": "event:/Serif/主人公_あ。", "waitingTime": 0.0 },
-        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "あれ。", "voiceEventPath": "event:/Serif/Ryuta_あれ。", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "リスタートしてもすぐやられるんだけど。", "voiceEventPath": "event:/Serif/主人公_リスタートしてもすぐやられるんだけど。", "waitingTime": 0.0 },
-        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "あー。", "voiceEventPath": "event:/Serif/ごっと_あー。", "waitingTime": 0.0 },
-        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "詰みだね。", "voiceEventPath": "event:/Serif/ごっと_詰みだね。", "waitingTime": 0.0 },
-        { "iconId": "milu_icon", "speaker": "Milu", "message": "針の上でセーブされちゃいましたね……", "voiceEventPath": "event:/Serif/Milu_針の上でセーブされちゃいましたね……", "waitingTime": 0.0 },
-        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "永遠に死に続けるホラーゲームになりましたね。", "voiceEventPath": "event:/Serif/かしわもち_永遠に死に続けるホラーゲームになりましたね。", "waitingTime": 0.0 },
-        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "想定できなかった……", "voiceEventPath": "event:/Serif/Ryuta_想定できなかった……", "waitingTime": 0.0 },
-        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "……これは監督者責任のわたしのせいだ", "voiceEventPath": "event:/Serif/ごっと_……これは監督者責任のわたしのせいだ", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "まぁ、はは……", "voiceEventPath": "event:/Serif/主人公_まぁ、はは……", "waitingTime": 5.0 }
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "ending_f.ending_f.dialogue.000",
+          "voiceEventPath": "event:/Serif/主人公_あ。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "ending_f.ending_f.dialogue.001",
+          "voiceEventPath": "event:/Serif/Ryuta_あれ。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "ending_f.ending_f.dialogue.002",
+          "voiceEventPath": "event:/Serif/主人公_リスタートしてもすぐやられるんだけど。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "ending_f.ending_f.dialogue.003",
+          "voiceEventPath": "event:/Serif/ごっと_あー。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "ending_f.ending_f.dialogue.004",
+          "voiceEventPath": "event:/Serif/ごっと_詰みだね。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "ending_f.ending_f.dialogue.005",
+          "voiceEventPath": "event:/Serif/Milu_針の上でセーブされちゃいましたね……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "ending_f.ending_f.dialogue.006",
+          "voiceEventPath": "event:/Serif/かしわもち_永遠に死に続けるホラーゲームになりましたね。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "ending_f.ending_f.dialogue.007",
+          "voiceEventPath": "event:/Serif/Ryuta_想定できなかった……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "ending_f.ending_f.dialogue.008",
+          "voiceEventPath": "event:/Serif/ごっと_……これは監督者責任のわたしのせいだ",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "ending_f.ending_f.dialogue.009",
+          "voiceEventPath": "event:/Serif/主人公_まぁ、はは……",
+          "waitingTime": 5.0
+        }
       ],
-      "choices": [], "nextBlockId": "", "freeChats": [], "waitingTime": 0.0
+      "choices": [],
+      "nextBlockId": "",
+      "freeChats": [],
+      "waitingTime": 0.0
     }
   ]
 }

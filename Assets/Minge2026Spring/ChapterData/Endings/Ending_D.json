@@ -3,22 +3,105 @@
     {
       "blockId": "Ending_D",
       "nodeType": 0,
+      "nodePosX": 0.0,
+      "nodePosY": 0.0,
       "dialogues": [
-        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "マップジェネレーター完成。", "voiceEventPath": "event:/Serif/ごっと_マップジェネレーター完成。", "waitingTime": 0.0 },
-        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "システムも全部作り直した。", "voiceEventPath": "event:/Serif/ごっと_システムも全部作り直した。", "waitingTime": 0.0 },
-        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "ステージ作る必要もうないんですか？", "voiceEventPath": "event:/Serif/Ryuta_ステージ作る必要もうないんですか？", "waitingTime": 0.0 },
-        { "iconId": "milu_icon", "speaker": "Milu", "message": "え……全部描き直しですか？", "voiceEventPath": "event:/Serif/Milu_え……全部描き直しですか？", "waitingTime": 0.0 },
-        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "曲もステージごとに全部変えるんです？", "voiceEventPath": "event:/Serif/かしわもち_曲もステージごとに全部変えるんです？", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "ちょ、ちょっと待って！", "voiceEventPath": "event:/Serif/主人公_ちょ、ちょっと待って！", "waitingTime": 0.0 },
-        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "ステージ自分で作っても...", "voiceEventPath": "event:/Serif/Ryuta_ステージ自分で作っても", "waitingTime": 0.0 },
-        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "いや、その前に設計変更する。", "voiceEventPath": "event:/Serif/ごっと_いや、その前に設計変更する。", "waitingTime": 0.0 },
-        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "えぇ...", "voiceEventPath": "event:/Serif/Ryuta_えぇ？！", "waitingTime": 0.0 },
-        { "iconId": "milu_icon", "speaker": "Milu", "message": "終わらない……", "voiceEventPath": "event:/Serif/Milu_終わらない……", "waitingTime": 0.0 },
-        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "終わらないですねぇ……", "voiceEventPath": "event:/Serif/かしわもち_終わらないですねぇ……", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "…………ごめん、時間切れ。", "voiceEventPath": "event:/Serif/主人公_…………ごめん、時間切れ。", "waitingTime": 0.0 },
-        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "……やりすぎたね。", "voiceEventPath": "event:/Serif/ごっと_……やりすぎたね。", "waitingTime": 5.0 }
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "ending_d.ending_d.dialogue.000",
+          "voiceEventPath": "event:/Serif/ごっと_マップジェネレーター完成。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "ending_d.ending_d.dialogue.001",
+          "voiceEventPath": "event:/Serif/ごっと_システムも全部作り直した。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "ending_d.ending_d.dialogue.002",
+          "voiceEventPath": "event:/Serif/Ryuta_ステージ作る必要もうないんですか？",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "ending_d.ending_d.dialogue.003",
+          "voiceEventPath": "event:/Serif/Milu_え……全部描き直しですか？",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "ending_d.ending_d.dialogue.004",
+          "voiceEventPath": "event:/Serif/かしわもち_曲もステージごとに全部変えるんです？",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "ending_d.ending_d.dialogue.005",
+          "voiceEventPath": "event:/Serif/主人公_ちょ、ちょっと待って！",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "ending_d.ending_d.dialogue.006",
+          "voiceEventPath": "event:/Serif/Ryuta_ステージ自分で作っても",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "ending_d.ending_d.dialogue.007",
+          "voiceEventPath": "event:/Serif/ごっと_いや、その前に設計変更する。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "ending_d.ending_d.dialogue.008",
+          "voiceEventPath": "event:/Serif/Ryuta_えぇ？！",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "ending_d.ending_d.dialogue.009",
+          "voiceEventPath": "event:/Serif/Milu_終わらない……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "ending_d.ending_d.dialogue.010",
+          "voiceEventPath": "event:/Serif/かしわもち_終わらないですねぇ……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "ending_d.ending_d.dialogue.011",
+          "voiceEventPath": "event:/Serif/主人公_…………ごめん、時間切れ。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "ending_d.ending_d.dialogue.012",
+          "voiceEventPath": "event:/Serif/ごっと_……やりすぎたね。",
+          "waitingTime": 5.0
+        }
       ],
-      "choices": [], "nextBlockId": "", "freeChats": [], "waitingTime": 0.0
+      "choices": [],
+      "nextBlockId": "",
+      "freeChats": [],
+      "waitingTime": 0.0
     }
   ]
 }

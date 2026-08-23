@@ -10,7 +10,10 @@
         "GUID:3d832f35578a38f4ca8dfabef5035e58",
         "GUID:343deaaf83e0cee4ca978e7df0b80d21",
         "GUID:0c752da273b17c547ae705acf0f2adf2",
-        "GUID:aab3caaf43456d6449a3e035348ff798"
+        "GUID:aab3caaf43456d6449a3e035348ff798",
+        "Unity.Localization",
+        "Unity.Localization.Editor",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [
         "Editor"

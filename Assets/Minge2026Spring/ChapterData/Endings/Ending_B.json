@@ -3,22 +3,105 @@
     {
       "blockId": "Ending_B",
       "nodeType": 0,
+      "nodePosX": 0.0,
+      "nodePosY": 0.0,
       "dialogues": [
-        { "iconId": "player_icon", "speaker": "主人公", "message": "……完成、かな？", "voiceEventPath": "event:/Serif/主人公_……完成、かな？", "waitingTime": 0.0 },
-        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "まぁ、動きますね。", "voiceEventPath": "event:/Serif/Ryuta_まぁ、動きますね。", "waitingTime": 0.0 },
-        { "iconId": "milu_icon", "speaker": "Milu", "message": "素材も、一応全部あります。", "voiceEventPath": "event:/Serif/Milu_素材も、一応全部あります。", "waitingTime": 0.0 },
-        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "曲も流れてますねぇ。", "voiceEventPath": "event:/Serif/かしわもち_曲も流れてますねぇ。", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "なんか……ゲームっぽくはなったね。", "voiceEventPath": "event:/Serif/主人公_なんか……ゲームっぽくはなったね。", "waitingTime": 0.0 },
-        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "でも、このゲームって結局何が面白いの？", "voiceEventPath": "event:/Serif/ごっと_でも、このゲームって結局何が面白いの？", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "……", "voiceEventPath": "event:/Serif/主人公_……", "waitingTime": 0.0 },
-        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "途中から誰も何も決めなくなっちゃいましたもんね。", "voiceEventPath": "event:/Serif/Ryuta_途中から誰も何も決めなくなっちゃいましたもんね。", "waitingTime": 0.0 },
-        { "iconId": "milu_icon", "speaker": "Milu", "message": "私は言われたものを描いただけですし……", "voiceEventPath": "event:/Serif/Milu_私は言われたものを描いただけですし……", "waitingTime": 0.0 },
-        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "僕も依頼通り作っただけですね。", "voiceEventPath": "event:/Serif/かしわもち_僕も依頼通り作っただけですね。", "waitingTime": 0.0 },
-        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "誰も間違ってはいない。", "voiceEventPath": "event:/Serif/ごっと_誰も間違ってはいない。", "waitingTime": 0.0 },
-        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "誰もゲームを作ってなかった。", "voiceEventPath": "event:/Serif/ごっと_誰もゲームを作ってなかった。", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "……ごめん。", "voiceEventPath": "event:/Serif/主人公_……ごめん。", "waitingTime": 5.0 }
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "ending_b.ending_b.dialogue.000",
+          "voiceEventPath": "event:/Serif/主人公_……完成、かな？",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "ending_b.ending_b.dialogue.001",
+          "voiceEventPath": "event:/Serif/Ryuta_まぁ、動きますね。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "ending_b.ending_b.dialogue.002",
+          "voiceEventPath": "event:/Serif/Milu_素材も、一応全部あります。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "ending_b.ending_b.dialogue.003",
+          "voiceEventPath": "event:/Serif/かしわもち_曲も流れてますねぇ。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "ending_b.ending_b.dialogue.004",
+          "voiceEventPath": "event:/Serif/主人公_なんか……ゲームっぽくはなったね。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "ending_b.ending_b.dialogue.005",
+          "voiceEventPath": "event:/Serif/ごっと_でも、このゲームって結局何が面白いの？",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "ending_b.ending_b.dialogue.006",
+          "voiceEventPath": "event:/Serif/主人公_……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "ending_b.ending_b.dialogue.007",
+          "voiceEventPath": "event:/Serif/Ryuta_途中から誰も何も決めなくなっちゃいましたもんね。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "ending_b.ending_b.dialogue.008",
+          "voiceEventPath": "event:/Serif/Milu_私は言われたものを描いただけですし……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "ending_b.ending_b.dialogue.009",
+          "voiceEventPath": "event:/Serif/かしわもち_僕も依頼通り作っただけですね。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "ending_b.ending_b.dialogue.010",
+          "voiceEventPath": "event:/Serif/ごっと_誰も間違ってはいない。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "ending_b.ending_b.dialogue.011",
+          "voiceEventPath": "event:/Serif/ごっと_誰もゲームを作ってなかった。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "ending_b.ending_b.dialogue.012",
+          "voiceEventPath": "event:/Serif/主人公_……ごめん。",
+          "waitingTime": 5.0
+        }
       ],
-      "choices": [], "nextBlockId": "", "freeChats": [], "waitingTime": 0.0
+      "choices": [],
+      "nextBlockId": "",
+      "freeChats": [],
+      "waitingTime": 0.0
     }
   ]
 }

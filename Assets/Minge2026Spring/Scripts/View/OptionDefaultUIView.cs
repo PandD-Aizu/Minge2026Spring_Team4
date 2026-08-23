@@ -2,6 +2,9 @@
 using TMPro;
 using System;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Components;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 namespace Minge2026Spring.Scripts.View
@@ -21,35 +24,109 @@ namespace Minge2026Spring.Scripts.View
         [SerializeField] public Button saveDeleteButton;
 
         private GameObject _saveDeleteConfirmation;
+        private Button _languageButton;
+        private TMP_Text _languageButtonText;
 
         private void Awake()
         {
-            if (voiceVolumeSlider is not null || seVolumeSlider is null)
+            EnsureVoiceVolumeSlider();
+            CreateLanguageSelector();
+        }
+
+        private void OnEnable()
+        {
+            LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
+        }
+
+        private void OnDisable()
+        {
+            LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
+        }
+
+        private void EnsureVoiceVolumeSlider()
+        {
+            if (voiceVolumeSlider != null || seVolumeSlider == null)
                 return;
 
             var sliderObject = Instantiate(seVolumeSlider.gameObject, seVolumeSlider.transform.parent);
             sliderObject.name = "VoiceVolumeSlider";
             var sliderRect = sliderObject.GetComponent<RectTransform>();
-            if (sliderRect is not null)
+            if (sliderRect != null)
                 sliderRect.anchoredPosition += Vector2.down * 100f;
             voiceVolumeSlider = sliderObject.GetComponent<Slider>();
 
             var seLabel = GameObject.Find("SEVolumeText");
-            if (seLabel is not null)
+            if (seLabel != null)
             {
                 var voiceLabel = Instantiate(seLabel, seLabel.transform.parent);
                 voiceLabel.name = "VoiceVolumeText";
                 var labelRect = voiceLabel.GetComponent<RectTransform>();
-                if (labelRect is not null)
+                if (labelRect != null)
                     labelRect.anchoredPosition += Vector2.down * 100f;
                 var label = voiceLabel.GetComponent<TextMeshProUGUI>();
-                if (label is not null)
-                    label.text = "Voice Volume";
+                if (label != null)
+                {
+                    RemoveClonedLocalizers(voiceLabel);
+                    UILocalization.Bind(label, "Options", "voice_volume");
+                }
             }
         }
+
+        private void CreateLanguageSelector()
+        {
+            if (saveDeleteButton == null || _languageButton != null)
+                return;
+
+            _languageButton = Instantiate(saveDeleteButton, saveDeleteButton.transform.parent);
+            _languageButton.name = "LanguageButton";
+            _languageButton.onClick.RemoveAllListeners();
+            RemoveClonedLocalizers(_languageButton.gameObject);
+
+            var sourceRect = saveDeleteButton.GetComponent<RectTransform>();
+            var rect = _languageButton.GetComponent<RectTransform>();
+            rect.anchorMin = sourceRect.anchorMin;
+            rect.anchorMax = sourceRect.anchorMax;
+            rect.pivot = sourceRect.pivot;
+            rect.sizeDelta = sourceRect.sizeDelta;
+            rect.anchoredPosition = new Vector2(0f, sourceRect.anchoredPosition.y);
+
+            _languageButtonText = _languageButton.GetComponentInChildren<TMP_Text>();
+            if (_languageButtonText != null)
+            {
+                _languageButtonText.enableAutoSizing = true;
+                _languageButtonText.fontSizeMin = 18f;
+                _languageButtonText.fontSizeMax = 36f;
+            }
+
+            _languageButton.onClick.AddListener(ToggleLocale);
+            RefreshLanguageSelector();
+        }
+
+        private void ToggleLocale()
+        {
+            var nextLocale = UILocalization.CurrentLocaleCode == UILocalization.JapaneseLocaleCode
+                ? UILocalization.EnglishLocaleCode
+                : UILocalization.JapaneseLocaleCode;
+            UILocalization.SelectLocale(nextLocale);
+        }
+
+        private void OnLocaleChanged(Locale _) => RefreshLanguageSelector();
+
+        private void RefreshLanguageSelector()
+        {
+            if (_languageButtonText == null)
+                return;
+
+            var languageNameKey = UILocalization.CurrentLocaleCode == UILocalization.JapaneseLocaleCode
+                ? "language_name_ja"
+                : "language_name_en";
+            var languageName = UILocalization.Get("Options", languageNameKey);
+            _languageButtonText.text = UILocalization.Get("Options", "language_current", languageName);
+        }
+
         public void ShowSaveDeleteConfirmation(Action onConfirm)
         {
-            if (_saveDeleteConfirmation is null)
+            if (_saveDeleteConfirmation == null)
                 _saveDeleteConfirmation = CreateSaveDeleteConfirmation(onConfirm);
             _saveDeleteConfirmation.SetActive(true);
         }
@@ -66,7 +143,8 @@ namespace Minge2026Spring.Scripts.View
 
             var message = Instantiate(saveDeleteButton.GetComponentInChildren<TMP_Text>(), dialog.transform);
             message.name = "WarningText";
-            message.text = "セーブデータを削除します。\nこの操作は取り消せません。\nよろしいですか？";
+            RemoveClonedLocalizers(message.gameObject);
+            UILocalization.Bind(message, "Options", "delete_warning");
             message.alignment = TextAlignmentOptions.Center;
             message.fontSize = 34f;
             var messageRect = message.rectTransform;
@@ -74,25 +152,36 @@ namespace Minge2026Spring.Scripts.View
             messageRect.anchorMax = new Vector2(0.92f, 0.9f);
             messageRect.offsetMin = messageRect.offsetMax = Vector2.zero;
 
-            var confirmButton = CreateDialogButton("ConfirmButton", "削除する", dialog.transform, new Vector2(-170f, -115f));
-            var cancelButton = CreateDialogButton("CancelButton", "キャンセル", dialog.transform, new Vector2(170f, -115f));
+            var confirmButton = CreateDialogButton("ConfirmButton", "confirm_delete", dialog.transform, new Vector2(-170f, -115f));
+            var cancelButton = CreateDialogButton("CancelButton", "cancel", dialog.transform, new Vector2(170f, -115f));
             confirmButton.onClick.AddListener(() => { onConfirm(); overlay.SetActive(false); });
             cancelButton.onClick.AddListener(() => overlay.SetActive(false));
             return overlay;
         }
 
-        private Button CreateDialogButton(string objectName, string label, Transform parent, Vector2 position)
+        private Button CreateDialogButton(string objectName, string entryKey, Transform parent, Vector2 position)
         {
             var button = Instantiate(saveDeleteButton, parent);
             button.name = objectName;
             button.onClick.RemoveAllListeners();
+            RemoveClonedLocalizers(button.gameObject);
             var rect = button.GetComponent<RectTransform>();
             rect.anchorMin = rect.anchorMax = new Vector2(0.5f, 0.5f);
             rect.sizeDelta = new Vector2(260f, 80f);
             rect.anchoredPosition = position;
             var text = button.GetComponentInChildren<TMP_Text>();
-            if (text is not null) text.text = label;
+            if (text != null)
+                UILocalization.Bind(text, "Options", entryKey);
             return button;
+        }
+
+        private static void RemoveClonedLocalizers(GameObject root)
+        {
+            foreach (var localizer in root.GetComponentsInChildren<LocalizeStringEvent>(true))
+            {
+                localizer.enabled = false;
+                Destroy(localizer);
+            }
         }
 
         private static GameObject CreateImageObject(string objectName, Transform parent, Color color)

@@ -69,7 +69,9 @@ namespace Minge2026Spring.Scripts.Editor.ChapterGraphEditor
                     for (int i = 0; i < BlockData.choices.Length; i++)
                     {
                         var port = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(bool));
-                        port.portName = string.IsNullOrEmpty(BlockData.choices[i].choiceText) ? $"Choice {i + 1}" : BlockData.choices[i].choiceText;
+                        port.portName = string.IsNullOrEmpty(BlockData.choices[i].choiceTextKey)
+                            ? $"Choice {i + 1}"
+                            : BlockData.choices[i].choiceTextKey;
                         outputContainer.Add(port);
                         ChoicePorts.Add(port);
                     }

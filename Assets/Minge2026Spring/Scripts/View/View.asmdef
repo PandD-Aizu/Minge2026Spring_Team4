@@ -9,7 +9,8 @@
         "GUID:405375243b85eb841991edd0216f0d43",
         "GUID:c44a20999c76c4844b837e78302284fe",
         "GUID:0c752da273b17c547ae705acf0f2adf2",
-        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "Unity.Localization"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

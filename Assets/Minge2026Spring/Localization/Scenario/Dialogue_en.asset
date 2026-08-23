@@ -1,0 +1,2744 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Dialogue_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 76e4184f73747b54aa1a77b55363464a, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 426762240
+    m_Localized: All right, let's begin the Game Planning & Development Club game
+      jam.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539456
+    m_Localized: Let's do this.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539457
+    m_Localized: Looking forward to working with you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539458
+    m_Localized: N-Nice to meet you all.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539459
+    m_Localized: Looking forward to it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539460
+    m_Localized: All right, let's start with introductions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539461
+    m_Localized: I'll be leading the team this time. It's my first time as leader,
+      so I'm a little nervous. Nice to meet you all. Oh, and I'm a third-year student.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539462
+    m_Localized: I'm Ryuta, a second-year student! I love making brutally hard action
+      games! Nice to meet you!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539463
+    m_Localized: I'm Got, a third-year. I'll be programming, same as Ryuta. 'Sup.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539464
+    m_Localized: I'm Milu, a first-year. Um, I'll be doing the art. Please go easy
+      on me...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539465
+    m_Localized: I'm Kashiwamochi, a first-year. I'll be handling sound. I'll do
+      my very best.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539466
+    m_Localized: First, let's quickly go over how this game jam will work.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539467
+    m_Localized: We have today and today only, and we'll be working online.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539468
+    m_Localized: Working remotely is kind of a pain...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539469
+    m_Localized: That... can't be helped.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539470
+    m_Localized: We'll start with a planning meeting, then everyone will work on
+      their own tasks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539471
+    m_Localized: Let's do our best to get it into a genuinely playable state.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539472
+    m_Localized: So, about the game we're making today...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539473
+    m_Localized: I was thinking we'd make an action game. What do you all think?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539474
+    m_Localized: Are we really deciding the genre right off the bat?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539475
+    m_Localized: A lot of people said they wanted to make an action game in the team
+      survey.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539476
+    m_Localized: Yes! My specialty!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539477
+    m_Localized: I see.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539478
+    m_Localized: Does that work for you, Milu and Kashiwamochi?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539479
+    m_Localized: It should... probably.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539480
+    m_Localized: Sure, that's fine.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539481
+    m_Localized: Then let's start working out the details.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539482
+    m_Localized: First, I want us all on the same page about the setting.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539483
+    m_Localized: (Who should I ask?)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539484
+    m_Localized: Got, do you have any ideas?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539485
+    m_Localized: Huh, me?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539486
+    m_Localized: Yeah. You know, since you have a lot of development experience.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539487
+    m_Localized: No, I'm good. Why not ask the younger members? Besides, I prefer
+      overall architecture and putting specs together.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539488
+    m_Localized: Oh, right.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539489
+    m_Localized: Ryuta, do you have any ideas?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539490
+    m_Localized: Huh? Me?!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539491
+    m_Localized: Yeah. You said action games were your specialty, so I wanted your
+      take.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539492
+    m_Localized: Let's see... Something like Oyaji Brothers might be easy to make.
+      I want to build traps, so how about a cave setting?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539493
+    m_Localized: I see... Got it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539494
+    m_Localized: Kashiwamochi, do you have any ideas?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539495
+    m_Localized: Hmm... I usually just tailor my work to whatever I'm asked for...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539496
+    m_Localized: Are there any kinds of music you're particularly good or bad at?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539497
+    m_Localized: Oh, making something orchestral could be fun. Electronic sounds
+      aren't really my forte.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539498
+    m_Localized: An orchestra, huh...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539499
+    m_Localized: Milu, do you have any ideas?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539500
+    m_Localized: M-Me...?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539501
+    m_Localized: Yeah. Like what kind of action game you'd want to make.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539502
+    m_Localized: Action games really aren't my area of expertise...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539503
+    m_Localized: I see.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539504
+    m_Localized: Then how about we base it on a conventional side-scrolling action
+      game?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539505
+    m_Localized: I think that sounds good.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539506
+    m_Localized: In that case, I'll assign tasks to our two programmers first.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539507
+    m_Localized: I've been waiting for this.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539508
+    m_Localized: First, we need to divide up the roles...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539509
+    m_Localized: Ryuta, you handle system design. Got, you take content.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539510
+    m_Localized: Huh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539511
+    m_Localized: Huh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539512
+    m_Localized: Was that a bad call?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539513
+    m_Localized: No, it's not bad, but...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539514
+    m_Localized: I don't know if I can handle the design...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539515
+    m_Localized: I think we'd be better off switching those around.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539516
+    m_Localized: Oh. Sorry...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539517
+    m_Localized: Got, you handle system design. Ryuta, you take content.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539518
+    m_Localized: Leave it to me!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539519
+    m_Localized: Am I free to decide all the development rules too?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539520
+    m_Localized: Yeah. You two are the only programmers, so talk it over and use
+      whatever works best for you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539521
+    m_Localized: Um... If you have any requests...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539522
+    m_Localized: Requests, huh...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539523
+    m_Localized: I honestly don't have any, and I don't really understand this stuff,
+      so I'll leave it all to you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539524
+    m_Localized: ...Okay.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539525
+    m_Localized: We don't know how many traps or bosses we'll end up with, so I'd
+      like a design that can scale as much as possible.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539526
+    m_Localized: Is this game really going to be that big?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539527
+    m_Localized: No, we can't make it that big, but it could change depending on
+      how ambitious Ryuta gets.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539528
+    m_Localized: Makes sense. Got it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539529
+    m_Localized: I just want to know where we should put the assets.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539530
+    m_Localized: Just paste them straight into the chat like usual.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539531
+    m_Localized: Won't that clutter up the chat?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539532
+    m_Localized: Oh, then let's use Golegole Cloud.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539533
+    m_Localized: I'll make a folder in the account our club uses.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539534
+    m_Localized: Got it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539535
+    m_Localized: Is there anything you want to do, Got?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539536
+    m_Localized: Nothing in particular. More than anything, I want to make something
+      that actually works as a game.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539537
+    m_Localized: Oh, right. How often would progress updates work best for you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539538
+    m_Localized: I'll go with whatever works for everyone.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539539
+    m_Localized: Then...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539540
+    m_Localized: We're short on time, so we don't need progress updates, right?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539541
+    m_Localized: No, that's a little too...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539542
+    m_Localized: You think so?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539543
+    m_Localized: The design is simple because it's a game jam. That also means there's
+      no room to recover if things go wrong.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539544
+    m_Localized: Oh. Then make the design completely airtight.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539545
+    m_Localized: That's not quite what I meant...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539546
+    m_Localized: Let's do a quick update every hour.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539547
+    m_Localized: Yeah, that sounds about right.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539548
+    m_Localized: I want you to check in with Ryuta more often than that.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539549
+    m_Localized: That's the plan. I'll leave the artist and sound designer to you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539550
+    m_Localized: Let's meet every twenty minutes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539551
+    m_Localized: ...Isn't that a little too often?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539552
+    m_Localized: Huh? You think so?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539553
+    m_Localized: Yeah. We'd constantly have to stop working.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539554
+    m_Localized: Well, you can never have too much communication, right?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539555
+    m_Localized: R-Right...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539556
+    m_Localized: Next up is Ryuta...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539557
+    m_Localized: What should I start with?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539558
+    m_Localized: You have quite a bit of freedom. What do you want to start with?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539559
+    m_Localized: Gotcha traps.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539560
+    m_Localized: I thought so.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539561
+    m_Localized: In that case...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539562
+    m_Localized: You can make as many traps as you want.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539563
+    m_Localized: Really?!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539564
+    m_Localized: We need ideas for the stage layout anyway.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539565
+    m_Localized: Well...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539566
+    m_Localized: Did I say something wrong...?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539567
+    m_Localized: Won't that work our artist to death?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539568
+    m_Localized: Well... yes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539569
+    m_Localized: Oh, good point...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539570
+    m_Localized: It's fine! I'll draw them myself!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539571
+    m_Localized: Huh? Oh, uh... really...?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539572
+    m_Localized: Then... sure, I guess...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539573
+    m_Localized: I'd like you to build the stage first.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539574
+    m_Localized: The stage?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539575
+    m_Localized: Yeah. I want you to plan what kind of stage you want so our artist
+      knows exactly what assets to make.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539576
+    m_Localized: That makes sense. Got it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539577
+    m_Localized: Could you wait for Got's instructions?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539578
+    m_Localized: So I can take a break until Got tells me what to do?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539579
+    m_Localized: I guess so, yes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539580
+    m_Localized: You can't do much until the design is finished.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539581
+    m_Localized: I'll finish it as quickly as I can.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539582
+    m_Localized: Understood.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539583
+    m_Localized: Oh, before you start on the traps, can I put you in charge of the
+      player's basic controls?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539584
+    m_Localized: Got it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539585
+    m_Localized: Got can expand the controls beyond walking later.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539586
+    m_Localized: Got it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539587
+    m_Localized: Next is the level design...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539588
+    m_Localized: I think I'd like to leave that to you, Ryuta.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539589
+    m_Localized: That makes sense. Then...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539590
+    m_Localized: Let's try making it at whatever difficulty you like, Ryuta!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539591
+    m_Localized: Wait, really?!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539592
+    m_Localized: Well... um... sure...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539593
+    m_Localized: Huh? Was that a bad idea?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539594
+    m_Localized: I'll give it everything I've got!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539595
+    m_Localized: ...Right... sure.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539596
+    m_Localized: For now, let's make it easy enough for anyone to beat.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539597
+    m_Localized: Yeah, that would make it more accessible.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539598
+    m_Localized: Let's make it brutally hard so it leaves an impression.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539599
+    m_Localized: If it's hard just for the sake of it, it might feel unfair.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539600
+    m_Localized: Next, let's assign the artist's tasks related to Ryuta's work.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539601
+    m_Localized: Okay.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539602
+    m_Localized: I'm thinking of using a tile-based system. Can you picture that?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539603
+    m_Localized: You mean like putting different blocks together, right?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539604
+    m_Localized: Exactly. Hand-crafting every stage would make the workload explode
+      every time we added one.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539605
+    m_Localized: Understood.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539606
+    m_Localized: So, about the stage assets for now...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539607
+    m_Localized: It'll be a lot of work, so free assets are fine.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539608
+    m_Localized: Oh, are you sure?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539609
+    m_Localized: Yeah. There are going to be a ton of them.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539610
+    m_Localized: I... see...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539611
+    m_Localized: Let's put those off for now.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539612
+    m_Localized: Huh, is that okay?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539613
+    m_Localized: You can't draw anything until Ryuta has a plan. I want you to draw
+      the player first.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539614
+    m_Localized: I see. Understood.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539615
+    m_Localized: I'd like you to prepare some placeholder assets.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539616
+    m_Localized: How detailed should the placeholders be?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539617
+    m_Localized: A solid-colored square is fine. Make it 64 by 64 pixels.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539618
+    m_Localized: Will all the tiles use that size?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539619
+    m_Localized: Yes. Please base the player's size on it too.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539620
+    m_Localized: I'm starting to get the picture. Thank you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539621
+    m_Localized: Next, about the player character. Do you have an image you'd like
+      to draw?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539622
+    m_Localized: The setting isn't settled yet, so I can't really picture anything.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539623
+    m_Localized: Which is easier for you to draw, a person or an animal?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539624
+    m_Localized: A person, definitely. Honestly, I'm not sure I can draw monsters.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539625
+    m_Localized: I see. We can decide on the monsters later.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539626
+    m_Localized: Let's see...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539627
+    m_Localized: Ignore the setting for now and draw the player however you like.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539628
+    m_Localized: Huh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539629
+    m_Localized: We'll have to decide on a story too, so I want you to draw the hero
+      you imagine, Milu.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539630
+    m_Localized: You mean we'll build the story around the character design?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539631
+    m_Localized: Exactly.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539632
+    m_Localized: Then I'll try doing it my way.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539633
+    m_Localized: Even a stick figure would be fine.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539634
+    m_Localized: Really? That's all you need?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539635
+    m_Localized: Yeah. You'll have to draw alternate poses too, so it'll be a lot
+      of work, right?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539636
+    m_Localized: That's true, but...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539637
+    m_Localized: You really can keep it that simple.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539638
+    m_Localized: O-Okay...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539639
+    m_Localized: Can you draw an explorer-like boy with two alternate poses?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539640
+    m_Localized: ...I think I can picture something.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539641
+    m_Localized: I'll leave the details to you, but an adventure-style setting should
+      make the story easier to develop.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539642
+    m_Localized: I like that. Understood.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539643
+    m_Localized: Finally, Kashiwamochi. Thanks for waiting.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539644
+    m_Localized: Okay!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539645
+    m_Localized: I'd like you to handle the music and sound effects...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539646
+    m_Localized: I'd like a tense, adventurous-sounding track.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539647
+    m_Localized: Tense, you say?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539648
+    m_Localized: I don't know much about music, so I can only describe the mood.
+      Can you work with that?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539649
+    m_Localized: Shouldn't it reflect the game's setting too?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539650
+    m_Localized: Keeping the setting consistent matters most, but I thought something
+      versatile enough for any stage would be best.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539651
+    m_Localized: I see what you mean. All right, I'll give it a try.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539652
+    m_Localized: Just... make it sound good.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539653
+    m_Localized: S-Sound good in what way...?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539654
+    m_Localized: You know... good!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539655
+    m_Localized: Well... okay...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539656
+    m_Localized: How about an orchestral piece?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539657
+    m_Localized: Oh, that sounds great.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539658
+    m_Localized: I want to respect your creative vision, Kashiwamochi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539659
+    m_Localized: Thank you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539660
+    m_Localized: You're free to do whatever you like.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539661
+    m_Localized: Then there are the sound effects.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539662
+    m_Localized: Just tell me what you need and I'll make as many as you want.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539663
+    m_Localized: That's really reassuring. In that case...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539664
+    m_Localized: Find us some good free sound effects.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539665
+    m_Localized: Huh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539666
+    m_Localized: Making both the music and the sound effects would be a lot, right?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539667
+    m_Localized: Well, that's true, but...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539668
+    m_Localized: It's fine if you cut a few corners on the sound effects.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539669
+    m_Localized: Hmm...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539670
+    m_Localized: I'd like you to make as many as possible.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539671
+    m_Localized: Got it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539672
+    m_Localized: Are you sure that's okay? I'm not asking too much?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539673
+    m_Localized: Not at all. Leave it to me.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539674
+    m_Localized: Put your energy into the music. We only need a few sound effects.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539675
+    m_Localized: Are you sure?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539676
+    m_Localized: Yeah. A few reusable sound effects would be a big help.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539677
+    m_Localized: Understood.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539678
+    m_Localized: I'm looking forward to your music, Kashiwamochi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539679
+    m_Localized: All right, I think that covers everything.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539680
+    m_Localized: Yeah, we have a general picture of the development plan now.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539681
+    m_Localized: I'm going all in on development!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539682
+    m_Localized: I'll let you know when the assets are ready.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539683
+    m_Localized: Me too.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539684
+    m_Localized: Then everyone can get to work.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539685
+    m_Localized: I've merged the final implementation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539686
+    m_Localized: Thanks. I'll make the build, then.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539687
+    m_Localized: Oh, is it finally done?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539688
+    m_Localized: Yeah. We somehow finished it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539689
+    m_Localized: I don't want to look at my drawing tablet for at least a month...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539690
+    m_Localized: I might still be a little unsatisfied.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539691
+    m_Localized: Then let's do a test playthrough.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539692
+    m_Localized: The build is ready, so start whenever you like.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539693
+    m_Localized: This is... good.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539694
+    m_Localized: For a one-day game jam, I think this turned out really well.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539695
+    m_Localized: You look satisfied, Got.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539696
+    m_Localized: Well, I'd call it a passing grade.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539697
+    m_Localized: I should learn from your drive to aim even higher.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539698
+    m_Localized: What did you think after playing it, Milu and Kashiwamochi?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539699
+    m_Localized: I'm just glad we had enough assets...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539700
+    m_Localized: Oh, that's your takeaway?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539701
+    m_Localized: The sound effects were implemented perfectly!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539702
+    m_Localized: I'm so glad they came out the way I imagined.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539703
+    m_Localized: And... I guess that's that.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539704
+    m_Localized: Huh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539705
+    m_Localized: "What do you mean, \u201Chuh?\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539706
+    m_Localized: You don't think we're stopping here, do you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539707
+    m_Localized: Huh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539708
+    m_Localized: It'd be a waste to end it after just one day.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539709
+    m_Localized: ...You mean...?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539710
+    m_Localized: Looks like we're continuing development.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539711
+    m_Localized: Come on, let's keep at it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539712
+    m_Localized: H-Haha...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539713
+    m_Localized: ...Is it finished?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539714
+    m_Localized: Well, it runs.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539715
+    m_Localized: Technically, all the assets are there.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539716
+    m_Localized: The music plays too.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539717
+    m_Localized: It... kind of looks like a game now.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539718
+    m_Localized: But what exactly is supposed to be fun about it?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539719
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539720
+    m_Localized: At some point, everyone just stopped making decisions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539721
+    m_Localized: I only drew what I was told to draw...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539722
+    m_Localized: And I only made what I was asked to make.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539723
+    m_Localized: Nobody did anything wrong.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539724
+    m_Localized: But nobody was actually making a game.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539725
+    m_Localized: ...I'm sorry.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539726
+    m_Localized: It can be beaten.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539727
+    m_Localized: All the assets are there.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539728
+    m_Localized: The sound works.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539729
+    m_Localized: There are no bugs.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539730
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539731
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539732
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539733
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539734
+    m_Localized: ...But somehow, it isn't fun.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539735
+    m_Localized: "\u201CFinished\u201D and \u201Cfun\u201D are not the same thing."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539736
+    m_Localized: You're right...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539737
+    m_Localized: Map generator complete.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539738
+    m_Localized: I rebuilt the entire system too.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539739
+    m_Localized: So I don't need to make stages anymore?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539740
+    m_Localized: What...? Do I have to redraw everything?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539741
+    m_Localized: Do I have to make different music for every stage too?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539742
+    m_Localized: W-Wait a second!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539743
+    m_Localized: I can make the stages myself...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539744
+    m_Localized: No. First, I'm changing the design.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539745
+    m_Localized: What...?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539746
+    m_Localized: We're never going to finish...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539747
+    m_Localized: No, we're not going to finish...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539748
+    m_Localized: ...Sorry. We're out of time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539749
+    m_Localized: ...We went too far.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539750
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539751
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539752
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539753
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539754
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539755
+    m_Localized: Well?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539756
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539757
+    m_Localized: It's not fun.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539758
+    m_Localized: ...Yeah.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539759
+    m_Localized: The music feels completely out of place.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539760
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539761
+    m_Localized: Delete it?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539762
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539763
+    m_Localized: Let's delete it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539764
+    m_Localized: Oh.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539765
+    m_Localized: Wait.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539766
+    m_Localized: I die again the instant I restart.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539767
+    m_Localized: Ah.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539768
+    m_Localized: It's a softlock.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539769
+    m_Localized: It saved right on top of the spikes...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539770
+    m_Localized: We accidentally made a horror game where you die forever.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539771
+    m_Localized: I didn't see that coming...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539772
+    m_Localized: ...This is my fault as the person in charge.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539773
+    m_Localized: Well... haha...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539774
+    m_Localized: Let's add more!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539775
+    m_Localized: Then I'll add more characters!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539776
+    m_Localized: I'll make three more tracks!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539777
+    m_Localized: Sounds great!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539778
+    m_Localized: Let's just change the whole spec!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539779
+    m_Localized: Huh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539780
+    m_Localized: Forget what we just decided! This is no longer a game! It's art!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539781
+    m_Localized: That's going a little too far...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539782
+    m_Localized: I'm in!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539783
+    m_Localized: Let's do it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539784
+    m_Localized: Wait, Got...?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539785
+    m_Localized: Yep. It's too late.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539786
+    m_Localized: ...Perfect.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539787
+    m_Localized: No bugs!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539788
+    m_Localized: We finished all the assets in time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539789
+    m_Localized: The music and sound effects are all implemented and checked.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539790
+    m_Localized: Thank you for checking every last detail!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539791
+    m_Localized: They played all the way to the end...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539792
+    m_Localized: I'm glad they got to see everything.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539793
+    m_Localized: This game was genuinely fun from beginning to end.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539794
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539795
+    m_Localized: Thank you so much, everyone.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539796
+    m_Localized: I had a great time!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539797
+    m_Localized: I never knew game jams could be this much fun.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539798
+    m_Localized: I'd love to do this again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539799
+    m_Localized: ...Yeah.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539800
+    m_Localized: Next time, let's make something even better.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539801
+    m_Localized: ...Of course!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539802
+    m_Localized: Clear!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539803
+    m_Localized: Huh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539804
+    m_Localized: Huh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539805
+    m_Localized: Huh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539806
+    m_Localized: A no-save clear?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539807
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539808
+    m_Localized: Now that's a developer.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539809
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539810
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539811
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539812
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539813
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539814
+    m_Localized: This is hopeless.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539815
+    m_Localized: You've seen everything there is to see.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539816
+    m_Localized: Thank you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539817
+    m_Localized: You may already know this, but...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539818
+    m_Localized: There is no single right answer in game development.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539819
+    m_Localized: No one person is to blame.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539820
+    m_Localized: There is no perfect way to give directions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539821
+    m_Localized: When it comes to implementation...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539822
+    m_Localized: ...or worldbuilding...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539823
+    m_Localized: ...there is more than one answer.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539824
+    m_Localized: And...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539825
+    m_Localized: the right answer...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539826
+    m_Localized: doesn't belong to you alone.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539827
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539828
+    m_Localized: I think that's all I need to say.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539829
+    m_Localized: If you've played this far...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539830
+    m_Localized: I'm sure you'll become a great game planner.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539831
+    m_Localized: And finally...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539832
+    m_Localized: Thank you for playing all the way to the end.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539833
+    m_Localized: Thank you for playing.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539834
+    m_Localized: 'Since we have the chance, I''d like to make something incredible
+      that we could enter in a contest.
+
+      What do you think?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539835
+    m_Localized: 'That''s vague and asking a lot...
+
+      But if we''re doing it,
+      I''ll write the code...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539836
+    m_Localized: What does everyone else think?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539837
+    m_Localized: 'I''m totally on board!
+
+      I''d love to make a near-impossible
+      action game packed with instant-death traps.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539838
+    m_Localized: 'I''d love to go all out on the presentation...
+
+      With lots
+      of animations and effects...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539839
+    m_Localized: I might like to layer lots of sounds into a rich orchestral piece.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539840
+    m_Localized: I don't have any particular preference, so I'll leave it to everyone
+      else.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539841
+    m_Localized: Um... I'm just doing sound, so I'll go along with what everyone
+      else wants.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539842
+    m_Localized: The artist has no particular requests either...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539843
+    m_Localized: What do our two programmers think?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539844
+    m_Localized: 'If nobody else minds,
+
+      I want to make an action game!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539845
+    m_Localized: 'Well, since Ryuta feels that strongly...
+
+      an action game
+      sounds fine, doesn''t it?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539846
+    m_Localized: 'I''m thinking of making an action game or a shooter.
+
+      What
+      do you all think?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539847
+    m_Localized: 'That sounds awesome!
+
+      I''m great at making action games!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539848
+    m_Localized: What does everyone else think?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539849
+    m_Localized: 'A straightforward system shouldn''t be hard to implement,
+
+      so
+      why not?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539850
+    m_Localized: 'Um... I''m not good at drawing mechanical things...
+
+      If that''s
+      okay, then I think it sounds good.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539851
+    m_Localized: 'Sure, I think it''s fine.
+
+      Just tell me what mood you want
+      for the music and I can make it.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539852
+    m_Localized: Then we'll go with an action game.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539853
+    m_Localized: Next, I'm going to assign everyone their tasks...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539854
+    m_Localized: Let's start with Got.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539855
+    m_Localized: Oh, me first?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539856
+    m_Localized: I want to put you in charge of the design, Got.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539857
+    m_Localized: Oh. All right.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539858
+    m_Localized: Then... (What task should I give him?)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539859
+    m_Localized: I'd like you to design the overall structure and show it to me first.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539860
+    m_Localized: "For now, keep the scope to something like \u201Cplayer controls,
+      traps, and one stage.\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539861
+    m_Localized: I see. A fairly small scope.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539862
+    m_Localized: Yeah, and I'd like you to write it up so everyone can refer to it
+      later.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539863
+    m_Localized: 'Understood.
+
+      I''ll decide the overall structure first and
+      work out the details later.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539864
+    m_Localized: 'A very rough outline is enough, okay?!
+
+      Whenever I ask you,
+      Got, you always obsess over every last detail...'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539865
+    m_Localized: Well... I'll at least get it to a runnable state for now.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539866
+    m_Localized: You're seriously good at this...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539867
+    m_Localized: I'd like you to put together a quick summary by tomorrow.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539868
+    m_Localized: ...Tomorrow?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539869
+    m_Localized: 'Yeah, it can be rough.
+
+      The design will take shape as development
+      progresses, right?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539870
+    m_Localized: Huh? But... fine, I guess...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539871
+    m_Localized: It's just a starting point for now, so I'm counting on you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539872
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539873
+    m_Localized: I don't really understand design, so just handle everything for
+      now.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539874
+    m_Localized: ...Everything?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539875
+    m_Localized: Yeah. Do whatever you like.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539876
+    m_Localized: Uh... right... okay...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539877
+    m_Localized: All right, let's begin Spring Minge's first online meeting.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539878
+    m_Localized: Let's do this.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539879
+    m_Localized: Looking forward to working with you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539880
+    m_Localized: N-Nice to meet you all.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539881
+    m_Localized: Looking forward to it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539882
+    m_Localized: All right, let's start with introductions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539883
+    m_Localized: 'I''ll be leading the team this time. I''m [name], a third-year
+      student.
+
+      It''s my first time as leader, so I''m a little nervous, but
+      I look forward to working with you all.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539884
+    m_Localized: 'I''m Ryuta, a second-year student.
+
+      Oh, and I''m a programmer.
+      My favorite game is Trap Man.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539885
+    m_Localized: 'I''m Got, a third-year student.
+
+      I''m a programmer, and I''ll
+      be supporting Ryuta.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539886
+    m_Localized: 'I-I''m Milu, a first-year student.
+
+      Um, I''m the artist,
+      and I''ll d-do my best!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539887
+    m_Localized: 'I''m Kashiwamochi, a second-year student.
+
+      Uh, I''ll be doing
+      sound. Yep.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539888
+    m_Localized: About the schedule going forward...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539889
+    m_Localized: 'Based on today''s full-team meeting,
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539890
+    m_Localized: please proceed with your individual tasks.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539891
+    m_Localized: So we won't be meeting in person this time?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539892
+    m_Localized: Right. It overlaps with the period when campus is closed.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539893
+    m_Localized: Oh, because of the entrance exams...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539894
+    m_Localized: And there's the graduation ceremony too.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539895
+    m_Localized: I'm moving back home, so online is my only real option.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539896
+    m_Localized: For those reasons, we'll be working online.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539897
+    m_Localized: Let's work toward having it ready for the playtesting event.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539898
+    m_Localized: So, first I'd like us to decide the general direction for the game
+      we're making.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539899
+    m_Localized: Um... (How should I bring this up?)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539900
+    m_Localized: I'm hungry!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539901
+    m_Localized: (stomach growls)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539902
+    m_Localized: I want sushi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539903
+    m_Localized: Yo, yo. Got a minute?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539904
+    m_Localized: Sure. What's up?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539905
+    m_Localized: I hear you guys are making a game right now.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539906
+    m_Localized: Yeah, for a game jam.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539907
+    m_Localized: Then put me in the game! Come on, I'm begging you!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539908
+    m_Localized: Where did that come from?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539909
+    m_Localized: Come on, it'd be great! Make me a secret character or something.
+      I love that stuff.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539910
+    m_Localized: We have no reason to put you in the game, Daittyan.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539911
+    m_Localized: A reason? Because I want to be in it. Checkmate.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539912
+    m_Localized: That doesn't prove anything.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539913
+    m_Localized: "What?! Fine, an enemy works too. When you beat me, I'll say, \u201CNot
+      bad!\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539914
+    m_Localized: That's not something the one who lost would say.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539915
+    m_Localized: Sweat the small stuff and you'll go bald, man. I've already figured
+      out my character concept.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539916
+    m_Localized: I didn't ask, but let's hear it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539917
+    m_Localized: The ultimate helper character. Maxed-out attack, infinite health,
+      and the moment I show up, you win.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539918
+    m_Localized: You'd completely break the game!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539919
+    m_Localized: Overpowered characters are the dream, right? Obviously!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539920
+    m_Localized: I might consider putting you on a poster in the background.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539921
+    m_Localized: Seriously? Yes! I'll send you a photo. I'll pick the most flattering
+      one, so just you wait!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539922
+    m_Localized: I never said we'd use an actual photo of you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539923
+    m_Localized: Come on... Give a guy a break. Let me know if I make the cut, okay?
+      I'm counting on you!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539924
+    m_Localized: Sure, sure. I'll add you if we have time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539925
+    m_Localized: Do you have any old Java exams?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539926
+    m_Localized: Nope.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539927
+    m_Localized: Seriously?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539928
+    m_Localized: Did you solve Ex8?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539929
+    m_Localized: Do you want the answer?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539930
+    m_Localized: Please.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539931
+    m_Localized: Here you go.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539932
+    m_Localized: I don't think it's wrong, at least.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539933
+    m_Localized: Isn't there some unrelated file mixed in here?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539934
+    m_Localized: Oh.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539935
+    m_Localized: Well, don't worry about it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539936
+    m_Localized: Now I'm curious.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539937
+    m_Localized: There's nothing in there I mind you seeing, so it's fine.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539938
+    m_Localized: You're really okay with that?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539939
+    m_Localized: By the way, what is this file?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539940
+    m_Localized: A design template for game development. It has a README with development
+      rules and stuff. I wonder why it's in there.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539941
+    m_Localized: Beats me.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539942
+    m_Localized: Kashiwamochi.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539943
+    m_Localized: '?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539944
+    m_Localized: I heard you're exhibiting at the upcoming Nanpo indie event.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539945
+    m_Localized: That's right. Are you interested?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539946
+    m_Localized: Let me buy one of your CDs.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539947
+    m_Localized: Thank you for your business.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539948
+    m_Localized: Japanese-style orchestral music really is great.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539949
+    m_Localized: It's my specialty.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539950
+    m_Localized: (with an image) Is this yours, Milu?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539951
+    m_Localized: It is. Was it in the clubroom?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539952
+    m_Localized: Yeah. You've already gone home, right? Is it okay if I leave it
+      in the clubroom?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539953
+    m_Localized: It would help if you could hide it on the bookshelf.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539954
+    m_Localized: Hide it?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539955
+    m_Localized: I don't really want anyone to see it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539956
+    m_Localized: Got it. I'll put it on the art team's shelf.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539957
+    m_Localized: Thank you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539958
+    m_Localized: We're playing Nupratune. Want to join?!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539959
+    m_Localized: Nupra! Sounds good!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539960
+    m_Localized: Tomorrow night at nine!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539961
+    m_Localized: Gotcha.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539962
+    m_Localized: Also, the co-op action game H.E.P.O. has a major update coming.
+      Want to play?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539963
+    m_Localized: H.E.P.O.? Never heard of it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539964
+    m_Localized: It's seriously fun.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539965
+    m_Localized: If an action-game fan like you recommends it, it must be good.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539966
+    m_Localized: I highly recommend it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539967
+    m_Localized: Bought it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539968
+    m_Localized: You're a legend!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539969
+    m_Localized: This is... good.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539970
+    m_Localized: For a one-day game jam, I think this turned out really well.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539971
+    m_Localized: You look satisfied, Got.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539972
+    m_Localized: Well, I'd call it a passing grade.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539973
+    m_Localized: I should learn from your drive to aim even higher.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539974
+    m_Localized: What did you think after playing it, Milu and Kashiwamochi?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539975
+    m_Localized: I'm just glad we had enough assets...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539976
+    m_Localized: Oh, that's your takeaway?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539977
+    m_Localized: The sound effects were implemented perfectly!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539978
+    m_Localized: I'm so glad they came out the way I imagined.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539979
+    m_Localized: And... I guess that's that.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539980
+    m_Localized: Huh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539981
+    m_Localized: "What do you mean, \u201Chuh?\u201D"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539982
+    m_Localized: You don't think we're stopping here, do you?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539983
+    m_Localized: Huh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539984
+    m_Localized: It'd be a waste to end it after just one day.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539985
+    m_Localized: ...You mean...?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539986
+    m_Localized: Looks like we're continuing development.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539987
+    m_Localized: Come on, let's keep at it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539988
+    m_Localized: H-Haha...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539989
+    m_Localized: ...Is it finished?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539990
+    m_Localized: Well, it runs.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539991
+    m_Localized: Technically, all the assets are there.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539992
+    m_Localized: The music plays too.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539993
+    m_Localized: It... kind of looks like a game now.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539994
+    m_Localized: But what exactly is supposed to be fun about it?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539995
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539996
+    m_Localized: At some point, everyone just stopped making decisions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539997
+    m_Localized: I only drew what I was told to draw...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539998
+    m_Localized: And I only made what I was asked to make.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443539999
+    m_Localized: Nobody did anything wrong.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540000
+    m_Localized: But nobody was actually making a game.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540001
+    m_Localized: ...I'm sorry.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540002
+    m_Localized: It can be beaten.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540003
+    m_Localized: All the assets are there.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540004
+    m_Localized: The sound works.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540005
+    m_Localized: There are no bugs.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540006
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540007
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540008
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540009
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540010
+    m_Localized: ...But somehow, it isn't fun.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540011
+    m_Localized: "\u201CFinished\u201D and \u201Cfun\u201D are not the same thing."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540012
+    m_Localized: You're right...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540013
+    m_Localized: Map generator complete.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540014
+    m_Localized: I rebuilt the entire system too.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540015
+    m_Localized: So I don't need to make stages anymore?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540016
+    m_Localized: What...? Do I have to redraw everything?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540017
+    m_Localized: Do I have to make different music for every stage too?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540018
+    m_Localized: W-Wait a second!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540019
+    m_Localized: I can make the stages myself...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540020
+    m_Localized: No. First, I'm changing the design.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540021
+    m_Localized: What...?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540022
+    m_Localized: We're never going to finish...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540023
+    m_Localized: No, we're not going to finish...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540024
+    m_Localized: ...Sorry. We're out of time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540025
+    m_Localized: ...We went too far.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540026
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540027
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540028
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540029
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540030
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540031
+    m_Localized: Well?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540032
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540033
+    m_Localized: It's not fun.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540034
+    m_Localized: ...Yeah.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540035
+    m_Localized: The music feels completely out of place.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540036
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540037
+    m_Localized: Delete it?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540038
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540039
+    m_Localized: Let's delete it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540040
+    m_Localized: Oh.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540041
+    m_Localized: Wait.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540042
+    m_Localized: I die again the instant I restart.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540043
+    m_Localized: Ah.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540044
+    m_Localized: It's a softlock.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540045
+    m_Localized: It saved right on top of the spikes...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540046
+    m_Localized: We accidentally made a horror game where you die forever.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540047
+    m_Localized: I didn't see that coming...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540048
+    m_Localized: ...This is my fault as the person in charge.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540049
+    m_Localized: Well... haha...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540050
+    m_Localized: Let's add more!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540051
+    m_Localized: Then I'll add more characters!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540052
+    m_Localized: I'll make three more tracks!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540053
+    m_Localized: Sounds great!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540054
+    m_Localized: Let's just change the whole spec!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540055
+    m_Localized: Huh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540056
+    m_Localized: Forget what we just decided! This is no longer a game! It's art!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540057
+    m_Localized: That's going a little too far...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540058
+    m_Localized: I'm in!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540059
+    m_Localized: Let's do it!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540060
+    m_Localized: Wait, Got...?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540061
+    m_Localized: Yep. It's too late.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540062
+    m_Localized: ...Perfect.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540063
+    m_Localized: No bugs!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540064
+    m_Localized: We finished all the assets in time.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540065
+    m_Localized: The music and sound effects are all implemented and checked.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540066
+    m_Localized: Thank you for checking every last detail!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540067
+    m_Localized: They played all the way to the end...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540068
+    m_Localized: I'm glad they got to see everything.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540069
+    m_Localized: This game was genuinely fun from beginning to end.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540070
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540071
+    m_Localized: Thank you so much, everyone.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540072
+    m_Localized: I had a great time!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540073
+    m_Localized: I never knew game jams could be this much fun.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540074
+    m_Localized: I'd love to do this again.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540075
+    m_Localized: ...Yeah.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540076
+    m_Localized: Next time, let's make something even better.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540077
+    m_Localized: ...Of course!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540078
+    m_Localized: Clear!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540079
+    m_Localized: Huh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540080
+    m_Localized: Huh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540081
+    m_Localized: Huh?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540082
+    m_Localized: A no-death clear?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540083
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540084
+    m_Localized: Now that's a developer.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540085
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540086
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540087
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540088
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540089
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540090
+    m_Localized: This is hopeless.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540091
+    m_Localized: You've seen everything there is to see.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540092
+    m_Localized: Thank you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540093
+    m_Localized: You may already know this, but...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540094
+    m_Localized: There is no single right answer in game development.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540095
+    m_Localized: No one person is to blame.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540096
+    m_Localized: There is no perfect way to give directions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540097
+    m_Localized: When it comes to implementation...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540098
+    m_Localized: ...or worldbuilding...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540099
+    m_Localized: ...there is more than one answer.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540100
+    m_Localized: And...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540101
+    m_Localized: the right answer...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540102
+    m_Localized: doesn't belong to you alone.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540103
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540104
+    m_Localized: I think that's all I need to say.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540105
+    m_Localized: If you've played this far...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540106
+    m_Localized: I'm sure you'll become a great game planner.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540107
+    m_Localized: And finally...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540108
+    m_Localized: Thank you for playing all the way to the end.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 443540109
+    m_Localized: Thank you for playing.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

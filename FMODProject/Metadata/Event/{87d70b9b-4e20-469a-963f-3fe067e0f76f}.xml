@@ -5,7 +5,7 @@
 			<value>AchievementBGM</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{9a4afc31-8e2b-4232-b5f6-41c7d92f3231}</destination>
@@ -146,6 +146,7 @@
 	<object class="MixerBusEffectChain" id="{885fa160-d66c-4a29-9c28-5aaf3ce9bca7}">
 		<relationship name="effects">
 			<destination>{c6e193e8-24d5-46cc-812c-c8105294487b}</destination>
+			<destination>{f5413f2e-6e2e-47e9-905d-fe66cc1b7af9}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2d5a996a-9f63-4a44-9fca-65c731d7684d}" />
@@ -181,5 +182,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{ed313117-94ea-4108-9bea-9cd59c3cebcc}" />
 	<object class="MixerBusFader" id="{c6e193e8-24d5-46cc-812c-c8105294487b}" />
+	<object class="SpatialiserEffect" id="{f5413f2e-6e2e-47e9-905d-fe66cc1b7af9}" />
 	<object class="MixerBusFader" id="{36779e20-bd8a-40e7-ab65-b0da58714bd1}" />
 </objects>

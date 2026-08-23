@@ -199,7 +199,7 @@ namespace Minge2026Spring.Scripts.Editor.ChapterGraphEditor
                     }
                     GUILayout.EndHorizontal();
 
-                    dialogue.speaker = EditorGUILayout.TextField("Speaker", dialogue.speaker);
+                    dialogue.speakerKey = EditorGUILayout.TextField("Speaker Key", dialogue.speakerKey);
                     dialogue.iconId = EditorGUILayout.TextField("Icon ID", dialogue.iconId);
 
                     voiceEventPicker.EventReference = string.IsNullOrWhiteSpace(dialogue.voiceEventPath)
@@ -214,8 +214,7 @@ namespace Minge2026Spring.Scripts.Editor.ChapterGraphEditor
                         ? string.Empty
                         : voiceEventPicker.EventReference.Path;
                     
-                    GUILayout.Label("Message:");
-                    dialogue.message = EditorGUILayout.TextArea(dialogue.message, GUILayout.MinHeight(50), GUILayout.ExpandHeight(true));
+                    dialogue.messageKey = EditorGUILayout.TextField("Message Key", dialogue.messageKey);
                     dialogue.waitingTime = EditorGUILayout.FloatField("Wait After(s)", dialogue.waitingTime);
                     
                     dialogueList[i] = dialogue;
@@ -225,7 +224,7 @@ namespace Minge2026Spring.Scripts.Editor.ChapterGraphEditor
                 
                 GUILayout.BeginHorizontal();
                 if (GUILayout.Button("+ Add Dialogue Entry", GUILayout.Height(25)))
-                    dialogueList.Add(new Dialogue { speaker = "Speaker" });
+                    dialogueList.Add(new Dialogue());
                 
                 if (dialogueList.Count > 0 && GUILayout.Button("Clear All", GUILayout.Width(70), GUILayout.Height(25)))
                     dialogueList.Clear();
@@ -249,7 +248,7 @@ namespace Minge2026Spring.Scripts.Editor.ChapterGraphEditor
                     var choice = choiceList[i];
 
                     GUILayout.BeginHorizontal();
-                    choice.choiceText = EditorGUILayout.TextField($"Choice {i+1}", choice.choiceText);
+                    choice.choiceTextKey = EditorGUILayout.TextField($"Choice {i+1} Key", choice.choiceTextKey);
 
                     if (GUILayout.Button("✕", GUILayout.Width(25)))
                     {
@@ -269,7 +268,7 @@ namespace Minge2026Spring.Scripts.Editor.ChapterGraphEditor
 
                 if (GUILayout.Button("+ Add Choice Option", GUILayout.Height(25)))
                 {
-                    choiceList.Add(new Choice { choiceText = "New Option" });
+                    choiceList.Add(new Choice());
                     choicesChanged = true;
                 }
 

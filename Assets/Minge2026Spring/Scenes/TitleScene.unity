@@ -1504,6 +1504,7 @@ MonoBehaviour:
   ExitButton: {fileID: 2100980934}
   versionFontSize: 16
   versionAlpha: 0.65
+  versionFont: {fileID: 11400000, guid: e8077101bbbcc774096d56bef6bd4305, type: 2}
 --- !u!4 &2079696836
 Transform:
   m_ObjectHideFlags: 0

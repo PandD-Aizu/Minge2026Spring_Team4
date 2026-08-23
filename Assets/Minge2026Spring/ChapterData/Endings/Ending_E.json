@@ -3,23 +3,112 @@
     {
       "blockId": "Ending_E",
       "nodeType": 0,
+      "nodePosX": 0.0,
+      "nodePosY": 0.0,
       "dialogues": [
-        { "iconId": "player_icon", "speaker": "主人公", "message": "……", "voiceEventPath": "event:/Serif/主人公_……", "waitingTime": 0.0 },
-        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "……", "voiceEventPath": "event:/Serif/Ryuta_......", "waitingTime": 0.0 },
-        { "iconId": "milu_icon", "speaker": "Milu", "message": "……", "voiceEventPath": "event:/Serif/Milu_……", "waitingTime": 0.0 },
-        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "……", "voiceEventPath": "event:/Serif/かしわもち_……", "waitingTime": 0.0 },
-        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "……", "voiceEventPath": "event:/Serif/ごっと_……", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "どう？", "voiceEventPath": "event:/Serif/主人公_どう？", "waitingTime": 0.0 },
-        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "……", "voiceEventPath": "event:/Serif/Ryuta_......", "waitingTime": 0.0 },
-        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "面白くないね。", "voiceEventPath": "event:/Serif/ごっと_面白くないね。", "waitingTime": 0.0 },
-        { "iconId": "milu_icon", "speaker": "Milu", "message": "……はい。", "voiceEventPath": "event:/Serif/Milu_……はい。", "waitingTime": 0.0 },
-        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "曲だけ浮いてる気がします。", "voiceEventPath": "event:/Serif/かしわもち_曲だけ浮いてる気がします。", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "……", "voiceEventPath": "event:/Serif/主人公_……", "waitingTime": 0.0 },
-        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "消す？", "voiceEventPath": "event:/Serif/ごっと_消す？", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "……", "voiceEventPath": "event:/Serif/主人公_……", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "消そうか。", "voiceEventPath": "event:/Serif/主人公_消そうか。", "waitingTime": 5.0 }
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "ending_e.ending_e.dialogue.000",
+          "voiceEventPath": "event:/Serif/主人公_……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "ending_e.ending_e.dialogue.001",
+          "voiceEventPath": "event:/Serif/Ryuta_......",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "ending_e.ending_e.dialogue.002",
+          "voiceEventPath": "event:/Serif/Milu_……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "ending_e.ending_e.dialogue.003",
+          "voiceEventPath": "event:/Serif/かしわもち_……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "ending_e.ending_e.dialogue.004",
+          "voiceEventPath": "event:/Serif/ごっと_……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "ending_e.ending_e.dialogue.005",
+          "voiceEventPath": "event:/Serif/主人公_どう？",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "ending_e.ending_e.dialogue.006",
+          "voiceEventPath": "event:/Serif/Ryuta_......",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "ending_e.ending_e.dialogue.007",
+          "voiceEventPath": "event:/Serif/ごっと_面白くないね。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "ending_e.ending_e.dialogue.008",
+          "voiceEventPath": "event:/Serif/Milu_……はい。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "ending_e.ending_e.dialogue.009",
+          "voiceEventPath": "event:/Serif/かしわもち_曲だけ浮いてる気がします。",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "ending_e.ending_e.dialogue.010",
+          "voiceEventPath": "event:/Serif/主人公_……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "ending_e.ending_e.dialogue.011",
+          "voiceEventPath": "event:/Serif/ごっと_消す？",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "ending_e.ending_e.dialogue.012",
+          "voiceEventPath": "event:/Serif/主人公_……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "ending_e.ending_e.dialogue.013",
+          "voiceEventPath": "event:/Serif/主人公_消そうか。",
+          "waitingTime": 5.0
+        }
       ],
-      "choices": [], "nextBlockId": "", "freeChats": [], "waitingTime": 0.0
+      "choices": [],
+      "nextBlockId": "",
+      "freeChats": [],
+      "waitingTime": 0.0
     }
   ]
 }
