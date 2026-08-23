@@ -1,0 +1,256 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: NovelUI Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: NovelUI
+  m_TableCollectionNameGuidString: d80efcc89e1a0734994a295809b6a9bf
+  m_Entries:
+  - m_Id: 938467328
+    m_Key: skip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244544
+    m_Key: continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244545
+    m_Key: direct_messages
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244546
+    m_Key: online
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244547
+    m_Key: channel.minecraft
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244548
+    m_Key: channel.read_me
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244549
+    m_Key: channel.clubroom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244550
+    m_Key: channel.game_recruitment
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244551
+    m_Key: channel.chat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244552
+    m_Key: channel.music_bot
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244553
+    m_Key: channel.sound_study
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244554
+    m_Key: server.game_jam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244555
+    m_Key: channel.general
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244556
+    m_Key: category.study_groups
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244557
+    m_Key: channel.programmers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244558
+    m_Key: channel.artist_study
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244559
+    m_Key: channel.sound
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244560
+    m_Key: channel.promotion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244561
+    m_Key: channel.minecraft_server
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244562
+    m_Key: channel.clubroom_availability
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244563
+    m_Key: channel.clubroom_booking
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244564
+    m_Key: channel.forms
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244565
+    m_Key: channel.requests
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244566
+    m_Key: channel.doodles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244567
+    m_Key: channel.artists
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244568
+    m_Key: channel.pixel_art
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244569
+    m_Key: channel.text_66
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244570
+    m_Key: channel.programmer_study
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244571
+    m_Key: category.general
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244572
+    m_Key: channel.announcements
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244573
+    m_Key: channel.drawing
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244574
+    m_Key: channel.text_65
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244575
+    m_Key: header.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244576
+    m_Key: header.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244577
+    m_Key: tutorial.dm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244578
+    m_Key: tutorial.menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244579
+    m_Key: dm.back_to_chat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244580
+    m_Key: separator.chapter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244581
+    m_Key: separator.choice
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244582
+    m_Key: menu.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244583
+    m_Key: menu.return_to_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244584
+    m_Key: menu.options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244585
+    m_Key: menu.back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244586
+    m_Key: audio.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244587
+    m_Key: audio.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244588
+    m_Key: audio.section
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244589
+    m_Key: audio.master.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244590
+    m_Key: audio.master.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244591
+    m_Key: audio.bgm.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244592
+    m_Key: audio.bgm.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244593
+    m_Key: audio.se.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244594
+    m_Key: audio.se.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244595
+    m_Key: audio.voice.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244596
+    m_Key: audio.voice.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244597
+    m_Key: audio.auto_save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244598
+    m_Key: audio.back_to_menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244599
+    m_Key: audio.restart
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4658839115793694977
+  references:
+    version: 2
+    RefIds:
+    - rid: 4658839115793694977
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1787522143341

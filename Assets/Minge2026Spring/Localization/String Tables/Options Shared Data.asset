@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Options Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: Options
+  m_TableCollectionNameGuidString: b8f92f613ecaf584c990488ca883f206
+  m_Entries:
+  - m_Id: 544202752
+    m_Key: master_volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 556785664
+    m_Key: bgm_volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 556785665
+    m_Key: se_volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 556785666
+    m_Key: voice_volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 556785667
+    m_Key: delete_save
+    m_Metadata:
+      m_Items: []
+  - m_Id: 556785668
+    m_Key: delete_warning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 556785669
+    m_Key: confirm_delete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 556785670
+    m_Key: cancel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 556785671
+    m_Key: language_current
+    m_Metadata:
+      m_Items: []
+  - m_Id: 556785672
+    m_Key: language_name_ja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 560979968
+    m_Key: language_name_en
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4658839115793694976
+  references:
+    version: 2
+    RefIds:
+    - rid: 4658839115793694976
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1787522143207

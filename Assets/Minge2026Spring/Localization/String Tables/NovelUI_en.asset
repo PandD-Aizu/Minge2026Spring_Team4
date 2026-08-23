@@ -1,0 +1,268 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: NovelUI_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: d80efcc89e1a0734994a295809b6a9bf, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 4658839115793694988
+  m_TableData:
+  - m_Id: 938467328
+    m_Localized: Skip
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244544
+    m_Localized: Continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244545
+    m_Localized: Direct Messages
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244546
+    m_Localized: Online
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244547
+    m_Localized: '# minecraft'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244548
+    m_Localized: Read Me
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244549
+    m_Localized: Clubroom
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244550
+    m_Localized: '# game-recruitment'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244551
+    m_Localized: '# general-chat'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244552
+    m_Localized: '# music-bot-commands'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244553
+    m_Localized: '# sound-study-group'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244554
+    m_Localized: One-Day Game Jam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244555
+    m_Localized: '# general'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244556
+    m_Localized: Study Groups
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244557
+    m_Localized: '# programmers'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244558
+    m_Localized: '# artist-study-group'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244559
+    m_Localized: '# sound'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244560
+    m_Localized: '# promotion'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244561
+    m_Localized: '# minecraft-server'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244562
+    m_Localized: '# clubroom-availability'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244563
+    m_Localized: '# clubroom-booking'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244564
+    m_Localized: '# forms'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244565
+    m_Localized: '# requests'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244566
+    m_Localized: '# doodles'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244567
+    m_Localized: '# artists'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244568
+    m_Localized: '# pixel-art-hour'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244569
+    m_Localized: '# text-66'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244570
+    m_Localized: '# programmer-study-group'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244571
+    m_Localized: General
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244572
+    m_Localized: '# announcements'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244573
+    m_Localized: '# drawing'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244574
+    m_Localized: '# text-65'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244575
+    m_Localized: Welcome to #One-Day Game Jam
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244576
+    m_Localized: "This is the beginning of the #One-Day Game Jam channel.\n\n\u2022
+      Communicate with your teammates and make the best game you can!\n\u2022 When
+      choices appear, select the option you want.\n\u2022 Open the menu from the
+      gear icon in the bottom-left corner."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244577
+    m_Localized: 'Open your
+
+      Direct Messages!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244578
+    m_Localized: 'Open the
+
+      options menu!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244579
+    m_Localized: "\u2190 Back to Chat"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244580
+    m_Localized: Chapter {0}
+    m_Metadata:
+      m_Items:
+      - rid: 4658839115793694988
+  - m_Id: 955244581
+    m_Localized: Choice {0}
+    m_Metadata:
+      m_Items:
+      - rid: 4658839115793694988
+  - m_Id: 955244582
+    m_Localized: Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244583
+    m_Localized: Return to Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244584
+    m_Localized: Options
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244585
+    m_Localized: Back
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244586
+    m_Localized: Audio Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244587
+    m_Localized: Adjust the in-game audio balance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244588
+    m_Localized: VOLUME
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244589
+    m_Localized: Master Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244590
+    m_Localized: Overall game volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244591
+    m_Localized: Music Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244592
+    m_Localized: Music and ambience
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244593
+    m_Localized: SFX Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244594
+    m_Localized: UI and sound effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244595
+    m_Localized: Voice Volume
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244596
+    m_Localized: Character voices
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244597
+    m_Localized: Changes are saved automatically
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244598
+    m_Localized: Back to Menu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 955244599
+    m_Localized: Restart from Beginning
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 4658839115793694988
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 955244580
+        - id: 955244581

@@ -6,14 +6,62 @@
       "nodePosX": 0.0,
       "nodePosY": 0.0,
       "dialogues": [
-        { "iconId": "player_icon", "speaker": "主人公", "message": "(画像と共に)これMiluさんの？", "voiceEventPath": "event:/Serif/主人公_(画像と共に)これMiluさんの？", "waitingTime": 0.0 },
-        { "iconId": "milu_icon", "speaker": "Milu", "message": "です。部室にありましたか？", "voiceEventPath": "event:/Serif/Milu_です。部室にありましたか？", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "うん。もう家帰ったよね？部室に置きっぱなしでもいい？", "voiceEventPath": "event:/Serif/主人公_うん。もう家帰ったよね？部室に置きっぱなしでもいい？", "waitingTime": 0.0 },
-        { "iconId": "milu_icon", "speaker": "Milu", "message": "本棚に隠しておいてもらえると助かります", "voiceEventPath": "event:/Serif/Milu_本棚に隠しておいてもらえると助かります", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "隠す？", "voiceEventPath": "event:/Serif/主人公_隠す？", "waitingTime": 0.0 },
-        { "iconId": "milu_icon", "speaker": "Milu", "message": "あまり見られたくないので", "voiceEventPath": "event:/Serif/Milu_あまり見られたくないので", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "了解。グラフィッカの棚に入れとくね", "voiceEventPath": "event:/Serif/主人公_了解。グラフィッカの棚に入れとくね", "waitingTime": 0.0 },
-        { "iconId": "milu_icon", "speaker": "Milu", "message": "ありがとうございます", "voiceEventPath": "event:/Serif/Milu_ありがとうございます", "waitingTime": 0.0 }
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_milu.dm_milu_0.dialogue.000",
+          "voiceEventPath": "event:/Serif/主人公_(画像と共に)これMiluさんの？",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "dm_milu.dm_milu_0.dialogue.001",
+          "voiceEventPath": "event:/Serif/Milu_です。部室にありましたか？",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_milu.dm_milu_0.dialogue.002",
+          "voiceEventPath": "event:/Serif/主人公_うん。もう家帰ったよね？部室に置きっぱなしでもいい？",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "dm_milu.dm_milu_0.dialogue.003",
+          "voiceEventPath": "event:/Serif/Milu_本棚に隠しておいてもらえると助かります",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_milu.dm_milu_0.dialogue.004",
+          "voiceEventPath": "event:/Serif/主人公_隠す？",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "dm_milu.dm_milu_0.dialogue.005",
+          "voiceEventPath": "event:/Serif/Milu_あまり見られたくないので",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_milu.dm_milu_0.dialogue.006",
+          "voiceEventPath": "event:/Serif/主人公_了解。グラフィッカの棚に入れとくね",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "dm_milu.dm_milu_0.dialogue.007",
+          "voiceEventPath": "event:/Serif/Milu_ありがとうございます",
+          "waitingTime": 0.0
+        }
       ],
       "choices": [],
       "nextBlockId": "",

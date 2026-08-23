@@ -130,6 +130,8 @@ GameObject:
   - component: {fileID: 36028290}
   - component: {fileID: 36028292}
   - component: {fileID: 36028291}
+  - component: {fileID: 36028293}
+  - component: {fileID: 36028294}
   m_Layer: 5
   m_Name: ButtonText
   m_TagString: Untagged
@@ -256,6 +258,94 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 36028289}
   m_CullTransparentMesh: 1
+--- !u!114 &36028293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36028289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Components.LocalizeStringEvent
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: Ending
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: fast_forward
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 36028291}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
+--- !u!114 &36028294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 36028289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.PropertyVariants.GameObjectLocalizer
+  m_TrackedObjects:
+  - rid: 4658839115793695014
+  references:
+    version: 2
+    RefIds:
+    - rid: 4658839115793695014
+      type: {class: TrackedUGuiGraphic, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects, asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 36028291}
+        m_TrackedProperties:
+          items:
+          - rid: 4658839115793695015
+          - rid: 4658839115793695016
+        m_UpdateType: 0
+    - rid: 4658839115793695015
+      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
+      data:
+        m_PropertyPath: m_fontSize
+        m_VariantData:
+        - localeIdentifier:
+            m_Code: ja
+          value: 35
+        - localeIdentifier:
+            m_Code: en
+          value: 30
+    - rid: 4658839115793695016
+      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
+      data:
+        m_PropertyPath: m_fontSizeBase
+        m_VariantData:
+        - localeIdentifier:
+            m_Code: ja
+          value: 35
+        - localeIdentifier:
+            m_Code: en
+          value: 30
 --- !u!1 &148740414
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,6 +516,7 @@ GameObject:
   - component: {fileID: 325262786}
   - component: {fileID: 325262788}
   - component: {fileID: 325262787}
+  - component: {fileID: 325262789}
   m_Layer: 5
   m_Name: ButtonText
   m_TagString: Untagged
@@ -552,6 +643,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 325262785}
   m_CullTransparentMesh: 1
+--- !u!114 &325262789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325262785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Components.LocalizeStringEvent
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: Ending
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: skip
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 325262787}
+        m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &743948109
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,6 +847,7 @@ GameObject:
   - component: {fileID: 837260892}
   - component: {fileID: 837260891}
   - component: {fileID: 837260890}
+  - component: {fileID: 837260893}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -784,6 +916,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &837260893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837260889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1511ccae7919cfc46b603b9b337fdc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.BaseInput
 --- !u!1 &1185164207
 GameObject:
   m_ObjectHideFlags: 0
@@ -1566,76 +1710,10 @@ MonoBehaviour:
   _endPadding: 420
   _contentWidth: 0.85
   _fontAsset: {fileID: 11400000, guid: d4aa1b8e570635a409ce60346fec5485, type: 2}
-  _title: "\u3010\u30B5\u30FC\u30AF\u30EBPandD\u3011\\nPlan\u901A\u308A\u306E\u30B2\u30FC\u30E0\u3092\u7D20\u76F4\u306B\u4F5C\u3089\u305B\u3066\u304F\u308C\u306A\u3044\u30E4\u30D0\u3044\u958B\u767A\u8005\u305F\u3061"
-  _finalMessage: THANK YOU FOR PLAYING!
   _textOutlineColor: {r: 0, g: 0, b: 0, a: 0.8}
   _textOutlineDistance: {x: 1.5, y: -1.5}
   _textShadowColor: {r: 0, g: 0, b: 0, a: 0.7}
   _textShadowDistance: {x: 3, y: -3}
-  _credits:
-  - title: PROJECT MANAGER
-    names: "\u3053\u3068"
-  - title: LEAD GAME DESIGNER
-    names: Ryota
-  - title: GAME DESIGNERS
-    names: "\u3053\u3068\u3000\u307C\u305F\u3082\u3061\u3000lumi\u3000\u308C\u306E\u308B\u3044\u304C"
-  - title: LEAD LEVEL DESIGNER
-    names: Ryota
-  - title: LEVEL DESIGNERS
-    names: "\u3053\u3068\u3000\u307C\u305F\u3082\u3061\u3000lumi\u3000\u308C\u306E\u308B\u3044\u304C"
-  - title: LEAD 2D ARTISTS
-    names: "lumi\u3000\u308C\u306E\u308B\u3044\u304C"
-  - title: 2D ARTISTS
-    names: "\u3053\u3068\u3000Ryota"
-  - title: LEAD PROGRAMMER
-    names: "\u3053\u3068\u3000Ryota"
-  - title: LEAD EDITOR TOOL PROGRAMMER
-    names: "\u3053\u3068\u3000Ryota"
-  - title: VOICE ACTORS
-    names: "\u4E3B\u4EBA\u516C(cv. \u308C\u306E\u308B\u3044\u304C)\n\n\u3054\u3063\u3068(cv.
-      \u3053\u3068)\n\nRyuta(cv. Ryota)\n\n\u304B\u3057\u308F\u3082\u3061(cv. \u307C\u305F\u3082\u3061)\n\nmilu(cv.
-      lumi)\n\n\u3060\u3044\u3063\u3061\u3083\u3093(cv. \u305F\u3044\u3063\u3061\u3083\u3093)"
-  - title: LEAD SOUND DESIGNER
-    names: "\u3053\u3068\u3000\u307C\u305F\u3082\u3061"
-  - title: MIXING
-    names: "\u3053\u3068"
-  - title: PV MANAGER
-    names: Ryota
-  - title: SPECIAL THANKS
-    names: "\u50D5\u3089\u306E\u5C0A\u656C\u3059\u308B\u5927\u5148\u8F29\u305F\u3044\u3063\u3061\u3083\u3093\ntessho\n\u4F01\u753B\u958B\u767A\u90E8\n\n\u30C1\u30FC\u30E0\uFF11\n\u30CA\u30AA\n\u7DD1\n\u305F\u304B\n\u30CA\u30F3\n\u305F\u3093\u3059\nkingyo\n\n\u30C1\u30FC\u30E0\uFF12\n\u3082\u307F\u3058\nTT\n\u304B\u3084\ncarelessmth\n\u304B\u306D\u3053\nKazArt.\nkora\n\n\u30C1\u30FC\u30E0\uFF13\n\u3042\u3084\n\u03B1lion\n\u53E4\u624B(\u30EA\u30AF)\n\u3070\u3084\u3057\nseika\n\u3044\u3063\u3057\u30FC\n\u84B2\u713C\u3055\u3093\u592A\u90CE(\u4EE5\u964D\u9577\u3044\u306E\u3067\u304B\u3070\u3084\u304D\u3068\u304A\u547C\u3073\u304F\u3060\u3055\u3044)"
-  - title: FONTS
-    names: Noto Sans JP
-  - title: IMAGES
-    names: "\u3044\u3089\u3059\u3068\u3084\nICOON MONO"
-  - title: BGM
-    names: "I gonna be the game developer! - \u4F5C\u66F2\uFF1A\u3053\u3068\u3001\u7DE8\u66F2\uFF1A\u3053\u3068\u3001SUNO
-      AI\n\nThe history - \u4F5C\u66F2\uFF1A\u3053\u3068\u3001\u7DE8\u66F2\uFF1A\u3053\u3068\u3001SUNO
-      AI\n\nAdjustment time - \u4F5C\u66F2\uFF1A\u3053\u3068\u3001\u7DE8\u66F2\uFF1A\u3053\u3068\u3001SUNO
-      AI\n\nMeeting time - \u4F5C\u66F2\uFF1A\u3053\u3068\u3001\u7DE8\u66F2\uFF1A\u3053\u3068\u3001SUNO
-      AI\n\nPlaning and Development - \u4F5C\u66F2\uFF1A\u3053\u3068\u3001\u7DE8\u66F2\uFF1A\u3053\u3068\u3001SUNO
-      AI\n\n\u7121\u984C - \u4F5C\u66F2\uFF1A\u307C\u305F\u3082\u3061\u3001\u7DE8\u66F2\uFF1A\u307C\u305F\u3082\u3061\n\n\u7121\u984C
-      - \u4F5C\u66F2\uFF1A\u307C\u305F\u3082\u3061\u3001\u7DE8\u66F2\uFF1A\u307C\u305F\u3082\u3061\n\n\u7121\u984C
-      - \u4F5C\u66F2\uFF1A\u307C\u305F\u3082\u3061\u3001\u7DE8\u66F2\uFF1A\u307C\u305F\u3082\u3061\n\n\u7121\u984C
-      - \u4F5C\u66F2\uFF1A\u307C\u305F\u3082\u3061\u3001\u7DE8\u66F2\uFF1A\u307C\u305F\u3082\u3061\n\n\u7121\u984C
-      - \u4F5C\u66F2\uFF1A\u307C\u305F\u3082\u3061\u3001\u7DE8\u66F2\uFF1A\u307C\u305F\u3082\u3061\n\n\u7121\u984C
-      - \u4F5C\u66F2\uFF1A\u307C\u305F\u3082\u3061\u3001\u7DE8\u66F2\uFF1A\u307C\u305F\u3082\u3061\n\n\u7121\u984C
-      - \u4F5C\u66F2\uFF1A\u307C\u305F\u3082\u3061\u3001\u7DE8\u66F2\uFF1A\u307C\u305F\u3082\u3061"
-  - title: SOUND EFFECT
-    names: "\u52B9\u679C\u97F3\u30E9\u30DC"
-  - title: THIRD-PARTY LIBRARIES
-    names: 'R3
-
-      UniTask
-
-      VContainer'
-  - title: AUDIO ENGINE
-    names: 
-  - title: DIRECTOR
-    names: "\u3053\u3068"
-  - title: PRODUCER
-    names: "\u3082\u307F\u3058"
-  - title: "\u4F1A\u6D25\u5927\u5B66\u3000\u4F01\u753B\u958B\u767A\u90E8"
-    names: Planning and Development (PandD)
   _images:
   - insertAfterSection: 0
     sprite: {fileID: 21300000, guid: cea212bce7f0ea64b90163fc761fca6e, type: 3}

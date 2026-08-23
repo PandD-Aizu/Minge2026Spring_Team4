@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Achievements_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 92213e1651701954f84926ad3c88cc90, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 4658839115793694983
+  m_TableData:
+  - m_Id: 1328537600
+    m_Localized: Pass and Delivery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314816
+    m_Localized: Three of the four members have high motivation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314817
+    m_Localized: Passive and Drift
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314818
+    m_Localized: Both programmers have low motivation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314819
+    m_Localized: Plain and Dry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314820
+    m_Localized: The sound designer and artist have low motivation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314821
+    m_Localized: Power and Disaster
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314822
+    m_Localized: Got has high motivation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314823
+    m_Localized: Pause and Delete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314824
+    m_Localized: Quit the game partway through.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314825
+    m_Localized: Panic and Deadlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314826
+    m_Localized: A softlock save occurred during the game.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314827
+    m_Localized: Passion and Discord
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314828
+    m_Localized: All three members except Got have high motivation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314829
+    m_Localized: Perfect and Delight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314830
+    m_Localized: All four members have high motivation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314831
+    m_Localized: Pride and Determination
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314832
+    m_Localized: Clear the game without dying once.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314833
+    m_Localized: Poor and Defect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314834
+    m_Localized: Everyone has low motivation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314835
+    m_Localized: Planning and Development
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314836
+    m_Localized: '100% Complete
+
+      Congratulations!!!!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314837
+    m_Localized: 'Total Play Time  {0}
+
+      Deaths           {1:N0}'
+    m_Metadata:
+      m_Items:
+      - rid: 4658839115793694983
+  - m_Id: 1345314838
+    m_Localized: 'Total Play Time: {0}'
+    m_Metadata:
+      m_Items:
+      - rid: 4658839115793694983
+  - m_Id: 1345314839
+    m_Localized: 'Total Deaths: {0:N0}'
+    m_Metadata:
+      m_Items:
+      - rid: 4658839115793694983
+  - m_Id: 1345314840
+    m_Localized: 'Total Play Time  {0}
+
+      Deaths           {1:N0}
+
+      Room            
+      {2}'
+    m_Metadata:
+      m_Items:
+      - rid: 4658839115793694983
+  - m_Id: 1345314841
+    m_Localized: '{0}. ???'
+    m_Metadata:
+      m_Items:
+      - rid: 4658839115793694983
+  - m_Id: 1345314842
+    m_Localized: 'EXTRA
+
+      STAGE'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314843
+    m_Localized: You can now break needles!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314844
+    m_Localized: You can now warp!
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 4658839115793694983
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 1345314837
+        - id: 1345314838
+        - id: 1345314839
+        - id: 1345314840
+        - id: 1345314841

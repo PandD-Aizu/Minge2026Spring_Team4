@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{1f81e2cc-1241-4165-901c-502da125fa66}">
+		<property name="assetPath">
+			<value>Planing and Development_-1dBTP.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>159.37306122448979</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7cef0a3e-b767-4358-b7f6-64653f0fef2d}</destination>
+		</relationship>
+	</object>
+</objects>

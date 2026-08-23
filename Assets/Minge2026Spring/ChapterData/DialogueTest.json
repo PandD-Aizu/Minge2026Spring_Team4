@@ -1,38 +1,49 @@
 {
-    "blocks": [
+  "blocks": [
+    {
+      "blockId": "0",
+      "nodeType": 0,
+      "nodePosX": 0.0,
+      "nodePosY": 0.0,
+      "dialogues": [
         {
-            "blockId": "0",
-            "dialogues": [
-                {
-                    "iconId": "PlayerIcon",
-                    "speaker": "Player",
-                    "message": "おなかすいたー",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "PlayerIcon",
-                    "speaker": "Player",
-                    "message": "(おなかが鳴る)",
-                    "waitingTime": 0.0
-                }
-            ],
-            "choices": [],
-            "nextBlockId": "1",
-            "waitingTime": 2.0
+          "iconId": "PlayerIcon",
+          "speakerKey": "character.player",
+          "messageKey": "dialoguetest.0.dialogue.000",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
         },
         {
-            "blockId": "1",
-            "dialogues": [
-                {
-                    "iconId": "PlayerIcon",
-                    "speaker": "Player",
-                    "message": "おすしたべたい",
-                    "waitingTime": 0.0
-                }
-            ],
-            "choices": [],
-            "nextBlockId": "",
-            "waitingTime": 0.0
+          "iconId": "PlayerIcon",
+          "speakerKey": "character.player",
+          "messageKey": "dialoguetest.0.dialogue.001",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
         }
-    ]
+      ],
+      "choices": [],
+      "nextBlockId": "1",
+      "freeChats": [],
+      "waitingTime": 2.0
+    },
+    {
+      "blockId": "1",
+      "nodeType": 0,
+      "nodePosX": 0.0,
+      "nodePosY": 0.0,
+      "dialogues": [
+        {
+          "iconId": "PlayerIcon",
+          "speakerKey": "character.player",
+          "messageKey": "dialoguetest.1.dialogue.000",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        }
+      ],
+      "choices": [],
+      "nextBlockId": "",
+      "freeChats": [],
+      "waitingTime": 0.0
+    }
+  ]
 }

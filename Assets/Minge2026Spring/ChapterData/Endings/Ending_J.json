@@ -3,15 +3,56 @@
     {
       "blockId": "Ending_J",
       "nodeType": 0,
+      "nodePosX": 0.0,
+      "nodePosY": 0.0,
       "dialogues": [
-        { "iconId": "player_icon", "speaker": "主人公", "message": "......", "voiceEventPath": "event:/Serif/主人公_……", "waitingTime": 0.0 },
-        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "......", "voiceEventPath": "event:/Serif/ごっと_……", "waitingTime": 0.0 },
-        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "......", "voiceEventPath": "event:/Serif/Ryuta_......", "waitingTime": 0.0 },
-        { "iconId": "milu_icon", "speaker": "Milu", "message": "......", "voiceEventPath": "event:/Serif/Milu_……", "waitingTime": 0.0 },
-        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "......", "voiceEventPath": "event:/Serif/かしわもち_……", "waitingTime": 0.0 },
-        { "iconId": "goddo_icon", "speaker": "ごっと", "message": "だめだこりゃ", "voiceEventPath": "event:/Serif/ごっと_ダメだこりゃ", "waitingTime": 5.0 }
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "ending_j.ending_j.dialogue.000",
+          "voiceEventPath": "event:/Serif/主人公_……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "ending_j.ending_j.dialogue.001",
+          "voiceEventPath": "event:/Serif/ごっと_……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "ending_j.ending_j.dialogue.002",
+          "voiceEventPath": "event:/Serif/Ryuta_......",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "ending_j.ending_j.dialogue.003",
+          "voiceEventPath": "event:/Serif/Milu_……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "ending_j.ending_j.dialogue.004",
+          "voiceEventPath": "event:/Serif/かしわもち_……",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "ending_j.ending_j.dialogue.005",
+          "voiceEventPath": "event:/Serif/ごっと_ダメだこりゃ",
+          "waitingTime": 5.0
+        }
       ],
-      "choices": [], "nextBlockId": "", "freeChats": [], "waitingTime": 0.0
+      "choices": [],
+      "nextBlockId": "",
+      "freeChats": [],
+      "waitingTime": 0.0
     }
   ]
 }

@@ -1,0 +1,171 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Ending_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 15c144085b85143479760f2bd641925a, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 4658839115793694981
+  m_TableData:
+  - m_Id: 758112256
+    m_Localized: FAST FORWARD >>
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083776
+    m_Localized: SKIP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083777
+    m_Localized: I GONNA BE THE TREASURE HUNTER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083778
+    m_Localized: THANK YOU FOR PLAYING!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083779
+    m_Localized: PLANNING / DIRECTOR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083780
+    m_Localized: Protagonist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083781
+    m_Localized: PROGRAMMERS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083782
+    m_Localized: 'Ryuta
+
+      Got'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083783
+    m_Localized: 2D ART
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083784
+    m_Localized: Milu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083785
+    m_Localized: SOUND
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083786
+    m_Localized: Kashiwamochi
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083787
+    m_Localized: SPECIAL THANKS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083788
+    m_Localized: 'Game Planning & Development Club
+
+      PLAYERS'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083789
+    m_Localized: 'Deaths: {0:N0}'
+    m_Metadata:
+      m_Items:
+      - rid: 4658839115793694981
+  - m_Id: 779083790
+    m_Localized: You've seen everything there is to see.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083791
+    m_Localized: Thank you.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083792
+    m_Localized: You may already know this, but...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083793
+    m_Localized: There is no single right answer in game development.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083794
+    m_Localized: No one person is to blame.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083795
+    m_Localized: There is no perfect way to give directions.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083796
+    m_Localized: When it comes to implementation...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083797
+    m_Localized: ...or worldbuilding...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083798
+    m_Localized: ...there is more than one answer.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083799
+    m_Localized: And...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083800
+    m_Localized: the right answer...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083801
+    m_Localized: doesn't belong to you alone.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083802
+    m_Localized: ...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083803
+    m_Localized: I think that's all I need to say.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083804
+    m_Localized: If you've played this far...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083805
+    m_Localized: I'm sure you'll become a great game planner.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083806
+    m_Localized: And finally...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083807
+    m_Localized: Thank you for playing all the way to the end.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 779083808
+    m_Localized: Thank you for playing.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 4658839115793694981
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 779083789

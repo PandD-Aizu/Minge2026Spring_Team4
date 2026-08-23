@@ -1,0 +1,172 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Choices Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: Choices
+  m_TableCollectionNameGuidString: a526ea5be5681c3409435a58c13c2369
+  m_Entries:
+  - m_Id: 389013504
+    m_Key: chapter.choice_1.choice.000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596416
+    m_Key: chapter.choice_1.choice.001
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596417
+    m_Key: chapter.choice_1.choice.002
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596418
+    m_Key: chapter.choice_1.choice.003
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596419
+    m_Key: chapter.choice_2.choice.000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596420
+    m_Key: chapter.choice_2.choice.001
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596421
+    m_Key: chapter.choice_3.choice.000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596422
+    m_Key: chapter.choice_3.choice.001
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596423
+    m_Key: chapter.choice_3.choice.002
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596424
+    m_Key: chapter.choice_4.choice.000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596425
+    m_Key: chapter.choice_4.choice.001
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596426
+    m_Key: chapter.choice_4.choice.002
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596427
+    m_Key: chapter.choice_5.choice.000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596428
+    m_Key: chapter.choice_5.choice.001
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596429
+    m_Key: chapter.choice_5.choice.002
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596430
+    m_Key: chapter.choice_6.choice.000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596431
+    m_Key: chapter.choice_6.choice.001
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596432
+    m_Key: chapter.choice_6.choice.002
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596433
+    m_Key: chapter.choice_7.choice.000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596434
+    m_Key: chapter.choice_7.choice.001
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596435
+    m_Key: chapter.choice_7.choice.002
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596436
+    m_Key: chapter.choice_8.choice.000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596437
+    m_Key: chapter.choice_8.choice.001
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596438
+    m_Key: chapter.choice_8.choice.002
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596439
+    m_Key: chapter.choice_9.choice.000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790720
+    m_Key: chapter.choice_9.choice.001
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790721
+    m_Key: chapter.choice_9.choice.002
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790722
+    m_Key: chapter.choice_10.choice.000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790723
+    m_Key: chapter.choice_10.choice.001
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790724
+    m_Key: chapter.choice_10.choice.002
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790725
+    m_Key: chapter1.choice2.choice.000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790726
+    m_Key: chapter1.choice2.choice.001
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790727
+    m_Key: chapter1.choice2.choice.002
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790728
+    m_Key: chapter1.choices.choice.000
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790729
+    m_Key: chapter1.choices.choice.001
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790730
+    m_Key: chapter1.choices.choice.002
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4658839115793694992
+  references:
+    version: 2
+    RefIds:
+    - rid: 4658839115793694992
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1787522186053

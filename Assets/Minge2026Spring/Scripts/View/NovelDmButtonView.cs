@@ -157,8 +157,10 @@ namespace Minge2026Spring.Scripts.View
         /// </summary>
         private void CreateBackButton()
         {
-            var buttonObject = CreateButton("DmBackButton", "← チャットに戻る", 20f);
+            var buttonObject = CreateButton("DmBackButton", string.Empty, 20f);
             buttonObject.transform.SetParent(_dmMenuObject.transform, false);
+            var label = buttonObject.GetComponentInChildren<TMP_Text>();
+            UILocalization.Bind(label, "NovelUI", "dm.back_to_chat");
 
             var layoutElement = buttonObject.AddComponent<LayoutElement>();
             layoutElement.minHeight = 60f;

@@ -1,0 +1,163 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Achievements_ja
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: ja
+  m_SharedData: {fileID: 11400000, guid: 92213e1651701954f84926ad3c88cc90, type: 2}
+  m_Metadata:
+    m_Items:
+    - rid: 4658839115793694980
+  m_TableData:
+  - m_Id: 1328537600
+    m_Localized: Pass and Delivery
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314816
+    m_Localized: "\uFF14\u4EBA\u306E\u3046\u3061\uFF13\u4EBA\u306E\u3084\u308B\u6C17\u5EA6\u304C\u9AD8\u3044"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314817
+    m_Localized: Passive and Drift
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314818
+    m_Localized: "\u30D7\u30ED\u30B0\u30E9\u30DE\uFF12\u4EBA\u306E\u3084\u308B\u6C17\u5EA6\u304C\u4F4E\u3044"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314819
+    m_Localized: Plain and Dry
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314820
+    m_Localized: "\u30B5\u30A6\u30F3\u30C9\u3001\u30B0\u30E9\u30D5\u30A3\u30C3\u30AB\u306E\u3084\u308B\u6C17\u5EA6\u304C\u4F4E\u3044"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314821
+    m_Localized: Power and Disaster
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314822
+    m_Localized: "\u3054\u3063\u3068\u306E\u3084\u308B\u6C17\u5EA6\u304C\u9AD8\u3044"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314823
+    m_Localized: Pause and Delete
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314824
+    m_Localized: "\u9014\u4E2D\u3067\u30B2\u30FC\u30E0\u3092\u3084\u3081\u308B"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314825
+    m_Localized: Panic and Deadlock
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314826
+    m_Localized: "\u30B2\u30FC\u30E0\u4E2D\u306B\u8A70\u307F\u30BB\u30FC\u30D6\u304C\u767A\u751F\u3057\u305F"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314827
+    m_Localized: Passion and Discord
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314828
+    m_Localized: "\u3054\u3063\u3068\u4EE5\u5916\u306E\uFF13\u4EBA\u306E\u3084\u308B\u6C17\u5EA6\u304C\u9AD8\u3044"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314829
+    m_Localized: Perfect and Delight
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314830
+    m_Localized: "4\u4EBA\u306E\u3084\u308B\u6C17\u5EA6\u304C\u9AD8\u3044"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314831
+    m_Localized: Pride and Determination
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314832
+    m_Localized: "\u4E00\u5EA6\u3082\u6B7B\u306A\u305A\u306B\u30B2\u30FC\u30E0\u30AF\u30EA\u30A2"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314833
+    m_Localized: Poor and Defect
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314834
+    m_Localized: "\u5168\u54E1\u306E\u3084\u308B\u6C17\u5EA6\u304C\u4F4E\u3044"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314835
+    m_Localized: Planning and Development
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314836
+    m_Localized: "\u5B8C\u5168\u30AF\u30EA\u30A2\n\u304A\u3081\u3067\u3068\u3046\uFF01\uFF01\uFF01\uFF01"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314837
+    m_Localized: "\u7DCF\u30D7\u30EC\u30A4\u6642\u9593  {0}\n\u30C7\u30B9\u6570           
+      {1:N0} \u56DE"
+    m_Metadata:
+      m_Items:
+      - rid: 4658839115793694980
+  - m_Id: 1345314838
+    m_Localized: "\u7DCF\u30D7\u30EC\u30A4\u6642\u9593: {0}"
+    m_Metadata:
+      m_Items:
+      - rid: 4658839115793694980
+  - m_Id: 1345314839
+    m_Localized: "\u7DCF\u30C7\u30B9\u6570: {0:N0} \u56DE"
+    m_Metadata:
+      m_Items:
+      - rid: 4658839115793694980
+  - m_Id: 1345314840
+    m_Localized: "\u7DCF\u30D7\u30EC\u30A4\u6642\u9593  {0}\n\u30C7\u30B9\u6570           
+      {1:N0} \u56DE\n\u30EB\u30FC\u30E0\u540D          {2}"
+    m_Metadata:
+      m_Items:
+      - rid: 4658839115793694980
+  - m_Id: 1345314841
+    m_Localized: "{0}. \uFF1F\uFF1F\uFF1F"
+    m_Metadata:
+      m_Items:
+      - rid: 4658839115793694980
+  - m_Id: 1345314842
+    m_Localized: 'EXTRA
+
+      STAGE'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314843
+    m_Localized: "\u91DD\u3092\u58CA\u305B\u308B\u3088\u3046\u306B\u306A\u308B\uFF01"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314844
+    m_Localized: "\u30EF\u30FC\u30D7\u304C\u3067\u304D\u308B\u3088\u3046\u306B\u306A\u308B\uFF01"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 4658839115793694980
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 
+        m_SharedEntries:
+        - id: 1345314837
+        - id: 1345314838
+        - id: 1345314839
+        - id: 1345314840
+        - id: 1345314841

@@ -4,6 +4,8 @@ using FMOD.Studio;
 using FMODUnity;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 namespace Minge2026Spring.Scripts.View
@@ -12,18 +14,7 @@ namespace Minge2026Spring.Scripts.View
     {
         private const string HaibokusyaVoiceEventPath = "event:/Serif/Ryuta_敗北者じゃけぇ";
 
-        [Serializable]
-        private struct CreditSection
-        {
-            public string title;
-            [TextArea] public string names;
-
-            public CreditSection(string title, string names)
-            {
-                this.title = title;
-                this.names = names;
-            }
-        }
+        private const int CreditSectionCount = 5;
 
         [Serializable]
         private struct CreditImage
@@ -36,37 +27,37 @@ namespace Minge2026Spring.Scripts.View
 
         private readonly struct ExtraDialogue
         {
-            public readonly string Text;
+            public readonly string EntryKey;
             public readonly string EventPath;
 
-            public ExtraDialogue(string text)
+            public ExtraDialogue(string entryKey, string voiceText)
             {
-                Text = text;
-                EventPath = $"event:/Serif/主人公_{text}";
+                EntryKey = entryKey;
+                EventPath = $"event:/Serif/主人公_{voiceText}";
             }
         }
 
         private static readonly ExtraDialogue[] ExtraDialogues =
         {
-            new("ここまで全部見たんだね。"),
-            new("ありがとう。"),
-            new("君は知っているかもしれないけど、"),
-            new("開発には正解なんてない。"),
-            new("誰が悪いわけでもない。"),
-            new("指示に最適解もない。"),
-            new("実装方法の"),
-            new("世界観の"),
-            new("答えはひとつじゃない。"),
-            new("それに"),
-            new("正しさを持つのは、"),
-            new("君だけじゃない。"),
-            new("……"),
-            new("これ以上は語らなくてもいいかな。"),
-            new("ここまで遊んでくれた君なら、"),
-            new("きっと良い企画開発者になれる。"),
-            new("最後に、"),
-            new("ここまで遊んでくれてありがとう。"),
-            new("Thank you for Playing")
+            new("extra_dialogue.0", "ここまで全部見たんだね。"),
+            new("extra_dialogue.1", "ありがとう。"),
+            new("extra_dialogue.2", "君は知っているかもしれないけど、"),
+            new("extra_dialogue.3", "開発には正解なんてない。"),
+            new("extra_dialogue.4", "誰が悪いわけでもない。"),
+            new("extra_dialogue.5", "指示に最適解もない。"),
+            new("extra_dialogue.6", "実装方法の"),
+            new("extra_dialogue.7", "世界観の"),
+            new("extra_dialogue.8", "答えはひとつじゃない。"),
+            new("extra_dialogue.9", "それに"),
+            new("extra_dialogue.10", "正しさを持つのは、"),
+            new("extra_dialogue.11", "君だけじゃない。"),
+            new("extra_dialogue.12", "……"),
+            new("extra_dialogue.13", "これ以上は語らなくてもいいかな。"),
+            new("extra_dialogue.14", "ここまで遊んでくれた君なら、"),
+            new("extra_dialogue.15", "きっと良い企画開発者になれる。"),
+            new("extra_dialogue.16", "最後に、"),
+            new("extra_dialogue.17", "ここまで遊んでくれてありがとう。"),
+            new("extra_dialogue.18", "Thank you for Playing")
         };
 
         [Header("Scene References")]
@@ -92,20 +83,10 @@ namespace Minge2026Spring.Scripts.View
 
         [Header("Credit Settings")]
         [SerializeField] private TMP_FontAsset _fontAsset;
-        [SerializeField] private string _title = "I GONNA BE THE TREASURE HUNTER";
-        [SerializeField] private string _finalMessage = "THANK YOU FOR PLAYING!";
         [SerializeField] private Color _textOutlineColor = new(0f, 0f, 0f, 0.8f);
         [SerializeField] private Vector2 _textOutlineDistance = new(1.5f, -1.5f);
         [SerializeField] private Color _textShadowColor = new(0f, 0f, 0f, 0.9f);
         [SerializeField] private Vector2 _textShadowDistance = new(4f, -4f);
-        [SerializeField] private List<CreditSection> _credits = new()
-        {
-            new CreditSection("PLANNING / DIRECTOR", "主人公"),
-            new CreditSection("PROGRAMMERS", "Ryuta\nごっと"),
-            new CreditSection("2D ART", "Milu"),
-            new CreditSection("SOUND", "かしわもち"),
-            new CreditSection("SPECIAL THANKS", "企画開発部\nPLAYERS")
-        };
         [SerializeField] private List<CreditImage> _images = new();
 
         [Header("Extra Ending Dialogue")]
@@ -153,10 +134,21 @@ namespace Minge2026Spring.Scripts.View
         private bool _showHaibokusyaMark;
         private bool _haibokusyaVoicePlayed;
         private bool _isInitialized;
+        private int _endingIndex = -1;
 
         private void Awake()
         {
             Initialize();
+        }
+
+        private void OnEnable()
+        {
+            LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
+        }
+
+        private void OnDisable()
+        {
+            LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
         }
 
         public void Initialize()
@@ -222,6 +214,7 @@ namespace Minge2026Spring.Scripts.View
 
         public void SetEndingTitle(int endingIndex, bool showHaibokusyaMark, int deathCount)
         {
+            _endingIndex = endingIndex;
             _endingTitle = AchievementEndingText.FormatTitle(endingIndex);
             _endingCondition = AchievementEndingText.GetDescription(endingIndex);
             _endingDeathCount = Mathf.Max(0, deathCount);
@@ -316,22 +309,23 @@ namespace Minge2026Spring.Scripts.View
             fitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
 
             CreateSpacer(_startPadding);
-            CreateText(_title, 52f, FontStyles.Bold, Color.white);
+            CreateLocalizedText("credit.title", 52f, FontStyles.Bold, Color.white);
             CreateSpacer(70f);
             CreateImagesAt(0);
             CreateSpacer(130f);
 
-            for (var index = 0; index < _credits.Count; index++)
+            for (var index = 0; index < CreditSectionCount; index++)
             {
-                var credit = _credits[index];
-                CreateText(credit.title, 34f, FontStyles.Bold, Color.white);
+                CreateLocalizedText($"credit.{index}.title", 34f, FontStyles.Bold, Color.white);
                 CreateSpacer(18f);
-                CreateText(credit.names, 27f, FontStyles.Normal, new Color(0.92f, 0.96f, 1f));
+                CreateLocalizedText($"credit.{index}.names", 27f, FontStyles.Normal,
+                    new Color(0.92f, 0.96f, 1f));
                 CreateImagesAt(index + 1);
                 CreateSpacer(105f);
             }
 
-            _finalEntry = CreateText(_finalMessage, 44f, FontStyles.Bold, new Color(1f, 0.92f, 0.45f)).rectTransform;
+            _finalEntry = CreateLocalizedText("credit.final_message", 44f, FontStyles.Bold,
+                new Color(1f, 0.92f, 0.45f)).rectTransform;
             CreateSpacer(_endPadding);
             Canvas.ForceUpdateCanvases();
             LayoutRebuilder.ForceRebuildLayoutImmediate(_content);
@@ -540,7 +534,7 @@ namespace Minge2026Spring.Scripts.View
         private void PlayExtraDialogue()
         {
             var dialogue = ExtraDialogues[_extraDialogueIndex];
-            _extraDialogueText.text = dialogue.Text;
+            _extraDialogueText.text = UILocalization.Get("Ending", dialogue.EntryKey);
             _extraDialogueInstance = RuntimeManager.CreateInstance(dialogue.EventPath);
             if (!_extraDialogueInstance.isValid())
             {
@@ -611,7 +605,24 @@ namespace Minge2026Spring.Scripts.View
             if (_endingConditionText != null && !string.IsNullOrEmpty(_endingCondition))
                 _endingConditionText.text = _endingCondition;
             if (_endingDeathCountText != null)
-                _endingDeathCountText.text = $"デス数: {_endingDeathCount:N0} 回";
+                _endingDeathCountText.text = UILocalization.Get("Ending", "death_count", _endingDeathCount);
+        }
+
+        private void OnLocaleChanged(Locale _)
+        {
+            if (_endingIndex >= 0)
+            {
+                _endingTitle = AchievementEndingText.FormatTitle(_endingIndex);
+                _endingCondition = AchievementEndingText.GetDescription(_endingIndex);
+                ApplyEndingText();
+            }
+
+            if (_isPlayingExtraDialogue && _extraDialogueText != null &&
+                _extraDialogueIndex >= 0 && _extraDialogueIndex < ExtraDialogues.Length)
+            {
+                _extraDialogueText.text = UILocalization.Get(
+                    "Ending", ExtraDialogues[_extraDialogueIndex].EntryKey);
+            }
         }
 
         private void PlayHaibokusyaVoice()
@@ -710,6 +721,13 @@ namespace Minge2026Spring.Scripts.View
 
             var layout = textObject.GetComponent<LayoutElement>();
             layout.minHeight = fontSize * (value.Contains("\n") ? 2.6f : 1.5f);
+            return text;
+        }
+
+        private TextMeshProUGUI CreateLocalizedText(string entryKey, float fontSize, FontStyles style, Color color)
+        {
+            var text = CreateText(UILocalization.Get("Ending", entryKey), fontSize, style, color);
+            UILocalization.Bind(text, "Ending", entryKey);
             return text;
         }
 

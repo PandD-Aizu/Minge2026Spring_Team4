@@ -119,7 +119,7 @@ namespace Minge2026Spring.Scripts.View
             {
                 await fontHandle.ToUniTask(cancellationToken: token);
                 textComponent.font = fontHandle.Result;
-                textComponent.text = choice.choiceText;
+                UILocalization.Bind(textComponent, "Choices", choice.choiceTextKey);
                 textComponent.fontSize = MaxFontSize;
                 textComponent.enableAutoSizing = true;
                 textComponent.fontSizeMin = MinFontSize;

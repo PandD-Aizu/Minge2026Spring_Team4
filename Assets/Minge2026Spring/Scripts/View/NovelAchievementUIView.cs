@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 namespace Minge2026Spring.Scripts.View
@@ -21,7 +23,7 @@ namespace Minge2026Spring.Scripts.View
             {
                 titleText.text = unlocked
                     ? AchievementEndingText.FormatTitle(index)
-                    : $"{(char)('A' + index)}. ？？？";
+                    : UILocalization.Get("Achievements", "locked_title", (char)('A' + index));
                 descriptionText.text = showDescription ? AchievementEndingText.GetDescription(index) : "???";
                 titleText.color = Color.white;
             }
@@ -42,6 +44,18 @@ namespace Minge2026Spring.Scripts.View
         private Material _selectionMaterial;
         private Vector2 _selectionPositionVelocity;
         private Vector2 _selectionSizeVelocity;
+        private ISet<string> _reachedEndingIds;
+        private bool _showDescriptions;
+
+        private void OnEnable()
+        {
+            LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
+        }
+
+        private void OnDisable()
+        {
+            LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
+        }
 
         public void SetSelectedEnding(int selectedIndex)
         {
@@ -59,10 +73,12 @@ namespace Minge2026Spring.Scripts.View
             if (endingTexts.Count != AchievementEndingText.EndingCount)
                 throw new InvalidOperationException("Novel ending text pairs must contain exactly 11 entries (A-K).");
 
-            var extraStageCleared = reachedEndingIds.Contains("Ending_K");
+            _reachedEndingIds = new HashSet<string>(reachedEndingIds);
+            _showDescriptions = showDescriptions;
+            var extraStageCleared = _reachedEndingIds.Contains("Ending_K");
             for (var index = 0; index < endingTexts.Count; index++)
             {
-                var unlocked = reachedEndingIds.Contains($"Ending_{(char)('A' + index)}");
+                var unlocked = _reachedEndingIds.Contains($"Ending_{(char)('A' + index)}");
                 var isExtraStageEnding = index == AchievementEndingText.RainbowEndingIndex;
                 var showDescription = showDescriptions && (!isExtraStageEnding || extraStageCleared);
                 endingTexts[index].SetText(index, unlocked, showDescription);
@@ -70,6 +86,12 @@ namespace Minge2026Spring.Scripts.View
 
             _rainbowTitle = endingTexts[AchievementEndingText.RainbowEndingIndex].TitleText;
             _rainbowEnabled = extraStageCleared;
+        }
+
+        private void OnLocaleChanged(Locale _)
+        {
+            if (_reachedEndingIds != null)
+                SetAchievements(_reachedEndingIds, _showDescriptions);
         }
 
         private void Update()

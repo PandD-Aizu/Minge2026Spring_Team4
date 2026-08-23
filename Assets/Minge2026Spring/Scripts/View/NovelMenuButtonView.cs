@@ -103,10 +103,10 @@ namespace Minge2026Spring.Scripts.View
             layout.childForceExpandWidth = true;
             layout.childForceExpandHeight = false;
 
-            CreateLabel("メニュー", 30f, 46f);
-            CreateMenuItem("タイトルに戻る", ReturnToTitle);
-            CreateMenuItem("オプション", OpenOption);
-            CreateMenuItem("戻る", CloseMenu);
+            CreateLabel("menu.title", 30f, 46f);
+            CreateMenuItem("menu.return_to_title", ReturnToTitle);
+            CreateMenuItem("menu.options", OpenOption);
+            CreateMenuItem("menu.back", CloseMenu);
         }
 
         /// <summary>
@@ -145,17 +145,18 @@ namespace Minge2026Spring.Scripts.View
             windowBlocker.onClick.AddListener(DoNothing);
 
             CreateOptionHeader(window.transform);
-            CreateText("SectionLabel", window.transform, "VOLUME", 13f, FontStyles.Bold,
+            var sectionLabel = CreateText("SectionLabel", window.transform, string.Empty, 13f, FontStyles.Bold,
                 MutedTextColor, new Vector2(-216f, 170f), new Vector2(220f, 24f), TextAlignmentOptions.Left);
+            UILocalization.Bind(sectionLabel, "NovelUI", "audio.section");
 
             // 4種類の音量を同じ情報設計で並べる
-            CreateVolumeRow(window.transform, "Master", "全体音量", "ゲーム全体の音量",
+            CreateVolumeRow(window.transform, "Master", "audio.master.title", "audio.master.description",
                 110f, _fmodVcaService.GetMasterVolume(), _fmodVcaService.SetMasterVolume);
-            CreateVolumeRow(window.transform, "BGM", "BGM音量", "音楽と環境音",
+            CreateVolumeRow(window.transform, "BGM", "audio.bgm.title", "audio.bgm.description",
                 15f, _fmodVcaService.GetBGMVolume(), _fmodVcaService.SetBGMVolume);
-            CreateVolumeRow(window.transform, "SE", "SE音量", "操作音と効果音",
+            CreateVolumeRow(window.transform, "SE", "audio.se.title", "audio.se.description",
                 -80f, _fmodVcaService.GetSEVolume(), _fmodVcaService.SetSEVolume);
-            CreateVolumeRow(window.transform, "Voice", "ボイス音量", "キャラクターの音声",
+            CreateVolumeRow(window.transform, "Voice", "audio.voice.title", "audio.voice.description",
                 -175f, _fmodVcaService.GetVoiceVolume(), _fmodVcaService.SetVoiceVolume);
 
             CreateOptionFooter(window.transform);
@@ -169,10 +170,12 @@ namespace Minge2026Spring.Scripts.View
         {
             var header = CreatePanel("Header", parent, HeaderColor,
                 new Vector2(0f, 254f), new Vector2(780f, 112f));
-            CreateText("Title", header.transform, "オーディオ設定", 28f, FontStyles.Bold,
+            var title = CreateText("Title", header.transform, string.Empty, 28f, FontStyles.Bold,
                 PrimaryTextColor, new Vector2(-114f, 18f), new Vector2(480f, 42f), TextAlignmentOptions.Left);
-            CreateText("Description", header.transform, "ゲーム中のサウンドバランスを調整", 14f, FontStyles.Normal,
+            UILocalization.Bind(title, "NovelUI", "audio.title");
+            var description = CreateText("Description", header.transform, string.Empty, 14f, FontStyles.Normal,
                 SecondaryTextColor, new Vector2(-94f, -23f), new Vector2(520f, 28f), TextAlignmentOptions.Left);
+            UILocalization.Bind(description, "NovelUI", "audio.description");
 
             // 右上からもすぐ閉じられる導線を用意
             var closeButton = CreateButton("CloseButton", "×", 27f, RowColor, AccentHoverColor);
@@ -184,15 +187,17 @@ namespace Minge2026Spring.Scripts.View
         /// <summary>
         /// 音量設定の1行を生成する
         /// </summary>
-        private void CreateVolumeRow(Transform parent, string objectName, string title, string description,
+        private void CreateVolumeRow(Transform parent, string objectName, string titleKey, string descriptionKey,
             float y, float initialValue, UnityAction<float> onValueChanged)
         {
             var row = CreatePanel($"VolumeRow_{objectName}", parent, RowColor,
                 new Vector2(0f, y), new Vector2(700f, 86f));
-            CreateText("Title", row.transform, title, 18f, FontStyles.Bold,
+            var title = CreateText("Title", row.transform, string.Empty, 18f, FontStyles.Bold,
                 PrimaryTextColor, new Vector2(-216f, 14f), new Vector2(220f, 28f), TextAlignmentOptions.Left);
-            CreateText("Description", row.transform, description, 13f, FontStyles.Normal,
+            UILocalization.Bind(title, "NovelUI", titleKey);
+            var description = CreateText("Description", row.transform, string.Empty, 13f, FontStyles.Normal,
                 MutedTextColor, new Vector2(-206f, -18f), new Vector2(240f, 24f), TextAlignmentOptions.Left);
+            UILocalization.Bind(description, "NovelUI", descriptionKey);
 
             var slider = CreateSlider(row.transform, initialValue);
             var valueBadge = CreatePanel("ValueBadge", row.transform, TrackColor,
@@ -222,18 +227,21 @@ namespace Minge2026Spring.Scripts.View
             var statusDot = CreatePanel("SaveStatus", parent, SuccessColor,
                 new Vector2(-326f, -266f), new Vector2(10f, 10f));
             statusDot.GetComponent<Image>().raycastTarget = false;
-            CreateText("SaveMessage", parent, "変更内容は自動保存されます", 13f, FontStyles.Normal,
+            var saveMessage = CreateText("SaveMessage", parent, string.Empty, 13f, FontStyles.Normal,
                 MutedTextColor, new Vector2(-156f, -266f), new Vector2(300f, 28f), TextAlignmentOptions.Left);
+            UILocalization.Bind(saveMessage, "NovelUI", "audio.auto_save");
 
-            var backButton = CreateButton("BackButton", "メニューへ戻る", 15f,
+            var backButton = CreateButton("BackButton", string.Empty, 15f,
                 new Color32(49, 51, 56, 255), new Color32(66, 68, 75, 255));
             backButton.transform.SetParent(parent, false);
+            UILocalization.Bind(backButton.GetComponentInChildren<TMP_Text>(), "NovelUI", "audio.back_to_menu");
             SetRect(backButton.GetComponent<RectTransform>(), new Vector2(274f, -266f), new Vector2(176f, 46f));
             backButton.GetComponent<Button>().onClick.AddListener(CloseOption);
 
-            var restartButton = CreateButton("RestartButton", "最初から始める", 15f,
+            var restartButton = CreateButton("RestartButton", string.Empty, 15f,
                 new Color32(91, 61, 61, 255), new Color32(116, 74, 74, 255));
             restartButton.transform.SetParent(parent, false);
+            UILocalization.Bind(restartButton.GetComponentInChildren<TMP_Text>(), "NovelUI", "audio.restart");
             SetRect(restartButton.GetComponent<RectTransform>(), new Vector2(70f, -266f), new Vector2(176f, 46f));
             restartButton.GetComponent<Button>().onClick.AddListener(RestartNovel);
         }
@@ -277,11 +285,12 @@ namespace Minge2026Spring.Scripts.View
         /// <summary>
         /// メニュー項目を生成する
         /// </summary>
-        private void CreateMenuItem(string text, UnityAction action)
+        private void CreateMenuItem(string entryKey, UnityAction action)
         {
-            var buttonObject = CreateButton($"MenuItem_{text}", text, 22f,
+            var buttonObject = CreateButton($"MenuItem_{entryKey}", string.Empty, 22f,
                 RowColor, AccentHoverColor);
             buttonObject.transform.SetParent(_menuWindow.transform, false);
+            UILocalization.Bind(buttonObject.GetComponentInChildren<TMP_Text>(), "NovelUI", entryKey);
 
             var layoutElement = buttonObject.AddComponent<LayoutElement>();
             layoutElement.minHeight = 58f;
@@ -292,13 +301,14 @@ namespace Minge2026Spring.Scripts.View
         /// <summary>
         /// 簡易メニューのタイトルを生成する
         /// </summary>
-        private void CreateLabel(string text, float fontSize, float height)
+        private void CreateLabel(string entryKey, float fontSize, float height)
         {
             var labelObject = new GameObject("MenuTitle", typeof(RectTransform), typeof(TextMeshProUGUI));
             labelObject.transform.SetParent(_menuWindow.transform, false);
 
             var label = labelObject.GetComponent<TextMeshProUGUI>();
-            ConfigureText(label, text, fontSize, FontStyles.Bold, PrimaryTextColor, TextAlignmentOptions.Center);
+            ConfigureText(label, string.Empty, fontSize, FontStyles.Bold, PrimaryTextColor, TextAlignmentOptions.Center);
+            UILocalization.Bind(label, "NovelUI", entryKey);
 
             var layoutElement = labelObject.AddComponent<LayoutElement>();
             layoutElement.minHeight = height;

@@ -6,14 +6,62 @@
       "nodePosX": 0.0,
       "nodePosY": 0.0,
       "dialogues": [
-        { "iconId": "player_icon", "speaker": "主人公", "message": "かしわもちくん", "voiceEventPath": "event:/Serif/主人公_かしわもちくん", "waitingTime": 0.0 },
-        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "？", "voiceEventPath": "event:/Serif/かしわもち_？", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "今度の南方同人イベントに出展するんだって？", "voiceEventPath": "event:/Serif/主人公_今度の南方同人イベントに出展するんだって？", "waitingTime": 0.0 },
-        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "そうですよ。興味ありますか？", "voiceEventPath": "event:/Serif/かしわもち_そうですよ。興味ありますか？", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "CD一枚買わせてください", "voiceEventPath": "event:/Serif/主人公_CD一枚買わせてください", "waitingTime": 0.0 },
-        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "毎度ありです", "voiceEventPath": "event:/Serif/かしわもち_毎度ありです", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "和風オーケストラ、やっぱり良い", "voiceEventPath": "event:/Serif/主人公_和風オーケストラ、やっぱり良い", "waitingTime": 0.0 },
-        { "iconId": "kashiwamochi_icon", "speaker": "かしわもち", "message": "得意分野です", "voiceEventPath": "event:/Serif/かしわもち_得意分野です", "waitingTime": 0.0 }
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_kashiwamochi.dm_kashiwamochi_0.dialogue.000",
+          "voiceEventPath": "event:/Serif/主人公_かしわもちくん",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "dm_kashiwamochi.dm_kashiwamochi_0.dialogue.001",
+          "voiceEventPath": "event:/Serif/かしわもち_？",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_kashiwamochi.dm_kashiwamochi_0.dialogue.002",
+          "voiceEventPath": "event:/Serif/主人公_今度の南方同人イベントに出展するんだって？",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "dm_kashiwamochi.dm_kashiwamochi_0.dialogue.003",
+          "voiceEventPath": "event:/Serif/かしわもち_そうですよ。興味ありますか？",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_kashiwamochi.dm_kashiwamochi_0.dialogue.004",
+          "voiceEventPath": "event:/Serif/主人公_CD一枚買わせてください",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "dm_kashiwamochi.dm_kashiwamochi_0.dialogue.005",
+          "voiceEventPath": "event:/Serif/かしわもち_毎度ありです",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_kashiwamochi.dm_kashiwamochi_0.dialogue.006",
+          "voiceEventPath": "event:/Serif/主人公_和風オーケストラ、やっぱり良い",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "dm_kashiwamochi.dm_kashiwamochi_0.dialogue.007",
+          "voiceEventPath": "event:/Serif/かしわもち_得意分野です",
+          "waitingTime": 0.0
+        }
       ],
       "choices": [],
       "nextBlockId": "",

@@ -1,0 +1,148 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Achievements Shared Data
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.SharedTableData
+  m_TableCollectionName: Achievements
+  m_TableCollectionNameGuidString: 92213e1651701954f84926ad3c88cc90
+  m_Entries:
+  - m_Id: 1328537600
+    m_Key: ending.0.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314816
+    m_Key: ending.0.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314817
+    m_Key: ending.1.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314818
+    m_Key: ending.1.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314819
+    m_Key: ending.2.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314820
+    m_Key: ending.2.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314821
+    m_Key: ending.3.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314822
+    m_Key: ending.3.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314823
+    m_Key: ending.4.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314824
+    m_Key: ending.4.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314825
+    m_Key: ending.5.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314826
+    m_Key: ending.5.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314827
+    m_Key: ending.6.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314828
+    m_Key: ending.6.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314829
+    m_Key: ending.7.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314830
+    m_Key: ending.7.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314831
+    m_Key: ending.8.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314832
+    m_Key: ending.8.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314833
+    m_Key: ending.9.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314834
+    m_Key: ending.9.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314835
+    m_Key: ending.10.title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314836
+    m_Key: ending.10.description
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314837
+    m_Key: ending_statistics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314838
+    m_Key: total_play_time
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314839
+    m_Key: total_deaths
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314840
+    m_Key: extra_statistics
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314841
+    m_Key: locked_title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314842
+    m_Key: extra_stage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314843
+    m_Key: hidden.needle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1345314844
+    m_Key: hidden.warp
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 4658839115793694978
+  references:
+    version: 2
+    RefIds:
+    - rid: 4658839115793694978
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1787522143568

@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Characters_ja
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: ja
+  m_SharedData: {fileID: 11400000, guid: d7c513a6217630545b3493daac896844, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 552591360
+    m_Localized: "\u4E3B\u4EBA\u516C"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 569368576
+    m_Localized: "\u308C\u306E"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 569368577
+    m_Localized: "\u3054\u3063\u3068"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 569368578
+    m_Localized: Ryuta
+    m_Metadata:
+      m_Items: []
+  - m_Id: 569368579
+    m_Localized: Milu
+    m_Metadata:
+      m_Items: []
+  - m_Id: 569368580
+    m_Localized: "\u304B\u3057\u308F\u3082\u3061"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 569368581
+    m_Localized: "\u3060\u3044\u3063\u3061\u3083\u3093"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 569368582
+    m_Localized: Player
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

@@ -6,17 +6,83 @@
       "nodePosX": 0.0,
       "nodePosY": 0.0,
       "dialogues": [
-        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "ヌプラチューンやるんですけどどうですか？！", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "ヌプラ！いいですねぇ", "voiceEventPath": "event:/Serif/主人公_ヌプラ！いいですねぇ", "waitingTime": 0.0 },
-        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "明日の夜９時からです！", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "りょ", "voiceEventPath": "event:/Serif/主人公_りょ", "waitingTime": 0.0 },
-        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "あと、今度協力型アクションゲームのH.E.P.O.の大型アプデあるんですけど、やりませんか？", "voiceEventPath": "event:/Serif/Ryuta_あと、今度協力型アクションゲームのH.E.P.O.の大型アプデあるんですけど、やりませんか？", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "へぽ？初めて聞く", "voiceEventPath": "event:/Serif/主人公_へぽ？初めて聞く", "waitingTime": 0.0 },
-        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "めっちゃおもろいです", "voiceEventPath": "event:/Serif/Ryuta_めっちゃおもろいです", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "アクション好きのRyutaくんが言うなら間違いないな", "voiceEventPath": "event:/Serif/主人公_アクション好きのRyutaくんが言うなら間違いないな", "waitingTime": 0.0 },
-        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "おすすめです！", "voiceEventPath": "event:/Serif/Ryuta_おすすめです！", "waitingTime": 0.0 },
-        { "iconId": "player_icon", "speaker": "主人公", "message": "買った", "voiceEventPath": "event:/Serif/主人公_買った", "waitingTime": 0.0 },
-        { "iconId": "ryuta_icon", "speaker": "Ryuta", "message": "かっけぇっす！", "voiceEventPath": "event:/Serif/Ryuta_かっけぇっす！", "waitingTime": 0.0 }
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "dm_ryuta.dm_ryuta_0.dialogue.000",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_ryuta.dm_ryuta_0.dialogue.001",
+          "voiceEventPath": "event:/Serif/主人公_ヌプラ！いいですねぇ",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "dm_ryuta.dm_ryuta_0.dialogue.002",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_ryuta.dm_ryuta_0.dialogue.003",
+          "voiceEventPath": "event:/Serif/主人公_りょ",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "dm_ryuta.dm_ryuta_0.dialogue.004",
+          "voiceEventPath": "event:/Serif/Ryuta_あと、今度協力型アクションゲームのH.E.P.O.の大型アプデあるんですけど、やりませんか？",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_ryuta.dm_ryuta_0.dialogue.005",
+          "voiceEventPath": "event:/Serif/主人公_へぽ？初めて聞く",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "dm_ryuta.dm_ryuta_0.dialogue.006",
+          "voiceEventPath": "event:/Serif/Ryuta_めっちゃおもろいです",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_ryuta.dm_ryuta_0.dialogue.007",
+          "voiceEventPath": "event:/Serif/主人公_アクション好きのRyutaくんが言うなら間違いないな",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "dm_ryuta.dm_ryuta_0.dialogue.008",
+          "voiceEventPath": "event:/Serif/Ryuta_おすすめです！",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "dm_ryuta.dm_ryuta_0.dialogue.009",
+          "voiceEventPath": "event:/Serif/主人公_買った",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "dm_ryuta.dm_ryuta_0.dialogue.010",
+          "voiceEventPath": "event:/Serif/Ryuta_かっけぇっす！",
+          "waitingTime": 0.0
+        }
       ],
       "choices": [],
       "nextBlockId": "",

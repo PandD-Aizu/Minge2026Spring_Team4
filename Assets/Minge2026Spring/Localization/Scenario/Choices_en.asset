@@ -1,0 +1,167 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Choices_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: a526ea5be5681c3409435a58c13c2369, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 389013504
+    m_Localized: Ask Got for his opinion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596416
+    m_Localized: Ask Ryuta for his opinion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596417
+    m_Localized: Ask Kashiwamochi for his opinion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596418
+    m_Localized: Ask Milu for her opinion
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596419
+    m_Localized: 'Ryuta: System Design / Got: Content'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596420
+    m_Localized: 'Got: System Design / Ryuta: Content'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596421
+    m_Localized: 'Request 1: Full discretion'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596422
+    m_Localized: 'Request 2: Prioritize extensibility'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596423
+    m_Localized: 'Request 3: Asset storage'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596424
+    m_Localized: 'Frequency 1: None'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596425
+    m_Localized: 'Frequency 2: Every hour'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596426
+    m_Localized: 'Frequency 3: Every 20 minutes'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596427
+    m_Localized: 'Task 1: Free rein on traps'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596428
+    m_Localized: 'Task 2: Build the stage first'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596429
+    m_Localized: 'Task 3: Wait for the design'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596430
+    m_Localized: 'Difficulty 1: Whatever you like'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596431
+    m_Localized: 'Difficulty 2: Beginner-friendly'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596432
+    m_Localized: 'Difficulty 3: Very hard'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596433
+    m_Localized: 'Assets 1: Use free assets'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596434
+    m_Localized: 'Assets 2: Postpone asset work'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596435
+    m_Localized: 'Assets 3: Make placeholders'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596436
+    m_Localized: 'Design 1: Complete freedom'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596437
+    m_Localized: 'Design 2: Stick figure'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596438
+    m_Localized: 'Design 3: Specific direction'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 401596439
+    m_Localized: 'Music 1: A tense track'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790720
+    m_Localized: 'Music 2: Your choice'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790721
+    m_Localized: 'Music 3: Propose an orchestral score'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790722
+    m_Localized: 'SFX 1: Use free sound effects'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790723
+    m_Localized: 'SFX 2: Request lots of custom sounds'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790724
+    m_Localized: 'SFX 3: Request a few reusable sounds'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790725
+    m_Localized: Show me the overall design when it's ready
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790726
+    m_Localized: Put together a quick summary by tomorrow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790727
+    m_Localized: I don't understand it, so you handle everything
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790728
+    m_Localized: Make an action game or shooter
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790729
+    m_Localized: Make something incredible
+    m_Metadata:
+      m_Items: []
+  - m_Id: 405790730
+    m_Localized: Ask what everyone wants
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

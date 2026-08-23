@@ -9,39 +9,11 @@ namespace Minge2026Spring.Scripts.View
         public const int EndingCount = 11;
         public const int RainbowEndingIndex = 10;
 
-        private static readonly string[] Titles =
-        {
-            "Pass and Delivery",
-            "Passive and Drift",
-            "Plain and Dry",
-            "Power and Disaster",
-            "Pause and Delete",
-            "Panic and Deadlock",
-            "Passion and Discord",
-            "Perfect and Delight",
-            "Pride and Determination",
-            "Poor and Defect",
-            "Planning and Development"
-        };
+        public static string GetTitle(int index) =>
+            UILocalization.Get("Achievements", $"ending.{ValidateIndex(index)}.title");
 
-        private static readonly string[] Descriptions =
-        {
-            "４人のうち３人のやる気度が高い",
-            "プログラマ２人のやる気度が低い",
-            "サウンド、グラフィッカのやる気度が低い",
-            "ごっとのやる気度が高い",
-            "途中でゲームをやめる",
-            "ゲーム中に詰みセーブが発生した",
-            "ごっと以外の３人のやる気度が高い",
-            "4人のやる気度が高い",
-            "一度も死なずにゲームクリア",
-            "全員のやる気度が低い",
-            "完全クリア\nおめでとう！！！！"
-        };
-
-        public static string GetTitle(int index) => Titles[ValidateIndex(index)];
-
-        public static string GetDescription(int index) => Descriptions[ValidateIndex(index)];
+        public static string GetDescription(int index) =>
+            UILocalization.Get("Achievements", $"ending.{ValidateIndex(index)}.description");
 
         public static string FormatTitle(int index)
         {

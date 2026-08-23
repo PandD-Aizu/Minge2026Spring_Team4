@@ -10,6 +10,8 @@ using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.EventSystems;
+using UnityEngine.Localization;
+using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
 namespace Minge2026Spring.Scripts.View
@@ -28,22 +30,35 @@ namespace Minge2026Spring.Scripts.View
             [SerializeField] private TMP_Text descriptionText;
             private string _unlockedTitle;
             private string _unlockedDescription;
+            private bool _unlocked;
+            private bool _showDescription;
+            private int _endingIndex;
 
             public RectTransform Root => titleText.transform.parent as RectTransform;
             public TMP_Text TitleText => titleText;
             public string StatisticsText { get; set; }
 
-            public void CaptureUnlockedText()
+            public void CaptureUnlockedText(int endingIndex)
             {
-                _unlockedTitle = titleText.text;
-                _unlockedDescription = descriptionText.text;
+                _endingIndex = endingIndex;
+                _unlockedTitle = AchievementEndingText.GetTitle(endingIndex);
+                _unlockedDescription = AchievementEndingText.GetDescription(endingIndex);
             }
 
             public void SetUnlocked(bool unlocked, bool showDescription, int endingIndex)
             {
+                _unlocked = unlocked;
+                _showDescription = showDescription;
+                _endingIndex = endingIndex;
                 titleText.text = unlocked ? FormatTitle(_unlockedTitle, endingIndex) : "???";
                 descriptionText.text = showDescription ? _unlockedDescription : "???";
                 titleText.color = Color.white;
+            }
+
+            public void RefreshLocalizedText()
+            {
+                CaptureUnlockedText(_endingIndex);
+                SetUnlocked(_unlocked, _showDescription, _endingIndex);
             }
 
             public void ConfigureLayout(float titleFontSize, float descriptionFontSize)
@@ -138,8 +153,28 @@ namespace Minge2026Spring.Scripts.View
         private int _hoveredEndingIndex = -1;
         private AsyncOperationHandle<Sprite> _haibokusyaMarkHandle;
         private EventInstance _haibokusyaVoiceInstance;
+        private readonly float[] _endingClearTimes = new float[EndingCount];
+        private readonly int[] _endingDeathCounts = new int[EndingCount];
+        private float _totalClearTime;
+        private long _totalDeathCount;
+        private ExtraStageProgress _extraStageProgress;
+        private bool _hasExtraStageProgress;
+        private bool _extraStageUnlocked;
+        private bool _hasHiddenItem1;
+        private bool _hasHiddenItem2;
+        private bool _showHiddenDescriptions;
 
         public Button ExtraStageButton => extraStageButton;
+
+        private void OnEnable()
+        {
+            LocalizationSettings.SelectedLocaleChanged += OnLocaleChanged;
+        }
+
+        private void OnDisable()
+        {
+            LocalizationSettings.SelectedLocaleChanged -= OnLocaleChanged;
+        }
 
         private void OnDestroy()
         {
@@ -154,14 +189,12 @@ namespace Minge2026Spring.Scripts.View
             if (endingTexts.Count != EndingCount)
                 throw new InvalidOperationException("Ending text pairs must contain exactly 11 entries (A-K).");
 
-            foreach (var endingText in endingTexts)
-                endingText.CaptureUnlockedText();
+            for (var index = 0; index < endingTexts.Count; index++)
+                endingTexts[index].CaptureUnlockedText(index);
 
             _allPlayTimeText = FindSceneText("ALLPlayTimeText");
             _allDeathCountText = FindSceneText("ALLDeathCount");
-            _unlockedExtraStageText = extraStageButtonText.text;
-            _hiddenItem1Description = hiddenItem1DescriptionText.text;
-            _hiddenItem2Description = hiddenItem2DescriptionText.text;
+            RefreshLocalizedSourceTexts();
             ArrangeEndingPanels();
             CreateTooltip();
             ConfigureHoverTargets();
@@ -191,39 +224,78 @@ namespace Minge2026Spring.Scripts.View
 
         public void SetEndingStatistics(int index, float clearTimeSeconds, int deathCount)
         {
-            endingTexts[index].StatisticsText =
-                $"総プレイ時間  {FormatElapsedTime(clearTimeSeconds)}\nデス数            {deathCount:N0} 回";
+            _endingClearTimes[index] = clearTimeSeconds;
+            _endingDeathCounts[index] = deathCount;
+            endingTexts[index].StatisticsText = UILocalization.Get(
+                "Achievements", "ending_statistics", FormatElapsedTime(clearTimeSeconds), deathCount);
         }
 
         public void SetTotalStatistics(float clearTimeSeconds, long deathCount)
         {
-            _allPlayTimeText.text = $"総プレイ時間: {FormatElapsedTime(clearTimeSeconds)}";
-            _allDeathCountText.text = $"総デス数: {deathCount:N0} 回";
+            _totalClearTime = clearTimeSeconds;
+            _totalDeathCount = deathCount;
+            _allPlayTimeText.text = UILocalization.Get(
+                "Achievements", "total_play_time", FormatElapsedTime(clearTimeSeconds));
+            _allDeathCountText.text = UILocalization.Get("Achievements", "total_deaths", deathCount);
         }
 
         public void SetExtraStageUnlocked(bool unlocked)
         {
+            _extraStageUnlocked = unlocked;
             extraStageButton.interactable = unlocked;
             extraStageButtonText.text = unlocked ? _unlockedExtraStageText : "???";
         }
 
         public void SetExtraStageProgress(ExtraStageProgress progress)
         {
+            _extraStageProgress = progress;
+            _hasExtraStageProgress = true;
             var roomName = string.IsNullOrWhiteSpace(progress.RoomName) ? "---" : progress.RoomName;
-            _extraStageStatisticsText =
-                $"総プレイ時間  {FormatElapsedTime(progress.ElapsedPlayTimeSeconds)}\n" +
-                $"デス数            {progress.DeathCount:N0} 回\n" +
-                $"ルーム名          {roomName}";
+            _extraStageStatisticsText = UILocalization.Get(
+                "Achievements", "extra_statistics",
+                FormatElapsedTime(progress.ElapsedPlayTimeSeconds), progress.DeathCount, roomName);
         }
 
         public void SetHiddenItemStatus(bool hasItem1, bool hasItem2, bool showDescriptions)
         {
+            _hasHiddenItem1 = hasItem1;
+            _hasHiddenItem2 = hasItem2;
+            _showHiddenDescriptions = showDescriptions;
             hiddenItem1Image.color = hasItem1 ? Color.white : Color.black;
             hiddenItem2Image.color = hasItem2 ? Color.white : Color.black;
             hiddenItem1DescriptionText.text = showDescriptions ? _hiddenItem1Description : "???";
             hiddenItem2DescriptionText.text = showDescriptions ? _hiddenItem2Description : "???";
             hiddenItem1DescriptionText.gameObject.SetActive(true);
             hiddenItem2DescriptionText.gameObject.SetActive(true);
+        }
+
+        private void OnLocaleChanged(Locale _)
+        {
+            RefreshLocalizedSourceTexts();
+            foreach (var endingText in endingTexts)
+                endingText.RefreshLocalizedText();
+            for (var index = 0; index < endingTexts.Count; index++)
+                SetEndingStatistics(index, _endingClearTimes[index], _endingDeathCounts[index]);
+            if (_allPlayTimeText != null && _allDeathCountText != null)
+                SetTotalStatistics(_totalClearTime, _totalDeathCount);
+            if (_hasExtraStageProgress)
+                SetExtraStageProgress(_extraStageProgress);
+            SetExtraStageUnlocked(_extraStageUnlocked);
+            SetHiddenItemStatus(_hasHiddenItem1, _hasHiddenItem2, _showHiddenDescriptions);
+
+            if (_tooltip != null && _tooltip.gameObject.activeSelf)
+            {
+                _tooltipText.text = _hoveredEndingIndex >= 0
+                    ? $"ENDING {(char)('A' + _hoveredEndingIndex)}\n{endingTexts[_hoveredEndingIndex].StatisticsText}"
+                    : $"EXTRA STAGE\n{_extraStageStatisticsText}";
+            }
+        }
+
+        private void RefreshLocalizedSourceTexts()
+        {
+            _unlockedExtraStageText = UILocalization.Get("Achievements", "extra_stage");
+            _hiddenItem1Description = UILocalization.Get("Achievements", "hidden.needle");
+            _hiddenItem2Description = UILocalization.Get("Achievements", "hidden.warp");
         }
 
         private void Update()

@@ -1,0 +1,3503 @@
+{
+  "characters": [
+    {
+      "key": "character.protagonist",
+      "japanese": "主人公",
+      "english": "Protagonist"
+    },
+    {
+      "key": "character.reno",
+      "japanese": "れの",
+      "english": "Reno"
+    },
+    {
+      "key": "character.got",
+      "japanese": "ごっと",
+      "english": "Got"
+    },
+    {
+      "key": "character.ryuta",
+      "japanese": "Ryuta",
+      "english": "Ryuta"
+    },
+    {
+      "key": "character.milu",
+      "japanese": "Milu",
+      "english": "Milu"
+    },
+    {
+      "key": "character.kashiwamochi",
+      "japanese": "かしわもち",
+      "english": "Kashiwamochi"
+    },
+    {
+      "key": "character.daittyan",
+      "japanese": "だいっちゃん",
+      "english": "Daittyan"
+    },
+    {
+      "key": "character.player",
+      "japanese": "Player",
+      "english": "Player"
+    }
+  ],
+  "dialogue": [
+    {
+      "key": "chapter.part1_0.dialogue.000",
+      "japanese": "それでは企画開発部ゲームジャムを始めます。",
+      "english": "All right, let's begin the Game Planning & Development Club game jam."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.001",
+      "japanese": "おなしゃす",
+      "english": "Let's do this."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.002",
+      "japanese": "おねがいします",
+      "english": "Looking forward to working with you."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.003",
+      "japanese": "お、おねがいします",
+      "english": "N-Nice to meet you all."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.004",
+      "japanese": "おねがいしまぁす",
+      "english": "Looking forward to it!"
+    },
+    {
+      "key": "chapter.part1_0.dialogue.005",
+      "japanese": "じゃあ、まず自己紹介しましょうか。",
+      "english": "All right, let's start with introductions."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.006",
+      "japanese": "今回リーダー努めます。リーダーは初めてで少し緊張しています。よろしくお願いします。あと学部三年です。",
+      "english": "I'll be leading the team this time. It's my first time as leader, so I'm a little nervous. Nice to meet you all. Oh, and I'm a third-year student."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.007",
+      "japanese": "学部二年のRyutaです！趣味は鬼畜アクション制作です！よろしくお願いします！",
+      "english": "I'm Ryuta, a second-year student! I love making brutally hard action games! Nice to meet you!"
+    },
+    {
+      "key": "chapter.part1_0.dialogue.008",
+      "japanese": "学部三年のごっとです。Ryutaくんと同じ、プログラマーやります。ちーす。",
+      "english": "I'm Got, a third-year. I'll be programming, same as Ryuta. 'Sup."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.009",
+      "japanese": "学部一年のMiluです。えと、絵を描きます。お手柔らかに……",
+      "english": "I'm Milu, a first-year. Um, I'll be doing the art. Please go easy on me..."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.010",
+      "japanese": "学部一年のかしわもちです、サウンド担当させていただきます。一生懸命頑張ります。",
+      "english": "I'm Kashiwamochi, a first-year. I'll be handling sound. I'll do my very best."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.011",
+      "japanese": "まず、今回のゲームジャムについて軽くおさらいするね",
+      "english": "First, let's quickly go over how this game jam will work."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.012",
+      "japanese": "開発期間は今日一日のみ、オンラインでやっていきます",
+      "english": "We have today and today only, and we'll be working online."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.013",
+      "japanese": "対面じゃないの若干しんどい……",
+      "english": "Working remotely is kind of a pain..."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.014",
+      "japanese": "それは……しゃーない",
+      "english": "That... can't be helped."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.015",
+      "japanese": "最初に企画会議をして、そのあとは各自作業とします。",
+      "english": "We'll start with a planning meeting, then everyone will work on their own tasks."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.016",
+      "japanese": "実際にゲームとして遊べる状態まで持っていけるように頑張りましょう",
+      "english": "Let's do our best to get it into a genuinely playable state."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.017",
+      "japanese": "さっそく、今回作るゲームについてなんだけど……",
+      "english": "So, about the game we're making today..."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.018",
+      "japanese": "今回はアクションゲームにしようと思うんだけど、みんなどうかな",
+      "english": "I was thinking we'd make an action game. What do you all think?"
+    },
+    {
+      "key": "chapter.part1_0.dialogue.019",
+      "japanese": "急にジャンル決めちゃっていいの？",
+      "english": "Are we really deciding the genre right off the bat?"
+    },
+    {
+      "key": "chapter.part1_0.dialogue.020",
+      "japanese": "チーム編成するときのアンケートで、アクション作りたいって声が多かったんだよ",
+      "english": "A lot of people said they wanted to make an action game in the team survey."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.021",
+      "japanese": "僕の専門分野キター",
+      "english": "Yes! My specialty!"
+    },
+    {
+      "key": "chapter.part1_0.dialogue.022",
+      "japanese": "なるほどね",
+      "english": "I see."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.023",
+      "japanese": "Miluさんとかしわもち君は大丈夫？",
+      "english": "Does that work for you, Milu and Kashiwamochi?"
+    },
+    {
+      "key": "chapter.part1_0.dialogue.024",
+      "japanese": "大丈夫です……多分",
+      "english": "It should... probably."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.025",
+      "japanese": "まぁ、大丈夫ですよ",
+      "english": "Sure, that's fine."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.026",
+      "japanese": "そしたら、具体的なところを詰めていこうか",
+      "english": "Then let's start working out the details."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.027",
+      "japanese": "まずは世界観を全員で認識を一緒にしたいんだけど",
+      "english": "First, I want us all on the same page about the setting."
+    },
+    {
+      "key": "chapter.part1_0.dialogue.028",
+      "japanese": "(誰に意見を聞こうか)",
+      "english": "(Who should I ask?)"
+    },
+    {
+      "key": "chapter.part1_1_branch_ans0.dialogue.000",
+      "japanese": "ごっとくん何か意見ある？",
+      "english": "Got, do you have any ideas?"
+    },
+    {
+      "key": "chapter.part1_1_branch_ans0.dialogue.001",
+      "japanese": "え、わたし？",
+      "english": "Huh, me?"
+    },
+    {
+      "key": "chapter.part1_1_branch_ans0.dialogue.002",
+      "japanese": "うん、ほら、開発経験豊富だし",
+      "english": "Yeah. You know, since you have a lot of development experience."
+    },
+    {
+      "key": "chapter.part1_1_branch_ans0.dialogue.003",
+      "japanese": "いや、私はいいので、下級生の意見を聞いたら？それに、私は全体の設計とか、仕様まとめる方が好きだから",
+      "english": "No, I'm good. Why not ask the younger members? Besides, I prefer overall architecture and putting specs together."
+    },
+    {
+      "key": "chapter.part1_1_branch_ans0.dialogue.004",
+      "japanese": "あ、そっか",
+      "english": "Oh, right."
+    },
+    {
+      "key": "chapter.part1_1_branch_ans1.dialogue.000",
+      "japanese": "Ryutaくん、何か意見ある？",
+      "english": "Ryuta, do you have any ideas?"
+    },
+    {
+      "key": "chapter.part1_1_branch_ans1.dialogue.001",
+      "japanese": "え？僕ですか？！",
+      "english": "Huh? Me?!"
+    },
+    {
+      "key": "chapter.part1_1_branch_ans1.dialogue.002",
+      "japanese": "うん、アクションゲーム専門って言ってたし、意見聞きたいなって",
+      "english": "Yeah. You said action games were your specialty, so I wanted your take."
+    },
+    {
+      "key": "chapter.part1_1_branch_ans1.dialogue.003",
+      "japanese": "そうですねぇ、おやじブラザーズみたいな感じだと作りやすいですかねぇ。トラップとか作ってみたいので、洞窟みたいなのどうですか？",
+      "english": "Let's see... Something like Oyaji Brothers might be easy to make. I want to build traps, so how about a cave setting?"
+    },
+    {
+      "key": "chapter.part1_1_branch_ans1.dialogue.004",
+      "japanese": "なるほどね……了解",
+      "english": "I see... Got it."
+    },
+    {
+      "key": "chapter.part1_1_branch_ans2.dialogue.000",
+      "japanese": "かしわもちくん、何か意見ある？",
+      "english": "Kashiwamochi, do you have any ideas?"
+    },
+    {
+      "key": "chapter.part1_1_branch_ans2.dialogue.001",
+      "japanese": "うーん、俺は依頼されたらそれに合わせる主義なんでぇ……",
+      "english": "Hmm... I usually just tailor my work to whatever I'm asked for..."
+    },
+    {
+      "key": "chapter.part1_1_branch_ans2.dialogue.002",
+      "japanese": "曲の得意不得意とかはないの？",
+      "english": "Are there any kinds of music you're particularly good or bad at?"
+    },
+    {
+      "key": "chapter.part1_1_branch_ans2.dialogue.003",
+      "japanese": "あー、オーケストラとか作れたら楽しいかもです。電子音はあんまり得意じゃないですね。",
+      "english": "Oh, making something orchestral could be fun. Electronic sounds aren't really my forte."
+    },
+    {
+      "key": "chapter.part1_1_branch_ans2.dialogue.004",
+      "japanese": "オーケストラかぁ……",
+      "english": "An orchestra, huh..."
+    },
+    {
+      "key": "chapter.part1_1_branch_ans3.dialogue.000",
+      "japanese": "Miluさん、何か意見ある？",
+      "english": "Milu, do you have any ideas?"
+    },
+    {
+      "key": "chapter.part1_1_branch_ans3.dialogue.001",
+      "japanese": "わ、私ですか……",
+      "english": "M-Me...?"
+    },
+    {
+      "key": "chapter.part1_1_branch_ans3.dialogue.002",
+      "japanese": "うん、こんなアクションゲーム作りたい、みたいなの",
+      "english": "Yeah. Like what kind of action game you'd want to make."
+    },
+    {
+      "key": "chapter.part1_1_branch_ans3.dialogue.003",
+      "japanese": "いかんせん、アクションゲームは専門外なので……",
+      "english": "Action games really aren't my area of expertise..."
+    },
+    {
+      "key": "chapter.part1_1_branch_ans3.dialogue.004",
+      "japanese": "そっか",
+      "english": "I see."
+    },
+    {
+      "key": "chapter.part1_1.dialogue.000",
+      "japanese": "じゃあ今回は、一般的な横スクロールアクションゲームをベースに作っていこうと思うんだけど、どうかな",
+      "english": "Then how about we base it on a conventional side-scrolling action game?"
+    },
+    {
+      "key": "chapter.part1_1.dialogue.001",
+      "japanese": "いいとおもいます",
+      "english": "I think that sounds good."
+    },
+    {
+      "key": "chapter.part1_1.dialogue.002",
+      "japanese": "そしたら、先にプログラマの二人にタスクを振ろうかな",
+      "english": "In that case, I'll assign tasks to our two programmers first."
+    },
+    {
+      "key": "chapter.part1_1.dialogue.003",
+      "japanese": "まってました",
+      "english": "I've been waiting for this."
+    },
+    {
+      "key": "chapter.part1_1.dialogue.004",
+      "japanese": "じゃあまずは役割分担なんだけど……",
+      "english": "First, we need to divide up the roles..."
+    },
+    {
+      "key": "chapter.part1_2_branch_ans0.dialogue.000",
+      "japanese": "Ryutaくんにシステム設計、ごっとくんはコンテンツをお願いするね",
+      "english": "Ryuta, you handle system design. Got, you take content."
+    },
+    {
+      "key": "chapter.part1_2_branch_ans0.dialogue.001",
+      "japanese": "え",
+      "english": "Huh?"
+    },
+    {
+      "key": "chapter.part1_2_branch_ans0.dialogue.002",
+      "japanese": "え",
+      "english": "Huh?"
+    },
+    {
+      "key": "chapter.part1_2_branch_ans0.dialogue.003",
+      "japanese": "あれ、まずかった？",
+      "english": "Was that a bad call?"
+    },
+    {
+      "key": "chapter.part1_2_branch_ans0.dialogue.004",
+      "japanese": "いや、まずくはない、けど……",
+      "english": "No, it's not bad, but..."
+    },
+    {
+      "key": "chapter.part1_2_branch_ans0.dialogue.005",
+      "japanese": "設計、できるかな……",
+      "english": "I don't know if I can handle the design..."
+    },
+    {
+      "key": "chapter.part1_2_branch_ans0.dialogue.006",
+      "japanese": "多分、逆の方がいいと思う",
+      "english": "I think we'd be better off switching those around."
+    },
+    {
+      "key": "chapter.part1_2_branch_ans0.dialogue.007",
+      "japanese": "そっか、ごめん……",
+      "english": "Oh. Sorry..."
+    },
+    {
+      "key": "chapter.part1_2_branch_ans1.dialogue.000",
+      "japanese": "ごっとくんにシステム設計、Ryutaくんはコンテンツをお願いするね",
+      "english": "Got, you handle system design. Ryuta, you take content."
+    },
+    {
+      "key": "chapter.part1_2_branch_ans1.dialogue.001",
+      "japanese": "任せてください！",
+      "english": "Leave it to me!"
+    },
+    {
+      "key": "chapter.part1_2.dialogue.000",
+      "japanese": "開発ルールとかも、私が全部決めちゃうってことでいいの？",
+      "english": "Am I free to decide all the development rules too?"
+    },
+    {
+      "key": "chapter.part1_2.dialogue.001",
+      "japanese": "うん、コード書くのは二人だけだから、話し合ってやりやすいようにしてもらえればいいよ",
+      "english": "Yeah. You two are the only programmers, so talk it over and use whatever works best for you."
+    },
+    {
+      "key": "chapter.part1_2.dialogue.002",
+      "japanese": "ええと……なんか、要望とかあれば……",
+      "english": "Um... If you have any requests..."
+    },
+    {
+      "key": "chapter.part1_2.dialogue.003",
+      "japanese": "要望かぁ……",
+      "english": "Requests, huh..."
+    },
+    {
+      "key": "chapter.part1_3_branch_ans0.dialogue.000",
+      "japanese": "まじで何にもないし、てかよくわかんないから一任するよ",
+      "english": "I honestly don't have any, and I don't really understand this stuff, so I'll leave it all to you."
+    },
+    {
+      "key": "chapter.part1_3_branch_ans0.dialogue.001",
+      "japanese": "……そう",
+      "english": "...Okay."
+    },
+    {
+      "key": "chapter.part1_3_branch_ans1.dialogue.000",
+      "japanese": "トラップの数とかボスの種類とか、どこまで増えるか不透明だから、増やせるだけ増やせるように設計してもらえるといいな",
+      "english": "We don't know how many traps or bosses we'll end up with, so I'd like a design that can scale as much as possible."
+    },
+    {
+      "key": "chapter.part1_3_branch_ans1.dialogue.001",
+      "japanese": "そんなに大規模なゲームになるの？",
+      "english": "Is this game really going to be that big?"
+    },
+    {
+      "key": "chapter.part1_3_branch_ans1.dialogue.002",
+      "japanese": "いや、そこまで大きくはできないけど、Ryutaくんのやる気しだいで変わるだろうから",
+      "english": "No, we can't make it that big, but it could change depending on how ambitious Ryuta gets."
+    },
+    {
+      "key": "chapter.part1_3_branch_ans1.dialogue.003",
+      "japanese": "なるほどね、了解",
+      "english": "Makes sense. Got it."
+    },
+    {
+      "key": "chapter.part1_3_branch_ans2.dialogue.000",
+      "japanese": "素材の置き場だけ教えてほしいかな",
+      "english": "I just want to know where we should put the assets."
+    },
+    {
+      "key": "chapter.part1_3_branch_ans2.dialogue.001",
+      "japanese": "まぁ、いつも通りチャット欄に直貼りでいいよ",
+      "english": "Just paste them straight into the chat like usual."
+    },
+    {
+      "key": "chapter.part1_3_branch_ans2.dialogue.002",
+      "japanese": "それだとチャット散らからない？",
+      "english": "Won't that clutter up the chat?"
+    },
+    {
+      "key": "chapter.part1_3_branch_ans2.dialogue.003",
+      "japanese": "あー、じゃあgolegoleクラウド使いましょう",
+      "english": "Oh, then let's use Golegole Cloud."
+    },
+    {
+      "key": "chapter.part1_3_branch_ans2.dialogue.004",
+      "japanese": "じゃあ、サークルで使ってるやつにフォルダ作っておくね",
+      "english": "I'll make a folder in the account our club uses."
+    },
+    {
+      "key": "chapter.part1_3_branch_ans2.dialogue.005",
+      "japanese": "了解",
+      "english": "Got it."
+    },
+    {
+      "key": "chapter.part1_3.dialogue.000",
+      "japanese": "逆にごっとくんがやりたいこととかある？",
+      "english": "Is there anything you want to do, Got?"
+    },
+    {
+      "key": "chapter.part1_3.dialogue.001",
+      "japanese": "いや、特には。それよりも、ちゃんとゲームとして動くもの作りたいから。",
+      "english": "Nothing in particular. More than anything, I want to make something that actually works as a game."
+    },
+    {
+      "key": "chapter.part1_3.dialogue.002",
+      "japanese": "あー、そういえば、進捗報告ってどれくらいの頻度がやりやすい？",
+      "english": "Oh, right. How often would progress updates work best for you?"
+    },
+    {
+      "key": "chapter.part1_3.dialogue.003",
+      "japanese": "それは全体に合わせるよ。",
+      "english": "I'll go with whatever works for everyone."
+    },
+    {
+      "key": "chapter.part1_3.dialogue.004",
+      "japanese": "じゃあ……",
+      "english": "Then..."
+    },
+    {
+      "key": "chapter.part1_4_branch_ans0.dialogue.000",
+      "japanese": "時間も少ないし、進捗報告いらないよね",
+      "english": "We're short on time, so we don't need progress updates, right?"
+    },
+    {
+      "key": "chapter.part1_4_branch_ans0.dialogue.001",
+      "japanese": "いや、それはさすがに……",
+      "english": "No, that's a little too..."
+    },
+    {
+      "key": "chapter.part1_4_branch_ans0.dialogue.002",
+      "japanese": "そう？",
+      "english": "You think so?"
+    },
+    {
+      "key": "chapter.part1_4_branch_ans0.dialogue.003",
+      "japanese": "ゲームジャムだから設計シンプルなんだよ。その分リカバリー効かないし",
+      "english": "The design is simple because it's a game jam. That also means there's no room to recover if things go wrong."
+    },
+    {
+      "key": "chapter.part1_4_branch_ans0.dialogue.004",
+      "japanese": "へー、じゃあガッチガチに設計してよ",
+      "english": "Oh. Then make the design completely airtight."
+    },
+    {
+      "key": "chapter.part1_4_branch_ans0.dialogue.005",
+      "japanese": "そういうことじゃないんだよなぁ……",
+      "english": "That's not quite what I meant..."
+    },
+    {
+      "key": "chapter.part1_4_branch_ans1.dialogue.000",
+      "japanese": "1時間ごとに軽く報告してもらおうかな",
+      "english": "Let's do a quick update every hour."
+    },
+    {
+      "key": "chapter.part1_4_branch_ans1.dialogue.001",
+      "japanese": "まぁ、そのくらいならちょうどいい",
+      "english": "Yeah, that sounds about right."
+    },
+    {
+      "key": "chapter.part1_4_branch_ans1.dialogue.002",
+      "japanese": "Ryutaくんとの報連相はもっと密にしてほしい",
+      "english": "I want you to check in with Ryuta more often than that."
+    },
+    {
+      "key": "chapter.part1_4_branch_ans1.dialogue.003",
+      "japanese": "そのつもりではいる。グラフィッカとサウンドは任せる。",
+      "english": "That's the plan. I'll leave the artist and sound designer to you."
+    },
+    {
+      "key": "chapter.part1_4_branch_ans2.dialogue.000",
+      "japanese": "20分ごとに会議しよう",
+      "english": "Let's meet every twenty minutes."
+    },
+    {
+      "key": "chapter.part1_4_branch_ans2.dialogue.001",
+      "japanese": "……さすがに多すぎない？",
+      "english": "...Isn't that a little too often?"
+    },
+    {
+      "key": "chapter.part1_4_branch_ans2.dialogue.002",
+      "japanese": "え、そうかな",
+      "english": "Huh? You think so?"
+    },
+    {
+      "key": "chapter.part1_4_branch_ans2.dialogue.003",
+      "japanese": "うん、普通に作業止まると思う",
+      "english": "Yeah. We'd constantly have to stop working."
+    },
+    {
+      "key": "chapter.part1_4_branch_ans2.dialogue.004",
+      "japanese": "まぁ、コミュニケーションは多いに越したことないじゃん？",
+      "english": "Well, you can never have too much communication, right?"
+    },
+    {
+      "key": "chapter.part1_4_branch_ans2.dialogue.005",
+      "japanese": "は、はぁ",
+      "english": "R-Right..."
+    },
+    {
+      "key": "chapter.part1_4.dialogue.000",
+      "japanese": "じゃあRyutaくんだけど……",
+      "english": "Next up is Ryuta..."
+    },
+    {
+      "key": "chapter.part1_4.dialogue.001",
+      "japanese": "僕は何から手を付けたらいいですかね",
+      "english": "What should I start with?"
+    },
+    {
+      "key": "chapter.part1_4.dialogue.002",
+      "japanese": "割と自由でいいと思うんだけど、逆になにからやりたい？",
+      "english": "You have quite a bit of freedom. What do you want to start with?"
+    },
+    {
+      "key": "chapter.part1_4.dialogue.003",
+      "japanese": "初見殺し",
+      "english": "Gotcha traps."
+    },
+    {
+      "key": "chapter.part1_4.dialogue.004",
+      "japanese": "だよね",
+      "english": "I thought so."
+    },
+    {
+      "key": "chapter.part1_4.dialogue.005",
+      "japanese": "そしたら……",
+      "english": "In that case..."
+    },
+    {
+      "key": "chapter.part1_5_branch_ans0.dialogue.000",
+      "japanese": "トラップ好きなだけ作っていいよ",
+      "english": "You can make as many traps as you want."
+    },
+    {
+      "key": "chapter.part1_5_branch_ans0.dialogue.001",
+      "japanese": "いいんですか？！",
+      "english": "Really?!"
+    },
+    {
+      "key": "chapter.part1_5_branch_ans0.dialogue.002",
+      "japanese": "ステージづくりのネタ欲しいしね",
+      "english": "We need ideas for the stage layout anyway."
+    },
+    {
+      "key": "chapter.part1_5_branch_ans0.dialogue.003",
+      "japanese": "それは……",
+      "english": "Well..."
+    },
+    {
+      "key": "chapter.part1_5_branch_ans0.dialogue.004",
+      "japanese": "なんかまずかった……？",
+      "english": "Did I say something wrong...?"
+    },
+    {
+      "key": "chapter.part1_5_branch_ans0.dialogue.005",
+      "japanese": "グラフィッカ死なない？",
+      "english": "Won't that work our artist to death?"
+    },
+    {
+      "key": "chapter.part1_5_branch_ans0.dialogue.006",
+      "japanese": "まぁ……はい",
+      "english": "Well... yes."
+    },
+    {
+      "key": "chapter.part1_5_branch_ans0.dialogue.007",
+      "japanese": "あ、たしかに……",
+      "english": "Oh, good point..."
+    },
+    {
+      "key": "chapter.part1_5_branch_ans0.dialogue.008",
+      "japanese": "大丈夫です！僕が描くんで！",
+      "english": "It's fine! I'll draw them myself!"
+    },
+    {
+      "key": "chapter.part1_5_branch_ans0.dialogue.009",
+      "japanese": "え、あ、そう……ですか……？",
+      "english": "Huh? Oh, uh... really...?"
+    },
+    {
+      "key": "chapter.part1_5_branch_ans0.dialogue.010",
+      "japanese": "じゃあ、まあ、うん……",
+      "english": "Then... sure, I guess..."
+    },
+    {
+      "key": "chapter.part1_5_branch_ans1.dialogue.000",
+      "japanese": "ステージ作りを最初にしてほしいな",
+      "english": "I'd like you to build the stage first."
+    },
+    {
+      "key": "chapter.part1_5_branch_ans1.dialogue.001",
+      "japanese": "ステージですか？",
+      "english": "The stage?"
+    },
+    {
+      "key": "chapter.part1_5_branch_ans1.dialogue.002",
+      "japanese": "うん。グラフィッカの素材を明確にするためにも、どんなステージにしたいか考えてほしいんだ。",
+      "english": "Yeah. I want you to plan what kind of stage you want so our artist knows exactly what assets to make."
+    },
+    {
+      "key": "chapter.part1_5_branch_ans1.dialogue.003",
+      "japanese": "なるほどです。了解しました！",
+      "english": "That makes sense. Got it!"
+    },
+    {
+      "key": "chapter.part1_5_branch_ans2.dialogue.000",
+      "japanese": "ごっとくんの指示を待っててくれるかな",
+      "english": "Could you wait for Got's instructions?"
+    },
+    {
+      "key": "chapter.part1_5_branch_ans2.dialogue.001",
+      "japanese": "じゃあ、ごっとさんの指示があるまでは休憩ですか？",
+      "english": "So I can take a break until Got tells me what to do?"
+    },
+    {
+      "key": "chapter.part1_5_branch_ans2.dialogue.002",
+      "japanese": "そう、なるね",
+      "english": "I guess so, yes."
+    },
+    {
+      "key": "chapter.part1_5_branch_ans2.dialogue.003",
+      "japanese": "設計が終わらない分には何もできないからね",
+      "english": "You can't do much until the design is finished."
+    },
+    {
+      "key": "chapter.part1_5_branch_ans2.dialogue.004",
+      "japanese": "急いで終わらせます",
+      "english": "I'll finish it as quickly as I can."
+    },
+    {
+      "key": "chapter.part1_5_branch_ans2.dialogue.005",
+      "japanese": "了解しました",
+      "english": "Understood."
+    },
+    {
+      "key": "chapter.part1_5.dialogue.000",
+      "japanese": "あ、トラップに手を付ける前に、プレイヤーの基本操作を任せちゃってもいいかな",
+      "english": "Oh, before you start on the traps, can I put you in charge of the player's basic controls?"
+    },
+    {
+      "key": "chapter.part1_5.dialogue.001",
+      "japanese": "わかりました！",
+      "english": "Got it!"
+    },
+    {
+      "key": "chapter.part1_5.dialogue.002",
+      "japanese": "歩行以外の操作はごっとくんが拡張していく感じでお願いね",
+      "english": "Got can expand the controls beyond walking later."
+    },
+    {
+      "key": "chapter.part1_5.dialogue.003",
+      "japanese": "了解です",
+      "english": "Got it."
+    },
+    {
+      "key": "chapter.part1_5.dialogue.004",
+      "japanese": "あとは、レベルデザインだけど……",
+      "english": "Next is the level design..."
+    },
+    {
+      "key": "chapter.part1_5.dialogue.005",
+      "japanese": "そこはRyutaくんに任せたいかな。",
+      "english": "I think I'd like to leave that to you, Ryuta."
+    },
+    {
+      "key": "chapter.part1_5.dialogue.006",
+      "japanese": "そうだよね、じゃあ……",
+      "english": "That makes sense. Then..."
+    },
+    {
+      "key": "chapter.part1_6_branch_ans0.dialogue.000",
+      "japanese": "Ryutaくんの好きな難易度で作ってみよう！",
+      "english": "Let's try making it at whatever difficulty you like, Ryuta!"
+    },
+    {
+      "key": "chapter.part1_6_branch_ans0.dialogue.001",
+      "japanese": "え、いいんですか！",
+      "english": "Wait, really?!"
+    },
+    {
+      "key": "chapter.part1_6_branch_ans0.dialogue.002",
+      "japanese": "いや……まぁ……うん……",
+      "english": "Well... um... sure..."
+    },
+    {
+      "key": "chapter.part1_6_branch_ans0.dialogue.003",
+      "japanese": "え？まずかった？",
+      "english": "Huh? Was that a bad idea?"
+    },
+    {
+      "key": "chapter.part1_6_branch_ans0.dialogue.004",
+      "japanese": "全力出しますよ！",
+      "english": "I'll give it everything I've got!"
+    },
+    {
+      "key": "chapter.part1_6_branch_ans0.dialogue.005",
+      "japanese": "……まぁ……うん",
+      "english": "...Right... sure."
+    },
+    {
+      "key": "chapter.part1_6_branch_ans1.dialogue.000",
+      "japanese": "一旦、誰でもクリアできるくらいにしよう",
+      "english": "For now, let's make it easy enough for anyone to beat."
+    },
+    {
+      "key": "chapter.part1_6_branch_ans1.dialogue.001",
+      "japanese": "まぁ、その方が遊びやすいですもんね",
+      "english": "Yeah, that would make it more accessible."
+    },
+    {
+      "key": "chapter.part1_6_branch_ans2.dialogue.000",
+      "japanese": "とにかく難しくしてインパクト出そう",
+      "english": "Let's make it brutally hard so it leaves an impression."
+    },
+    {
+      "key": "chapter.part1_6_branch_ans2.dialogue.001",
+      "japanese": "難しいだけだと理不尽になるかもです",
+      "english": "If it's hard just for the sake of it, it might feel unfair."
+    },
+    {
+      "key": "chapter.part1_6.dialogue.000",
+      "japanese": "そしたら、Ryutaくん関連でグラフィッカ先にタスク決めようか",
+      "english": "Next, let's assign the artist's tasks related to Ryuta's work."
+    },
+    {
+      "key": "chapter.part1_6.dialogue.001",
+      "japanese": "はい",
+      "english": "Okay."
+    },
+    {
+      "key": "chapter.part1_6.dialogue.002",
+      "japanese": "今回はタイルベースで作ろうと思うんだけど、イメージできる？",
+      "english": "I'm thinking of using a tile-based system. Can you picture that?"
+    },
+    {
+      "key": "chapter.part1_6.dialogue.003",
+      "japanese": "なんか、ブロックの組み合わせみたいな、あの感じですよね。",
+      "english": "You mean like putting different blocks together, right?"
+    },
+    {
+      "key": "chapter.part1_6.dialogue.004",
+      "japanese": "そうそう。ハンドメイドステージだとステージ増えるごとに負担がすごいことになっちゃうからね",
+      "english": "Exactly. Hand-crafting every stage would make the workload explode every time we added one."
+    },
+    {
+      "key": "chapter.part1_6.dialogue.005",
+      "japanese": "わかりました。",
+      "english": "Understood."
+    },
+    {
+      "key": "chapter.part1_6.dialogue.006",
+      "japanese": "とりあえずステージの素材に関してなんだけど……",
+      "english": "So, about the stage assets for now..."
+    },
+    {
+      "key": "chapter.part1_7_branch_ans0.dialogue.000",
+      "japanese": "大変だろうからフリー素材でいいよ",
+      "english": "It'll be a lot of work, so free assets are fine."
+    },
+    {
+      "key": "chapter.part1_7_branch_ans0.dialogue.001",
+      "japanese": "え、それでいいんですか",
+      "english": "Oh, are you sure?"
+    },
+    {
+      "key": "chapter.part1_7_branch_ans0.dialogue.002",
+      "japanese": "うん、だってすごい量あるよ",
+      "english": "Yeah. There are going to be a ton of them."
+    },
+    {
+      "key": "chapter.part1_7_branch_ans0.dialogue.003",
+      "japanese": "そう、ですか……",
+      "english": "I... see..."
+    },
+    {
+      "key": "chapter.part1_7_branch_ans1.dialogue.000",
+      "japanese": "一旦後回しでいいや",
+      "english": "Let's put those off for now."
+    },
+    {
+      "key": "chapter.part1_7_branch_ans1.dialogue.001",
+      "japanese": "え、いいんですか？",
+      "english": "Huh, is that okay?"
+    },
+    {
+      "key": "chapter.part1_7_branch_ans1.dialogue.002",
+      "japanese": "Ryutaくんの案が出ないと描くものもかけないからね。先にプレイヤーを描いてほしいんだ",
+      "english": "You can't draw anything until Ryuta has a plan. I want you to draw the player first."
+    },
+    {
+      "key": "chapter.part1_7_branch_ans1.dialogue.003",
+      "japanese": "なるほど、わかりました",
+      "english": "I see. Understood."
+    },
+    {
+      "key": "chapter.part1_7_branch_ans2.dialogue.000",
+      "japanese": "仮素材だけ用意してほしいな",
+      "english": "I'd like you to prepare some placeholder assets."
+    },
+    {
+      "key": "chapter.part1_7_branch_ans2.dialogue.001",
+      "japanese": "仮ってどれくらい描けばいいですか？",
+      "english": "How detailed should the placeholders be?"
+    },
+    {
+      "key": "chapter.part1_7_branch_ans2.dialogue.002",
+      "japanese": "一色で塗りつぶした四角でいいよ。サイズは64×64でお願い。",
+      "english": "A solid-colored square is fine. Make it 64 by 64 pixels."
+    },
+    {
+      "key": "chapter.part1_7_branch_ans2.dialogue.003",
+      "japanese": "今回使うタイルはこのサイズで統一になるんですか？",
+      "english": "Will all the tiles use that size?"
+    },
+    {
+      "key": "chapter.part1_7_branch_ans2.dialogue.004",
+      "japanese": "うん。プレイヤーのサイズもこれを基準にしてほしい。",
+      "english": "Yes. Please base the player's size on it too."
+    },
+    {
+      "key": "chapter.part1_7_branch_ans2.dialogue.005",
+      "japanese": "イメージがつかめてきました。ありがとうございます",
+      "english": "I'm starting to get the picture. Thank you."
+    },
+    {
+      "key": "chapter.part1_7.dialogue.000",
+      "japanese": "じゃあ続けてプレイヤーについてなんだけど、描きたいイメージとかある？",
+      "english": "Next, about the player character. Do you have an image you'd like to draw?"
+    },
+    {
+      "key": "chapter.part1_7.dialogue.001",
+      "japanese": "まだ世界観が定まっていないので、想像できていないですね",
+      "english": "The setting isn't settled yet, so I can't really picture anything."
+    },
+    {
+      "key": "chapter.part1_7.dialogue.002",
+      "japanese": "人と動物だったら、どっちの方が描きやすい？",
+      "english": "Which is easier for you to draw, a person or an animal?"
+    },
+    {
+      "key": "chapter.part1_7.dialogue.003",
+      "japanese": "圧倒的に人ですね。正直、モンスターを描けるか怪しいです。",
+      "english": "A person, definitely. Honestly, I'm not sure I can draw monsters."
+    },
+    {
+      "key": "chapter.part1_7.dialogue.004",
+      "japanese": "なるほどね。まぁ、モンスターに関しては後々決めようか。",
+      "english": "I see. We can decide on the monsters later."
+    },
+    {
+      "key": "chapter.part1_7.dialogue.005",
+      "japanese": "じゃあ、そうだなぁ……",
+      "english": "Let's see..."
+    },
+    {
+      "key": "chapter.part1_8_branch_ans0.dialogue.000",
+      "japanese": "世界観とか無視でもいいから好きなようにプレイヤーを描いてみて",
+      "english": "Ignore the setting for now and draw the player however you like."
+    },
+    {
+      "key": "chapter.part1_8_branch_ans0.dialogue.001",
+      "japanese": "え",
+      "english": "Huh?"
+    },
+    {
+      "key": "chapter.part1_8_branch_ans0.dialogue.002",
+      "japanese": "ストーリーとかも決めなきゃいけなくなると思うから、Miluさんの思う主人公を描いてみてほしいんだ",
+      "english": "We'll have to decide on a story too, so I want you to draw the hero you imagine, Milu."
+    },
+    {
+      "key": "chapter.part1_8_branch_ans0.dialogue.003",
+      "japanese": "キャラデザから連想してストーリーを決めるってことですか？",
+      "english": "You mean we'll build the story around the character design?"
+    },
+    {
+      "key": "chapter.part1_8_branch_ans0.dialogue.004",
+      "japanese": "そういうこと",
+      "english": "Exactly."
+    },
+    {
+      "key": "chapter.part1_8_branch_ans0.dialogue.005",
+      "japanese": "じゃあ、やりたいようにやってみます",
+      "english": "Then I'll try doing it my way."
+    },
+    {
+      "key": "chapter.part1_8_branch_ans1.dialogue.000",
+      "japanese": "棒人間とかでもいいよ",
+      "english": "Even a stick figure would be fine."
+    },
+    {
+      "key": "chapter.part1_8_branch_ans1.dialogue.001",
+      "japanese": "え、そんな感じでいいんですか？",
+      "english": "Really? That's all you need?"
+    },
+    {
+      "key": "chapter.part1_8_branch_ans1.dialogue.002",
+      "japanese": "うん。差分だって描かなきゃいけないし、大変でしょ？",
+      "english": "Yeah. You'll have to draw alternate poses too, so it'll be a lot of work, right?"
+    },
+    {
+      "key": "chapter.part1_8_branch_ans1.dialogue.003",
+      "japanese": "それは、そうですけど……",
+      "english": "That's true, but..."
+    },
+    {
+      "key": "chapter.part1_8_branch_ans1.dialogue.004",
+      "japanese": "それくらい楽な感じでいいからね",
+      "english": "You really can keep it that simple."
+    },
+    {
+      "key": "chapter.part1_8_branch_ans1.dialogue.005",
+      "japanese": "は、はぁ……",
+      "english": "O-Okay..."
+    },
+    {
+      "key": "chapter.part1_8_branch_ans2.dialogue.000",
+      "japanese": "差分二枚で、探検者っぽい少年、ってイメージで描けそう？",
+      "english": "Can you draw an explorer-like boy with two alternate poses?"
+    },
+    {
+      "key": "chapter.part1_8_branch_ans2.dialogue.001",
+      "japanese": "……なんとなく、描けると思います。",
+      "english": "...I think I can picture something."
+    },
+    {
+      "key": "chapter.part1_8_branch_ans2.dialogue.002",
+      "japanese": "細かいデザインは一任するけど、アドベンチャー的な世界観ならストーリーも組みやすそうだし。",
+      "english": "I'll leave the details to you, but an adventure-style setting should make the story easier to develop."
+    },
+    {
+      "key": "chapter.part1_8_branch_ans2.dialogue.003",
+      "japanese": "いいと思います。了解しました。",
+      "english": "I like that. Understood."
+    },
+    {
+      "key": "chapter.part1_8.dialogue.000",
+      "japanese": "じゃあ、最後にかしわもちくん。おまたせです。",
+      "english": "Finally, Kashiwamochi. Thanks for waiting."
+    },
+    {
+      "key": "chapter.part1_8.dialogue.001",
+      "japanese": "はーい",
+      "english": "Okay!"
+    },
+    {
+      "key": "chapter.part1_8.dialogue.002",
+      "japanese": "BGMと効果音をお願いしたいんだけど……",
+      "english": "I'd like you to handle the music and sound effects..."
+    },
+    {
+      "key": "chapter.part1_9_branch_ans0.dialogue.000",
+      "japanese": "緊張感のあるアドベンチャーっぽい曲を作ってほしいんだ",
+      "english": "I'd like a tense, adventurous-sounding track."
+    },
+    {
+      "key": "chapter.part1_9_branch_ans0.dialogue.001",
+      "japanese": "緊張感、ですか",
+      "english": "Tense, you say?"
+    },
+    {
+      "key": "chapter.part1_9_branch_ans0.dialogue.002",
+      "japanese": "音楽に詳しくないから、雰囲気でしか言えないんだけど、いけそう？",
+      "english": "I don't know much about music, so I can only describe the mood. Can you work with that?"
+    },
+    {
+      "key": "chapter.part1_9_branch_ans0.dialogue.003",
+      "japanese": "世界観とかは取り込まなくていいんですか？",
+      "english": "Shouldn't it reflect the game's setting too?"
+    },
+    {
+      "key": "chapter.part1_9_branch_ans0.dialogue.004",
+      "japanese": "世界観がぶれないようにするのが一番だけど、どんなステージでも汎用的に使える方がいいかなと思って",
+      "english": "Keeping the setting consistent matters most, but I thought something versatile enough for any stage would be best."
+    },
+    {
+      "key": "chapter.part1_9_branch_ans0.dialogue.005",
+      "japanese": "そういうことですか。なるほど、作ってみますね。",
+      "english": "I see what you mean. All right, I'll give it a try."
+    },
+    {
+      "key": "chapter.part1_9_branch_ans1.dialogue.000",
+      "japanese": "まぁ、いい感じで宜しく",
+      "english": "Just... make it sound good."
+    },
+    {
+      "key": "chapter.part1_9_branch_ans1.dialogue.001",
+      "japanese": "い、いい感じって、どんな……",
+      "english": "S-Sound good in what way...?"
+    },
+    {
+      "key": "chapter.part1_9_branch_ans1.dialogue.002",
+      "japanese": "なんか、いい感じ！",
+      "english": "You know... good!"
+    },
+    {
+      "key": "chapter.part1_9_branch_ans1.dialogue.003",
+      "japanese": "まぁ、はい……",
+      "english": "Well... okay..."
+    },
+    {
+      "key": "chapter.part1_9_branch_ans2.dialogue.000",
+      "japanese": "オーケストラとかどうかな",
+      "english": "How about an orchestral piece?"
+    },
+    {
+      "key": "chapter.part1_9_branch_ans2.dialogue.001",
+      "japanese": "お、いいですね",
+      "english": "Oh, that sounds great."
+    },
+    {
+      "key": "chapter.part1_9_branch_ans2.dialogue.002",
+      "japanese": "基本的にかしわもちくんのやりたいことを尊重するよ",
+      "english": "I want to respect your creative vision, Kashiwamochi."
+    },
+    {
+      "key": "chapter.part1_9_branch_ans2.dialogue.003",
+      "japanese": "ありがとうございます",
+      "english": "Thank you."
+    },
+    {
+      "key": "chapter.part1_9_branch_ans2.dialogue.004",
+      "japanese": "好きにしてもらって大丈夫だからね",
+      "english": "You're free to do whatever you like."
+    },
+    {
+      "key": "chapter.part1_9.dialogue.000",
+      "japanese": "あとは効果音だけど",
+      "english": "Then there are the sound effects."
+    },
+    {
+      "key": "chapter.part1_9.dialogue.001",
+      "japanese": "言ってもらえればいくらでも作りますよ",
+      "english": "Just tell me what you need and I'll make as many as you want."
+    },
+    {
+      "key": "chapter.part1_9.dialogue.002",
+      "japanese": "本当に心強いなぁ　そしたら……",
+      "english": "That's really reassuring. In that case..."
+    },
+    {
+      "key": "chapter.part1_10_branch_ans0.dialogue.000",
+      "japanese": "いい感じのフリー効果音持ってきて",
+      "english": "Find us some good free sound effects."
+    },
+    {
+      "key": "chapter.part1_10_branch_ans0.dialogue.001",
+      "japanese": "え",
+      "english": "Huh?"
+    },
+    {
+      "key": "chapter.part1_10_branch_ans0.dialogue.002",
+      "japanese": "BGMも作って効果音も作ってだなんて大変でしょ",
+      "english": "Making both the music and the sound effects would be a lot, right?"
+    },
+    {
+      "key": "chapter.part1_10_branch_ans0.dialogue.003",
+      "japanese": "まぁ、それはそうですけど",
+      "english": "Well, that's true, but..."
+    },
+    {
+      "key": "chapter.part1_10_branch_ans0.dialogue.004",
+      "japanese": "効果音くらい手を抜いてもらって大丈夫だから",
+      "english": "It's fine if you cut a few corners on the sound effects."
+    },
+    {
+      "key": "chapter.part1_10_branch_ans0.dialogue.005",
+      "japanese": "ううん……",
+      "english": "Hmm..."
+    },
+    {
+      "key": "chapter.part1_10_branch_ans1.dialogue.000",
+      "japanese": "できるだけたくさん作ってほしいな",
+      "english": "I'd like you to make as many as possible."
+    },
+    {
+      "key": "chapter.part1_10_branch_ans1.dialogue.001",
+      "japanese": "了解です",
+      "english": "Got it."
+    },
+    {
+      "key": "chapter.part1_10_branch_ans1.dialogue.002",
+      "japanese": "本当に大丈夫？無理言ってない？",
+      "english": "Are you sure that's okay? I'm not asking too much?"
+    },
+    {
+      "key": "chapter.part1_10_branch_ans1.dialogue.003",
+      "japanese": "全然ですよ。任せてください。",
+      "english": "Not at all. Leave it to me."
+    },
+    {
+      "key": "chapter.part1_10_branch_ans2.dialogue.000",
+      "japanese": "BGMに気合入れてもらって、効果音は少しで大丈夫だよ",
+      "english": "Put your energy into the music. We only need a few sound effects."
+    },
+    {
+      "key": "chapter.part1_10_branch_ans2.dialogue.001",
+      "japanese": "いいんですか？",
+      "english": "Are you sure?"
+    },
+    {
+      "key": "chapter.part1_10_branch_ans2.dialogue.002",
+      "japanese": "うん、使いまわせる効果音とか作ってもらえれば助かるな",
+      "english": "Yeah. A few reusable sound effects would be a big help."
+    },
+    {
+      "key": "chapter.part1_10_branch_ans2.dialogue.003",
+      "japanese": "わかりました",
+      "english": "Understood."
+    },
+    {
+      "key": "chapter.part1_10_branch_ans2.dialogue.004",
+      "japanese": "かしわもちくんの音楽に期待してるよ",
+      "english": "I'm looking forward to your music, Kashiwamochi."
+    },
+    {
+      "key": "chapter.part1_10.dialogue.000",
+      "japanese": "よし、こんな感じかな",
+      "english": "All right, I think that covers everything."
+    },
+    {
+      "key": "chapter.part1_10.dialogue.001",
+      "japanese": "まぁ、一旦開発の全体像は見えたかな",
+      "english": "Yeah, we have a general picture of the development plan now."
+    },
+    {
+      "key": "chapter.part1_10.dialogue.002",
+      "japanese": "気合い入れて開発しますよ",
+      "english": "I'm going all in on development!"
+    },
+    {
+      "key": "chapter.part1_10.dialogue.003",
+      "japanese": "素材できたら報告しますね",
+      "english": "I'll let you know when the assets are ready."
+    },
+    {
+      "key": "chapter.part1_10.dialogue.004",
+      "japanese": "僕もそうします",
+      "english": "Me too."
+    },
+    {
+      "key": "chapter.part1_10.dialogue.005",
+      "japanese": "そしたら、みんな作業に移ってください",
+      "english": "Then everyone can get to work."
+    },
+    {
+      "key": "chapter.part1_10.dialogue.006",
+      "japanese": "最後の実装、マージしました",
+      "english": "I've merged the final implementation."
+    },
+    {
+      "key": "chapter.part1_10.dialogue.007",
+      "japanese": "ありがとう。そしたらビルドするね",
+      "english": "Thanks. I'll make the build, then."
+    },
+    {
+      "key": "chapter.part1_10.dialogue.008",
+      "japanese": "お、ついに完成？",
+      "english": "Oh, is it finally done?"
+    },
+    {
+      "key": "chapter.part1_10.dialogue.009",
+      "japanese": "うん。なんとか完成したよ。",
+      "english": "Yeah. We somehow finished it."
+    },
+    {
+      "key": "chapter.part1_10.dialogue.010",
+      "japanese": "もう一か月はタブレット見たくないかも……",
+      "english": "I don't want to look at my drawing tablet for at least a month..."
+    },
+    {
+      "key": "chapter.part1_10.dialogue.011",
+      "japanese": "僕は若干物足りないかも",
+      "english": "I might still be a little unsatisfied."
+    },
+    {
+      "key": "chapter.part1_10.dialogue.012",
+      "japanese": "そしたら、一旦テストプレイとしましょうか",
+      "english": "Then let's do a test playthrough."
+    },
+    {
+      "key": "chapter.part1_10.dialogue.013",
+      "japanese": "ビルドは終わってるので、いつでもどうぞ。",
+      "english": "The build is ready, so start whenever you like."
+    },
+    {
+      "key": "chapter.ending_a.dialogue.000",
+      "japanese": "これは……いいね",
+      "english": "This is... good."
+    },
+    {
+      "key": "chapter.ending_a.dialogue.001",
+      "japanese": "onedayゲームジャムにしては、いい出来だと思うな。",
+      "english": "For a one-day game jam, I think this turned out really well."
+    },
+    {
+      "key": "chapter.ending_a.dialogue.002",
+      "japanese": "ごっとくん、満足そうだね",
+      "english": "You look satisfied, Got."
+    },
+    {
+      "key": "chapter.ending_a.dialogue.003",
+      "japanese": "まぁ、合格点ってところ、かな",
+      "english": "Well, I'd call it a passing grade."
+    },
+    {
+      "key": "chapter.ending_a.dialogue.004",
+      "japanese": "さらに上を目指す姿勢、見習わなきゃだなぁ",
+      "english": "I should learn from your drive to aim even higher."
+    },
+    {
+      "key": "chapter.ending_a.dialogue.005",
+      "japanese": "Miluさんとかしわもちくんは、実際遊んでみてどう？",
+      "english": "What did you think after playing it, Milu and Kashiwamochi?"
+    },
+    {
+      "key": "chapter.ending_a.dialogue.006",
+      "japanese": "素材足りててよかった……",
+      "english": "I'm just glad we had enough assets..."
+    },
+    {
+      "key": "chapter.ending_a.dialogue.007",
+      "japanese": "あ、そっちの感想？",
+      "english": "Oh, that's your takeaway?"
+    },
+    {
+      "key": "chapter.ending_a.dialogue.008",
+      "japanese": "効果音の実装完璧じゃないですか",
+      "english": "The sound effects were implemented perfectly!"
+    },
+    {
+      "key": "chapter.ending_a.dialogue.009",
+      "japanese": "イメージ通りに実装できてよかったぁ",
+      "english": "I'm so glad they came out the way I imagined."
+    },
+    {
+      "key": "chapter.ending_a.dialogue.010",
+      "japanese": "と、まぁこんな感じ、かな",
+      "english": "And... I guess that's that."
+    },
+    {
+      "key": "chapter.ending_a.dialogue.011",
+      "japanese": "え？",
+      "english": "Huh?"
+    },
+    {
+      "key": "chapter.ending_a.dialogue.012",
+      "japanese": "え？って何？",
+      "english": "What do you mean, “huh?”"
+    },
+    {
+      "key": "chapter.ending_a.dialogue.013",
+      "japanese": "これで終わりなわけないでしょ？",
+      "english": "You don't think we're stopping here, do you?"
+    },
+    {
+      "key": "chapter.ending_a.dialogue.014",
+      "japanese": "え？",
+      "english": "Huh?"
+    },
+    {
+      "key": "chapter.ending_a.dialogue.015",
+      "japanese": "一日で終わらせたらもったいないじゃないですか",
+      "english": "It'd be a waste to end it after just one day."
+    },
+    {
+      "key": "chapter.ending_a.dialogue.016",
+      "japanese": "……ってことは",
+      "english": "...You mean...?"
+    },
+    {
+      "key": "chapter.ending_a.dialogue.017",
+      "japanese": "継続開発らしいですよ",
+      "english": "Looks like we're continuing development."
+    },
+    {
+      "key": "chapter.ending_a.dialogue.018",
+      "japanese": "まぁ、頑張りましょうよ！",
+      "english": "Come on, let's keep at it!"
+    },
+    {
+      "key": "chapter.ending_a.dialogue.019",
+      "japanese": "は、はは……",
+      "english": "H-Haha..."
+    },
+    {
+      "key": "chapter.ending_b.dialogue.000",
+      "japanese": "……完成、かな？",
+      "english": "...Is it finished?"
+    },
+    {
+      "key": "chapter.ending_b.dialogue.001",
+      "japanese": "まぁ、動きますね。",
+      "english": "Well, it runs."
+    },
+    {
+      "key": "chapter.ending_b.dialogue.002",
+      "japanese": "素材も、一応全部あります。",
+      "english": "Technically, all the assets are there."
+    },
+    {
+      "key": "chapter.ending_b.dialogue.003",
+      "japanese": "曲も流れてますねぇ。",
+      "english": "The music plays too."
+    },
+    {
+      "key": "chapter.ending_b.dialogue.004",
+      "japanese": "なんか……ゲームっぽくはなったね。",
+      "english": "It... kind of looks like a game now."
+    },
+    {
+      "key": "chapter.ending_b.dialogue.005",
+      "japanese": "でも、このゲームって結局何が面白いの？",
+      "english": "But what exactly is supposed to be fun about it?"
+    },
+    {
+      "key": "chapter.ending_b.dialogue.006",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_b.dialogue.007",
+      "japanese": "途中から誰も何も決めなくなっちゃいましたもんね。",
+      "english": "At some point, everyone just stopped making decisions."
+    },
+    {
+      "key": "chapter.ending_b.dialogue.008",
+      "japanese": "私は言われたものを描いただけですし……",
+      "english": "I only drew what I was told to draw..."
+    },
+    {
+      "key": "chapter.ending_b.dialogue.009",
+      "japanese": "僕も依頼通り作っただけですね。",
+      "english": "And I only made what I was asked to make."
+    },
+    {
+      "key": "chapter.ending_b.dialogue.010",
+      "japanese": "誰も間違ってはいない。",
+      "english": "Nobody did anything wrong."
+    },
+    {
+      "key": "chapter.ending_b.dialogue.011",
+      "japanese": "誰もゲームを作ってなかった。",
+      "english": "But nobody was actually making a game."
+    },
+    {
+      "key": "chapter.ending_b.dialogue.012",
+      "japanese": "……ごめん。",
+      "english": "...I'm sorry."
+    },
+    {
+      "key": "chapter.ending_c.dialogue.000",
+      "japanese": "クリアできます。",
+      "english": "It can be beaten."
+    },
+    {
+      "key": "chapter.ending_c.dialogue.001",
+      "japanese": "素材も全部あります。",
+      "english": "All the assets are there."
+    },
+    {
+      "key": "chapter.ending_c.dialogue.002",
+      "japanese": "音も鳴ります。",
+      "english": "The sound works."
+    },
+    {
+      "key": "chapter.ending_c.dialogue.003",
+      "japanese": "バグもありません。",
+      "english": "There are no bugs."
+    },
+    {
+      "key": "chapter.ending_c.dialogue.004",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_c.dialogue.005",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_c.dialogue.006",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_c.dialogue.007",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_c.dialogue.008",
+      "japanese": "……なんか、面白くないね。",
+      "english": "...But somehow, it isn't fun."
+    },
+    {
+      "key": "chapter.ending_c.dialogue.009",
+      "japanese": "\"完成\"と\"面白い\"は違うから。",
+      "english": "“Finished” and “fun” are not the same thing."
+    },
+    {
+      "key": "chapter.ending_c.dialogue.010",
+      "japanese": "そうだね……",
+      "english": "You're right..."
+    },
+    {
+      "key": "chapter.ending_d.dialogue.000",
+      "japanese": "マップジェネレーター完成。",
+      "english": "Map generator complete."
+    },
+    {
+      "key": "chapter.ending_d.dialogue.001",
+      "japanese": "システムも全部作り直した。",
+      "english": "I rebuilt the entire system too."
+    },
+    {
+      "key": "chapter.ending_d.dialogue.002",
+      "japanese": "ステージ作る必要もうないんですか？",
+      "english": "So I don't need to make stages anymore?"
+    },
+    {
+      "key": "chapter.ending_d.dialogue.003",
+      "japanese": "え……全部描き直しですか？",
+      "english": "What...? Do I have to redraw everything?"
+    },
+    {
+      "key": "chapter.ending_d.dialogue.004",
+      "japanese": "曲もステージごとに全部変えるんです？",
+      "english": "Do I have to make different music for every stage too?"
+    },
+    {
+      "key": "chapter.ending_d.dialogue.005",
+      "japanese": "ちょ、ちょっと待って！",
+      "english": "W-Wait a second!"
+    },
+    {
+      "key": "chapter.ending_d.dialogue.006",
+      "japanese": "ステージ自分で作っても...",
+      "english": "I can make the stages myself..."
+    },
+    {
+      "key": "chapter.ending_d.dialogue.007",
+      "japanese": "いや、その前に設計変更する。",
+      "english": "No. First, I'm changing the design."
+    },
+    {
+      "key": "chapter.ending_d.dialogue.008",
+      "japanese": "えぇ...",
+      "english": "What...?"
+    },
+    {
+      "key": "chapter.ending_d.dialogue.009",
+      "japanese": "終わらない……",
+      "english": "We're never going to finish..."
+    },
+    {
+      "key": "chapter.ending_d.dialogue.010",
+      "japanese": "終わらないですねぇ……",
+      "english": "No, we're not going to finish..."
+    },
+    {
+      "key": "chapter.ending_d.dialogue.011",
+      "japanese": "…………ごめん、時間切れ。",
+      "english": "...Sorry. We're out of time."
+    },
+    {
+      "key": "chapter.ending_d.dialogue.012",
+      "japanese": "……やりすぎたね。",
+      "english": "...We went too far."
+    },
+    {
+      "key": "chapter.ending_e.dialogue.000",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_e.dialogue.001",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_e.dialogue.002",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_e.dialogue.003",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_e.dialogue.004",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_e.dialogue.005",
+      "japanese": "どう？",
+      "english": "Well?"
+    },
+    {
+      "key": "chapter.ending_e.dialogue.006",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_e.dialogue.007",
+      "japanese": "面白くないね。",
+      "english": "It's not fun."
+    },
+    {
+      "key": "chapter.ending_e.dialogue.008",
+      "japanese": "……はい。",
+      "english": "...Yeah."
+    },
+    {
+      "key": "chapter.ending_e.dialogue.009",
+      "japanese": "曲だけ浮いてる気がします。",
+      "english": "The music feels completely out of place."
+    },
+    {
+      "key": "chapter.ending_e.dialogue.010",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_e.dialogue.011",
+      "japanese": "消す？",
+      "english": "Delete it?"
+    },
+    {
+      "key": "chapter.ending_e.dialogue.012",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_e.dialogue.013",
+      "japanese": "消そうか。",
+      "english": "Let's delete it."
+    },
+    {
+      "key": "chapter.ending_f.dialogue.000",
+      "japanese": "あ。",
+      "english": "Oh."
+    },
+    {
+      "key": "chapter.ending_f.dialogue.001",
+      "japanese": "あれ。",
+      "english": "Wait."
+    },
+    {
+      "key": "chapter.ending_f.dialogue.002",
+      "japanese": "リスタートしてもすぐやられるんだけど。",
+      "english": "I die again the instant I restart."
+    },
+    {
+      "key": "chapter.ending_f.dialogue.003",
+      "japanese": "あー。",
+      "english": "Ah."
+    },
+    {
+      "key": "chapter.ending_f.dialogue.004",
+      "japanese": "詰みだね。",
+      "english": "It's a softlock."
+    },
+    {
+      "key": "chapter.ending_f.dialogue.005",
+      "japanese": "針の上でセーブされちゃいましたね……",
+      "english": "It saved right on top of the spikes..."
+    },
+    {
+      "key": "chapter.ending_f.dialogue.006",
+      "japanese": "永遠に死に続けるホラーゲームになりましたね。",
+      "english": "We accidentally made a horror game where you die forever."
+    },
+    {
+      "key": "chapter.ending_f.dialogue.007",
+      "japanese": "想定できなかった……",
+      "english": "I didn't see that coming..."
+    },
+    {
+      "key": "chapter.ending_f.dialogue.008",
+      "japanese": "……これは監督者責任のわたしのせいだ",
+      "english": "...This is my fault as the person in charge."
+    },
+    {
+      "key": "chapter.ending_f.dialogue.009",
+      "japanese": "まぁ、はは……",
+      "english": "Well... haha..."
+    },
+    {
+      "key": "chapter.ending_g.dialogue.000",
+      "japanese": "もっと追加しましょう！",
+      "english": "Let's add more!"
+    },
+    {
+      "key": "chapter.ending_g.dialogue.001",
+      "japanese": "じゃあキャラも増やします！",
+      "english": "Then I'll add more characters!"
+    },
+    {
+      "key": "chapter.ending_g.dialogue.002",
+      "japanese": "曲もあと三曲作ります！",
+      "english": "I'll make three more tracks!"
+    },
+    {
+      "key": "chapter.ending_g.dialogue.003",
+      "japanese": "いいね！！",
+      "english": "Sounds great!!"
+    },
+    {
+      "key": "chapter.ending_g.dialogue.004",
+      "japanese": "もういっそ仕様変えます！",
+      "english": "Let's just change the whole spec!"
+    },
+    {
+      "key": "chapter.ending_g.dialogue.005",
+      "japanese": "え？",
+      "english": "Huh?"
+    },
+    {
+      "key": "chapter.ending_g.dialogue.006",
+      "japanese": "さっき決めたのやめます！もはやこれはゲームではない！芸術だ！",
+      "english": "Forget what we just decided! This is no longer a game! It's art!"
+    },
+    {
+      "key": "chapter.ending_g.dialogue.007",
+      "japanese": "それはさすがに……",
+      "english": "That's going a little too far..."
+    },
+    {
+      "key": "chapter.ending_g.dialogue.008",
+      "japanese": "ありです！",
+      "english": "I'm in!"
+    },
+    {
+      "key": "chapter.ending_g.dialogue.009",
+      "japanese": "やりましょう！",
+      "english": "Let's do it!"
+    },
+    {
+      "key": "chapter.ending_g.dialogue.010",
+      "japanese": "え、ごっとくん……",
+      "english": "Wait, Got...?"
+    },
+    {
+      "key": "chapter.ending_g.dialogue.011",
+      "japanese": "うん、手遅れ",
+      "english": "Yep. It's too late."
+    },
+    {
+      "key": "chapter.ending_h.dialogue.000",
+      "japanese": "……完璧",
+      "english": "...Perfect."
+    },
+    {
+      "key": "chapter.ending_h.dialogue.001",
+      "japanese": "バグなし！",
+      "english": "No bugs!"
+    },
+    {
+      "key": "chapter.ending_h.dialogue.002",
+      "japanese": "素材全部間に合いました",
+      "english": "We finished all the assets in time."
+    },
+    {
+      "key": "chapter.ending_h.dialogue.003",
+      "japanese": "BGMも効果音も実装確認済みです。",
+      "english": "The music and sound effects are all implemented and checked."
+    },
+    {
+      "key": "chapter.ending_h.dialogue.004",
+      "japanese": "細かいとこまでみてくれてありがとうございます！",
+      "english": "Thank you for checking every last detail!"
+    },
+    {
+      "key": "chapter.ending_h.dialogue.005",
+      "japanese": "最後まで遊んでもらえた……",
+      "english": "They played all the way to the end..."
+    },
+    {
+      "key": "chapter.ending_h.dialogue.006",
+      "japanese": "全部見てもらえて嬉しいですね。",
+      "english": "I'm glad they got to see everything."
+    },
+    {
+      "key": "chapter.ending_h.dialogue.007",
+      "japanese": "このゲーム、ちゃんと最後まで面白かった。",
+      "english": "This game was genuinely fun from beginning to end."
+    },
+    {
+      "key": "chapter.ending_h.dialogue.008",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_h.dialogue.009",
+      "japanese": "みんな、本当にありがとう。",
+      "english": "Thank you so much, everyone."
+    },
+    {
+      "key": "chapter.ending_h.dialogue.010",
+      "japanese": "楽しかったです！",
+      "english": "I had a great time!"
+    },
+    {
+      "key": "chapter.ending_h.dialogue.011",
+      "japanese": "ゲームジャムってこんなに面白いんですね。",
+      "english": "I never knew game jams could be this much fun."
+    },
+    {
+      "key": "chapter.ending_h.dialogue.012",
+      "japanese": "またやりたいです。",
+      "english": "I'd love to do this again."
+    },
+    {
+      "key": "chapter.ending_h.dialogue.013",
+      "japanese": "……まぁ。",
+      "english": "...Yeah."
+    },
+    {
+      "key": "chapter.ending_h.dialogue.014",
+      "japanese": "次はもっと面白いもの作ろう。",
+      "english": "Next time, let's make something even better."
+    },
+    {
+      "key": "chapter.ending_h.dialogue.015",
+      "japanese": "......もちろん!",
+      "english": "...Of course!"
+    },
+    {
+      "key": "chapter.ending_i.dialogue.000",
+      "japanese": "クリア！",
+      "english": "Clear!"
+    },
+    {
+      "key": "chapter.ending_i.dialogue.001",
+      "japanese": "え",
+      "english": "Huh?"
+    },
+    {
+      "key": "chapter.ending_i.dialogue.002",
+      "japanese": "え",
+      "english": "Huh?"
+    },
+    {
+      "key": "chapter.ending_i.dialogue.003",
+      "japanese": "え",
+      "english": "Huh?"
+    },
+    {
+      "key": "chapter.ending_i.dialogue.004",
+      "japanese": "ノーセーブクリア？",
+      "english": "A no-save clear?"
+    },
+    {
+      "key": "chapter.ending_i.dialogue.005",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_i.dialogue.006",
+      "japanese": "それでこそ開発者。",
+      "english": "Now that's a developer."
+    },
+    {
+      "key": "chapter.ending_j.dialogue.000",
+      "japanese": "......",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_j.dialogue.001",
+      "japanese": "......",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_j.dialogue.002",
+      "japanese": "......",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_j.dialogue.003",
+      "japanese": "......",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_j.dialogue.004",
+      "japanese": "......",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_j.dialogue.005",
+      "japanese": "だめだこりゃ",
+      "english": "This is hopeless."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.000",
+      "japanese": "ここまで全部見たんだね。",
+      "english": "You've seen everything there is to see."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.001",
+      "japanese": "ありがとう。",
+      "english": "Thank you."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.002",
+      "japanese": "君は知っているかもしれないけど、",
+      "english": "You may already know this, but..."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.003",
+      "japanese": "開発には正解なんてない。",
+      "english": "There is no single right answer in game development."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.004",
+      "japanese": "誰が悪いわけでもない。",
+      "english": "No one person is to blame."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.005",
+      "japanese": "指示に最適解もない。",
+      "english": "There is no perfect way to give directions."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.006",
+      "japanese": "実装方法の",
+      "english": "When it comes to implementation..."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.007",
+      "japanese": "世界観の",
+      "english": "...or worldbuilding..."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.008",
+      "japanese": "答えはひとつじゃない。",
+      "english": "...there is more than one answer."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.009",
+      "japanese": "それに",
+      "english": "And..."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.010",
+      "japanese": "正しさを持つのは、",
+      "english": "the right answer..."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.011",
+      "japanese": "君だけじゃない。",
+      "english": "doesn't belong to you alone."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.012",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.013",
+      "japanese": "これ以上は語らなくてもいいかな。",
+      "english": "I think that's all I need to say."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.014",
+      "japanese": "ここまで遊んでくれた君なら、",
+      "english": "If you've played this far..."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.015",
+      "japanese": "きっと良い企画開発者になれる。",
+      "english": "I'm sure you'll become a great game planner."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.016",
+      "japanese": "最後に、",
+      "english": "And finally..."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.017",
+      "japanese": "ここまで遊んでくれてありがとう。",
+      "english": "Thank you for playing all the way to the end."
+    },
+    {
+      "key": "chapter.ending_k.dialogue.018",
+      "japanese": "Thank you for Playing",
+      "english": "Thank you for playing."
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans1.dialogue.000",
+      "japanese": "せっかくだし、コンテストとかを見越した\nすごいの作りたいんだけど、どう？",
+      "english": "Since we have the chance, I'd like to make something incredible that we could enter in a contest.\nWhat do you think?"
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans1.dialogue.001",
+      "japanese": "アバウトなうえに無茶言うじゃん……\nまぁ、やるならやるで全然コード書くけど……",
+      "english": "That's vague and asking a lot...\nBut if we're doing it, I'll write the code..."
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans1.dialogue.002",
+      "japanese": "他のみんなはどう思う？",
+      "english": "What does everyone else think?"
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans1.dialogue.003",
+      "japanese": "全然ありだと思います！\n即死トラップ満載の詰みアクションゲーとか作りたいな",
+      "english": "I'm totally on board!\nI'd love to make a near-impossible action game packed with instant-death traps."
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans1.dialogue.004",
+      "japanese": "演出凝ってみたいな……\nアニメーションとかエフェクトいっぱいにして……",
+      "english": "I'd love to go all out on the presentation...\nWith lots of animations and effects..."
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans1.dialogue.005",
+      "japanese": "音重ねまくって、\n深みのあるオーケストラとか作ってみたいかも",
+      "english": "I might like to layer lots of sounds into a rich orchestral piece."
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans2.dialogue.000",
+      "japanese": "自分は特に希望ないから、皆に任せるよ",
+      "english": "I don't have any particular preference, so I'll leave it to everyone else."
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans2.dialogue.001",
+      "japanese": "えぇと……俺もサウンドだし、他の人に合わせますよ",
+      "english": "Um... I'm just doing sound, so I'll go along with what everyone else wants."
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans2.dialogue.002",
+      "japanese": "グラフィッカからも、特に希望はないです……",
+      "english": "The artist has no particular requests either..."
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans2.dialogue.003",
+      "japanese": "プログラマ二人はどう思う？",
+      "english": "What do our two programmers think?"
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans2.dialogue.004",
+      "japanese": "皆が何でもいいって言うなら\n僕アクション作りたいです！",
+      "english": "If nobody else minds,\nI want to make an action game!"
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans2.dialogue.005",
+      "japanese": "まぁ、Ryuta君がこう言ってるから……\nアクションでいいんじゃない？",
+      "english": "Well, since Ryuta feels that strongly...\nan action game sounds fine, doesn't it?"
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans0.dialogue.000",
+      "japanese": "アクションかシューティングを作りたいなって思うんだけど\nみんなはどう思う？",
+      "english": "I'm thinking of making an action game or a shooter.\nWhat do you all think?"
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans0.dialogue.001",
+      "japanese": "え、めっちゃいいじゃないですか\n僕アクション作るの得意ですよ！",
+      "english": "That sounds awesome!\nI'm great at making action games!"
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans0.dialogue.002",
+      "japanese": "他のみんなはどう思う？",
+      "english": "What does everyone else think?"
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans0.dialogue.003",
+      "japanese": "無難なシステムなら実装も難しくないだろうし、\nいいんじゃない？",
+      "english": "A straightforward system shouldn't be hard to implement,\nso why not?"
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans0.dialogue.004",
+      "japanese": "えと……メカっぽいの描くの苦手なんですけど……\nそれで大丈夫なら、いいと思います",
+      "english": "Um... I'm not good at drawing mechanical things...\nIf that's okay, then I think it sounds good."
+    },
+    {
+      "key": "chapter1.part1_1_branch_ans0.dialogue.005",
+      "japanese": "まぁ、いいと思います\n曲の雰囲気とか言ってもらえれば、全然作るので",
+      "english": "Sure, I think it's fine.\nJust tell me what mood you want for the music and I can make it."
+    },
+    {
+      "key": "chapter1.part1_2.dialogue.000",
+      "japanese": "じゃあ、アクションゲームを作る方向で",
+      "english": "Then we'll go with an action game."
+    },
+    {
+      "key": "chapter1.part1_2.dialogue.001",
+      "japanese": "次に、みんなにタスクを振っていこうと思うんだけど...",
+      "english": "Next, I'm going to assign everyone their tasks..."
+    },
+    {
+      "key": "chapter1.part1_2.dialogue.002",
+      "japanese": "まずはごっと",
+      "english": "Let's start with Got."
+    },
+    {
+      "key": "chapter1.part1_2.dialogue.003",
+      "japanese": "あ、私からですか",
+      "english": "Oh, me first?"
+    },
+    {
+      "key": "chapter1.part1_2.dialogue.004",
+      "japanese": "設計はごっとに任せたいからね",
+      "english": "I want to put you in charge of the design, Got."
+    },
+    {
+      "key": "chapter1.part1_2.dialogue.005",
+      "japanese": "あぁ、そうですか",
+      "english": "Oh. All right."
+    },
+    {
+      "key": "chapter1.part1_2.dialogue.006",
+      "japanese": "それじゃあ...(どんなタスクを振ろうかな)",
+      "english": "Then... (What task should I give him?)"
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans0.dialogue.000",
+      "japanese": "全体の設計を作って僕に先に見せてほしいな",
+      "english": "I'd like you to design the overall structure and show it to me first."
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans0.dialogue.001",
+      "japanese": "とりあえず、”プレイヤー操作・罠・ステージ１つ”くらいの規模で",
+      "english": "For now, keep the scope to something like “player controls, traps, and one stage.”"
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans0.dialogue.002",
+      "japanese": "なるほど、スコープは小さめですね",
+      "english": "I see. A fairly small scope."
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans0.dialogue.003",
+      "japanese": "うん、あとでみんなが見れるようにドキュメントもまとめてほしい",
+      "english": "Yeah, and I'd like you to write it up so everyone can refer to it later."
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans0.dialogue.004",
+      "japanese": "了解です。\nじゃあ、全体の構造だけ先に決めて、細かいところはあとで詰めます",
+      "english": "Understood.\nI'll decide the overall structure first and work out the details later."
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans0.dialogue.005",
+      "japanese": "本当に大まかでいいからね？！\nごっどにお願いするといつも細部までこだわりつくしちゃうから......",
+      "english": "A very rough outline is enough, okay?!\nWhenever I ask you, Got, you always obsess over every last detail..."
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans0.dialogue.006",
+      "japanese": "まぁ.......とりあえず、動かせる程度までは作っておきます",
+      "english": "Well... I'll at least get it to a runnable state for now."
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans0.dialogue.007",
+      "japanese": "優秀だなぁ......",
+      "english": "You're seriously good at this..."
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans1.dialogue.000",
+      "japanese": "明日までに簡単にまとめてきてほしいんだ。",
+      "english": "I'd like you to put together a quick summary by tomorrow."
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans1.dialogue.001",
+      "japanese": "......明日？",
+      "english": "...Tomorrow?"
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans1.dialogue.002",
+      "japanese": "うん、雑でいいよ。\n設計なんて開発が進につ入れて確立していくでしょ。",
+      "english": "Yeah, it can be rough.\nThe design will take shape as development progresses, right?"
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans1.dialogue.003",
+      "japanese": "え、でも......まぁ、いいか......",
+      "english": "Huh? But... fine, I guess..."
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans1.dialogue.004",
+      "japanese": "とりあえずたたき台みたいな感じだから、よろしく",
+      "english": "It's just a starting point for now, so I'm counting on you."
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans1.dialogue.005",
+      "japanese": "......",
+      "english": "..."
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans2.dialogue.000",
+      "japanese": "僕は設計よくわかんないから、とりあえず全部よろしく",
+      "english": "I don't really understand design, so just handle everything for now."
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans2.dialogue.001",
+      "japanese": "......全部、ですか",
+      "english": "...Everything?"
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans2.dialogue.002",
+      "japanese": "うん、好きにやっていいよ",
+      "english": "Yeah. Do whatever you like."
+    },
+    {
+      "key": "chapter1.part1_3_branch_ans2.dialogue.003",
+      "japanese": "え....あぁ....はい....",
+      "english": "Uh... right... okay..."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.000",
+      "japanese": "それでは、春みんげ～第一回オンラインミーティングを始めます",
+      "english": "All right, let's begin Spring Minge's first online meeting."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.001",
+      "japanese": "おなしゃす",
+      "english": "Let's do this."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.002",
+      "japanese": "お願いします",
+      "english": "Looking forward to working with you."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.003",
+      "japanese": "お、おねがいします",
+      "english": "N-Nice to meet you all."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.004",
+      "japanese": "おねがいしまぁす",
+      "english": "Looking forward to it!"
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.005",
+      "japanese": "じゃあ、まず自己紹介しましょうか",
+      "english": "All right, let's start with introductions."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.006",
+      "japanese": "今回リーダーを務めます。学部三年の[name]です\nリーダーは初めてで少し緊張していますが、宜しくお願いします",
+      "english": "I'll be leading the team this time. I'm [name], a third-year student.\nIt's my first time as leader, so I'm a little nervous, but I look forward to working with you all."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.007",
+      "japanese": "学部二年のRyutaです\nあ、プログラマです。好きなゲームはトラップマンです",
+      "english": "I'm Ryuta, a second-year student.\nOh, and I'm a programmer. My favorite game is Trap Man."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.008",
+      "japanese": "学部三年のごっとです\nプログラマで、Ryutaくんのサポートやります",
+      "english": "I'm Got, a third-year student.\nI'm a programmer, and I'll be supporting Ryuta."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.009",
+      "japanese": "が、学部一年のMiluです\nえと、グラフィッカでが、がんばります！",
+      "english": "I-I'm Milu, a first-year student.\nUm, I'm the artist, and I'll d-do my best!"
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.010",
+      "japanese": "学部二年のかしわもちです\nえーと、サウンドやります。　はーい",
+      "english": "I'm Kashiwamochi, a second-year student.\nUh, I'll be doing sound. Yep."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.011",
+      "japanese": "今後の予定だけど",
+      "english": "About the schedule going forward..."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.012",
+      "japanese": "今回は、全体ミーティングをもとに\n",
+      "english": "Based on today's full-team meeting,\n"
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.013",
+      "japanese": "作業は各々進めてください",
+      "english": "please proceed with your individual tasks."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.014",
+      "japanese": "今回はオフラインで集まりはしないんだね",
+      "english": "So we won't be meeting in person this time?"
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.015",
+      "japanese": "うん、大学の立ち入り禁止期間とかぶちゃっててね",
+      "english": "Right. It overlaps with the period when campus is closed."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.016",
+      "japanese": "あぁ、入試ですか……",
+      "english": "Oh, because of the entrance exams..."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.017",
+      "japanese": "あと卒業式もあるからね",
+      "english": "And there's the graduation ceremony too."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.018",
+      "japanese": "俺は実家変えるから、オンラインしか難しいね",
+      "english": "I'm moving back home, so online is my only real option."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.019",
+      "japanese": "そういうわけで、オンラインで進めていきます",
+      "english": "For those reasons, we'll be working online."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.020",
+      "japanese": "テストプレイ会を目標に頑張りましょう",
+      "english": "Let's work toward having it ready for the playtesting event."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.021",
+      "japanese": "というわけで、とりあえず今回作るゲームの大まかな方向性を決めていきたいと思います",
+      "english": "So, first I'd like us to decide the general direction for the game we're making."
+    },
+    {
+      "key": "chapter1.part1_0.dialogue.022",
+      "japanese": "ええと...(なんて声をかけよう)",
+      "english": "Um... (How should I bring this up?)"
+    },
+    {
+      "key": "dialoguetest.0.dialogue.000",
+      "japanese": "おなかすいたー",
+      "english": "I'm hungry!"
+    },
+    {
+      "key": "dialoguetest.0.dialogue.001",
+      "japanese": "(おなかが鳴る)",
+      "english": "(stomach growls)"
+    },
+    {
+      "key": "dialoguetest.1.dialogue.000",
+      "japanese": "おすしたべたい",
+      "english": "I want sushi."
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.000",
+      "japanese": "おっすおっす。今ちょっといいすか？",
+      "english": "Yo, yo. Got a minute?"
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.001",
+      "japanese": "大丈夫です。どうしました？",
+      "english": "Sure. What's up?"
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.002",
+      "japanese": "お前ら今、ゲーム作ってるらしいじゃん？",
+      "english": "I hear you guys are making a game right now."
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.003",
+      "japanese": "はい。ゲームジャムで作ってますけど",
+      "english": "Yeah, for a game jam."
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.004",
+      "japanese": "じゃあさ、そのゲームに俺を出してくれよ～。頼むよ～",
+      "english": "Then put me in the game! Come on, I'm begging you!"
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.005",
+      "japanese": "急に何を言い出すんですか",
+      "english": "Where did that come from?"
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.006",
+      "japanese": "いいじゃんいいじゃん。隠しキャラとかでさ。俺そういうの好きだから",
+      "english": "Come on, it'd be great! Make me a secret character or something. I love that stuff."
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.007",
+      "japanese": "だいっちゃん先輩を出す理由がないんですけど",
+      "english": "We have no reason to put you in the game, Daittyan."
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.008",
+      "japanese": "理由？　俺が出たいから。はい論破",
+      "english": "A reason? Because I want to be in it. Checkmate."
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.009",
+      "japanese": "論破できてないですよ",
+      "english": "That doesn't prove anything."
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.010",
+      "japanese": "ファッ！？　じゃあ敵キャラでもいいゾ。倒されたら『やりますねぇ！』って言うから",
+      "english": "What?! Fine, an enemy works too. When you beat me, I'll say, “Not bad!”"
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.011",
+      "japanese": "それ、倒された側の台詞じゃないですよね",
+      "english": "That's not something the one who lost would say."
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.012",
+      "japanese": "細かいこと気にするとハゲるゾ。俺はもうキャラ設定まで考えてるから",
+      "english": "Sweat the small stuff and you'll go bald, man. I've already figured out my character concept."
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.013",
+      "japanese": "聞いてないですけど、一応聞きます",
+      "english": "I didn't ask, but let's hear it."
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.014",
+      "japanese": "最強の助っ人キャラ。攻撃力カンスト、体力無限、俺が来た瞬間ゲームクリア",
+      "english": "The ultimate helper character. Maxed-out attack, infinite health, and the moment I show up, you win."
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.015",
+      "japanese": "ゲームを壊しに来てるじゃないですか",
+      "english": "You'd completely break the game!"
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.016",
+      "japanese": "最強キャラはロマンだろ？　当たり前だよなぁ？",
+      "english": "Overpowered characters are the dream, right? Obviously!"
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.017",
+      "japanese": "せめて背景のポスターくらいなら考えます",
+      "english": "I might consider putting you on a poster in the background."
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.018",
+      "japanese": "マジ？　やったぜ。じゃあ写真送るわ。盛れてるやつ厳選するから見とけよ見とけよ～",
+      "english": "Seriously? Yes! I'll send you a photo. I'll pick the most flattering one, so just you wait!"
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.019",
+      "japanese": "別に実写で出すとは言ってないです",
+      "english": "I never said we'd use an actual photo of you."
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.020",
+      "japanese": "えぇ……。まあ多少はね？　採用されたら教えてくれよな～頼むよ～",
+      "english": "Come on... Give a guy a break. Let me know if I make the cut, okay? I'm counting on you!"
+    },
+    {
+      "key": "dm_daittyan.dm_daittyan_0.dialogue.021",
+      "japanese": "はいはい。余裕があったら入れておきます",
+      "english": "Sure, sure. I'll add you if we have time."
+    },
+    {
+      "key": "dm_got.dm_got_0.dialogue.000",
+      "japanese": "javaの過去問ある？",
+      "english": "Do you have any old Java exams?"
+    },
+    {
+      "key": "dm_got.dm_got_0.dialogue.001",
+      "japanese": "ない",
+      "english": "Nope."
+    },
+    {
+      "key": "dm_got.dm_got_0.dialogue.002",
+      "japanese": "まじか",
+      "english": "Seriously?"
+    },
+    {
+      "key": "dm_got.dm_got_0.dialogue.003",
+      "japanese": "Ex8解けた？",
+      "english": "Did you solve Ex8?"
+    },
+    {
+      "key": "dm_got.dm_got_0.dialogue.004",
+      "japanese": "答えほしいの？",
+      "english": "Do you want the answer?"
+    },
+    {
+      "key": "dm_got.dm_got_0.dialogue.005",
+      "japanese": "ください",
+      "english": "Please."
+    },
+    {
+      "key": "dm_got.dm_got_0.dialogue.006",
+      "japanese": "はい",
+      "english": "Here you go."
+    },
+    {
+      "key": "dm_got.dm_got_0.dialogue.007",
+      "japanese": "間違ってることはないと思うけど",
+      "english": "I don't think it's wrong, at least."
+    },
+    {
+      "key": "dm_got.dm_got_0.dialogue.008",
+      "japanese": "なんか違うファイル混じってない？",
+      "english": "Isn't there some unrelated file mixed in here?"
+    },
+    {
+      "key": "dm_got.dm_got_0.dialogue.009",
+      "japanese": "あ",
+      "english": "Oh."
+    },
+    {
+      "key": "dm_got.dm_got_0.dialogue.010",
+      "japanese": "まぁ、きにしないで",
+      "english": "Well, don't worry about it."
+    },
+    {
+      "key": "dm_got.dm_got_0.dialogue.011",
+      "japanese": "気になるんだが",
+      "english": "Now I'm curious."
+    },
+    {
+      "key": "dm_got.dm_got_0.dialogue.012",
+      "japanese": "見られて困らないからいいよ",
+      "english": "There's nothing in there I mind you seeing, so it's fine."
+    },
+    {
+      "key": "dm_got.dm_got_0.dialogue.013",
+      "japanese": "いいんかい",
+      "english": "You're really okay with that?"
+    },
+    {
+      "key": "dm_got.dm_got_0.dialogue.014",
+      "japanese": "ちなみにこのファイル何",
+      "english": "By the way, what is this file?"
+    },
+    {
+      "key": "dm_got.dm_got_0.dialogue.015",
+      "japanese": "ゲーム開発の時の設計のテンプレ。開発ルールのReadmeとか入ってる。なんでここにあるんだろ",
+      "english": "A design template for game development. It has a README with development rules and stuff. I wonder why it's in there."
+    },
+    {
+      "key": "dm_got.dm_got_0.dialogue.016",
+      "japanese": "知らん",
+      "english": "Beats me."
+    },
+    {
+      "key": "dm_kashiwamochi.dm_kashiwamochi_0.dialogue.000",
+      "japanese": "かしわもちくん",
+      "english": "Kashiwamochi."
+    },
+    {
+      "key": "dm_kashiwamochi.dm_kashiwamochi_0.dialogue.001",
+      "japanese": "？",
+      "english": "?"
+    },
+    {
+      "key": "dm_kashiwamochi.dm_kashiwamochi_0.dialogue.002",
+      "japanese": "今度の南方同人イベントに出展するんだって？",
+      "english": "I heard you're exhibiting at the upcoming Nanpo indie event."
+    },
+    {
+      "key": "dm_kashiwamochi.dm_kashiwamochi_0.dialogue.003",
+      "japanese": "そうですよ。興味ありますか？",
+      "english": "That's right. Are you interested?"
+    },
+    {
+      "key": "dm_kashiwamochi.dm_kashiwamochi_0.dialogue.004",
+      "japanese": "CD一枚買わせてください",
+      "english": "Let me buy one of your CDs."
+    },
+    {
+      "key": "dm_kashiwamochi.dm_kashiwamochi_0.dialogue.005",
+      "japanese": "毎度ありです",
+      "english": "Thank you for your business."
+    },
+    {
+      "key": "dm_kashiwamochi.dm_kashiwamochi_0.dialogue.006",
+      "japanese": "和風オーケストラ、やっぱり良い",
+      "english": "Japanese-style orchestral music really is great."
+    },
+    {
+      "key": "dm_kashiwamochi.dm_kashiwamochi_0.dialogue.007",
+      "japanese": "得意分野です",
+      "english": "It's my specialty."
+    },
+    {
+      "key": "dm_milu.dm_milu_0.dialogue.000",
+      "japanese": "(画像と共に)これMiluさんの？",
+      "english": "(with an image) Is this yours, Milu?"
+    },
+    {
+      "key": "dm_milu.dm_milu_0.dialogue.001",
+      "japanese": "です。部室にありましたか？",
+      "english": "It is. Was it in the clubroom?"
+    },
+    {
+      "key": "dm_milu.dm_milu_0.dialogue.002",
+      "japanese": "うん。もう家帰ったよね？部室に置きっぱなしでもいい？",
+      "english": "Yeah. You've already gone home, right? Is it okay if I leave it in the clubroom?"
+    },
+    {
+      "key": "dm_milu.dm_milu_0.dialogue.003",
+      "japanese": "本棚に隠しておいてもらえると助かります",
+      "english": "It would help if you could hide it on the bookshelf."
+    },
+    {
+      "key": "dm_milu.dm_milu_0.dialogue.004",
+      "japanese": "隠す？",
+      "english": "Hide it?"
+    },
+    {
+      "key": "dm_milu.dm_milu_0.dialogue.005",
+      "japanese": "あまり見られたくないので",
+      "english": "I don't really want anyone to see it."
+    },
+    {
+      "key": "dm_milu.dm_milu_0.dialogue.006",
+      "japanese": "了解。グラフィッカの棚に入れとくね",
+      "english": "Got it. I'll put it on the art team's shelf."
+    },
+    {
+      "key": "dm_milu.dm_milu_0.dialogue.007",
+      "japanese": "ありがとうございます",
+      "english": "Thank you."
+    },
+    {
+      "key": "dm_ryuta.dm_ryuta_0.dialogue.000",
+      "japanese": "ヌプラチューンやるんですけどどうですか？！",
+      "english": "We're playing Nupratune. Want to join?!"
+    },
+    {
+      "key": "dm_ryuta.dm_ryuta_0.dialogue.001",
+      "japanese": "ヌプラ！いいですねぇ",
+      "english": "Nupra! Sounds good!"
+    },
+    {
+      "key": "dm_ryuta.dm_ryuta_0.dialogue.002",
+      "japanese": "明日の夜９時からです！",
+      "english": "Tomorrow night at nine!"
+    },
+    {
+      "key": "dm_ryuta.dm_ryuta_0.dialogue.003",
+      "japanese": "りょ",
+      "english": "Gotcha."
+    },
+    {
+      "key": "dm_ryuta.dm_ryuta_0.dialogue.004",
+      "japanese": "あと、今度協力型アクションゲームのH.E.P.O.の大型アプデあるんですけど、やりませんか？",
+      "english": "Also, the co-op action game H.E.P.O. has a major update coming. Want to play?"
+    },
+    {
+      "key": "dm_ryuta.dm_ryuta_0.dialogue.005",
+      "japanese": "へぽ？初めて聞く",
+      "english": "H.E.P.O.? Never heard of it."
+    },
+    {
+      "key": "dm_ryuta.dm_ryuta_0.dialogue.006",
+      "japanese": "めっちゃおもろいです",
+      "english": "It's seriously fun."
+    },
+    {
+      "key": "dm_ryuta.dm_ryuta_0.dialogue.007",
+      "japanese": "アクション好きのRyutaくんが言うなら間違いないな",
+      "english": "If an action-game fan like you recommends it, it must be good."
+    },
+    {
+      "key": "dm_ryuta.dm_ryuta_0.dialogue.008",
+      "japanese": "おすすめです！",
+      "english": "I highly recommend it!"
+    },
+    {
+      "key": "dm_ryuta.dm_ryuta_0.dialogue.009",
+      "japanese": "買った",
+      "english": "Bought it."
+    },
+    {
+      "key": "dm_ryuta.dm_ryuta_0.dialogue.010",
+      "japanese": "かっけぇっす！",
+      "english": "You're a legend!"
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.000",
+      "japanese": "これは……いいね",
+      "english": "This is... good."
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.001",
+      "japanese": "onedayゲームジャムにしては、いい出来だと思うな。",
+      "english": "For a one-day game jam, I think this turned out really well."
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.002",
+      "japanese": "ごっとくん、満足そうだね",
+      "english": "You look satisfied, Got."
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.003",
+      "japanese": "まぁ、合格点ってところ、かな",
+      "english": "Well, I'd call it a passing grade."
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.004",
+      "japanese": "さらに上を目指す姿勢、見習わなきゃだなぁ",
+      "english": "I should learn from your drive to aim even higher."
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.005",
+      "japanese": "Miluさんとかしわもちくんは、実際遊んでみてどう？",
+      "english": "What did you think after playing it, Milu and Kashiwamochi?"
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.006",
+      "japanese": "素材足りててよかった……",
+      "english": "I'm just glad we had enough assets..."
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.007",
+      "japanese": "あ、そっちの感想？",
+      "english": "Oh, that's your takeaway?"
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.008",
+      "japanese": "効果音の実装完璧じゃないですか",
+      "english": "The sound effects were implemented perfectly!"
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.009",
+      "japanese": "イメージ通りに実装できてよかったぁ",
+      "english": "I'm so glad they came out the way I imagined."
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.010",
+      "japanese": "と、まぁこんな感じ、かな",
+      "english": "And... I guess that's that."
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.011",
+      "japanese": "え？",
+      "english": "Huh?"
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.012",
+      "japanese": "え？って何？",
+      "english": "What do you mean, “huh?”"
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.013",
+      "japanese": "これで終わりなわけないでしょ？",
+      "english": "You don't think we're stopping here, do you?"
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.014",
+      "japanese": "え？",
+      "english": "Huh?"
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.015",
+      "japanese": "一日で終わらせたらもったいないじゃないですか",
+      "english": "It'd be a waste to end it after just one day."
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.016",
+      "japanese": "……ってことは",
+      "english": "...You mean...?"
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.017",
+      "japanese": "継続開発らしいですよ",
+      "english": "Looks like we're continuing development."
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.018",
+      "japanese": "まぁ、頑張りましょうよ！",
+      "english": "Come on, let's keep at it!"
+    },
+    {
+      "key": "ending_a.ending_a.dialogue.019",
+      "japanese": "は、はは……",
+      "english": "H-Haha..."
+    },
+    {
+      "key": "ending_b.ending_b.dialogue.000",
+      "japanese": "……完成、かな？",
+      "english": "...Is it finished?"
+    },
+    {
+      "key": "ending_b.ending_b.dialogue.001",
+      "japanese": "まぁ、動きますね。",
+      "english": "Well, it runs."
+    },
+    {
+      "key": "ending_b.ending_b.dialogue.002",
+      "japanese": "素材も、一応全部あります。",
+      "english": "Technically, all the assets are there."
+    },
+    {
+      "key": "ending_b.ending_b.dialogue.003",
+      "japanese": "曲も流れてますねぇ。",
+      "english": "The music plays too."
+    },
+    {
+      "key": "ending_b.ending_b.dialogue.004",
+      "japanese": "なんか……ゲームっぽくはなったね。",
+      "english": "It... kind of looks like a game now."
+    },
+    {
+      "key": "ending_b.ending_b.dialogue.005",
+      "japanese": "でも、このゲームって結局何が面白いの？",
+      "english": "But what exactly is supposed to be fun about it?"
+    },
+    {
+      "key": "ending_b.ending_b.dialogue.006",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "ending_b.ending_b.dialogue.007",
+      "japanese": "途中から誰も何も決めなくなっちゃいましたもんね。",
+      "english": "At some point, everyone just stopped making decisions."
+    },
+    {
+      "key": "ending_b.ending_b.dialogue.008",
+      "japanese": "私は言われたものを描いただけですし……",
+      "english": "I only drew what I was told to draw..."
+    },
+    {
+      "key": "ending_b.ending_b.dialogue.009",
+      "japanese": "僕も依頼通り作っただけですね。",
+      "english": "And I only made what I was asked to make."
+    },
+    {
+      "key": "ending_b.ending_b.dialogue.010",
+      "japanese": "誰も間違ってはいない。",
+      "english": "Nobody did anything wrong."
+    },
+    {
+      "key": "ending_b.ending_b.dialogue.011",
+      "japanese": "誰もゲームを作ってなかった。",
+      "english": "But nobody was actually making a game."
+    },
+    {
+      "key": "ending_b.ending_b.dialogue.012",
+      "japanese": "……ごめん。",
+      "english": "...I'm sorry."
+    },
+    {
+      "key": "ending_c.ending_c.dialogue.000",
+      "japanese": "クリアできます。",
+      "english": "It can be beaten."
+    },
+    {
+      "key": "ending_c.ending_c.dialogue.001",
+      "japanese": "素材も全部あります。",
+      "english": "All the assets are there."
+    },
+    {
+      "key": "ending_c.ending_c.dialogue.002",
+      "japanese": "音も鳴ります。",
+      "english": "The sound works."
+    },
+    {
+      "key": "ending_c.ending_c.dialogue.003",
+      "japanese": "バグもありません。",
+      "english": "There are no bugs."
+    },
+    {
+      "key": "ending_c.ending_c.dialogue.004",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "ending_c.ending_c.dialogue.005",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "ending_c.ending_c.dialogue.006",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "ending_c.ending_c.dialogue.007",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "ending_c.ending_c.dialogue.008",
+      "japanese": "……なんか、面白くないね。",
+      "english": "...But somehow, it isn't fun."
+    },
+    {
+      "key": "ending_c.ending_c.dialogue.009",
+      "japanese": "\"完成\"と\"面白い\"は違うから。",
+      "english": "“Finished” and “fun” are not the same thing."
+    },
+    {
+      "key": "ending_c.ending_c.dialogue.010",
+      "japanese": "そうだね……",
+      "english": "You're right..."
+    },
+    {
+      "key": "ending_d.ending_d.dialogue.000",
+      "japanese": "マップジェネレーター完成。",
+      "english": "Map generator complete."
+    },
+    {
+      "key": "ending_d.ending_d.dialogue.001",
+      "japanese": "システムも全部作り直した。",
+      "english": "I rebuilt the entire system too."
+    },
+    {
+      "key": "ending_d.ending_d.dialogue.002",
+      "japanese": "ステージ作る必要もうないんですか？",
+      "english": "So I don't need to make stages anymore?"
+    },
+    {
+      "key": "ending_d.ending_d.dialogue.003",
+      "japanese": "え……全部描き直しですか？",
+      "english": "What...? Do I have to redraw everything?"
+    },
+    {
+      "key": "ending_d.ending_d.dialogue.004",
+      "japanese": "曲もステージごとに全部変えるんです？",
+      "english": "Do I have to make different music for every stage too?"
+    },
+    {
+      "key": "ending_d.ending_d.dialogue.005",
+      "japanese": "ちょ、ちょっと待って！",
+      "english": "W-Wait a second!"
+    },
+    {
+      "key": "ending_d.ending_d.dialogue.006",
+      "japanese": "ステージ自分で作っても...",
+      "english": "I can make the stages myself..."
+    },
+    {
+      "key": "ending_d.ending_d.dialogue.007",
+      "japanese": "いや、その前に設計変更する。",
+      "english": "No. First, I'm changing the design."
+    },
+    {
+      "key": "ending_d.ending_d.dialogue.008",
+      "japanese": "えぇ...",
+      "english": "What...?"
+    },
+    {
+      "key": "ending_d.ending_d.dialogue.009",
+      "japanese": "終わらない……",
+      "english": "We're never going to finish..."
+    },
+    {
+      "key": "ending_d.ending_d.dialogue.010",
+      "japanese": "終わらないですねぇ……",
+      "english": "No, we're not going to finish..."
+    },
+    {
+      "key": "ending_d.ending_d.dialogue.011",
+      "japanese": "…………ごめん、時間切れ。",
+      "english": "...Sorry. We're out of time."
+    },
+    {
+      "key": "ending_d.ending_d.dialogue.012",
+      "japanese": "……やりすぎたね。",
+      "english": "...We went too far."
+    },
+    {
+      "key": "ending_e.ending_e.dialogue.000",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "ending_e.ending_e.dialogue.001",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "ending_e.ending_e.dialogue.002",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "ending_e.ending_e.dialogue.003",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "ending_e.ending_e.dialogue.004",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "ending_e.ending_e.dialogue.005",
+      "japanese": "どう？",
+      "english": "Well?"
+    },
+    {
+      "key": "ending_e.ending_e.dialogue.006",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "ending_e.ending_e.dialogue.007",
+      "japanese": "面白くないね。",
+      "english": "It's not fun."
+    },
+    {
+      "key": "ending_e.ending_e.dialogue.008",
+      "japanese": "……はい。",
+      "english": "...Yeah."
+    },
+    {
+      "key": "ending_e.ending_e.dialogue.009",
+      "japanese": "曲だけ浮いてる気がします。",
+      "english": "The music feels completely out of place."
+    },
+    {
+      "key": "ending_e.ending_e.dialogue.010",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "ending_e.ending_e.dialogue.011",
+      "japanese": "消す？",
+      "english": "Delete it?"
+    },
+    {
+      "key": "ending_e.ending_e.dialogue.012",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "ending_e.ending_e.dialogue.013",
+      "japanese": "消そうか。",
+      "english": "Let's delete it."
+    },
+    {
+      "key": "ending_f.ending_f.dialogue.000",
+      "japanese": "あ。",
+      "english": "Oh."
+    },
+    {
+      "key": "ending_f.ending_f.dialogue.001",
+      "japanese": "あれ。",
+      "english": "Wait."
+    },
+    {
+      "key": "ending_f.ending_f.dialogue.002",
+      "japanese": "リスタートしてもすぐやられるんだけど。",
+      "english": "I die again the instant I restart."
+    },
+    {
+      "key": "ending_f.ending_f.dialogue.003",
+      "japanese": "あー。",
+      "english": "Ah."
+    },
+    {
+      "key": "ending_f.ending_f.dialogue.004",
+      "japanese": "詰みだね。",
+      "english": "It's a softlock."
+    },
+    {
+      "key": "ending_f.ending_f.dialogue.005",
+      "japanese": "針の上でセーブされちゃいましたね……",
+      "english": "It saved right on top of the spikes..."
+    },
+    {
+      "key": "ending_f.ending_f.dialogue.006",
+      "japanese": "永遠に死に続けるホラーゲームになりましたね。",
+      "english": "We accidentally made a horror game where you die forever."
+    },
+    {
+      "key": "ending_f.ending_f.dialogue.007",
+      "japanese": "想定できなかった……",
+      "english": "I didn't see that coming..."
+    },
+    {
+      "key": "ending_f.ending_f.dialogue.008",
+      "japanese": "……これは監督者責任のわたしのせいだ",
+      "english": "...This is my fault as the person in charge."
+    },
+    {
+      "key": "ending_f.ending_f.dialogue.009",
+      "japanese": "まぁ、はは……",
+      "english": "Well... haha..."
+    },
+    {
+      "key": "ending_g.ending_g.dialogue.000",
+      "japanese": "もっと追加しましょう！",
+      "english": "Let's add more!"
+    },
+    {
+      "key": "ending_g.ending_g.dialogue.001",
+      "japanese": "じゃあキャラも増やします！",
+      "english": "Then I'll add more characters!"
+    },
+    {
+      "key": "ending_g.ending_g.dialogue.002",
+      "japanese": "曲もあと三曲作ります！",
+      "english": "I'll make three more tracks!"
+    },
+    {
+      "key": "ending_g.ending_g.dialogue.003",
+      "japanese": "いいね！！",
+      "english": "Sounds great!!"
+    },
+    {
+      "key": "ending_g.ending_g.dialogue.004",
+      "japanese": "もういっそ仕様変えます！",
+      "english": "Let's just change the whole spec!"
+    },
+    {
+      "key": "ending_g.ending_g.dialogue.005",
+      "japanese": "え？",
+      "english": "Huh?"
+    },
+    {
+      "key": "ending_g.ending_g.dialogue.006",
+      "japanese": "さっき決めたのやめます！もはやこれはゲームではない！芸術だ！",
+      "english": "Forget what we just decided! This is no longer a game! It's art!"
+    },
+    {
+      "key": "ending_g.ending_g.dialogue.007",
+      "japanese": "それはさすがに……",
+      "english": "That's going a little too far..."
+    },
+    {
+      "key": "ending_g.ending_g.dialogue.008",
+      "japanese": "ありです！",
+      "english": "I'm in!"
+    },
+    {
+      "key": "ending_g.ending_g.dialogue.009",
+      "japanese": "やりましょう！",
+      "english": "Let's do it!"
+    },
+    {
+      "key": "ending_g.ending_g.dialogue.010",
+      "japanese": "え、ごっとくん……",
+      "english": "Wait, Got...?"
+    },
+    {
+      "key": "ending_g.ending_g.dialogue.011",
+      "japanese": "うん、手遅れ",
+      "english": "Yep. It's too late."
+    },
+    {
+      "key": "ending_h.ending_h.dialogue.000",
+      "japanese": "……完璧",
+      "english": "...Perfect."
+    },
+    {
+      "key": "ending_h.ending_h.dialogue.001",
+      "japanese": "バグなし！",
+      "english": "No bugs!"
+    },
+    {
+      "key": "ending_h.ending_h.dialogue.002",
+      "japanese": "素材全部間に合いました",
+      "english": "We finished all the assets in time."
+    },
+    {
+      "key": "ending_h.ending_h.dialogue.003",
+      "japanese": "BGMも効果音も実装確認済みです。",
+      "english": "The music and sound effects are all implemented and checked."
+    },
+    {
+      "key": "ending_h.ending_h.dialogue.004",
+      "japanese": "細かいとこまでみてくれてありがとうございます！",
+      "english": "Thank you for checking every last detail!"
+    },
+    {
+      "key": "ending_h.ending_h.dialogue.005",
+      "japanese": "最後まで遊んでもらえた……",
+      "english": "They played all the way to the end..."
+    },
+    {
+      "key": "ending_h.ending_h.dialogue.006",
+      "japanese": "全部見てもらえて嬉しいですね。",
+      "english": "I'm glad they got to see everything."
+    },
+    {
+      "key": "ending_h.ending_h.dialogue.007",
+      "japanese": "このゲーム、ちゃんと最後まで面白かった。",
+      "english": "This game was genuinely fun from beginning to end."
+    },
+    {
+      "key": "ending_h.ending_h.dialogue.008",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "ending_h.ending_h.dialogue.009",
+      "japanese": "みんな、本当にありがとう。",
+      "english": "Thank you so much, everyone."
+    },
+    {
+      "key": "ending_h.ending_h.dialogue.010",
+      "japanese": "楽しかったです！",
+      "english": "I had a great time!"
+    },
+    {
+      "key": "ending_h.ending_h.dialogue.011",
+      "japanese": "ゲームジャムってこんなに面白いんですね。",
+      "english": "I never knew game jams could be this much fun."
+    },
+    {
+      "key": "ending_h.ending_h.dialogue.012",
+      "japanese": "またやりたいです。",
+      "english": "I'd love to do this again."
+    },
+    {
+      "key": "ending_h.ending_h.dialogue.013",
+      "japanese": "……まぁ。",
+      "english": "...Yeah."
+    },
+    {
+      "key": "ending_h.ending_h.dialogue.014",
+      "japanese": "次はもっと面白いもの作ろう。",
+      "english": "Next time, let's make something even better."
+    },
+    {
+      "key": "ending_h.ending_h.dialogue.015",
+      "japanese": "......もちろん!",
+      "english": "...Of course!"
+    },
+    {
+      "key": "ending_i.ending_i.dialogue.000",
+      "japanese": "クリア！",
+      "english": "Clear!"
+    },
+    {
+      "key": "ending_i.ending_i.dialogue.001",
+      "japanese": "え",
+      "english": "Huh?"
+    },
+    {
+      "key": "ending_i.ending_i.dialogue.002",
+      "japanese": "え",
+      "english": "Huh?"
+    },
+    {
+      "key": "ending_i.ending_i.dialogue.003",
+      "japanese": "え",
+      "english": "Huh?"
+    },
+    {
+      "key": "ending_i.ending_i.dialogue.004",
+      "japanese": "ノーデスクリア？",
+      "english": "A no-death clear?"
+    },
+    {
+      "key": "ending_i.ending_i.dialogue.005",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "ending_i.ending_i.dialogue.006",
+      "japanese": "それでこそ開発者。",
+      "english": "Now that's a developer."
+    },
+    {
+      "key": "ending_j.ending_j.dialogue.000",
+      "japanese": "......",
+      "english": "..."
+    },
+    {
+      "key": "ending_j.ending_j.dialogue.001",
+      "japanese": "......",
+      "english": "..."
+    },
+    {
+      "key": "ending_j.ending_j.dialogue.002",
+      "japanese": "......",
+      "english": "..."
+    },
+    {
+      "key": "ending_j.ending_j.dialogue.003",
+      "japanese": "......",
+      "english": "..."
+    },
+    {
+      "key": "ending_j.ending_j.dialogue.004",
+      "japanese": "......",
+      "english": "..."
+    },
+    {
+      "key": "ending_j.ending_j.dialogue.005",
+      "japanese": "だめだこりゃ",
+      "english": "This is hopeless."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.000",
+      "japanese": "ここまで全部見たんだね。",
+      "english": "You've seen everything there is to see."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.001",
+      "japanese": "ありがとう。",
+      "english": "Thank you."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.002",
+      "japanese": "君は知っているかもしれないけど、",
+      "english": "You may already know this, but..."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.003",
+      "japanese": "開発には正解なんてない。",
+      "english": "There is no single right answer in game development."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.004",
+      "japanese": "誰が悪いわけでもない。",
+      "english": "No one person is to blame."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.005",
+      "japanese": "指示に最適解もない。",
+      "english": "There is no perfect way to give directions."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.006",
+      "japanese": "実装方法の",
+      "english": "When it comes to implementation..."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.007",
+      "japanese": "世界観の",
+      "english": "...or worldbuilding..."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.008",
+      "japanese": "答えはひとつじゃない。",
+      "english": "...there is more than one answer."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.009",
+      "japanese": "それに",
+      "english": "And..."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.010",
+      "japanese": "正しさを持つのは、",
+      "english": "the right answer..."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.011",
+      "japanese": "君だけじゃない。",
+      "english": "doesn't belong to you alone."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.012",
+      "japanese": "……",
+      "english": "..."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.013",
+      "japanese": "これ以上は語らなくてもいいかな。",
+      "english": "I think that's all I need to say."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.014",
+      "japanese": "ここまで遊んでくれた君なら、",
+      "english": "If you've played this far..."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.015",
+      "japanese": "きっと良い企画開発者になれる。",
+      "english": "I'm sure you'll become a great game planner."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.016",
+      "japanese": "最後に、",
+      "english": "And finally..."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.017",
+      "japanese": "ここまで遊んでくれてありがとう。",
+      "english": "Thank you for playing all the way to the end."
+    },
+    {
+      "key": "ending_k.ending_k.dialogue.018",
+      "japanese": "Thank you for Playing",
+      "english": "Thank you for playing."
+    }
+  ],
+  "choices": [
+    {
+      "key": "chapter.choice_1.choice.000",
+      "japanese": "ごっとに意見を聞く",
+      "english": "Ask Got for his opinion"
+    },
+    {
+      "key": "chapter.choice_1.choice.001",
+      "japanese": "Ryutaに意見を聞く",
+      "english": "Ask Ryuta for his opinion"
+    },
+    {
+      "key": "chapter.choice_1.choice.002",
+      "japanese": "かしわもちに意見を聞く",
+      "english": "Ask Kashiwamochi for his opinion"
+    },
+    {
+      "key": "chapter.choice_1.choice.003",
+      "japanese": "Miluに意見を聞く",
+      "english": "Ask Milu for her opinion"
+    },
+    {
+      "key": "chapter.choice_2.choice.000",
+      "japanese": "Ryuta：システム設計 / ごっと：コンテンツ",
+      "english": "Ryuta: System Design / Got: Content"
+    },
+    {
+      "key": "chapter.choice_2.choice.001",
+      "japanese": "ごっと：システム設計 / Ryuta：コンテンツ",
+      "english": "Got: System Design / Ryuta: Content"
+    },
+    {
+      "key": "chapter.choice_3.choice.000",
+      "japanese": "要望1：一任",
+      "english": "Request 1: Full discretion"
+    },
+    {
+      "key": "chapter.choice_3.choice.001",
+      "japanese": "要望2：拡張性重視",
+      "english": "Request 2: Prioritize extensibility"
+    },
+    {
+      "key": "chapter.choice_3.choice.002",
+      "japanese": "要望3：素材置き場",
+      "english": "Request 3: Asset storage"
+    },
+    {
+      "key": "chapter.choice_4.choice.000",
+      "japanese": "頻度1：なし",
+      "english": "Frequency 1: None"
+    },
+    {
+      "key": "chapter.choice_4.choice.001",
+      "japanese": "頻度2：1時間ごと",
+      "english": "Frequency 2: Every hour"
+    },
+    {
+      "key": "chapter.choice_4.choice.002",
+      "japanese": "頻度3：20分ごと",
+      "english": "Frequency 3: Every 20 minutes"
+    },
+    {
+      "key": "chapter.choice_5.choice.000",
+      "japanese": "タスク1：トラップ自由",
+      "english": "Task 1: Free rein on traps"
+    },
+    {
+      "key": "chapter.choice_5.choice.001",
+      "japanese": "タスク2：ステージ作り優先",
+      "english": "Task 2: Build the stage first"
+    },
+    {
+      "key": "chapter.choice_5.choice.002",
+      "japanese": "タスク3：設計待ち",
+      "english": "Task 3: Wait for the design"
+    },
+    {
+      "key": "chapter.choice_6.choice.000",
+      "japanese": "難易度1：好きに作る",
+      "english": "Difficulty 1: Whatever you like"
+    },
+    {
+      "key": "chapter.choice_6.choice.001",
+      "japanese": "難易度2：初心者向け",
+      "english": "Difficulty 2: Beginner-friendly"
+    },
+    {
+      "key": "chapter.choice_6.choice.002",
+      "japanese": "難易度3：高難易度",
+      "english": "Difficulty 3: Very hard"
+    },
+    {
+      "key": "chapter.choice_7.choice.000",
+      "japanese": "素材1：フリー素材推奨",
+      "english": "Assets 1: Use free assets"
+    },
+    {
+      "key": "chapter.choice_7.choice.001",
+      "japanese": "素材2：後回し",
+      "english": "Assets 2: Postpone asset work"
+    },
+    {
+      "key": "chapter.choice_7.choice.002",
+      "japanese": "素材3：仮素材作成",
+      "english": "Assets 3: Make placeholders"
+    },
+    {
+      "key": "chapter.choice_8.choice.000",
+      "japanese": "デザイン1：自由発想",
+      "english": "Design 1: Complete freedom"
+    },
+    {
+      "key": "chapter.choice_8.choice.001",
+      "japanese": "デザイン2：棒人間",
+      "english": "Design 2: Stick figure"
+    },
+    {
+      "key": "chapter.choice_8.choice.002",
+      "japanese": "デザイン3：具体的な指定",
+      "english": "Design 3: Specific direction"
+    },
+    {
+      "key": "chapter.choice_9.choice.000",
+      "japanese": "BGM1：緊張感のある曲",
+      "english": "Music 1: A tense track"
+    },
+    {
+      "key": "chapter.choice_9.choice.001",
+      "japanese": "BGM2：おまかせ",
+      "english": "Music 2: Your choice"
+    },
+    {
+      "key": "chapter.choice_9.choice.002",
+      "japanese": "BGM3：オーケストラ提案",
+      "english": "Music 3: Propose an orchestral score"
+    },
+    {
+      "key": "chapter.choice_10.choice.000",
+      "japanese": "効果音1：フリー効果音",
+      "english": "SFX 1: Use free sound effects"
+    },
+    {
+      "key": "chapter.choice_10.choice.001",
+      "japanese": "効果音2：自作大量要求",
+      "english": "SFX 2: Request lots of custom sounds"
+    },
+    {
+      "key": "chapter.choice_10.choice.002",
+      "japanese": "効果音3：少量・汎用要求",
+      "english": "SFX 3: Request a few reusable sounds"
+    },
+    {
+      "key": "chapter1.choice2.choice.000",
+      "japanese": "全体的な設計をつくったら見せてほしい",
+      "english": "Show me the overall design when it's ready"
+    },
+    {
+      "key": "chapter1.choice2.choice.001",
+      "japanese": "明日までに簡単にまとめてきて",
+      "english": "Put together a quick summary by tomorrow"
+    },
+    {
+      "key": "chapter1.choice2.choice.002",
+      "japanese": "よくわかんないから全部よろしく",
+      "english": "I don't understand it, so you handle everything"
+    },
+    {
+      "key": "chapter1.choices.choice.000",
+      "japanese": "アクションかシューティングを作ろう",
+      "english": "Make an action game or shooter"
+    },
+    {
+      "key": "chapter1.choices.choice.001",
+      "japanese": "すごいの作ろう",
+      "english": "Make something incredible"
+    },
+    {
+      "key": "chapter1.choices.choice.002",
+      "japanese": "みんなはどうしたい？",
+      "english": "Ask what everyone wants"
+    }
+  ]
+}

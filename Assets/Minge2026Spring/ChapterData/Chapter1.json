@@ -1,571 +1,634 @@
 {
-    "blocks": [
+  "blocks": [
+    {
+      "blockId": "Part1_1_Branch_Ans1",
+      "nodeType": 0,
+      "nodePosX": 741.0,
+      "nodePosY": 78.0,
+      "dialogues": [
         {
-            "blockId": "Part1_1_Branch_Ans1",
-            "nodeType": 0,
-            "nodePosX": 741.0,
-            "nodePosY": 78.0,
-            "dialogues": [
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "せっかくだし、コンテストとかを見越した\nすごいの作りたいんだけど、どう？",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっと",
-                    "message": "アバウトなうえに無茶言うじゃん……\nまぁ、やるならやるで全然コード書くけど……",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "他のみんなはどう思う？",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "ryuta_icon",
-                    "speaker": "Ryuta",
-                    "message": "全然ありだと思います！\n即死トラップ満載の詰みアクションゲーとか作りたいな",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "milu_icon",
-                    "speaker": "Milu",
-                    "message": "演出凝ってみたいな……\nアニメーションとかエフェクトいっぱいにして……",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "kashiwamochi_icon",
-                    "speaker": "かしわもち",
-                    "message": "音重ねまくって、\n深みのあるオーケストラとか作ってみたいかも",
-                    "waitingTime": 0.0
-                }
-            ],
-            "choices": [],
-            "nextBlockId": "Part1_2",
-            "freeChats": [],
-            "waitingTime": 5.0
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_1_branch_ans1.dialogue.000",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
         },
         {
-            "blockId": "Part1_1_Branch_Ans2",
-            "nodeType": 0,
-            "nodePosX": 741.0,
-            "nodePosY": 155.0,
-            "dialogues": [
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "自分は特に希望ないから、皆に任せるよ",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "kashiwamochi_icon",
-                    "speaker": "かしわもち",
-                    "message": "えぇと……俺もサウンドだし、他の人に合わせますよ",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "milu_icon",
-                    "speaker": "Milu",
-                    "message": "グラフィッカからも、特に希望はないです……",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "プログラマ二人はどう思う？",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "ryuta_icon",
-                    "speaker": "Ryuta",
-                    "message": "皆が何でもいいって言うなら\n僕アクション作りたいです！",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっと",
-                    "message": "まぁ、Ryuta君がこう言ってるから……\nアクションでいいんじゃない？",
-                    "waitingTime": 0.0
-                }
-            ],
-            "choices": [],
-            "nextBlockId": "Part1_2",
-            "freeChats": [],
-            "waitingTime": 5.0
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "chapter1.part1_1_branch_ans1.dialogue.001",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
         },
         {
-            "blockId": "Part1_1_Branch_Ans0",
-            "nodeType": 0,
-            "nodePosX": 739.0,
-            "nodePosY": 1.0,
-            "dialogues": [
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "アクションかシューティングを作りたいなって思うんだけど\nみんなはどう思う？",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "ryuta_icon",
-                    "speaker": "Ryuta",
-                    "message": "え、めっちゃいいじゃないですか\n僕アクション作るの得意ですよ！",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "他のみんなはどう思う？",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっと",
-                    "message": "無難なシステムなら実装も難しくないだろうし、\nいいんじゃない？",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "milu_icon",
-                    "speaker": "Milu",
-                    "message": "えと……メカっぽいの描くの苦手なんですけど……\nそれで大丈夫なら、いいと思います",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "kashiwamochi_icon",
-                    "speaker": "かしわもち",
-                    "message": "まぁ、いいと思います\n曲の雰囲気とか言ってもらえれば、全然作るので",
-                    "waitingTime": 0.0
-                }
-            ],
-            "choices": [],
-            "nextBlockId": "Part1_2",
-            "freeChats": [],
-            "waitingTime": 5.0
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_1_branch_ans1.dialogue.002",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
         },
         {
-            "blockId": "Part1_2",
-            "nodeType": 0,
-            "nodePosX": 1023.0,
-            "nodePosY": 1.0,
-            "dialogues": [
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "じゃあ、アクションゲームを作る方向で",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "次に、みんなにタスクを振っていこうと思うんだけど...",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "まずはごっと",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっと",
-                    "message": "あ、私からですか",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "設計はごっとに任せたいからね",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっと",
-                    "message": "あぁ、そうですか",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "それじゃあ...(どんなタスクを振ろうかな)",
-                    "waitingTime": 0.0
-                }
-            ],
-            "choices": [],
-            "nextBlockId": "Choice2",
-            "freeChats": [],
-            "waitingTime": 5.0
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter1.part1_1_branch_ans1.dialogue.003",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
         },
         {
-            "blockId": "Part1_3_Branch_Ans0",
-            "nodeType": 0,
-            "nodePosX": 1518.0,
-            "nodePosY": 1.0,
-            "dialogues": [
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "全体の設計を作って僕に先に見せてほしいな",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "とりあえず、”プレイヤー操作・罠・ステージ１つ”くらいの規模で",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっど",
-                    "message": "なるほど、スコープは小さめですね",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "うん、あとでみんなが見れるようにドキュメントもまとめてほしい",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっど",
-                    "message": "了解です。\nじゃあ、全体の構造だけ先に決めて、細かいところはあとで詰めます",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "本当に大まかでいいからね？！\nごっどにお願いするといつも細部までこだわりつくしちゃうから......",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっど",
-                    "message": "まぁ.......とりあえず、動かせる程度までは作っておきます",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "優秀だなぁ......",
-                    "waitingTime": 0.0
-                }
-            ],
-            "choices": [],
-            "nextBlockId": "",
-            "freeChats": [],
-            "waitingTime": 0.0
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter1.part1_1_branch_ans1.dialogue.004",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
         },
         {
-            "blockId": "Part1_3_Branch_Ans1",
-            "nodeType": 0,
-            "nodePosX": 1518.0,
-            "nodePosY": 78.0,
-            "dialogues": [
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "明日までに簡単にまとめてきてほしいんだ。",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっど",
-                    "message": "......明日？",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "うん、雑でいいよ。\n設計なんて開発が進につ入れて確立していくでしょ。",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっど",
-                    "message": "え、でも......まぁ、いいか......",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "とりあえずたたき台みたいな感じだから、よろしく",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっど",
-                    "message": "......",
-                    "waitingTime": 0.0
-                }
-            ],
-            "choices": [],
-            "nextBlockId": "",
-            "freeChats": [],
-            "waitingTime": 0.0
-        },
-        {
-            "blockId": "Choice2",
-            "nodeType": 1,
-            "nodePosX": 1215.0,
-            "nodePosY": 1.0,
-            "dialogues": [],
-            "choices": [
-                {
-                    "choiceText": "全体的な設計をつくったら見せてほしい",
-                    "nextBlockId": "Part1_3_Branch_Ans0",
-                    "characterAMoraleDelta": 0,
-                    "characterBMoraleDelta": 0,
-                    "characterCMoraleDelta": 0,
-                    "characterDMoraleDelta": 0
-                },
-                {
-                    "choiceText": "明日までに簡単にまとめてきて",
-                    "nextBlockId": "Part1_3_Branch_Ans1",
-                    "characterAMoraleDelta": 0,
-                    "characterBMoraleDelta": 0,
-                    "characterCMoraleDelta": 0,
-                    "characterDMoraleDelta": 0
-                },
-                {
-                    "choiceText": "よくわかんないから全部よろしく",
-                    "nextBlockId": "Part1_3_Branch_Ans2",
-                    "characterAMoraleDelta": 0,
-                    "characterBMoraleDelta": 0,
-                    "characterCMoraleDelta": 0,
-                    "characterDMoraleDelta": 0
-                }
-            ],
-            "nextBlockId": "",
-            "freeChats": [],
-            "waitingTime": 5.0
-        },
-        {
-            "blockId": "Part1_3_Branch_Ans2",
-            "nodeType": 0,
-            "nodePosX": 1518.0,
-            "nodePosY": 155.0,
-            "dialogues": [
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "僕は設計よくわかんないから、とりあえず全部よろしく",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっど",
-                    "message": "......全部、ですか",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "うん、好きにやっていいよ",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっど",
-                    "message": "え....あぁ....はい....",
-                    "waitingTime": 0.0
-                }
-            ],
-            "choices": [],
-            "nextBlockId": "",
-            "freeChats": [],
-            "waitingTime": 0.0
-        },
-        {
-            "blockId": "Choices",
-            "nodeType": 1,
-            "nodePosX": 473.0,
-            "nodePosY": 1.0,
-            "dialogues": [],
-            "choices": [
-                {
-                    "choiceText": "アクションかシューティングを作ろう",
-                    "nextBlockId": "Part1_1_Branch_Ans0",
-                    "characterAMoraleDelta": 1,
-                    "characterBMoraleDelta": 95,
-                    "characterCMoraleDelta": 0,
-                    "characterDMoraleDelta": 1
-                },
-                {
-                    "choiceText": "すごいの作ろう",
-                    "nextBlockId": "Part1_1_Branch_Ans1",
-                    "characterAMoraleDelta": 0,
-                    "characterBMoraleDelta": -1,
-                    "characterCMoraleDelta": -2,
-                    "characterDMoraleDelta": -1
-                },
-                {
-                    "choiceText": "みんなはどうしたい？",
-                    "nextBlockId": "Part1_1_Branch_Ans2",
-                    "characterAMoraleDelta": 1,
-                    "characterBMoraleDelta": -10,
-                    "characterCMoraleDelta": 2,
-                    "characterDMoraleDelta": 1
-                }
-            ],
-            "nextBlockId": "",
-            "freeChats": [],
-            "waitingTime": 3.0
-        },
-        {
-            "blockId": "Part1_0",
-            "nodeType": 0,
-            "nodePosX": 306.0,
-            "nodePosY": 1.0,
-            "dialogues": [
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "それでは、春みんげ～第一回オンラインミーティングを始めます",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "ryuta_icon",
-                    "speaker": "Ryuta",
-                    "message": "おなしゃす",
-                    "voiceEventPath": "event:/Serif/Ryuta_おなしゃす",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっと",
-                    "message": "お願いします",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "milu_icon",
-                    "speaker": "Milu",
-                    "message": "お、おねがいします",
-                    "voiceEventPath": "event:/Serif/Milu_お、おねがいします",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "kashiwamochi_icon",
-                    "speaker": "かしわもち",
-                    "message": "おねがいしまぁす",
-                    "voiceEventPath": "event:/Serif/かしわもち_おねがいしまぁす",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "じゃあ、まず自己紹介しましょうか",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "今回リーダーを務めます。学部三年の[name]です\nリーダーは初めてで少し緊張していますが、宜しくお願いします",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "ryuta_icon",
-                    "speaker": "Ryuta",
-                    "message": "学部二年のRyutaです\nあ、プログラマです。好きなゲームはトラップマンです",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっと",
-                    "message": "学部三年のごっとです\nプログラマで、Ryutaくんのサポートやります",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "milu_icon",
-                    "speaker": "Milu",
-                    "message": "が、学部一年のMiluです\nえと、グラフィッカでが、がんばります！",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "kashiwamochi_icon",
-                    "speaker": "かしわもち",
-                    "message": "学部二年のかしわもちです\nえーと、サウンドやります。　はーい",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "今後の予定だけど",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "今回は、全体ミーティングをもとに\n",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "作業は各々進めてください",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "goddo_icon",
-                    "speaker": "ごっと",
-                    "message": "今回はオフラインで集まりはしないんだね",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "うん、大学の立ち入り禁止期間とかぶちゃっててね",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "milu_icon",
-                    "speaker": "Milu",
-                    "message": "あぁ、入試ですか……",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "ryuta_icon",
-                    "speaker": "Ryuta",
-                    "message": "あと卒業式もあるからね",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "kashiwamochi_icon",
-                    "speaker": "かしわもち",
-                    "message": "俺は実家変えるから、オンラインしか難しいね",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "そういうわけで、オンラインで進めていきます",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "テストプレイ会を目標に頑張りましょう",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "というわけで、とりあえず今回作るゲームの大まかな方向性を決めていきたいと思います",
-                    "waitingTime": 0.0
-                },
-                {
-                    "iconId": "player_icon",
-                    "speaker": "主人公",
-                    "message": "ええと...(なんて声をかけよう)",
-                    "waitingTime": 0.0
-                }
-            ],
-            "choices": [],
-            "nextBlockId": "Choices",
-            "freeChats": [],
-            "waitingTime": 5.0
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter1.part1_1_branch_ans1.dialogue.005",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
         }
-    ]
+      ],
+      "choices": [],
+      "nextBlockId": "Part1_2",
+      "freeChats": [],
+      "waitingTime": 5.0
+    },
+    {
+      "blockId": "Part1_1_Branch_Ans2",
+      "nodeType": 0,
+      "nodePosX": 741.0,
+      "nodePosY": 155.0,
+      "dialogues": [
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_1_branch_ans2.dialogue.000",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter1.part1_1_branch_ans2.dialogue.001",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter1.part1_1_branch_ans2.dialogue.002",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_1_branch_ans2.dialogue.003",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter1.part1_1_branch_ans2.dialogue.004",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "chapter1.part1_1_branch_ans2.dialogue.005",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        }
+      ],
+      "choices": [],
+      "nextBlockId": "Part1_2",
+      "freeChats": [],
+      "waitingTime": 5.0
+    },
+    {
+      "blockId": "Part1_1_Branch_Ans0",
+      "nodeType": 0,
+      "nodePosX": 739.0,
+      "nodePosY": 1.0,
+      "dialogues": [
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_1_branch_ans0.dialogue.000",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter1.part1_1_branch_ans0.dialogue.001",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_1_branch_ans0.dialogue.002",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "chapter1.part1_1_branch_ans0.dialogue.003",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter1.part1_1_branch_ans0.dialogue.004",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter1.part1_1_branch_ans0.dialogue.005",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        }
+      ],
+      "choices": [],
+      "nextBlockId": "Part1_2",
+      "freeChats": [],
+      "waitingTime": 5.0
+    },
+    {
+      "blockId": "Part1_2",
+      "nodeType": 0,
+      "nodePosX": 1023.0,
+      "nodePosY": 1.0,
+      "dialogues": [
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_2.dialogue.000",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_2.dialogue.001",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_2.dialogue.002",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "chapter1.part1_2.dialogue.003",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_2.dialogue.004",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "chapter1.part1_2.dialogue.005",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_2.dialogue.006",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        }
+      ],
+      "choices": [],
+      "nextBlockId": "Choice2",
+      "freeChats": [],
+      "waitingTime": 5.0
+    },
+    {
+      "blockId": "Part1_3_Branch_Ans0",
+      "nodeType": 0,
+      "nodePosX": 1518.0,
+      "nodePosY": 1.0,
+      "dialogues": [
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_3_branch_ans0.dialogue.000",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_3_branch_ans0.dialogue.001",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "chapter1.part1_3_branch_ans0.dialogue.002",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_3_branch_ans0.dialogue.003",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "chapter1.part1_3_branch_ans0.dialogue.004",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_3_branch_ans0.dialogue.005",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "chapter1.part1_3_branch_ans0.dialogue.006",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_3_branch_ans0.dialogue.007",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        }
+      ],
+      "choices": [],
+      "nextBlockId": "",
+      "freeChats": [],
+      "waitingTime": 0.0
+    },
+    {
+      "blockId": "Part1_3_Branch_Ans1",
+      "nodeType": 0,
+      "nodePosX": 1518.0,
+      "nodePosY": 78.0,
+      "dialogues": [
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_3_branch_ans1.dialogue.000",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "chapter1.part1_3_branch_ans1.dialogue.001",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_3_branch_ans1.dialogue.002",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "chapter1.part1_3_branch_ans1.dialogue.003",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_3_branch_ans1.dialogue.004",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "chapter1.part1_3_branch_ans1.dialogue.005",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        }
+      ],
+      "choices": [],
+      "nextBlockId": "",
+      "freeChats": [],
+      "waitingTime": 0.0
+    },
+    {
+      "blockId": "Choice2",
+      "nodeType": 1,
+      "nodePosX": 1215.0,
+      "nodePosY": 1.0,
+      "dialogues": [],
+      "choices": [
+        {
+          "choiceTextKey": "chapter1.choice2.choice.000",
+          "nextBlockId": "Part1_3_Branch_Ans0",
+          "characterAMoraleDelta": 0,
+          "characterBMoraleDelta": 0,
+          "characterCMoraleDelta": 0,
+          "characterDMoraleDelta": 0
+        },
+        {
+          "choiceTextKey": "chapter1.choice2.choice.001",
+          "nextBlockId": "Part1_3_Branch_Ans1",
+          "characterAMoraleDelta": 0,
+          "characterBMoraleDelta": 0,
+          "characterCMoraleDelta": 0,
+          "characterDMoraleDelta": 0
+        },
+        {
+          "choiceTextKey": "chapter1.choice2.choice.002",
+          "nextBlockId": "Part1_3_Branch_Ans2",
+          "characterAMoraleDelta": 0,
+          "characterBMoraleDelta": 0,
+          "characterCMoraleDelta": 0,
+          "characterDMoraleDelta": 0
+        }
+      ],
+      "nextBlockId": "",
+      "freeChats": [],
+      "waitingTime": 5.0
+    },
+    {
+      "blockId": "Part1_3_Branch_Ans2",
+      "nodeType": 0,
+      "nodePosX": 1518.0,
+      "nodePosY": 155.0,
+      "dialogues": [
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_3_branch_ans2.dialogue.000",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "chapter1.part1_3_branch_ans2.dialogue.001",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_3_branch_ans2.dialogue.002",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "chapter1.part1_3_branch_ans2.dialogue.003",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        }
+      ],
+      "choices": [],
+      "nextBlockId": "",
+      "freeChats": [],
+      "waitingTime": 0.0
+    },
+    {
+      "blockId": "Choices",
+      "nodeType": 1,
+      "nodePosX": 473.0,
+      "nodePosY": 1.0,
+      "dialogues": [],
+      "choices": [
+        {
+          "choiceTextKey": "chapter1.choices.choice.000",
+          "nextBlockId": "Part1_1_Branch_Ans0",
+          "characterAMoraleDelta": 1,
+          "characterBMoraleDelta": 95,
+          "characterCMoraleDelta": 0,
+          "characterDMoraleDelta": 1
+        },
+        {
+          "choiceTextKey": "chapter1.choices.choice.001",
+          "nextBlockId": "Part1_1_Branch_Ans1",
+          "characterAMoraleDelta": 0,
+          "characterBMoraleDelta": -1,
+          "characterCMoraleDelta": -2,
+          "characterDMoraleDelta": -1
+        },
+        {
+          "choiceTextKey": "chapter1.choices.choice.002",
+          "nextBlockId": "Part1_1_Branch_Ans2",
+          "characterAMoraleDelta": 1,
+          "characterBMoraleDelta": -10,
+          "characterCMoraleDelta": 2,
+          "characterDMoraleDelta": 1
+        }
+      ],
+      "nextBlockId": "",
+      "freeChats": [],
+      "waitingTime": 3.0
+    },
+    {
+      "blockId": "Part1_0",
+      "nodeType": 0,
+      "nodePosX": 306.0,
+      "nodePosY": 1.0,
+      "dialogues": [
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_0.dialogue.000",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter1.part1_0.dialogue.001",
+          "voiceEventPath": "event:/Serif/Ryuta_おなしゃす",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "chapter1.part1_0.dialogue.002",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter1.part1_0.dialogue.003",
+          "voiceEventPath": "event:/Serif/Milu_お、おねがいします",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter1.part1_0.dialogue.004",
+          "voiceEventPath": "event:/Serif/かしわもち_おねがいしまぁす",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_0.dialogue.005",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_0.dialogue.006",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter1.part1_0.dialogue.007",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "chapter1.part1_0.dialogue.008",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter1.part1_0.dialogue.009",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter1.part1_0.dialogue.010",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_0.dialogue.011",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_0.dialogue.012",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_0.dialogue.013",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "goddo_icon",
+          "speakerKey": "character.got",
+          "messageKey": "chapter1.part1_0.dialogue.014",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_0.dialogue.015",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "milu_icon",
+          "speakerKey": "character.milu",
+          "messageKey": "chapter1.part1_0.dialogue.016",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "ryuta_icon",
+          "speakerKey": "character.ryuta",
+          "messageKey": "chapter1.part1_0.dialogue.017",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "kashiwamochi_icon",
+          "speakerKey": "character.kashiwamochi",
+          "messageKey": "chapter1.part1_0.dialogue.018",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_0.dialogue.019",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_0.dialogue.020",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_0.dialogue.021",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        },
+        {
+          "iconId": "player_icon",
+          "speakerKey": "character.protagonist",
+          "messageKey": "chapter1.part1_0.dialogue.022",
+          "voiceEventPath": "",
+          "waitingTime": 0.0
+        }
+      ],
+      "choices": [],
+      "nextBlockId": "Choices",
+      "freeChats": [],
+      "waitingTime": 5.0
+    }
+  ]
 }
