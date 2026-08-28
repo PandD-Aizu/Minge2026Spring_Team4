@@ -23,54 +23,6 @@ MonoBehaviour:
     m_Key: skip
     m_Metadata:
       m_Items: []
-  - m_Id: 779083777
-    m_Key: credit.title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083778
-    m_Key: credit.final_message
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083779
-    m_Key: credit.0.title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083780
-    m_Key: credit.0.names
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083781
-    m_Key: credit.1.title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083782
-    m_Key: credit.1.names
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083783
-    m_Key: credit.2.title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083784
-    m_Key: credit.2.names
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083785
-    m_Key: credit.3.title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083786
-    m_Key: credit.3.names
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083787
-    m_Key: credit.4.title
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083788
-    m_Key: credit.4.names
-    m_Metadata:
-      m_Items: []
   - m_Id: 779083789
     m_Key: death_count
     m_Metadata:

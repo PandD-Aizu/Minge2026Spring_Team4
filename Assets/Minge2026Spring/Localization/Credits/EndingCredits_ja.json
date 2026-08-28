@@ -1,0 +1,94 @@
+{
+  "title": "【サークルPandD】\nPlan通りのゲームを素直に作らせてくれないヤバい開発者たち",
+  "finalMessage": "THANK YOU FOR PLAYING!",
+  "credits": [
+    {
+      "title": "PROJECT MANAGER",
+      "names": "こと"
+    },
+    {
+      "title": "LEAD GAME DESIGNER",
+      "names": "Ryota"
+    },
+    {
+      "title": "GAME DESIGNERS",
+      "names": "こと　ぼたもち　lumi　れのるいが"
+    },
+    {
+      "title": "LEAD LEVEL DESIGNER",
+      "names": "Ryota"
+    },
+    {
+      "title": "LEVEL DESIGNERS",
+      "names": "こと　ぼたもち　lumi　れのるいが"
+    },
+    {
+      "title": "LEAD 2D ARTISTS",
+      "names": "lumi　れのるいが"
+    },
+    {
+      "title": "2D ARTISTS",
+      "names": "こと　Ryota"
+    },
+    {
+      "title": "LEAD PROGRAMMER",
+      "names": "こと　Ryota"
+    },
+    {
+      "title": "LEAD EDITOR TOOL PROGRAMMER",
+      "names": "こと　Ryota"
+    },
+    {
+      "title": "VOICE ACTORS",
+      "names": "ごっと(cv. こと)\nRyuta(cv. Ryota)\nかしわもち(cv. ぼたもち)\nmilu(cv. lumi)\n主人公(cv. れのるいが)\nだいっちゃん(cv. たいっちゃん)"
+    },
+    {
+      "title": "LEAD SOUND DESIGNER",
+      "names": "こと　ぼたもち"
+    },
+    {
+      "title": "MIXING",
+      "names": "こと"
+    },
+    {
+      "title": "PV MANAGER",
+      "names": "Ryota"
+    },
+    {
+      "title": "SPECIAL THANKS",
+      "names": "僕らの尊敬する大先輩たいっちゃん\ntessho\n企画開発部\n\nチーム１\nナオ\n緑\nたか\nナン\nたんす\nkingyo\n\nチーム２\nもみじ\nTT\nかや\ncarelessmth\nかねこ\nKazArt.\nkora\n\nチーム３\nあや\nαlion\n古手(リク)\nばやし\nseika\nいっしー\n蒲焼さん太郎(以降長いのでかばやきとお呼びください)"
+    },
+    {
+      "title": "FONTS",
+      "names": "Noto Sans JP"
+    },
+    {
+      "title": "IMAGES",
+      "names": "いらすとや\nICOON MONO"
+    },
+    {
+      "title": "SOUND EFFECT",
+      "names": "効果音ラボ"
+    },
+    {
+      "title": "THIRD-PARTY LIBRARIES",
+      "names": "R3\n\nUniTask\n\nVContainer"
+    },
+    {
+      "title": "AUDIO ENGINE",
+      "names": ""
+    },
+    {
+      "title": "DIRECTOR",
+      "names": "こと"
+    },
+    {
+      "title": "PRODUCER",
+      "names": "もみじ"
+    },
+    {
+      "title": "会津大学　企画開発部",
+      "names": "Planning and Development (PandD)"
+    }
+  ]
+}

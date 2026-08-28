@@ -1,9 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Threading;
+using Cysharp.Threading.Tasks;
 using FMOD.Studio;
 using FMODUnity;
 using TMPro;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
@@ -14,7 +17,20 @@ namespace Minge2026Spring.Scripts.View
     {
         private const string HaibokusyaVoiceEventPath = "event:/Serif/Ryuta_敗北者じゃけぇ";
 
-        private const int CreditSectionCount = 5;
+        [Serializable]
+        private sealed class CreditRollData
+        {
+            public string title;
+            public string finalMessage;
+            public List<CreditSection> credits;
+        }
+
+        [Serializable]
+        private sealed class CreditSection
+        {
+            public string title;
+            public string names;
+        }
 
         [Serializable]
         private struct CreditImage
@@ -83,6 +99,8 @@ namespace Minge2026Spring.Scripts.View
 
         [Header("Credit Settings")]
         [SerializeField] private TMP_FontAsset _fontAsset;
+        [Tooltip("Localization Scene SettingsでロケールごとにAddressablesのアドレスを切り替えます。")]
+        [SerializeField] private string _creditJsonAddress = "EndingCredits_ja";
         [SerializeField] private Color _textOutlineColor = new(0f, 0f, 0f, 0.8f);
         [SerializeField] private Vector2 _textOutlineDistance = new(1.5f, -1.5f);
         [SerializeField] private Color _textShadowColor = new(0f, 0f, 0f, 0.9f);
@@ -134,6 +152,9 @@ namespace Minge2026Spring.Scripts.View
         private bool _showHaibokusyaMark;
         private bool _haibokusyaVoicePlayed;
         private bool _isInitialized;
+        private bool _startScrollRequested;
+        private string _loadedCreditJsonAddress;
+        private int _creditLoadVersion;
         private int _endingIndex = -1;
 
         private void Awake()
@@ -176,23 +197,35 @@ namespace Minge2026Spring.Scripts.View
             var buttonLabel = SpeedUpButton.GetComponentInChildren<TextMeshProUGUI>();
             _font = _fontAsset != null ? _fontAsset : buttonLabel.font;
 
-            BuildCreditRoll();
             BuildEndingTitleOverlay();
             BuildExtraDialogueOverlay();
             _isInitialized = true;
+            LoadCreditRollAsync(_creditJsonAddress, ++_creditLoadVersion, destroyCancellationToken).Forget();
         }
 
         private void OnDestroy()
         {
+            _creditLoadVersion++;
             StopExtraDialogueInstance();
         }
 
         public void StartScroll()
         {
+            _startScrollRequested = true;
             if (_extraDialogueOverlay != null)
                 _extraDialogueOverlay.SetActive(false);
-            if (_viewport != null)
-                _viewport.gameObject.SetActive(true);
+
+            if (_viewport == null)
+            {
+                _speedUpButtonObject.SetActive(false);
+                if (_skipButtonObject != null)
+                    _skipButtonObject.SetActive(false);
+                _isScrolling = false;
+                return;
+            }
+
+            _startScrollRequested = false;
+            _viewport.gameObject.SetActive(true);
             _speedUpButtonObject.SetActive(true);
             if (_skipButtonObject != null)
                 _skipButtonObject.SetActive(_shouldShowSkipButton);
@@ -202,7 +235,8 @@ namespace Minge2026Spring.Scripts.View
         public void StartExtraDialogue()
         {
             _isScrolling = false;
-            _viewport.gameObject.SetActive(false);
+            if (_viewport != null)
+                _viewport.gameObject.SetActive(false);
             _speedUpButtonObject.SetActive(false);
             if (_skipButtonObject != null)
                 _skipButtonObject.SetActive(false);
@@ -266,7 +300,81 @@ namespace Minge2026Spring.Scripts.View
             _isFastForwardPressed = isPressed;
         }
 
-        private void BuildCreditRoll()
+        private async UniTaskVoid LoadCreditRollAsync(
+            string address,
+            int loadVersion,
+            CancellationToken cancellationToken)
+        {
+            if (string.IsNullOrWhiteSpace(address))
+            {
+                Debug.LogError("[EndingDefaultUIView] Credit JSON address is not assigned.", this);
+                return;
+            }
+
+            var handle = Addressables.LoadAssetAsync<TextAsset>(address);
+            try
+            {
+                await handle.ToUniTask(cancellationToken: cancellationToken);
+                if (loadVersion != _creditLoadVersion)
+                    return;
+
+                if (handle.Result == null)
+                {
+                    Debug.LogError($"[EndingDefaultUIView] Credit JSON was not found: {address}", this);
+                    return;
+                }
+
+                var creditData = JsonUtility.FromJson<CreditRollData>(handle.Result.text);
+                if (!IsValidCreditData(creditData))
+                {
+                    Debug.LogError($"[EndingDefaultUIView] Credit JSON is invalid: {address}", this);
+                    return;
+                }
+
+                if (_viewport != null)
+                    Destroy(_viewport.gameObject);
+
+                _viewport = null;
+                _content = null;
+                _finalEntry = null;
+                _loadedCreditJsonAddress = address;
+                BuildCreditRoll(creditData);
+
+                if (_startScrollRequested)
+                    StartScroll();
+            }
+            catch (OperationCanceledException)
+            {
+            }
+            catch (Exception exception)
+            {
+                Debug.LogError(
+                    $"[EndingDefaultUIView] Failed to load Addressable credit JSON '{address}': {exception.Message}",
+                    this);
+            }
+            finally
+            {
+                if (handle.IsValid())
+                    Addressables.Release(handle);
+            }
+        }
+
+        private static bool IsValidCreditData(CreditRollData data)
+        {
+            if (data == null || string.IsNullOrEmpty(data.title) ||
+                string.IsNullOrEmpty(data.finalMessage) || data.credits == null || data.credits.Count == 0)
+                return false;
+
+            foreach (var credit in data.credits)
+            {
+                if (credit == null || string.IsNullOrEmpty(credit.title))
+                    return false;
+            }
+
+            return true;
+        }
+
+        private void BuildCreditRoll(CreditRollData creditData)
         {
             var canvas = _speedUpButtonObject.GetComponentInParent<Canvas>();
             if (canvas == null)
@@ -309,26 +417,28 @@ namespace Minge2026Spring.Scripts.View
             fitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
 
             CreateSpacer(_startPadding);
-            CreateLocalizedText("credit.title", 52f, FontStyles.Bold, Color.white);
+            CreateText(creditData.title, 52f, FontStyles.Bold, Color.white);
             CreateSpacer(70f);
             CreateImagesAt(0);
             CreateSpacer(130f);
 
-            for (var index = 0; index < CreditSectionCount; index++)
+            for (var index = 0; index < creditData.credits.Count; index++)
             {
-                CreateLocalizedText($"credit.{index}.title", 34f, FontStyles.Bold, Color.white);
+                var credit = creditData.credits[index];
+                CreateText(credit.title, 34f, FontStyles.Bold, Color.white);
                 CreateSpacer(18f);
-                CreateLocalizedText($"credit.{index}.names", 27f, FontStyles.Normal,
+                CreateText(credit.names ?? string.Empty, 27f, FontStyles.Normal,
                     new Color(0.92f, 0.96f, 1f));
                 CreateImagesAt(index + 1);
                 CreateSpacer(105f);
             }
 
-            _finalEntry = CreateLocalizedText("credit.final_message", 44f, FontStyles.Bold,
+            _finalEntry = CreateText(creditData.finalMessage, 44f, FontStyles.Bold,
                 new Color(1f, 0.92f, 0.45f)).rectTransform;
             CreateSpacer(_endPadding);
             Canvas.ForceUpdateCanvases();
             LayoutRebuilder.ForceRebuildLayoutImmediate(_content);
+            _viewport.gameObject.SetActive(_isScrolling);
         }
 
         private void BuildEndingTitleOverlay()
@@ -610,6 +720,8 @@ namespace Minge2026Spring.Scripts.View
 
         private void OnLocaleChanged(Locale _)
         {
+            ReloadCreditRollAfterLocaleChangeAsync(destroyCancellationToken).Forget();
+
             if (_endingIndex >= 0)
             {
                 _endingTitle = AchievementEndingText.FormatTitle(_endingIndex);
@@ -623,6 +735,24 @@ namespace Minge2026Spring.Scripts.View
                 _extraDialogueText.text = UILocalization.Get(
                     "Ending", ExtraDialogues[_extraDialogueIndex].EntryKey);
             }
+        }
+
+        private async UniTaskVoid ReloadCreditRollAfterLocaleChangeAsync(CancellationToken cancellationToken)
+        {
+            try
+            {
+                // GameObjectLocalizerがロケール別のAddressを反映した後に読み直す。
+                await UniTask.NextFrame(cancellationToken: cancellationToken);
+            }
+            catch (OperationCanceledException)
+            {
+                return;
+            }
+
+            if (_loadedCreditJsonAddress == _creditJsonAddress)
+                return;
+
+            LoadCreditRollAsync(_creditJsonAddress, ++_creditLoadVersion, cancellationToken).Forget();
         }
 
         private void PlayHaibokusyaVoice()
@@ -721,13 +851,6 @@ namespace Minge2026Spring.Scripts.View
 
             var layout = textObject.GetComponent<LayoutElement>();
             layout.minHeight = fontSize * (value.Contains("\n") ? 2.6f : 1.5f);
-            return text;
-        }
-
-        private TextMeshProUGUI CreateLocalizedText(string entryKey, float fontSize, FontStyles style, Color color)
-        {
-            var text = CreateText(UILocalization.Get("Ending", entryKey), fontSize, style, color);
-            UILocalization.Bind(text, "Ending", entryKey);
             return text;
         }
 

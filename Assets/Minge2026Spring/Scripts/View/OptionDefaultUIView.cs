@@ -11,6 +11,8 @@ namespace Minge2026Spring.Scripts.View
 {
     public class OptionDefaultUIView : MonoBehaviour
     {
+        public event Action<string> LanguageSelected;
+
         [Header("音量スライダー")]
         [SerializeField] public Slider mainVolumeSlider;
         [SerializeField] public Slider bgmVolumeSlider;
@@ -108,6 +110,7 @@ namespace Minge2026Spring.Scripts.View
                 ? UILocalization.EnglishLocaleCode
                 : UILocalization.JapaneseLocaleCode;
             UILocalization.SelectLocale(nextLocale);
+            LanguageSelected?.Invoke(nextLocale);
         }
 
         private void OnLocaleChanged(Locale _) => RefreshLanguageSelector();

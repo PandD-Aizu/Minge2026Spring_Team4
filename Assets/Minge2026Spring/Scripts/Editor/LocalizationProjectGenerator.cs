@@ -11,6 +11,7 @@ using UnityEngine.Events;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;
 using UnityEngine.Localization.Settings;
+using Minge2026Spring.Scripts.Infrastructure.Localization;
 using UnityEngine.Localization.Tables;
 using UnityEngine.SceneManagement;
 
@@ -28,7 +29,6 @@ namespace Minge2026Spring.Scripts.Editor
         private const string SettingsPath = RootDirectory + "/LocalizationSettings.asset";
         private const string JapaneseLocalePath = LocaleDirectory + "/Japanese (ja).asset";
         private const string EnglishLocalePath = LocaleDirectory + "/English (en).asset";
-        private const string LocalePreferenceKey = "minge.selected-locale";
 
         private static readonly string[] ScenePaths =
         {
@@ -237,7 +237,7 @@ namespace Minge2026Spring.Scripts.Editor
         {
             var selectors = settings.GetStartupLocaleSelectors();
             selectors.Clear();
-            selectors.Add(new PlayerPrefLocaleSelector { PlayerPreferenceKey = LocalePreferenceKey });
+            selectors.Add(new GameSaveLocaleSelector());
             selectors.Add(new SystemLocaleSelector());
             selectors.Add(new SpecificLocaleSelector { LocaleId = new LocaleIdentifier("en") });
 
@@ -482,18 +482,6 @@ namespace Minge2026Spring.Scripts.Editor
             {
                 E("fast_forward", "早送り＞＞", "FAST FORWARD >>"),
                 E("skip", "スキップ", "SKIP"),
-                E("credit.title", "I GONNA BE THE TREASURE HUNTER", "I GONNA BE THE TREASURE HUNTER"),
-                E("credit.final_message", "THANK YOU FOR PLAYING!", "THANK YOU FOR PLAYING!"),
-                E("credit.0.title", "PLANNING / DIRECTOR", "PLANNING / DIRECTOR"),
-                E("credit.0.names", "主人公", "Protagonist"),
-                E("credit.1.title", "PROGRAMMERS", "PROGRAMMERS"),
-                E("credit.1.names", "Ryuta\nごっと", "Ryuta\nGot"),
-                E("credit.2.title", "2D ART", "2D ART"),
-                E("credit.2.names", "Milu", "Milu"),
-                E("credit.3.title", "SOUND", "SOUND"),
-                E("credit.3.names", "かしわもち", "Kashiwamochi"),
-                E("credit.4.title", "SPECIAL THANKS", "SPECIAL THANKS"),
-                E("credit.4.names", "企画開発部\nPLAYERS", "Game Planning & Development Club\nPLAYERS"),
                 E("death_count", "デス数: {0:N0} 回", "Deaths: {0:N0}", true)
             };
 
