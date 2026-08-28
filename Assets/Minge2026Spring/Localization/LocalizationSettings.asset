@@ -194,9 +194,8 @@ MonoBehaviour:
         - d
         - 
     - rid: 4658839115793694972
-      type: {class: PlayerPrefLocaleSelector, ns: UnityEngine.Localization.Settings, asm: Unity.Localization}
-      data:
-        m_PlayerPreferenceKey: minge.selected-locale
+      type: {class: GameSaveLocaleSelector, ns: Minge2026Spring.Scripts.Infrastructure.Localization, asm: Infrastructure}
+      data: {}
     - rid: 4658839115793694973
       type: {class: SystemLocaleSelector, ns: UnityEngine.Localization.Settings, asm: Unity.Localization}
       data: 

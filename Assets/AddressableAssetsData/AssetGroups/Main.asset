@@ -177,6 +177,18 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c841b7d998c24ab89bb11cb964b448d6
+    m_Address: EndingCredits_ja
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d9a87c2e129343e5954fd7285aa985df
+    m_Address: EndingCredits_en
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Json
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: da177a1202608064a17d9a0000000001
     m_Address: DM_Daittyan
     m_ReadOnly: 0

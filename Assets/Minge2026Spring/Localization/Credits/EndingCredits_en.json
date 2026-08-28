@@ -1,0 +1,94 @@
+{
+  "title": "【Circle PandD】\nThe Wild Developers Who Wouldn't Let Us Simply Make the Game According to Plan",
+  "finalMessage": "THANK YOU FOR PLAYING!",
+  "credits": [
+    {
+      "title": "PROJECT MANAGER",
+      "names": "Koto"
+    },
+    {
+      "title": "LEAD GAME DESIGNER",
+      "names": "Ryota"
+    },
+    {
+      "title": "GAME DESIGNERS",
+      "names": "Koto  Botamochi  lumi  Renoruiga"
+    },
+    {
+      "title": "LEAD LEVEL DESIGNER",
+      "names": "Ryota"
+    },
+    {
+      "title": "LEVEL DESIGNERS",
+      "names": "Koto  Botamochi  lumi  Renoruiga"
+    },
+    {
+      "title": "LEAD 2D ARTISTS",
+      "names": "lumi  Renoruiga"
+    },
+    {
+      "title": "2D ARTISTS",
+      "names": "Koto  Ryota"
+    },
+    {
+      "title": "LEAD PROGRAMMER",
+      "names": "Koto  Ryota"
+    },
+    {
+      "title": "LEAD EDITOR TOOL PROGRAMMER",
+      "names": "Koto  Ryota"
+    },
+    {
+      "title": "VOICE ACTORS",
+      "names": "Got (CV: Koto)\nRyuta (CV: Ryota)\nKashiwamochi (CV: Botamochi)\nMilu (CV: lumi)\nProtagonist (CV: Renoruiga)\nDaittyan (CV: Taicchan)"
+    },
+    {
+      "title": "LEAD SOUND DESIGNER",
+      "names": "Koto  Botamochi"
+    },
+    {
+      "title": "MIXING",
+      "names": "Koto"
+    },
+    {
+      "title": "PV MANAGER",
+      "names": "Ryota"
+    },
+    {
+      "title": "SPECIAL THANKS",
+      "names": "Taicchan, our highly respected senior\ntessho\nPlanning and Development Club\n\nTEAM 1\nNao\nMidori\nTaka\nNan\nTansu\nkingyo\n\nTEAM 2\nMomiji\nTT\nKaya\ncarelessmth\nKaneko\nKazArt.\nkora\n\nTEAM 3\nAya\nαlion\nKote (Riku)\nBayashi\nseika\nIsshi\nKabayaki-san Taro (the full name is long, so please call me Kabayaki)"
+    },
+    {
+      "title": "FONTS",
+      "names": "Noto Sans JP"
+    },
+    {
+      "title": "IMAGES",
+      "names": "Irasutoya\nICOON MONO"
+    },
+    {
+      "title": "SOUND EFFECTS",
+      "names": "Sound Effect Lab"
+    },
+    {
+      "title": "THIRD-PARTY LIBRARIES",
+      "names": "R3\n\nUniTask\n\nVContainer"
+    },
+    {
+      "title": "AUDIO ENGINE",
+      "names": ""
+    },
+    {
+      "title": "DIRECTOR",
+      "names": "Koto"
+    },
+    {
+      "title": "PRODUCER",
+      "names": "Momiji"
+    },
+    {
+      "title": "UNIVERSITY OF AIZU  PLANNING AND DEVELOPMENT CLUB",
+      "names": "Planning and Development (PandD)"
+    }
+  ]
+}

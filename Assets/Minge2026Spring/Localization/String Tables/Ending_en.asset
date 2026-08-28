@@ -27,58 +27,6 @@ MonoBehaviour:
     m_Localized: SKIP
     m_Metadata:
       m_Items: []
-  - m_Id: 779083777
-    m_Localized: I GONNA BE THE TREASURE HUNTER
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083778
-    m_Localized: THANK YOU FOR PLAYING!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083779
-    m_Localized: PLANNING / DIRECTOR
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083780
-    m_Localized: Protagonist
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083781
-    m_Localized: PROGRAMMERS
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083782
-    m_Localized: 'Ryuta
-
-      Got'
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083783
-    m_Localized: 2D ART
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083784
-    m_Localized: Milu
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083785
-    m_Localized: SOUND
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083786
-    m_Localized: Kashiwamochi
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083787
-    m_Localized: SPECIAL THANKS
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083788
-    m_Localized: 'Game Planning & Development Club
-
-      PLAYERS'
-    m_Metadata:
-      m_Items: []
   - m_Id: 779083789
     m_Localized: 'Deaths: {0:N0}'
     m_Metadata:

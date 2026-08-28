@@ -1,4 +1,5 @@
 using System;
+using Minge2026Spring.Scripts.Application.DTOs;
 using Minge2026Spring.Scripts.Application.Interface;
 using Minge2026Spring.Scripts.View;
 using R3;
@@ -20,11 +21,23 @@ namespace Minge2026Spring.Scripts.Presenter
 
         public void Initialize()
         {
+            _view.LanguageSelected += SaveLanguage;
             _view.saveDeleteButton.OnClickAsObservable()
                 .Subscribe(_ => _view.ShowSaveDeleteConfirmation(_gameSaveRepository.Delete))
                 .AddTo(_disposables);
         }
 
-        public void Dispose() => _disposables.Dispose();
+        public void Dispose()
+        {
+            _view.LanguageSelected -= SaveLanguage;
+            _disposables.Dispose();
+        }
+
+        private void SaveLanguage(string languageType)
+        {
+            var saveData = _gameSaveRepository.Load() ?? new GameSaveData();
+            saveData.languageType = languageType;
+            _gameSaveRepository.Save(saveData);
+        }
     }
 }

@@ -12,7 +12,6 @@ namespace Minge2026Spring.Scripts.View
     /// </summary>
     public static class UILocalization
     {
-        public const string LocalePreferenceKey = "minge.selected-locale";
         public const string JapaneseLocaleCode = "ja";
         public const string EnglishLocaleCode = "en";
 
@@ -35,8 +34,6 @@ namespace Minge2026Spring.Scripts.View
             if (locale == null)
                 throw new InvalidOperationException($"Locale is not registered: {localeCode}");
 
-            PlayerPrefs.SetString(LocalePreferenceKey, locale.Identifier.Code);
-            PlayerPrefs.Save();
             LocalizationSettings.SelectedLocale = locale;
         }
 

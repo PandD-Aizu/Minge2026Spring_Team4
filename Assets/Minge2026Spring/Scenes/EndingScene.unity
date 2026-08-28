@@ -228,7 +228,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -613,7 +613,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -937,6 +937,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1185164208}
+  - component: {fileID: 1185164209}
   m_Layer: 5
   m_Name: SpeedUpObj
   m_TagString: Untagged
@@ -964,6 +965,53 @@ RectTransform:
   m_AnchoredPosition: {x: -830, y: -380}
   m_SizeDelta: {x: 270, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1185164209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185164207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.PropertyVariants.GameObjectLocalizer
+  m_TrackedObjects:
+  - rid: 4658839219955040350
+  references:
+    version: 2
+    RefIds:
+    - rid: 4658839219955040350
+      type: {class: TrackedRectTransform, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects, asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 1185164208}
+        m_TrackedProperties:
+          items:
+          - rid: 4658839219955040351
+          - rid: 4658839219955040352
+    - rid: 4658839219955040351
+      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
+      data:
+        m_PropertyPath: m_SizeDelta.x
+        m_VariantData:
+        - localeIdentifier:
+            m_Code: ja
+          value: 270
+        - localeIdentifier:
+            m_Code: en
+          value: 300
+    - rid: 4658839219955040352
+      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
+      data:
+        m_PropertyPath: m_AnchoredPosition.x
+        m_VariantData:
+        - localeIdentifier:
+            m_Code: ja
+          value: -830
+        - localeIdentifier:
+            m_Code: en
+          value: -810
 --- !u!1 &1326830587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1665,6 +1713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2079696836}
   - component: {fileID: 2079696837}
+  - component: {fileID: 2079696838}
   m_Layer: 0
   m_Name: EndingDefaultUIView
   m_TagString: Untagged
@@ -1710,15 +1759,16 @@ MonoBehaviour:
   _endPadding: 420
   _contentWidth: 0.85
   _fontAsset: {fileID: 11400000, guid: d4aa1b8e570635a409ce60346fec5485, type: 2}
+  _creditJsonAddress: EndingCredits_ja
   _textOutlineColor: {r: 0, g: 0, b: 0, a: 0.8}
   _textOutlineDistance: {x: 1.5, y: -1.5}
   _textShadowColor: {r: 0, g: 0, b: 0, a: 0.7}
   _textShadowDistance: {x: 3, y: -3}
   _images:
   - insertAfterSection: 0
-    sprite: {fileID: 21300000, guid: cea212bce7f0ea64b90163fc761fca6e, type: 3}
+    sprite: {fileID: 21300000, guid: 8661f3ad47cb07d42864be05eb6d3036, type: 3}
     height: 0
-  - insertAfterSection: 20
+  - insertAfterSection: 19
     sprite: {fileID: 21300000, guid: a6c297c8e92a8fb46a296beee5642c88, type: 3}
     height: 0
   _extraDialogueFontSize: 38
@@ -1727,6 +1777,45 @@ MonoBehaviour:
   _endingTitleFadeDuration: 1
   _endingTitleHoldDuration: 5
   _haibokusyaMarkSprite: {fileID: 21300000, guid: 66a8f2b724e2477409fa19098fa864fa, type: 3}
+--- !u!114 &2079696838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079696834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.PropertyVariants.GameObjectLocalizer
+  m_TrackedObjects:
+  - rid: 4658839219955040359
+  references:
+    version: 2
+    RefIds:
+    - rid: 4658839219955040359
+      type: {class: TrackedMonoBehaviourObject, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects, asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 2079696837}
+        m_TrackedProperties:
+          items:
+          - rid: 4658839219955040360
+        m_UpdateType: 0
+        m_Changed:
+          m_PersistentCalls:
+            m_Calls: []
+    - rid: 4658839219955040360
+      type: {class: StringTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties, asm: Unity.Localization}
+      data:
+        m_PropertyPath: _creditJsonAddress
+        m_VariantData:
+        - localeIdentifier:
+            m_Code: ja
+          value: EndingCredits_ja
+        - localeIdentifier:
+            m_Code: en
+          value: EndingCredits_en
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

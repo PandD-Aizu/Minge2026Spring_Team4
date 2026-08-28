@@ -27,54 +27,6 @@ MonoBehaviour:
     m_Localized: "\u30B9\u30AD\u30C3\u30D7"
     m_Metadata:
       m_Items: []
-  - m_Id: 779083777
-    m_Localized: I GONNA BE THE TREASURE HUNTER
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083778
-    m_Localized: THANK YOU FOR PLAYING!
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083779
-    m_Localized: PLANNING / DIRECTOR
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083780
-    m_Localized: "\u4E3B\u4EBA\u516C"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083781
-    m_Localized: PROGRAMMERS
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083782
-    m_Localized: "Ryuta\n\u3054\u3063\u3068"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083783
-    m_Localized: 2D ART
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083784
-    m_Localized: Milu
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083785
-    m_Localized: SOUND
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083786
-    m_Localized: "\u304B\u3057\u308F\u3082\u3061"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083787
-    m_Localized: SPECIAL THANKS
-    m_Metadata:
-      m_Items: []
-  - m_Id: 779083788
-    m_Localized: "\u4F01\u753B\u958B\u767A\u90E8\nPLAYERS"
-    m_Metadata:
-      m_Items: []
   - m_Id: 779083789
     m_Localized: "\u30C7\u30B9\u6570: {0:N0} \u56DE"
     m_Metadata:

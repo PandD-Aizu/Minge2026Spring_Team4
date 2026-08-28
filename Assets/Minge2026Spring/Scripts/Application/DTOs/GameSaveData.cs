@@ -5,6 +5,7 @@ namespace Minge2026Spring.Scripts.Application.DTOs
     [Serializable]
     public class GameSaveData
     {
+        public string languageType;
         public string chapterId;
         public string currentBlockId;
         public string[] reachedBlockIds = Array.Empty<string>();
