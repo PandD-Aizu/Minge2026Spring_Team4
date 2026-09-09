@@ -2,6 +2,12 @@
 
 春みんげ2026　チーム４👴
 
+## 開発環境のセットアップ
+
+GitをインストールしてPATHを通し、リポジトリをclone / pullした後にUnity `6000.3.6f1`で開いてください。
+Steamworks.NETを含むGit依存パッケージは、`Packages/manifest.json`と`Packages/packages-lock.json`に従って各自の環境へ自動取得されます。初回取得にはネット接続が必要です。
+Steamworks.NETのunitypackageのインポートや、Assetsへの手動配置は不要です。詳細は[Steam設定](Documentation/SteamSetup.md)を参照してください。
+
 ## コーディング規約
 ### 命名規則
 * クラス / 構造体名: パスカルケース(例: PlayerController)

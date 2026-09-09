@@ -27,6 +27,7 @@ namespace Minge2026Spring.Scripts.View
         private async UniTaskVoid CreateVersionLabelAsync()
         {
             var canvas = FindObjectsByType<Canvas>(FindObjectsSortMode.None)
+                .Where(candidate => candidate.gameObject.scene == gameObject.scene)
                 .OrderByDescending(candidate => candidate.sortingOrder)
                 .FirstOrDefault();
 
@@ -49,6 +50,11 @@ namespace Minge2026Spring.Scripts.View
                 {
                     Debug.LogWarning($"[TitleDefaultUIView] Failed to load font 'NotoSans_Regular': {ex.Message}");
                 }
+            }
+
+            if (this == null || canvas == null)
+            {
+                return;
             }
 
             var labelObject = new GameObject("VersionLabel", typeof(RectTransform), typeof(TextMeshProUGUI));

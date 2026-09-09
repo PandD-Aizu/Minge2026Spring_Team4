@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Minge2026Spring.Scripts.Infrastructure.Repositories
 {
-    public class GameSaveRepository : IGameSaveRepository
+    public class GameSaveRepository : IGameSaveRepository, IHiddenItemStatusRepository
     {
         private const string SaveFileName = "GameSave.json";
         private const string MoraleFilePath = "I_gonna_be_the_tresure_hunter/CharactersMoraleValue.json";
@@ -32,6 +32,12 @@ namespace Minge2026Spring.Scripts.Infrastructure.Repositories
                 Debug.LogException(exception);
                 return null;
             }
+        }
+
+        public HiddenItemStatus LoadHiddenItemStatus()
+        {
+            var saveData = Load();
+            return new HiddenItemStatus(saveData?.GetItem1 ?? false, saveData?.GetItem2 ?? false);
         }
 
         /// <inheritdoc />
@@ -73,7 +79,7 @@ namespace Minge2026Spring.Scripts.Infrastructure.Repositories
                     File.Delete(_savePath);
 
                 // 外部ゲームがこのファイルを必ず読み込むため、削除ではなく
-                // 初期値を書き戻す。隠しアイテムは未取得状態へ戻す。
+                // 士気度の初期値を書き戻す。
                 var resetMoraleData = new CharacterMoraleValueJson();
                 var moraleDirectory = Path.GetDirectoryName(_moraleSavePath);
                 if (!string.IsNullOrEmpty(moraleDirectory))
