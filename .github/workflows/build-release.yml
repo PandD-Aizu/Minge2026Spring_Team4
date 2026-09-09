@@ -23,32 +23,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # The 20000x20000 source requires 1.6 GB for a single RGBA buffer.
-      # Resize before Unity decodes it; maxTextureSize only applies after decoding.
-      - name: Prepare title logo for import
-        shell: pwsh
-        run: |
-          Add-Type -AssemblyName System.Drawing
-          $path = Join-Path $env:GITHUB_WORKSPACE 'Assets/Minge2026Spring/Sprites/TitleLogo.png'
-          $source = [System.Drawing.Image]::FromFile($path)
-          $target = $null
-          $graphics = $null
-          $temporaryPath = "$path.resized"
-          try {
-            $target = [System.Drawing.Bitmap]::new(2048, 2048)
-            $graphics = [System.Drawing.Graphics]::FromImage($target)
-            $graphics.CompositingMode = [System.Drawing.Drawing2D.CompositingMode]::SourceCopy
-            $graphics.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic
-            $graphics.PixelOffsetMode = [System.Drawing.Drawing2D.PixelOffsetMode]::HighQuality
-            $graphics.DrawImage($source, [System.Drawing.Rectangle]::new(0, 0, 2048, 2048))
-            $target.Save($temporaryPath, [System.Drawing.Imaging.ImageFormat]::Png)
-          } finally {
-            if ($graphics) { $graphics.Dispose() }
-            if ($target) { $target.Dispose() }
-            $source.Dispose()
-          }
-          Move-Item -LiteralPath $temporaryPath -Destination $path -Force
-
       - name: Build Unity project
         uses: game-ci/unity-builder@v4
         env:
@@ -56,8 +30,6 @@ jobs:
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
-          # The preparation step intentionally modifies the checked-out logo.
-          allowDirtyBuild: true
           unityVersion: ${{ env.UNITY_VERSION }}
           customImage: unityci/editor:windows-${{ env.UNITY_VERSION }}-windows-il2cpp-${{ env.UNITY_IMAGE_VERSION }}
           targetPlatform: StandaloneWindows64
